@@ -1,0 +1,20 @@
+{
+  "name": "gerador-editais-tr",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Construtor de Chamadas Públicas e Termos de Referência do IPEA/PIPA — corpus de editais raspados e gerador de minutas.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
