@@ -29,7 +29,7 @@ function Figura({ titulo, insight, children, wide }) {
         <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: C.cerrado, fontWeight: 600 }}>{titulo}</div>
         {insight && <div style={{ fontFamily: SERIF, fontSize: 13.5, color: C.muted, fontStyle: "italic", marginTop: 3, lineHeight: 1.4 }}>{insight}</div>}
       </figcaption>
-      <div style={{ background: "#fffdf7", border: `1px solid ${C.line}`, borderRadius: 2, padding: "14px 16px" }}>
+      <div style={{ background: "#ffffff", border: `1px solid ${C.line}`, borderRadius: 2, padding: "14px 16px" }}>
         {children}
       </div>
     </figure>
@@ -85,7 +85,7 @@ export default function AnalyticsView() {
       {/* ---------- TEMPO E PROGRAMAS ---------- */}
       <Secao titulo="Programas ao longo do tempo">
         <Figura titulo="Programa × ano — a virada estrutural" wide
-          insight="O achado mais forte: PROMOB domina 2023–2024 (90, 73) e some em 2026; PIPA só aparece em 2025 (37) e cresce. O gerador, porém, é hardcoded para PIPA — mira a minoria histórica.">
+          insight="O achado mais forte: PROMOB domina 2023–2024 (90, 73) e some em 2026; PIPA só aparece em 2025 (37) e cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA (Anexo II) — por isso o gerador é, corretamente, PIPA-only.">
           <StackedBars data={S.programaPorAno} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} />
         </Figura>
         <Figura titulo="Chamadas por ano"

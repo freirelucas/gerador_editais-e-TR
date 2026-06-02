@@ -18,10 +18,11 @@ O sinal mais forte de todo o dataset. O **PROMOB** (mobilização de pesquisador
 respondia por **97% das chamadas em 2023 e 96% em 2024**, despencou para **44% em
 2025** e **zerou em 2026**. O **PIPA** só aparece em 2025 (37 chamadas) e domina 2026.
 
-**Por que importa:** o construtor de minutas do app é *hardcoded* para
-"CHAMADA PÚBLICA IPEA/PIPA". Ou seja, ele mira o programa que é **minoria histórica**
-(22% do corpus) e ignora o PROMOB, que dominou o período. Recomendação derivada:
-parametrizar o gerador por programa.
+**Por que importa:** essa virada não é ruído de raspagem — é **mudança de regime**. A
+**Portaria Normativa IPEA nº 317/2025** instituiu o PIPA e **converteu** as modalidades de
+PROMOB/PNPD e PROCIN nas novas modalidades PIPA (Anexo II). Por isso o gerador é, com
+acerto, **PIPA-only**: PROMOB/PROCIN não são mais regimes vivos, apenas história. O corpus
+antigo sobrevive como referência e como **padrões de descrição** (fora do núcleo regulado).
 
 ## 2. Volume de chamadas em queda — e 2026 incompleto
 

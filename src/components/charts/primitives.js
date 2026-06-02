@@ -1,12 +1,12 @@
 // Primitivas compartilhadas dos gráficos SVG (sem dependência externa).
-import { C } from "../../theme.js";
+import { C, SANS } from "../../theme.js";
 
-// Cores por programa (consistentes em toda a aba) e paleta categórica geral.
-export const COR_PROGRAMA = { PIPA: C.cerrado, PROMOB: C.terra, PROCIN: C.gold };
-export const PALETA = [C.cerrado, C.terra, C.gold, "#7a9a6d", "#b0844a", "#9a6b4b", C.muted];
+// Cores por programa (consistentes em toda a aba) e paleta categórica geral, em Azul IPEA.
+export const COR_PROGRAMA = { PIPA: C.azul, PROMOB: C.gold, PROCIN: C.azulClaro };
+export const PALETA = [C.azul, C.gold, C.azulClaro, C.azulEscuro, "#8fb4bf", C.muted];
 
-export const MONO = "'IBM Plex Mono',monospace";
-export const SERIF = "Spectral,serif";
+export const MONO = SANS;
+export const SERIF = SANS;
 
 export const fmtInt = (n) => n.toLocaleString("pt-BR");
 

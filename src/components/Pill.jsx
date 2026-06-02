@@ -16,7 +16,7 @@ export default function Pill({ children, tone }) {
         border: `1px solid ${s.bd}`,
         padding: "1px 8px",
         borderRadius: 2,
-        fontFamily: "'IBM Plex Mono',monospace",
+        fontFamily: "'Source Sans 3',sans-serif",
         fontSize: 10,
         letterSpacing: ".06em",
         textTransform: "uppercase",

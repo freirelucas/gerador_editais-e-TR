@@ -8,12 +8,12 @@ export default function Heatmap({ data }) {
   const max = Math.max(1, ...data.flatMap((d) => d.meses));
   const W = 680, padL = 52, padT = 22, cell = 44, gap = 3;
   const H = padT + data.length * (cell + gap) + 6;
-  // interpola papel -> cerrado
+  // interpola cinza-azulado -> Azul IPEA (#10566a = 16,86,106)
   const cor = (v) => {
-    if (!v) return "#efece1";
+    if (!v) return "#e8eef0";
     const t = v / max;
     const lerp = (a, b) => Math.round(a + (b - a) * t);
-    return `rgb(${lerp(244, 61)},${lerp(240, 90)},${lerp(230, 61)})`;
+    return `rgb(${lerp(225, 16)},${lerp(235, 86)},${lerp(238, 106)})`;
   };
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto" }} role="img">
@@ -32,7 +32,7 @@ export default function Heatmap({ data }) {
               {v > 0 && (
                 <text x={padL + c * (cell + gap) + cell / 2} y={padT + r * (cell + gap) + cell / 2}
                   textAnchor="middle" dominantBaseline="middle" fontFamily={MONO} fontSize="11"
-                  fill={v / max > 0.55 ? "#f4f0e6" : C.ink}>{v}</text>
+                  fill={v / max > 0.55 ? "#ffffff" : C.ink}>{v}</text>
               )}
             </g>
           ))}

@@ -1,16 +1,45 @@
-// Modalidades de bolsa e valores mensais (R$), conforme a Portaria Normativa
-// IPEA nº 262/2023 (que altera a Portaria nº 492/2010).
+// Modalidades de participação e valores de bolsa do PIPA.
+// Fonte: Portaria Normativa IPEA nº 317/2025 — Art. 4º (modalidades) e Anexo I (valores).
+// `moeda`: "BRL" | "USD" | "NONE" (Pesquisador Convidado é voluntário, sem bolsa).
 export const MODALIDADES = [
-  { nome: "Auxiliar de Pesquisa", valor: 1225.0 },
-  { nome: "Assistente de Pesquisa I", valor: 2210.0 },
-  { nome: "Assistente de Pesquisa II", valor: 3360.0 },
-  { nome: "Assistente de Pesquisa III", valor: 4030.0 },
-  { nome: "Assistente de Pesquisa IV", valor: 5320.0 },
-  { nome: "Doutor", valor: 6760.0 },
-  { nome: "Pesquisador Visitante", valor: 4940.0 },
-  { nome: "Incentivo à Pesquisa I", valor: 4030.0 },
-  { nome: "Incentivo à Pesquisa II", valor: 6240.0 },
-  { nome: "Pesquisador de Campo I", valor: 3120.0 },
-  { nome: "Pesquisador de Campo II", valor: 6240.0 },
-  { nome: "Profissional Sênior", valor: 6240.0 },
+  {
+    nome: "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    valor: 1582.0, moeda: "BRL",
+    requisito: "Matrícula regular em curso de graduação.",
+  },
+  {
+    nome: "Assistente de Pesquisa e Ciência de Dados Júnior",
+    valor: 2785.0, moeda: "BRL",
+    requisito: "Graduação concluída.",
+  },
+  {
+    nome: "Assistente de Pesquisa Pleno",
+    valor: 4030.0, moeda: "BRL",
+    requisito: "Título de mestre ou especialista, ou no mínimo dois anos de experiência comprovada em pesquisa.",
+  },
+  {
+    nome: "Assistente em Ciência de Dados Pleno",
+    valor: 4030.0, moeda: "BRL",
+    requisito: "Graduação concluída, com conhecimentos e habilidades em ciência de dados.",
+  },
+  {
+    nome: "Assistente de Pesquisa e Ciência de Dados Sênior",
+    valor: 6240.0, moeda: "BRL",
+    requisito: "Graduação concluída e título de pós-graduação lato ou stricto sensu.",
+  },
+  {
+    nome: "Doutor Bolsista",
+    valor: 6760.0, moeda: "BRL",
+    requisito: "Título de doutor.",
+  },
+  {
+    nome: "Pesquisador Internacional",
+    valor: 2400.0, moeda: "USD",
+    requisito: "Docente/pesquisador de instituição estrangeira; admissão por processo seletivo simplificado.",
+  },
+  {
+    nome: "Pesquisador Convidado",
+    valor: 0.0, moeda: "NONE",
+    requisito: "Admissão por convite; serviço voluntário (Lei nº 9.608/1998). Não faz jus a bolsa.",
+  },
 ];

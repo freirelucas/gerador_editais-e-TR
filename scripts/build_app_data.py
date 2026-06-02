@@ -18,11 +18,14 @@ CLEAN_BIB = ROOT / "data" / "biblioteca_clausulas.json"
 OUT_QUALITY = ROOT / "src" / "data" / "quality.json"
 OUT_SUG = ROOT / "src" / "data" / "clausulas_sugeridas.json"
 
-# Categorias oferecidas como sugestão nos campos livres do construtor
+# Sugestões SOMENTE para campos descritivos (fora do núcleo regulado): as cláusulas dos
+# modelos antigos servem como padrões de descrição de projetos/atividades/perfil — não
+# como texto regulado (esse vem da Portaria 317/2025). Rótulo -> categoria da biblioteca.
 SUGESTOES = {
-    "OBJETO": "OBJETO",
-    "REQUISITOS DOS CANDIDATOS": "REQUISITOS DOS CANDIDATOS",
-    "CRITÉRIOS DE JULGAMENTO": "CRITÉRIOS DE JULGAMENTO",
+    "DEFINIÇÃO DO PROJETO": "OBJETO",
+    "PERFIL E REQUISITOS": "REQUISITOS DOS CANDIDATOS",
+    "ATIVIDADES": "ATIVIDADES QUE O CANDIDATO IRÁ DESENVOLVER",
+    "CRITÉRIOS DE SELEÇÃO": "CRITÉRIOS DE JULGAMENTO",
 }
 TOP_SUG = 6
 EN_RE = re.compile(r"\b(THE|OF|AND|REQUIREMENTS|SCHOLARSHIP|RESEARCH|PROJECT|TITLE|"

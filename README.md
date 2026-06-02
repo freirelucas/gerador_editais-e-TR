@@ -1,23 +1,29 @@
-# Gerador de Editais e Termos de Referência — IPEA/PIPA
+# Gerador de Termo de Referência e Edital — IPEA/PIPA
 
-Ferramenta web para **explorar o corpus de Chamadas Públicas do IPEA**, **gerar minutas**
-de editais e **analisar os dados**, com base na regulamentação vigente do Programa de
-Incentivo à Pesquisa Aplicada (PIPA).
+Ferramenta web para **gerar o Termo de Referência e a minuta de Chamada Pública** do
+Programa de Incentivo à Pesquisa Aplicada (PIPA), ancorados na **norma vigente — Portaria
+Normativa IPEA nº 317, de 18 de abril de 2025** — além de explorar e analisar o corpus
+histórico de chamadas. A interface reproduz a **identidade visual do IPEA** (Azul IPEA,
+wordmark "ipea").
 
 Três abas:
 
-- **Construtor de minuta** — monta em tempo real a minuta de uma Chamada Pública e
-  oferece **sugestões de cláusulas reais** (extraídas da biblioteca limpa) nos campos
-  livres. Copia ou baixa em `.txt`.
+- **Gerador** — formulário enxuto que monta, em tempo real, o **Termo de Referência
+  (Art. 7º)** e a **minuta de Chamada Pública Especializada** derivada, com as **8
+  modalidades e valores atuais** (Anexo I). Os campos descritivos (projeto, perfil,
+  atividades, critérios) oferecem **padrões de descrição** extraídos dos modelos antigos —
+  úteis apenas fora do núcleo regulado. Copia ou baixa em `.txt`.
 - **Corpus de editais** — busca e filtros (ano, programa, situação) sobre 253 chamadas
   raspadas do portal IPEA (2023–2026).
 - **Analytics dos dados** — painel de gráficos (SVG próprio, sem dependências) que
   **começa pela qualidade/limitações** dos dados e mostra a virada estrutural
   PROMOB→PIPA, prazos, sazonalidade, temas e a biblioteca de cláusulas.
 
-> ⚠️ As minutas geradas são **rascunhos de trabalho**. Revisão jurídica e adequação à
-> versão vigente do regulamento PIPA são obrigatórias antes de qualquer publicação.
-> Valores conforme a Portaria Normativa IPEA nº 262/2023 (altera a Portaria nº 492/2010).
+> ⚠️ O documento gerado é um **rascunho de trabalho**: revisão jurídica e conferência com a
+> versão vigente da norma são obrigatórias antes da publicação. As portarias anteriores
+> (PROMOB/PNPD, PROCIN) foram **convertidas no PIPA** (Anexo II da Portaria 317/2025) — por
+> isso o gerador é PIPA-only; as cláusulas dos modelos antigos servem apenas como padrões
+> de descrição, fora do núcleo regulado.
 
 ## Como rodar
 
@@ -71,12 +77,13 @@ porta de qualidade, builda e publica `dist/` no Pages a cada push em `main`. Ati
 │   ├── main.jsx · App.jsx · theme.js
 │   ├── data/
 │   │   ├── corpus.js                # adaptador do corpus limpo
-│   │   ├── clausulas.js             # sugestões de cláusula p/ o construtor
-│   │   ├── modalidades.js · boilerplate.js
+│   │   ├── clausulas.js             # padrões de descrição (campos descritivos)
+│   │   ├── modalidades.js           # 8 modalidades + valores (Anexo I / Portaria 317)
+│   │   ├── norma.js                 # núcleo regulado (Portaria 317/2025)
 │   │   ├── quality.json             # métricas p/ a aba Analytics (gerado)
 │   │   └── clausulas_sugeridas.json # (gerado)
 │   ├── lib/
-│   │   ├── format.js · minuta.js
+│   │   ├── format.js · minuta.js    # minuta.js: buildTR (Art. 7º) + buildEdital
 │   │   └── stats.js                 # agregações da aba Analytics
 │   └── components/
 │       ├── Pill.jsx · CorpusView.jsx · BuilderView.jsx

@@ -24,13 +24,14 @@ corpus = json.loads((ROOT / "data" / "corpus_chamadas_2023-2026.json").read_text
 bib = json.loads((ROOT / "data" / "biblioteca_clausulas.json").read_text(encoding="utf-8"))
 raw_bib = json.loads((ROOT / "data" / "raw" / "biblioteca_clausulas.json").read_text(encoding="utf-8"))
 
-PAPER, INK, CERRADO, TERRA, GOLD, LINE = "#f4f0e6", "#1c1a14", "#3d5a3d", "#8a4b2b", "#9a7d2e", "#cdc4ad"
+# Paleta Azul IPEA (CERRADO/TERRA/GOLD mantidos como nomes de variável, agora em tons IPEA)
+PAPER, INK, CERRADO, TERRA, GOLD, LINE = "#ffffff", "#16292f", "#10566a", "#c98a1e", "#4f8a9e", "#d3dfe2"
 COR_PROG = {"PIPA": CERRADO, "PROMOB": TERRA, "PROCIN": GOLD}
 PROGRAMAS, ANOS = ["PIPA", "PROCIN", "PROMOB"], ["2023", "2024", "2025", "2026"]
 MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 STOP = set("de da do das dos e a o as os para com no na nos nas em um uma sobre por que à á ao aos pela pelo".split())
 
-plt.rcParams.update({"figure.facecolor": PAPER, "axes.facecolor": "#fffdf7", "font.size": 10,
+plt.rcParams.update({"figure.facecolor": PAPER, "axes.facecolor": "#f4f8f9", "font.size": 10,
                      "axes.edgecolor": LINE, "axes.titlesize": 12, "text.color": INK,
                      "axes.labelcolor": INK, "xtick.color": INK, "ytick.color": INK})
 
