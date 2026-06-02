@@ -3,6 +3,28 @@ import { C } from "../theme.js";
 import { MODALIDADES } from "../data/modalidades.js";
 import { BRL } from "../lib/format.js";
 import { buildMinuta, minutaToText } from "../lib/minuta.js";
+import { clausulasDe } from "../data/clausulas.js";
+
+// Chips de cláusulas reais (biblioteca limpa) que preenchem um campo ao clicar.
+function Sugestoes({ rotulo, onEscolher }) {
+  const opcoes = clausulasDe(rotulo).slice(0, 4);
+  if (!opcoes.length) return null;
+  return (
+    <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
+      <span style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 9, letterSpacing: ".06em", textTransform: "uppercase", color: C.muted }}>
+        sugestões da biblioteca:
+      </span>
+      {opcoes.map((c, i) => (
+        <button key={i} type="button" title={c} onClick={() => onEscolher(c)}
+          style={{ fontFamily: "'IBM Plex Mono',monospace", fontSize: 10, border: `1px solid ${C.line}`,
+            background: "#faf7ef", color: C.cerrado, borderRadius: 2, padding: "2px 7px", cursor: "pointer",
+            maxWidth: 230, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+          {c.slice(0, 40)}…
+        </button>
+      ))}
+    </div>
+  );
+}
 
 // Aba "Construtor de minuta": formulário à esquerda, pré-visualização à direita.
 export default function BuilderView() {
@@ -22,6 +44,7 @@ export default function BuilderView() {
     inicio: "",
   });
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
+  const setVal = (k, v) => setF({ ...f, [k]: v });
   const minuta = useMemo(() => buildMinuta(f), [f]);
   const [copied, setCopied] = useState(false);
   const copy = () => {
@@ -102,6 +125,7 @@ export default function BuilderView() {
             value={f.requisitos}
             onChange={set("requisitos")}
           />
+          <Sugestoes rotulo="REQUISITOS DOS CANDIDATOS" onEscolher={(c) => setVal("requisitos", c)} />
         </Field>
         <Field l="Critérios de julgamento">
           <textarea
@@ -110,6 +134,7 @@ export default function BuilderView() {
             value={f.criterios}
             onChange={set("criterios")}
           />
+          <Sugestoes rotulo="CRITÉRIOS DE JULGAMENTO" onEscolher={(c) => setVal("criterios", c)} />
         </Field>
         <Field l="Diretoria responsável">
           <input

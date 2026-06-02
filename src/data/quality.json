@@ -1,0 +1,231 @@
+{
+  "gerado_em": "2026-06-02",
+  "proveniencia": {
+    "corpus": {
+      "semente": "data/raw/corpus_chamadas_2023-2026.json",
+      "snapshot": "2026-06 (raspagem do portal IPEA)"
+    },
+    "biblioteca_antes": {
+      "categorias": 103,
+      "clausulas": 5895
+    },
+    "biblioteca_depois": {
+      "categorias": 87,
+      "clausulas": 3060
+    }
+  },
+  "biblioteca": {
+    "top_categorias": [
+      [
+        "REQUISITOS DOS CANDIDATOS",
+        268
+      ],
+      [
+        "CRONOGRAMA",
+        235
+      ],
+      [
+        "OBJETO",
+        214
+      ],
+      [
+        "APRESENTAÇÃO E ENVIO DAS CANDIDATURAS",
+        190
+      ],
+      [
+        "CRITÉRIOS DE JULGAMENTO",
+        185
+      ],
+      [
+        "CLÁUSULA DE RESERVA",
+        175
+      ],
+      [
+        "RECURSOS ADMINISTRATIVOS",
+        168
+      ],
+      [
+        "PROPÓSITO DO TRABALHO",
+        164
+      ],
+      [
+        "TÍTULO DO PROJETO",
+        157
+      ],
+      [
+        "MODALIDADE E VALOR DA BOLSA",
+        153
+      ],
+      [
+        "CONCESSÃO DA BOLSA",
+        105
+      ],
+      [
+        "IMPUGNAÇÃO DA CHAMADA PÚBLICA",
+        92
+      ],
+      [
+        "QUANTIDADE E DURAÇÃO DAS BOLSAS",
+        79
+      ],
+      [
+        "ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER",
+        74
+      ],
+      [
+        "ATIVIDADES QUE O CANDIDATO IRÁ DESENVOLVER",
+        70
+      ]
+    ],
+    "duplicacao_por_categoria": [
+      [
+        "INFORMAÇÕES DO PROJETO",
+        0.979
+      ],
+      [
+        "OBJETIVO",
+        0.932
+      ],
+      [
+        "RESULTADO DO JULGAMENTO",
+        0.927
+      ],
+      [
+        "PERMISSÕES E AUTORIZAÇÕES ESPECIAIS",
+        0.917
+      ],
+      [
+        "ESCLARECIMENT OS E DAS INFORMAÇÕES ADICIONAIS",
+        0.913
+      ],
+      [
+        "AJUSTES DOS PROJETOS APROVADOS",
+        0.9
+      ],
+      [
+        "ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS",
+        0.887
+      ],
+      [
+        "RESULTADO DA CHAMADA PÚBLICA",
+        0.875
+      ],
+      [
+        "ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA",
+        0.864
+      ],
+      [
+        "ANEXO",
+        0.859
+      ],
+      [
+        "CANCELAMENTO DA CONCESSÃO",
+        0.855
+      ],
+      [
+        "DISPOSIÇÕES GERAIS",
+        0.835
+      ],
+      [
+        "RECURSOS ADMINISTRATIVOS AO JULGAMENTO DAS CANDIDATURAS",
+        0.769
+      ],
+      [
+        "CONCESSÃO DE BENEFÍCIOS",
+        0.724
+      ],
+      [
+        "QUANTIDADE E DURAÇÃO DAS BOLSAS",
+        0.651
+      ]
+    ],
+    "variabilidade": [
+      [
+        "INFORMAÇÕES DO PROJETO",
+        0.021
+      ],
+      [
+        "OBJETIVO",
+        0.068
+      ],
+      [
+        "RESULTADO DO JULGAMENTO",
+        0.073
+      ],
+      [
+        "PERMISSÕES E AUTORIZAÇÕES ESPECIAIS",
+        0.083
+      ],
+      [
+        "ESCLARECIMENT OS E DAS INFORMAÇÕES ADICIONAIS",
+        0.087
+      ],
+      [
+        "AJUSTES DOS PROJETOS APROVADOS",
+        0.1
+      ],
+      [
+        "ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS",
+        0.113
+      ],
+      [
+        "RESULTADO DA CHAMADA PÚBLICA",
+        0.125
+      ],
+      [
+        "ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA",
+        0.136
+      ],
+      [
+        "ANEXO",
+        0.141
+      ],
+      [
+        "CANCELAMENTO DA CONCESSÃO",
+        0.145
+      ],
+      [
+        "DISPOSIÇÕES GERAIS",
+        0.165
+      ]
+    ],
+    "idioma": {
+      "pt": 72,
+      "en": 15
+    },
+    "categorias_en": [
+      "ACTIVITIES TO BE DEVELOPED",
+      "CANDIDATE REQUIREMENTS",
+      "CHALLENGING THE SIMPLIFIED SELECTION PROCESS",
+      "CHRONOGRAM",
+      "EXPECTED RESULTS",
+      "IDENTIFICATION OF THE RECOMMENDED RESEARCHER",
+      "IMPLEMENTATION OF THE SCHOLARSHIP",
+      "MODALITY OF THE SCHOLARSHIP",
+      "OBJECT",
+      "OBJECTIVE",
+      "PROJECT TITLE",
+      "PURPOSE OF THE RESEARCH",
+      "RESERVATION CLAUSE",
+      "REVOCATION OR ANULLMENT OF THE SIMPLIFIED SELECTION PROCESS",
+      "SCHOLARSHIP QUANTITY AND DURATION"
+    ],
+    "tamanho_hist": {
+      "0": 513,
+      "250": 534,
+      "500": 456,
+      "750": 171,
+      "1000": 226,
+      "1250": 310,
+      "1500": 148,
+      "1750": 154,
+      "2000": 548
+    },
+    "tamanho_resumo": {
+      "min": 25,
+      "mediana": 772,
+      "media": 1135,
+      "max": 5841
+    }
+  }
+}

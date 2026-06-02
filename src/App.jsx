@@ -3,6 +3,7 @@ import { C, FONTS } from "./theme.js";
 import { CORPUS } from "./data/corpus.js";
 import BuilderView from "./components/BuilderView.jsx";
 import CorpusView from "./components/CorpusView.jsx";
+import AnalyticsView from "./components/AnalyticsView.jsx";
 
 // Raiz da aplicação: cabeçalho, abas (construtor / corpus) e rodapé.
 export default function App() {
@@ -44,6 +45,7 @@ export default function App() {
           {[
             ["builder", "Construtor de minuta"],
             ["corpus", "Corpus de editais"],
+            ["analytics", "Analytics dos dados"],
           ].map(([k, l]) => (
             <button
               key={k}
@@ -66,7 +68,7 @@ export default function App() {
             </button>
           ))}
         </div>
-        {tab === "builder" ? <BuilderView /> : <CorpusView />}
+        {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : <AnalyticsView />}
         <footer
           style={{
             marginTop: 46,

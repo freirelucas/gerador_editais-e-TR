@@ -18,3 +18,11 @@ pnpm-debug.log*
 .idea/
 .DS_Store
 *.local
+
+# Artefatos gerados (reproduzíveis via scripts/generate_charts.py)
+analytics/charts/
+analytics/index.md
+
+# Python
+__pycache__/
+*.pyc
