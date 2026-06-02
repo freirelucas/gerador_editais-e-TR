@@ -1,0 +1,422 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº 011/2023 - SELEÇÃO DE CANDIDATO PARA
+                      CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA os interessados a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+
+A presente Chamada tem por objetivo selecionar interessados, para concessão de bolsa
+pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e
+no REGULAMENTO desta Chamada, em realizar pesquisa no âmbito do Projeto:
+“Cooperação Brasileira para o Desenvolvimento Internacional: COBRADI 2021-
+2024”.
+
+2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 02 (duas) bolsas, com duração prevista 12 (doze) meses podendo
+ser renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+
+3.1 - Candidato 1 – Assistente de Pesquisa I - Graduado
+3.1.1. Ter graduação na área de Economia;
+3.1.2. Ter conhecimentos intermediários em análise estatística com a linguagem R / R
+Studio e visualização de dados com o pacote R Shiny;
+3.1.3. Ter conhecimentos básicos em Python e SQL para estruturação e manipulação
+de bases de dados do Governo Federal Brasileiro;
+3.1.4. Ter experiência obrigatória em bases de dados do Sistema Único de Saúde do
+Brasil;
+3.1.5. Ter conhecimentos intermediários em comunicação/redação científica e pesquisa.
+Publicações próprias em periódicos científicos ou de policy na temática de cooperação
+para o desenvolvimento serão considerados uma vantagem;
+3.1.6. Ter domínio pleno da língua portuguesa e da língua inglesa. Conhecimentos em
+uma segunda língua oficial das Nações Unidas serão considerados uma vantagem;
+3.1.7. Ter disponibilidade presencial para desenvolver as atividades inerentes ao projeto
+no IPEA – Brasília-DF.
+Vaga: 01 (uma)
+
+3.2 - Candidato 2 – Assistente de Pesquisa II - Mestrando
+3.2.1. Está regularmente matriculado no curso de Mestrado na área de Relações
+Internacionais;
+3.2.2. Ter conhecimentos intermediários em comunicação/redação científica e pesquisa.
+Participação em programa de iniciação científica será considerada uma vantagem;
+
+
+
+                                                                                       1
+3.2.3. Ter experiência em manipulação, gestão e análise de pequenas bases de dados
+para pesquisas exploratórias. Publicações próprias em periódicos científicos ou de
+policy serão consideradas uma vantagem;
+3.2.4. Ter experiência na utilização de bases internacionais de indexação e diretórios
+agregadores de periódicos (Scielo, Scopus, Web of Science, DOAJ etc.)
+3.2.5. Ter domínio pleno da língua portuguesa e da língua inglesa. Conhecimentos na
+língua espanhola são desejáveis;
+3.2.6. Ter conhecimentos básicos em análise estatística (Excel, SPSS, R, SAS, STATA,
+etc) ou análise de dados qualitativos (IRAMUTEQ ou Nvivo ou Atlas.ti).
+Vaga: 01
+
+4. PARA TODOS OS CANDIDATOS
+4.1. Ter cumprido o interstício de 01 (um) ano caso esteja concorrendo para a mesma
+modalidade, salvo, se a vigência da bolsa anterior for inferior a 12 meses;
+4.2. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+4.3. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+4.4. Caso o candidato tenha recebido bolsa de pesquisa IPEA e seu relatório final tenha
+obtido avaliação péssima, ou caso esteja em situação de pendência na entrega de
+relatórios de atividades, este poderá, a critério do comitê julgador, ser desclassificado;
+4.5. Solicita-se aos candidatos e candidatas atualizarem e adaptarem seus
+currículos, ressaltando os pontos requeridos neste edital.
+
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. A solicitação deve ser apresentada, pelo candidato, mediante o cadastramento de
+seus dados no Sistema de Cadastro de Bolsista, disponível na página do IPEA
+www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando Currículo ou
+informar endereço lattes;
+5.2. Todo e qualquer documento anexado no Sistema de Cadastro de Bolsista fora do
+prazo de inscrição não será considerado;
+5.3. Para candidatos que já possuem o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 4.1. desta Chamada
+Pública.
+
+6. CRONOGRAMA
+
+EVENTOS                                                     DATAS
+Início do envio das candidaturas                            02 de março de 2023
+Data limite para submissão das candidaturas                 15 de março de 2023
+Divulgação dos resultados no Diário Oficial da União e na A partir de 20 de março
+página do IPEA na internet                                  de 2023
+                                                            A partir de 24 de março
+Início das bolsas
+                                                            de 2023
+6.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+
+
+
+                                                                                        2
+6.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+7. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+8. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+8.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito a indenização
+ou reclamação de qualquer natureza.
+8.2. O IPEA poderá cancelar a presente chamada pública caso o Comitê julgador não
+se pronuncie no prazo de 30 dias a contar da entrega das propostas para análise.
+
+9. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+9.1. A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+9.2. Decairá do direito de impugnar os termos da presente chamada o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceito sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+9.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+10. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+
+                                                        Brasília, 1º de março de 2023.
+
+
+
+                         Marinésia Lemos Souto
+  Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa -
+                                 CGCAP
+
+
+
+
+                                                                                     3
+                                  REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+ O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+O candidato deverá atender aos requisitos constantes do item 3 da Chamada Pública,
+o qual será avaliado pelo comitê julgador mediante análise curricular e entrevista
+(quando for o caso).
+
+4. MODALIDADES E VALORES DAS BOLSAS
+Quantidade Modalidade                             Valor em R$/Mês
+     01     Assistente de Pesquisa I - Graduado            1.700,00
+     01     Assistente de Pesquisa II (Mestrando)          2.400,00
+
+4.1. O candidato vinculado a Instituição Pública, deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa
+se exercer cargo de Pesquisador, professor Universitário ou equivalentes.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto (quando
+for o caso) nas seguintes notas:
+NOTA: (0) Insuficiente; (1 – 4) Fraco; (5 – 6) Regular; (7 – 8) Bom – (9-10) Excelente
+PESO NOTA: (1 a 5)
+
+ 3.1. Candidato 1 – Assistente de Pesquisa I - Graduado
+ITEM CRITÉRIO DE AVALIAÇÃO                                         PESO
+       Conhecimentos intermediários em análise estatística com a
+   A linguagem R / R Studio e visualização de dados com o pacote R   4
+       Shiny;
+
+
+                                                                                    4
+    Conhecimentos básicos em Python e SQL para estruturação e
+  B                                                                            2
+    manipulação de bases de dados do Governo Federal Brasileiro;
+    Experiência obrigatória em bases de dados do Sistema Único de
+  C                                                                            4
+    Saúde do Brasil;
+    Conhecimentos intermediários em comunicação/redação científica e
+    pesquisa. Publicações próprias em periódicos científicos ou de policy
+  D                                                                            3
+    na temática de cooperação para o desenvolvimento serão
+    considerados uma vantagem;
+    Domínio pleno da língua portuguesa e da língua inglesa.
+  E Conhecimentos em uma terceira língua oficial das Nações Unidas             2
+    serão considerados uma vantagem;
+  F Entrevista                                                                 3
+
+
+3.2. Candidato 2 – Assistente de Pesquisa II - Mestrando
+ITEM CRITÉRIO DE AVALIAÇÃO                                                  PESO
+        Conhecimentos intermediários em comunicação/redação científica
+A       e pesquisa. Participação em programa de iniciação científica será 4
+        considerada uma vantagem
+        Experiência em manipulação, gestão e análise de pequenas
+        bases de dados para pesquisas exploratórias. Publicações
+B                                                                           4
+        próprias em periódicos científicos ou de policy serão consideradas
+        uma vantagem
+        Experiência na utilização de bases internacionais de indexação e
+C       diretórios agregadores de periódicos (Scielo, Scopus, Web of        3
+        Science, DOAJ etc.)
+        Domínio pleno da língua portuguesa e da língua inglesa.
+D                                                                           2
+        Conhecimentos na língua espanhola são desejáveis
+        Conhecimentos básicos em análise estatística (Excel, SPSS, R,
+E       SAS, STATA, etc) ou análise de dados qualitativos (IRAMUTEQ 2
+        ou Nvivo ou Atlas.ti)
+F       Entrevista                                                          3
+5.1.1. A critério do Comitê Julgador poderão ser entrevistados 03 (três) candidatos por
+vaga que obtiverem o melhor desempenho nos itens de A a E;
+5.1.2. Poderá, a critério do comitê julgador, ser desclassificado o candidato que obtiver
+nota final inferior a 50% do total proposto na presente Chamada.
+5.1.3. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que
+emitirá nota de justificativa.
+
+6. RESULTADO DO JULGAMENTO
+A relação dos candidatos aprovados será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor recurso ao resultado do julgamento das
+propostas, poderá apresenta-lo, por meio do e-mail pnpd@ipea.gov.br , no prazo de 03
+(três) dias úteis, a contar do dia seguinte da data de publicação do resultado no Diário
+Oficial da União.
+
+
+                                                                                       5
+7.2. Os participantes, a contar da divulgação das notas no site do Ipea, terão 03 (três)
+dias úteis para interpor recursos contra as notas recebidas ou a classificação definida.
+7.3. O teor dos recursos serão publicados no site do Ipea para conhecimento dos
+demais participantes.
+7.4. Da data da publicação do recurso no site do Ipea, será concedido o prazo de 03
+(três) dias úteis para contrarrazões.
+7.5. O direito de contrarrazões é instrumento de defesa que visa refutar ou combater
+as razões do recurso encaminhado. Caso o interessado sinta-se prejudicado pelo
+pedido do recurso, cabe o envio das contrarrazões indicando o número da chamada e
+o nome do recorrente no caso de ter-se mais de um recurso para a mesma chamada,
+observando o prazo mencionado no item 7.4.
+7.6. O recurso e as contrarrazões deveram ser dirigidos ao Comitê Julgador que, após
+o exame, poderá julgar pelo deferimento. Caso o Comitê julgue pelo indeferimento, o
+recurso com as contrarrazões será encaminhado para deliberação final da Presidência
+do IPEA.
+
+8. DA CONCESSÃO DA BOLSA
+8.1. O (A) candidato(a) deverá manifestar interesse na concessão da bolsa, pelo e-mail
+pnpd@ipea.gov.br, no prazo de 05 (cinco) dias corridos após a publicação dos
+resultados, sob pena de não ter a bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade as Portarias IPEA
+Nº 491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+no item 2 da presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Cópia da Autorização da instituição de origem para atuação no projeto (para
+candidatos vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Cópia Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e assim sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providencias cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+
+
+
+                                                                                      6
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e as suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXO
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+
+
+
+                                                                                 7
+                              ANEXO I
+        TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+
+“Cooperação Brasileira para o Desenvolvimento Internacional: COBRADI 2021-
+2024”
+
+
+2. PROPÓSITO DO TRABALHO
+
+O objetivo geral do projeto é estimar os gastos anuais com a Cooperação Prestada
+Brasileira em suas diversas modalidades, com especial foco na contribuição do Brasil
+para Agenda 2030 e para o avanço das metas relacionadas aos Objetivos de
+Desenvolvimento Sustentável. Como Objetivos secundários, o projeto pretende: (1)
+consolidar a metodologia do COBRADI; (2) expandir a pesquisa entre os órgãos do
+governo federal Brasileiro; (3) operacionalizar a inclusão de entes subnacionais no
+levantamento de dados; (3) apoiar a construção e representação da visão brasileira no
+TOSSD/OCDE e demais metodologias de cooperação Sul-Sul no âmbito da
+UNCTAD/BAPA+40.
+
+Como parte da Cooperação Internacional para o Desenvolvimento do Brasil (CIDB), as
+atividades de Cooperação Prestada do Brasil são um termômetro tanto para o
+engajamento do Brasil na agenda internacional de desenvolvimento quanto para as
+relações com os países do Sul Global. Nesse sentido, a parceria entre IPEA e ABC
+materializada no projeto COBRADI é central para traduzir em números o gasto brasileiro
+com a Cooperação Prestada, aperfeiçoando a tomada de decisão sobre a CIDB.
+
+O COBRADI é baseado em uma metodologia exploratória, calcada na coleta direta de
+dados junto às unidades de análise em cada ciclo anual. O instrumento atual de coleta
+dados é a planilha excel-padronizada cuja estrutura representa a síntese entre o método
+COBRADI e o método TOSSD. Todavia, e a depender dos resultados de cada ciclo
+anual do COBRADI, aperfeiçoamentos nas estratégias de coleta e técnicas de análise
+de dados poderão ser implementadas (survey, entrevistas, cruzamentos com outras
+bases de dados públicas, etc). Os dados resultantes serão analisados para a elaboração
+do Relatório COBRADI Anual e para a elaboração de outras pesquisas de interesse do
+IPEA. Estima-se também a consolidação de métricas padronizadas que permitam a
+visualização interna/externa em ferramentas de BI no ciclo 2021-2024 do projeto.
+
+3.ATIVIDADES QUE OS BOLSISTAS IRÃO DESENVOLVER
+
+3.1. Candidato 1 – Assistente de Pesquisa I – Graduado
+     Manipular e gerir dados oriundos de bancos/bases de dados públicas, com forte
+       ênfase em dados do Sistema Único de Saúde e demais bases ligadas a políticas
+       sociais;
+     Elaborar regularmente análises descritivas ad-hoc para exploração de bases de
+       dados e cruzamentos entre variáveis de interesse constante em bases de dados
+       públicas;
+     Apoiar a elaboração de painéis internos de monitoramento de variáveis de
+       interesse para a Cooperação Brasileira para o Desenvolvimento Internacional
+       (COBRADI), utilizando o pacote RShiny;
+     Conduzir análises ad-hoc com técnicas de estatística inferencial;
+
+
+                                                                                     8
+    Apoiar a elaboração de apresentações (ex: Powerpoint, Canva, Miro, etc) e
+     elementos visuais (ex: infográficos) destinados a peças de comunicação e
+     divulgação regular da metodologia/resultados do COBRADI e da participação
+     brasileira no TOSSD;
+    Apoiar o processo regular de coleta de dados e relações com as instituições
+     participantes da pesquisa COBRADI.
+
+3.2. Candidato 2 – Assistente de Pesquisa II - Mestrando
+     Manipular e gerir dados oriundos de pesquisas exploratórias próprias ou
+       constantes em bancos/bases de dados públicas;
+     Elaborar regularmente análises descritivas de conjuntos de dados próprios ou
+       de terceiros;
+     Explorar bases de dados acadêmicas (ex: Scielo, Scopus, Web of Science,
+       DOAJ etc.) sobre temáticas prioritárias à Cooperação para o Desenvolvimento e
+       outras políticas públicas setoriais.
+
+4. RESULTADOS ESPERADOS
+Tendo em vista que a periodicidade de coleta de dados e produção do Relatório
+COBRADI passou a ser anual, toda a pesquisa COBRADI está construída em ciclos de
+até 12 meses. Cada ciclo para o projeto COBRADI 2021-2024 envolve a entrega de três
+produtos: (1) Evento de lançamento dos resultados preliminares do relatório COBRADI;
+(2) Relatório COBRADI final; (3) Base de dados COBRADI/TOSSD.
+
+3.1. Candidato 1 – Assistente de Pesquisa I - Graduado
+     Capítulos do Relatório COBRADI 2022;
+     Base de dados COBRADI 2022 e TOSSD 2022;
+     Relatório anual de atividades.
+
+3.2. Candidato 2 – Assistente de Pesquisa II - Mestrando (Remoto)
+     Capítulos do Relatório COBRADI 2022;
+     Base de dados COBRADI 2022 e TOSSD 2022;
+     Relatório anual de atividades.
+
+
+
+
+                                                                                  9
+

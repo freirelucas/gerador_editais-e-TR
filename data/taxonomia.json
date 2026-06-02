@@ -1,0 +1,17 @@
+{
+  "_nota": "Taxonomia-SEMENTE editável. Ajuste categorias/palavras-chave e rode `python scripts/classify.py` (não precisa re-baixar nem re-enriquecer). Casamento por substring, sem acentos, minúsculas, sobre objeto+projeto+papel+modalidades+requisitos+formação. Multi-rótulo.",
+  "FUNCAO": {
+    "Ciência de Dados – Engenharia": ["engenharia de dados", "engenheiro de dados", "pipeline", "etl", "banco de dados", "infraestrutura de dados", "mlops", "spark", "data warehouse", "big data", "web scraping", "raspagem"],
+    "Ciência de Dados – Analytics": ["ciencia de dados", "cientista de dados", "analise de dados", "machine learning", "aprendizado de maquina", "estatistic", "econometr", "modelagem", "visualizacao de dados", "microdados", "ciencia de dados pleno", "ciencia de dados iniciante", "ciencia de dados junior", "ciencia de dados senior"],
+    "Pesquisa aplicada": ["assistente de pesquisa", "doutor bolsista", "auxiliar de pesquisa", "incentivo a pesquisa", "avaliacao de politicas", "revisao de literatura", "pesquisador"],
+    "Especialista de domínio": ["especialista", "consultor", "profissional senior", "mestre na area", "especializacao em", "notorio saber", "doutor na area"]
+  },
+  "TEMA": {
+    "Macroeconomia e Fiscal": ["macroeconom", "fiscal", "tributa", "monetaria", "inflacao", "juros", "pib", "contas nacionais", "divida publica", "orcament"],
+    "Social, Trabalho e Renda": ["social", "pobreza", "desigualdade", "educacao", "saude", "assistencia", "trabalho", "emprego", "renda", "previdencia", "genero", "raca", "racial", "igualdade"],
+    "Internacional e Comércio": ["internacional", "comercio", "exportacao", "importacao", "geopolit", "relacoes exteriores", "cadeias globais", "cooperacao", "estrangeir"],
+    "Regional, Urbano e Ambiental": ["regional", "urban", "cidade", "territor", "habitacao", "mobilidade", "ambiental", "clima", "sustentab", "saneamento", "infraestrutura"],
+    "Estado, Instituições e Democracia": ["estado", "institui", "democ", "governanca", "gestao publica", "federa", "judicia", "regulac", "politicas publicas", "transparencia"],
+    "Inovação, CT&I e Setorial": ["inovacao", "tecnologia", "industrial", "produtividade", "ciencia e tecnologia", "setorial", "energia", "agro", "digital", "propriedade intelectual"]
+  }
+}

@@ -26,3 +26,6 @@ analytics/index.md
 # Python
 __pycache__/
 *.pyc
+
+# PDFs baixados (binários pesados; só o texto extraído é commitado em data/pdf_text/)
+data/raw/pdfs/

@@ -12,6 +12,7 @@ BIB = ROOT / "data" / "biblioteca_clausulas.json"
 PROGRAMAS = {"PIPA", "PROCIN", "PROMOB"}
 SITUACOES = {"ABERTA", "FECHADA"}
 ANOS = {"2023", "2024", "2025", "2026"}
+DIRETORIAS = {"DIMAC", "DISOC", "DIRUR", "DISET", "DINTE", "DIEST", "DIDES"}
 
 
 def main():
@@ -36,6 +37,25 @@ def main():
                     erros.append(f"corpus[{i}] {campo} não-ISO: {v!r}")
         if not isinstance(r.get("pdf_urls"), list):
             erros.append(f"corpus[{i}] pdf_urls não é lista")
+        # campos enriquecidos: OPCIONAIS — valida só a forma quando presentes,
+        # nunca exige (gate passa com ou sem enriquecimento).
+        for campo in ("modalidades_extraidas", "formacao", "requisitos", "atividades",
+                      "valores_brl", "categoria_funcao", "categoria_tema"):
+            if campo in r and not isinstance(r[campo], list):
+                erros.append(f"corpus[{i}] {campo} deveria ser lista")
+        for campo in ("objeto", "papel", "modalidade_canonica"):
+            if r.get(campo) is not None and not isinstance(r[campo], str):
+                erros.append(f"corpus[{i}] {campo} deveria ser string")
+        if r.get("diretoria") is not None and r["diretoria"] not in DIRETORIAS:
+            erros.append(f"corpus[{i}] diretoria inválida: {r['diretoria']!r}")
+
+    tax = ROOT / "data" / "taxonomia.json"
+    if tax.exists():
+        try:
+            t = json.loads(tax.read_text(encoding="utf-8"))
+            assert isinstance(t, dict) and any(k in t for k in ("FUNCAO", "TEMA"))
+        except (json.JSONDecodeError, AssertionError) as ex:
+            erros.append(f"taxonomia.json inválida: {ex}")
 
     bib = json.loads(BIB.read_text(encoding="utf-8"))
     if not isinstance(bib, dict):

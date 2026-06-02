@@ -1,0 +1,888 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº 028/2025 - SELEÇÃO DE CANDIDATO PARA
+                     CONCESSÃO DE BOLSA
+
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA interessados(as) a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa de
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+ A presente Chamada tem por objetivo selecionar interessados para concessão de
+ bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no
+ Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto:
+ “Transformação Digital na Administração Pública Federal: Automação de
+ Tarefas e Business Intelligence”.
+
+
+ 2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 02 (duas) bolsas, com duração prevista de 12 (doze) meses podendo
+ser renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+3.1. Candidato 1 – Assistente de Pesquisa III (Mestre)
+3.1.1. Ter graduação completa em qualquer área de formação e título de Mestre em
+Administração, Administração Pública, Tecnologia da Informação, Transformação
+Digital, Ciência de Dados ou Ciência da Informação.
+3.1.1.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente.
+3.1.1.1.1. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos dos itens 3.1.1, da
+Chamada Pública e o item 8. DA CONCESSÃO DA BOLSA – Item 8.2 do
+Regulamento, com convocação do candidato classificado na posição subsequente.
+3.1.2. Apresentar proposta de pesquisa de no máximo 5 páginas sobre Transformação
+Digital na Administração Pública Federal voltada à Automação de Tarefas e uso
+de Business Intelligence. A não apresentação da proposta sujeitará ao candidato a sua
+exclusão da Chamada, mesmo que este possua experiência na área requerida;
+3.1.3. Comprovar no currículo publicações sobre os temas Transformação Digital,
+Automação de Tarefas ou Business Intelligence. A identificação dos temas indicados
+deve estar disponível no título da publicação;
+3.1.4. Desejável ter experiência em Automação de Tarefas;
+3.1.5. Desejável ter experiência em Business Intelligence;
+3.1.6. Desejável ter experiência em projetos de pesquisa;
+3.1.7. As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas
+o bolsista deverá ter disponibilidade para realização de atividades presencialmente no
+
+
+
+                                                                                        1
+Ipea Brasília, sempre que solicitado pelo coordenador do projeto, com recursos próprios
+do bolsista.
+Vaga: 01 (uma)
+
+3.2. Candidato 2 – Bolsa de Incentivo à Pesquisa I (Graduado)
+3.2.1. Ter graduação completa em uma das seguintes áreas: Administração,
+Administração Pública, Tecnologia da Informação, Transformação Digital, Ciência de
+Dados ou Ciência da Informação.
+3.2.1.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente.
+3.2.1.1.1. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos dos itens 3.2.1, da
+Chamada Pública e o item 8. DA CONCESSÃO DA BOLSA – Item 8.2 do
+Regulamento, com convocação do candidato classificado na posição subsequente.
+3.2.2. Conhecimento em desenvolvimento de soluções de acesso, manipulação e
+disponibilização de dados;
+3.2.3. Desejável ter experiência em Automação de Tarefas;
+3.2.4. Desejável ter experiência em Business Intelligence;
+3.2.5. Desejável ter experiência em projetos de pesquisa;
+3.2.6. Desejável comprovar no currículo projetos de Transformação Digital, Automação
+de Tarefas ou Business Intelligence;
+3.2.7. As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas
+o bolsista deverá ter disponibilidade para realização de atividades presencialmente no
+Ipea Brasília, sempre que solicitado pelo coordenador do projeto, com recursos próprios
+do bolsista.
+Vaga: 01 (uma)
+
+4. PARA TODOS OS CANDIDATOS
+4.1. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+4.2. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+4.3. Caso o candidato tenha possuído bolsa de pesquisa IPEA e seu relatório final tenha
+obtido avaliação péssima, ou caso esteja em situação de pendência na entrega de
+relatórios de atividades, este poderá, a critério do comitê julgador, ser desclassificado;
+4.4. Solicita-se aos candidatos atualizarem e adaptarem seus currículos,
+ressaltando os pontos requeridos neste edital;
+4.5. A existência de algum tipo de inadimplência por parte do candidato selecionado
+junto à Administração Pública Federal, direta ou indireta, constituirá fator impeditivo para
+a concessão da bolsa pesquisa;
+4.6. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou
+artigos científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou
+tese defendida, coordenação e/ou participação em projetos de pesquisas, carteira de
+trabalho, entre outros.
+
+
+
+
+                                                                                          2
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. As inscrições deverão ser realizadas exclusivamente através SISTEMA DE
+CADASTRO DE BOLSA- https://bolsas.ipea.gov.br/bolsas, disponível na página do
+IPEA www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando:
+a) Currículo ou informando endereço lattes; e
+b) Proposta de execução do projeto. (somente para o candidato 3.1. Candidato 1 –
+Assistente de Pesquisa III (Mestre))
+Obs.: O candidato que não anexar o currículo e projeto será desclassificado
+automaticamente.
+5.2. O candidato que não tem cadastro deverá acessar o SISTEMA DE CADASTRO
+DE BOLSA - https://bolsas.ipea.gov.br/bolsas, opção “Ainda não sou cadastrado” e
+preencher os dados. A Senha deverá ser composta por letras, números e caracteres
+especiais, no intervalo de 8 a 10 caracteres.
+5.3. O candidato, ao concluir sua inscrição, receberá um e-mail de confirmação da
+inscrição, devendo, caso não o receba, entrar em contato através do e-mail
+pnpd@ipea.gov.br noticiando o ocorrido para esclarecimentos visando a conclusão da
+inscrição.
+5.4. O candidato que não concluir a inscrição será eliminado automaticamente.
+5.5. A inscrição será aceita única e exclusivamente através do SISTEMA DE
+CADASTRO DE BOLSA - https://bolsas.ipea.gov.br/bolsas.
+5.6. O preenchimento dos dados e conferência é de inteira responsabilidade do
+candidato. Havendo erro o Ipea não se responsabiliza.
+5.7. Após a conclusão do processo de inscrição e a obtenção do status "Inscrição
+Finalizada", não será possível realizar alterações nos dados informados pelo
+candidato, bem como excluir ou incluir documentos.
+5.8. Caso o candidato se inscreva para mais de uma modalidade de bolsa, dentro da
+mesma chamada pública, sendo exigido anexar projeto para cada solicitação de
+inscrição, este deverá incluir, sob pena de desclassificação, em cada uma delas arquivo
+com o projeto, mesmo quando o escopo ou tema for semelhante.
+5.9. Para candidato que já possui o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 4.1. desta Chamada
+Pública.
+5.10. Constatando-se projetos idênticos encaminhados por diferentes candidatos, todas
+as propostas envolvidas serão desclassificadas.
+5.11. Os projetos de pesquisas citados na letra “b” do item 5.1, não serão
+necessariamente desenvolvidos no âmbito desta Chamada Pública, e terão meramente
+o papel de objeto para a avaliação do candidato pelo Comitê Julgador.
+
+6. CRONOGRAMA
+                     EVENTOS                                      DATAS
+Início do envio das candidaturas                       28 de abril de 2025
+Data limite para submissão das candidaturas            13 de maio de 2025
+Previsão da divulgação do resultado no Diário Oficial A partir de 20 de maio de
+da União e na página do IPEA na internet              2025
+Previsão do início da bolsa                            A partir de 26 de maio de
+                                                       2025
+
+
+
+
+                                                                                     3
+6.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+6.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+7. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+8. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+8.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito à indenização
+ou reclamação de qualquer natureza.
+8.2. O IPEA poderá cancelar a presente chamada pública, caso o Comitê julgador não
+se pronuncie no prazo de 30 dias, a contar da entrega das propostas para análise.
+
+9. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+9.1. A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+9.2. Decairá do direito de impugnar os termos da presente Chamada, o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceitado sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+9.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+10. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+                                                          Brasília, 25 de abril de 2025.
+
+                          Marinésia Lemos Souto
+   Coordenador-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa –
+                                  CGCAP
+
+
+
+
+                                                                                      4
+                                REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+Chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+Os candidatos deverão atender aos requisitos constantes do item 3 da Chamada
+Pública, os quais serão avaliados pelo comitê julgador mediante análise curricular,
+entrevista e proposta de projeto (dentro do escopo da pesquisa), conforme modelo
+previsto no Anexo II da presente Chamada, que detalhe a metodologia a ser empregada
+e as atividades a serem realizadas.
+    1) O projeto deverá constar os seguintes itens:
+1.1)    Contextualização da proposta quanto à inserção das EMENTAS DOS
+        OBJETIVOS ESTRATÉGICOS do IPEA;
+1.2)    Objetivo geral;
+1.3)    Objetivos específicos;
+1.4)    Justificativa;
+1.5)    Referencial teórico;
+1.6)    Metodologia proposta;
+1.7)    Atividade e cronogramas;
+1.8)    Resultados esperados;
+1.9)    Outras informações relevantes;
+1.10) Referências Bibliográficas.
+
+4. MODALIDADES E VALORES DAS BOLSAS
+                                                                  VALOR EM
+ QUANTIDADE                    MODALIDADE
+                                                                   R$/MÊS
+
+       01        Assistente de Pesquisa III (Mestre)                4.030,00
+
+
+       01        Bolsa de Incentivo a Pesquisa I (Graduado)         4.030,00
+
+4.1. O candidato vinculado a instituição pública deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+
+
+
+                                                                                  5
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa
+se exercer cargo de pesquisador, professor universitário ou equivalentes.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto.
+5.1. Poderão, a critério do comitê julgador, ser entrevistados 03 (três) candidatos por
+vaga com o melhor desempenho nos de itens de A a D.
+5.2. Poderá, a critério do comitê julgador, ser desclassificado o candidato que obtiver
+nota inferior a 50% do total proposto nos itens de A a E desta Chamada.
+5.3. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que emitirá
+nota de justificativa.
+
+3.1. Candidato 1 – Assistente de Pesquisa III (Mestre)
+ ITEM                   CRITÉRIO DE AVALIAÇÃO                               PESO
+ A      Análise curricular: experiência em Automação de Tarefas          2,0
+
+ B      Análise curricular: experiência em Business Intelligence         2,0
+
+        Análise curricular: publicações sobre Transformação Digital,
+ C                                                                   2,0
+        Automação de Tarefas ou Business Intelligence
+
+ D      Análise do projeto de pesquisa entregue pelo candidato           3,0
+
+ E      Entrevista                                                       1,0
+
+
+3.2. Candidato 2 - Bolsa de Incentivo à Pesquisa I (Graduado)
+ ITEM                    CRITÉRIO DE AVALIAÇÃO                              PESO
+ A      Análise curricular: experiência em Automação de Tarefas          2,0
+
+ B      Análise curricular: experiência em Business Intelligence         2,0
+
+        Análise curricular: projetos de Transformação Digital,
+ C                                                             3,0
+        Automação de Tarefas ou Business Intelligence
+
+        Formação complementar na área de gestão pública, gestão de
+ D                                                                 2,0
+        processos ou administração
+
+ E      Entrevista                                                       1,0
+
+
+6. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+
+
+
+                                                                                     6
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor pedido de recurso ao resultado do julgamento,
+deverá apresentá-lo exclusivamente por meio do SISTEMA DE CADASTRO DE
+BOLSA - https://bolsas.ipea.gov.br/bolsas e as contrarrazões deverão ser enviadas
+através do e-mail pnpd@ipea.gov.br
+7.1.1. O pedido de recurso administrativo serve para revisar o resultado do julgamento
+por razões de legalidade e de mérito.
+7.1.2. O pedido de contrarrazões é uma espécie de recurso administrativo que visa
+refutar ou combater as razões de um pedido de recurso encaminhado por outro
+candidato.
+7.2. Caso o participante queira interpor recurso ao resultado do julgamento das
+propostas, deverá apresentá-lo, por meio SISTEMA DE CADASTRO DE BOLSA
+- https://bolsas.ipea.gov.br/bolsas no prazo de 03 (três) dias úteis, a contar do dia
+seguinte da data de publicação do resultado no Diário Oficial da União, para interpor
+pedidos de recursos administrativos contra as notas recebidas ou a classificação
+definida.
+7.3. Caso o participante sinta-se prejudicado pelo pedido de recurso de outro
+candidato, cabe o envio do pedido de contrarrazões através do e-mail
+pnpd@ipea.gov.br, indicando o número da chamada e o nome do recorrente no prazo
+de até 03 (três) dias úteis, a contar o dia seguinte da resposta no site do Ipea. O pedido
+de contrarrazões, todavia, só será avaliado se o pedido de recurso de outro candidato
+for deferido. Neste período, mediante solicitação também por e-mail, poderão ser
+enviados aos participantes os teores do pedido de reconsideração deferido.
+7.4. O pedido de recurso ou de contrarrazões deverá ser remetido ao Ipea em formato
+PDF, de petição, com pelo menos os seguintes campos:
+a) objeto do pedido
+b) exposição de motivos;
+c) embasamento normativo;
+d) pedido.
+7.5. No campo de texto do sistema, o candidato deverá informar a relação dos
+documentos apresentados, iniciada pelo próprio pedido.
+7.6. Será negado conhecimento ao pedido de recurso ou de contrarrazões que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos e não
+apresentar os documentos necessários por e-mail para contrarrazões;
+b) estiver fora das regras estabelecidas neste edital, dos procedimentos previstos na
+Lei 9.784, de 29 de janeiro de 1999 ou em outras instruções e normatizações;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de
+gênero, e/ou religioso, sendo o candidato eliminado do presente certame, podendo
+ainda o Ipea realizar comunicação às instituições competentes em caso de crime;
+d) lhe faltar pedido ou causa de pedir;
+e) o pedido for indeterminado;
+f) da narração dos fatos não decorrer logicamente a conclusão;
+g) contiver pedidos incompatíveis entre si.
+7.7. Os pedidos de recurso ou de contrarrazões, caso não sejam negados
+conhecimento pela Coordenação de Apoio à Pesquisa do Ipea, deverão ser dirigidos
+ao comitê julgador que, após exame, poderá julgar pela reconsideração de sua
+decisão, bem como confirmação, modificação, anulação ou revogação total ou parcial,
+nos termos da Lei 9.784, de 29 de janeiro de 1999. Caso o comitê julgue pelo
+
+
+
+
+                                                                                         7
+indeferimento da reconsideração, os pedidos de recurso e ou de contrarrazões serão
+encaminhados para deliberação final da Presidência do Ipea.
+
+8. DA CONCESSÃO DA BOLSA
+8.1. O candidato deverá manifestar interesse de assumir a bolsa, sob pena de não ter
+a bolsa implementada, receberá um link por e-mail, devendo estar logado no SISTEMA
+DE CADASTRO DE BOLSA para aparecer a página de aceite.
+8.2. A bolsa será concedida na duração prevista em conformidade às Portarias IPEA Nº
+491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+no item 2 da presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Autorização da instituição de origem para atuação no projeto (para candidatos
+vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e, assim, sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providências cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato, adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e às suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio do IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+
+
+
+                                                                                     8
+13. ANEXO
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+ANEXO II – MODELO DE PROPOSTA DE PROJETO
+ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+
+
+
+
+                                                               9
+                                       ANEXO I
+
+
+
+       TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+ "Transformação Digital na Administração Pública Federal: Automação de
+ Tarefas e Business Intelligence ”.
+
+
+2. PROPÓSITO DO TRABALHO
+
+A Transformação Digital pode ser compreendida como um processo organizacional
+contínuo e multifacetado, que ultrapassa a mera adoção de tecnologias digitais e implica
+alterações profundas nos modelos de negócios, estruturas organizacionais e processos
+internos (Plekhanov et al., 2023). Diferente das abordagens tradicionais de
+informatização, a Transformação Digital demanda a reconfiguração das fronteiras
+organizacionais, impactando as camadas centrais e periféricas das instituições. No
+contexto do setor público, isso se traduz na necessidade de repensar práticas de gestão
+e de integrar ferramentas digitais às atividades de retaguarda, tais como controle,
+planejamento e monitoramento institucional (de Borba et al. 2023).
+
+Para lidar com tal complexidade, a literatura propõe a adoção de estratégias de
+Transformação Digital estruturadas em quatro dimensões fundamentais: uso de
+tecnologias, mudanças na geração de valor, alterações estruturais e aspectos
+financeiros (Matt et al. 2015). Essas dimensões devem ser articuladas de forma
+coordenada a fim de assegurar que a integração tecnológica seja acompanhada de
+reconfigurações operacionais e culturais necessárias à geração de valor sustentável.
+Ebert e Duarte (2018) reforçam que a Transformação Digital envolve a introdução de
+tecnologias disruptivas e métodos ágeis que reconfiguram processos de maneira
+incremental ou radical, inclusive em atividades administrativas. Nesse sentido, o uso de
+soluções low-code para Automação de Tarefas e Business Intelligence (BI) representa
+uma resposta concreta à necessidade de promover ganhos de eficiência operacional,
+integridade informacional e capacidade analítica no interior das organizações públicas,
+habilitando uma administração mais responsiva e orientada por dados.
+
+A proposta alinha-se à concepção de governo como plataforma, conforme delineada por
+O’Reilly (2010), segundo a qual o papel do Estado, no contexto da Transformação
+digital, deve transcender a mera prestação de serviços e assumir a função de articulador
+e facilitador de soluções inovadoras e colaborativas. Nessa perspectiva, o projeto
+objetiva impulsionar a Transformação Digital na Administração Pública Federal por meio
+da aplicação de soluções de Automação de Tarefas e ferramentas de BI baseadas em
+tecnologias acessíveis (low-code), com vistas à otimização de processos, ao aumento
+da eficiência institucional e ao aprimoramento da tomada de decisão. Tal abordagem
+está fundamentada nos princípios da simplicidade, da interoperabilidade, da
+transparência e da participação ativa de servidores, constituindo-se como estratégia
+
+
+                                                                                     10
+para tornar o governo mais responsivo, adaptativo e orientado por dados, em
+consonância com os preceitos de inovação aberta e arquitetura de participação
+característicos da chamada Government 2.0.
+A Automação de Tarefas na administração pública tem se consolidado como uma
+estratégia fundamental para enfrentar os desafios estruturais de ineficiência,
+morosidade e disfunções da burocracia. Segundo Vendramin (2012), a introdução
+automação permite a reconfiguração do modelo piramidal tradicional, otimizando a
+circulação de informações, promovendo maior agilidade nos fluxos decisórios e
+ampliando o poder de gestão em todos os níveis hierárquicos. Além de reduzir o tempo
+e o custo das atividades operacionais, a automação favorece a padronização dos
+processos, aumenta a confiabilidade dos dados, assegura maior controle sobre as
+atividades e contribui para a superação de gargalos históricos da gestão pública,
+sobretudo em contextos críticos. Complementarmente, o uso de tecnologias como
+o Robotics Process Automation (RPA) tem se destacado por sua capacidade de simular
+ações humanas em ambientes digitais, com foco na execução de tarefas repetitivas,
+extensas e propensas a erros, típicas da realidade administrativa do setor público. A
+pesquisa de Silva (2024) demonstrou, no caso da Secretaria de Estado da Educação
+de Minas Gerais, ganhos expressivos em termos de eficiência, precisão e economia de
+recursos com a adoção do RPA, evidenciando uma produtividade de 4,84:1. Nesse
+contexto, a automação de processos não apenas promove ganhos operacionais, mas
+também fortalece o papel estratégico da tecnologia como catalisadora de inovação,
+desempenho institucional e melhor aplicação dos recursos públicos.
+
+A crescente complexidade da administração pública e a necessidade de respostas mais
+céleres, assertivas e baseadas em evidências vêm impulsionando o uso de tecnologias
+de BI como elemento estruturante da Transformação Digital no setor público. O BI, ao
+integrar e interpretar dados provenientes de diversas fontes institucionais, não apenas
+fortalece a capacidade analítica das organizações públicas, como também viabiliza a
+tomada de decisões estratégicas mais eficazes, promovendo racionalização de
+recursos, incremento da transparência e aumento da responsividade estatal. Nesse
+contexto, a literatura recente tem demonstrado o papel central do BI como instrumento
+de apoio à gestão pública. Oliveira e Araújo (2023), ao analisarem a experiência da
+Diretoria Regional de Saúde Norte de Belo Horizonte, evidenciam como a estruturação
+de um painel de informações estratégicas fundamentado em BI ampliou a integração
+entre planejamento e execução, aumentando a transparência interna e a efetividade da
+alocação de recursos. Bertuleza (2023) reforça essa perspectiva ao propor uma
+arquitetura de BI voltada para o controle de gastos com pessoal no estado do Rio
+Grande do Norte, demonstrando como a consolidação e visualização de dados em
+painéis interativos contribuem diretamente para a governança fiscal e a prestação de
+contas. Siqueira et al. (2023), por sua vez, ao realizarem uma revisão sistemática sobre
+BI em instituições públicas de ensino superior, identificam que as aplicações mais
+consolidadas se concentram em áreas como governança institucional e análise de
+aprendizagem, embora exista espaço para expansão em áreas menos exploradas,
+como logística e comunicação institucional.
+
+
+
+
+                                                                                     11
+Contudo, cabe ressaltar que a implementação da Transformação Digital na
+Administração Pública Federal deve ser concebida como um processo estruturado,
+gradual e fundamentado na modelagem e Automação de Tarefas. O método MAP,
+proposto por Galimberti et al. (2023), apresenta uma abordagem sistemática composta
+por 12 etapas que vão desde o planejamento da automação até a instalação dos
+processos em ambientes de produção. O modelo destaca a importância do
+mapeamento detalhado dos fluxos de trabalho na notação BPMN, da modelagem das
+bases de dados, da definição de regras de negócio e da construção de interfaces com
+usuários. Esse modelo, especialmente eficaz em organizações públicas de elevada
+complexidade como universidades, contribui para padronização, eficiência e
+institucionalização do conhecimento processual. Já o estudo de Zaoui e Souissi (2020)
+evidencia que o desenvolvimento de um roadmap de Transformação Digital requer,
+além de planejamento estratégico, a articulação de fases interdependentes que vão
+desde a avaliação da maturidade digital até a implementação e institucionalização das
+mudanças. Essas abordagens reforçam que a Transformação Digital bem-sucedida no
+setor público depende de três pilares fundamentais: avaliação diagnóstica, definição de
+estratégias e execução técnica — todos apoiados por práticas interoperáveis,
+metodologias robustas e tecnologias adaptativas.
+
+Diante deste cenário, o presente projeto propõe a investigar o tema sob a seguinte
+questão de pesquisa: "Como promover a Transformação Digital na Administração
+Pública Federal por meio da Automação de Tarefas e uso do Business
+Intelligence?". Para responder essa questão, o projeto tem como objetivo investigar
+soluções de Transformação Digital na Administração Pública Federal voltadas à
+implementação de soluções de BI e Automação de Tarefas no estilo low-code. A
+iniciativa visa aprimorar a eficiência, agilidade e controle dos processos internos,
+promovendo maior transparência, racionalização do trabalho e otimização da gestão de
+dados para embasar a tomada de decisão. Por meio de soluções tecnicamente
+acessíveis aos usuários comuns, o estudo visa fomentar a Automação de Tarefas e o
+uso de BI de forma simples, ágil, econômica e personalizável na Administração Pública
+Federal. O projeto de pesquisa será conduzido pela Coordenação-Geral de
+Planejamento, Gestão Estratégica e Orçamento (CGPGO) que, por força do regimento
+interno do Ipea, tem entre suas atribuições "coordenar ações de fortalecimento
+institucional, de modernização da estrutura organizacional e do regimento interno, de
+melhoria e automação de processos de trabalho e de adoção de sistemas de informação
+para a gestão" (Portaria normativa Ipea Nº 291/2024, Art. 21, VIII).
+METAS
+
+Meta 1 - Projeto de Pesquisa
+
+Etapa    Descrição
+
+1.1      Revisão da literatura
+
+1.2      Estudo preliminar da estrutura, processos e ferramentas disponíveis
+
+1.3      Proposição inicial com definição de método e escopo da pesquisa
+
+
+
+                                                                                    12
+1.4     Elaboração e entrega do projeto de pesquisa
+
+
+
+Meta 2 - Mapeamento e Diagnóstico
+
+Etapa   Descrição
+
+2.1     Mapeamento de tarefas passíveis de automação low-code
+
+2.2     Identificação de tarefas que se beneficiariam do uso de BI
+
+2.3     Estudo preliminar das ferramentas disponíveis e aplicáveis
+
+        Relatório com definição preliminar dos processos beneficiados, tanto pela
+2.4     automação das terafas quanto pela adoção de BI, além das ferramentas
+        aplicáveis
+
+
+
+Meta 3 – Benchmarking
+
+Etapa   Descrição
+
+3.1     Definição de órgãos públicos para estudo de benchmarking
+
+3.2     Descrição comparativa das melhores práticas em automação e BI
+
+3.3     Identificação de desafios, riscos e oportunidades
+
+        Relatório conclusivo acerca das melhores práticas de automação e BI e sua
+3.4
+        capacidade de generalização
+
+
+
+Meta 4 - Estratégia de Automação de Tarefas
+
+Etapa   Descrição
+
+4.1     Proposta de automação de tarefas
+
+        Plano de implantação com processos, tarefas, ferramentas, prazos, recursos
+4.2
+        e pontos de controle
+
+
+
+
+                                                                               13
+Meta 5 - Estratégia de Business Intelligence
+
+Etapa       Descrição
+
+5.1         Proposta de uso do BI para otimização de tarefas
+
+            Plano de implantação com processos, tarefas, ferramentas, prazos, recursos
+5.2
+            e pontos de controle
+
+
+
+Meta 6 – Implantação
+
+Etapa       Descrição
+
+6.1         Desenvolvimento de protótipos para testes
+
+6.2         Estudo dos benefícios identificados nos testes
+
+6.3         Implantação completa ao menos um setor
+
+6.4         Documentação para implantação em outros setores
+
+
+
+Meta 7 - Acompanhamento e Conclusão
+
+Etapa       Descrição
+
+7.1         Acompanhamento da implantação
+
+7.2         Ajustes no projeto
+
+7.3         Relatório de melhores práticas de Automação de Tarefas e BI
+
+7.4         Publicação do relatório com as melhores práticas
+
+
+
+3. ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER
+
+3.1. Candidato 1 – Assistente de Pesquisa III (Mestre)
+
+      ➢ Colaborar na discussão dos resultados;
+      ➢ Prestar suporte técnico à equipe do projeto;
+      ➢ Executar pesquisas de campo junto ao Ipea e demais órgãos da Administração
+        Pública Federal;
+      ➢ Realizar pesquisas qualitativas, quantitativas e documentais, incluindo coleta e
+        análise dos dados;
+      ➢ Limpar, tratar e analisar dados quantitativos e qualitativos;
+
+
+                                                                                     14
+   ➢   Redigir e apresentar relatórios das entregas previstas;
+   ➢   Realizar seminários para apresentação e discussão dos resultados;
+   ➢   Participar de reuniões sobre o projeto;
+   ➢   Informar à equipe sobre o andamento do projeto;
+   ➢   Documentar de forma clara e detalhada a metodologia proposta;
+   ➢   Produzir textos voltados a divulgações dos resultados da pesquisa;
+   ➢   Auxiliar na aplicação da metodologia.
+
+3.2. Candidato 2 – Bolsa de Incentivo à Pesquisa I (Graduado)
+
+   ➢   Colaborar na discussão dos resultados;
+   ➢   Prestar suporte técnico à equipe do projeto;
+   ➢   Auxiliar nas pesquisas de campo junto ao Ipea e demais órgãos da
+       Administração Pública Federal;
+   ➢   Desenvolver soluções de acesso, manipulação e disponibilização de dados;
+   ➢   Limpar, tratar e analisar dados quantitativos e qualitativos;
+   ➢   Desenvolver soluções de automação de tarefas no âmbito dos processos da
+       Administração Pública Federal;
+   ➢   Pesquisar, testar, sugerir, implementar e documentar ferramentas low-code que
+       auxiliem na automação de tarefas;
+   ➢   Preparar bases de dados, desenvolver painéis, desenhar leiautes e propor
+       soluções de Business Intelligence que auxiliem no desenvolvimento de tarefas
+       no âmbito dos processos da Administração Pública Federal;
+   ➢   Redigir e apresentar relatórios das entregas previstas;
+   ➢   Realizar seminários para apresentação e discussão dos resultados;
+   ➢   Participar de reuniões sobre o projeto;
+   ➢   Informar à equipe sobre o andamento do projeto;
+   ➢   Documentar de forma clara e detalhada a metodologia proposta;
+   ➢   Produzir textos voltados a divulgações dos resultados da pesquisa;
+   ➢   Auxiliar na aplicação da metodologia.
+
+4. RESULTADOS ESPERADOS
+
+Ao final do projeto, espera-se obter:
+
+   ➢   Redução do tempo de execução dos processos internos;
+   ➢   Melhora no acesso e qualidade da informação para tomada de decisão;
+   ➢   Redução de erros operacionais e retrabalho;
+   ➢   Metodologia de aplicação acessível aos usuários comuns;
+   ➢   Documentação da metodologia para implementação;
+   ➢   Relatório de melhores práticas em implantação de automação e BI na
+       Administração Pública Federal publicado no repositório do Ipea para consumo
+       pelos órgãos da Administração Pública Federal.
+
+
+
+
+                                                                                 15
+                              ANEXO II
+                   MODELO DE PROPOSTA DE PROJETO
+
+
+                                 MODELO DA CAPA
+             IPEA – Instituto de Pesquisa Econômica Aplicada
+       Programa de Pesquisa para o Desenvolvimento Nacional - PNPD
+
+
+
+
+                           PROPOSTA DE PROJETO
+
+
+
+
+Nome do Candidato:
+
+
+( ) 3.1 Candidato 1 – Assistente de Pesquisa III (Mestre)
+
+
+
+
+                     Chamada Pública PNPD nº _____/______
+
+
+
+
+                                                                     16
+                          ANEXO II – CONTINUAÇÃO
+
+               ROTEIRO PARA A ELABORAÇÃO DO PROJETO
+
+
+
+
+  1) O projeto deverá constar os seguintes itens:
+   1.1) Contextualização da proposta quanto à inserção das EMENTAS DOS
+         OBJETIVOS ESTRATÉGICOS do IPEA;
+   1.2) Objetivo geral;
+   1.3) Objetivos específicos;
+   1.4) Justificativa;
+   1.5) Referencial teórico;
+   1.6) Metodologia proposta;
+   1.7) Atividade e cronogramas;
+   1.8) Resultados esperados;
+   1.9) Outras informações relevantes;
+   1.10) Referências Bibliográficas.
+
+
+
+
+IMPORTANTE:
+
+  a) Tipo de arquivo: “doc” ou “pdf”.
+
+
+
+
+                                                                     17
+            ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+              OBJETIVOS ESTRATÉGICOS FINALÍSTICOS
+
+I - AVALIAR E PROPOR POLÍTICAS PÚBLICAS E PROGRAMAS ESSENCIAIS AO
+DESENVOLVIMENTO DO PAÍS
+1. Realizar pesquisa de excelência para apoiar as políticas públicas e programas
+essenciais ao desenvolvimento.
+2. Garantir a representação do IPEA em colegiados consultivos e deliberativos de
+políticas públicas para influenciar a construção da agenda institucional.
+3. Ampliar o assessoramento e a cooperação com os órgãos governamentais mais
+relevantes para influenciar a avaliação e formulação de políticas públicas e programas.
+4. Manter o quadro técnico do IPEA informado e atualizado sobre a agenda institucional
+de políticas públicas.
+5. Ampliar o acesso e uso de bases de dados necessárias à avaliação e à proposição
+de políticas públicas.
+
+II - FORMULAR ESTUDOS PROSPECTIVOS PARA ORIENTAR ESTRATÉGIAS DE
+DESENVOLVIMENTO DE MÉDIO E LONGO PRAZO
+1. Ofertar aos órgãos decisórios estudos prospectivos para antecipar impactos e
+identificar temas estratégicos para o desenvolvimento brasileiro.
+2. Ofertar aos órgãos decisórios estudos prospectivos setoriais e regionais que
+subsidiem o aprimoramento de políticas públicas e programas estratégicos.
+3. Propor e desenvolver pesquisas e metodologias relacionadas à prospecção.
+4. Assessorar instituições públicas na elaboração de estudos prospectivos.
+
+III - ASSESSORAR O ESTADO NA MELHORIA DA QUALIDADE DE SUAS
+DECISÕES
+1. Pesquisar e produzir diagnósticos sobre os principais problemas que impactam na
+agenda prioritária do Estado.
+2. Pesquisar e disseminar temas, propostas e métodos inovadores.
+3. Ampliar a prestação de serviços de assessoria ao Estado, de forma que resulte em
+respostas rápidas e consistentes para solução de problemas prioritários do
+desenvolvimento.
+4. Ter sistema atualizado com informações, estudos e indicação de pessoas e
+instituições relacionados às políticas e programas prioritários do Estado.
+5. Aumentar a capacidade de resposta do IPEA, por meio da mobilização de redes e
+maior produtividade no uso de bases de dados.
+
+IV - CONTRIBUIR PARA A QUALIFICAÇÃO DO DEBATE PÚBLICO QUANTO AOS
+RUMOS DO DESENVOLVIMENTO DO PAÍS E DA AÇÃO DO ESTADO
+1. Identificar, pesquisar e disseminar temas relevantes e emergentes na sociedade.
+2. Disponibilizar, em formatos adequados, as informações e conhecimentos produzidos
+pelo Ipea para atores da sociedade, incluindo locais e internacionais.
+3. Auscultar, articular e subsidiar os atores sociais relevantes para o desenvolvimento,
+por meio de redes e de diferentes canais de interação.
+
+
+
+
+                                                                                     18
+                OBJETIVOS ESTRATÉGICOS DE GESTÃO
+
+I - ASSEGURAR PRODUTIVIDADE COM QUALIDADE E QUANTITATIVO
+ADEQUADO DE SERVIDORES
+1. Desenvolver a qualificação dos servidores, particularmente em metodologias de
+avaliação, prospecção e competências gerenciais, alinhada ao Plano Estratégico.
+2. Estruturar e qualificar a gestão de pessoas com uma política de incentivo ao
+desempenho.
+3. Propiciar ambiente e condições de trabalho motivadores.
+4. Viabilizar a adequação permanente do perfil e do quantitativo de pessoal por meio de
+políticas de ingresso, alocação e retenção de talentos.
+5. Implantar política corporativa para relacionamento com pesquisadores externos,
+bolsistas e terceirizados, com foco na profissionalização das relações, monitoramento e
+fiscalização.
+
+II - GARANTIR CONFIABILIDADE, AGILIDADE E EFETIVIDADE AOS PROCESSOS
+E SISTEMAS DE GESTÃO
+1. Assegurar a gestão estratégica para garantir a atualização e o monitoramento do
+Plano Estratégico.
+2. Aprimorar a gestão por projetos com critérios claros para a alocação de recursos.
+3. Aprimorar e integrar os processos e os sistemas de gestão para assegurar
+transparência, agilidade e economicidade.
+4. Redesenhar os processos críticos, de modo a aumentar sua confiabilidade, eficiência
+e eficácia.
+
+III - FORTALECER E ARTICULAR A COMUNICAÇÃO INTERNA E EXTERNA
+1. Qualificar a comunicação interna, com o intuito de criar um ambiente cooperativo e
+de amplo acesso às informações de interesse do servidor.
+2. Assegurar transparência às decisões tomadas no âmbito da diretoria colegiada e de
+outras instâncias decisórias.
+3. Definir uma política institucional de relacionamento com o público externo,
+particularmente com a mídia.
+4. Divulgar os resultados de estudos e pesquisas em linguagem adequada aos
+diferentes atores nacionais e internacionais.
+5. Aprimorar canais e espaços de diálogo entre o IPEA e seus principais parceiros e
+públicos.
+
+IV - GARANTIR FOCO E SINERGIA AO PLANO DE TRABALHO
+1. Aprimorar o processo de elaboração do Plano de Trabalho, de modo a garantir a
+definição e o desdobramento dos projetos em conformidade com o Plano Estratégico.
+2. Promover e incentivar a construção coletiva de projetos entre diretorias e
+coordenações.
+3. Aprimorar política de celebração e operacionalização de acordos e convênios visando
+garantir seu alinhamento com o Plano Estratégico do IPEA.
+4. Aperfeiçoar e institucionalizar a gestão do conhecimento e da inovação.
+5. Criar espaços e instrumentos institucionais de acompanhamento e debate sobre a
+conjuntura nacional, com disseminação de seus resultados na Instituição.
+
+
+
+
+                                                                                    19
+

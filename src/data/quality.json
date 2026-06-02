@@ -14,6 +14,20 @@
       "clausulas": 3060
     }
   },
+  "enriquecimento": {
+    "total": 253,
+    "com_texto": 216,
+    "objeto": 166,
+    "papel": 176,
+    "modalidade_canonica": 34,
+    "formacao": 194,
+    "requisitos": 166,
+    "diretoria": 62,
+    "categoria_funcao": 183,
+    "categoria_tema": 206,
+    "pdf_404": 0,
+    "texto_curto": 37
+  },
   "biblioteca": {
     "top_categorias": [
       [

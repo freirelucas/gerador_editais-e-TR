@@ -1,0 +1,561 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº 059/2024 - SELEÇÃO DE CANDIDATO PARA
+                      CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA interessados(as) a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa de
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+ A presente Chamada tem por objetivo selecionar interessados para concessão de
+ bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no
+ Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto:
+ “IpeaData-Lab”.
+
+
+ 2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 04 (quatros) bolsas, com duração prevista de 12 (doze) meses
+podendo ser renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+3.1. Candidato 1 – Bolsa de Incentivo a Pesquisa (II)
+3.1.1. Possuir graduação completa e pós-graduação completa ou cursando em uma das
+seguintes áreas: Economia, Administração Pública, Ciências Sociais, Ciência Política
+ou Gestão de Políticas Públicas;
+3.1.2. Possuir conhecimentos avançados e experiência prática em processos de
+Avaliação Ex-Ante de Políticas Públicas, envolvendo a elaboração de modelo lógico;
+3.1.3. Ter experiência na definição e produção de indicadores para avaliação e
+monitoramento de Políticas Públicas.
+3.1.4. Experiência na elaboração de relatórios técnicos;
+3.1.5. Anexar, no momento da inscrição, documento com até 1000 (mil) palavras com
+uma proposta metodológica para a análise ex-ante da reformulação do "Programa Brasil
+Mais Produtivo", do Ministério do Desenvolvimento, Indústria, Comércio e Serviços
+(MDIC). A não apresentação do documento, sujeitará o candidato à sua exclusão da
+Chamada, mesmo que este possua experiência na área requerida;
+3.1.6. Conhecimento em língua inglesa.
+Vaga: 01 (uma)
+
+3.2. Candidato 2 – Bolsa de Incentivo a Pesquisa (II)
+3.2.1. Possuir graduação completa e pós-graduação completa ou cursando em uma das
+seguintes áreas: Estatística, Ciência de Dados, Ciência da Computação ou Engenharia;
+3.2.2. Possuir experiência com utilização e deploy de modelos de linguagem natural
+(LLMs).
+3.2.3. Habilidade em trabalhar com grandes volumes de dados (Big Data) e em técnicas
+de pré-processamento de texto, imagens e/ou áudio;
+3.2.4. Possuir conhecimentos avançados de programação em R ou Python;
+
+
+                                                                                  1
+3.2.5. Desejável ter conhecimentos em Ciência de Dados, incluindo desenvolvimento de
+soluções de acesso, manipulação e disponibilização de bancos de dados;
+3.2.6. Conhecimento em língua inglesa;
+3.2.7. Ter disponibilidade para executar as atividades inerentes ao projeto de pesquisa
+presencialmente no Ipea Brasília;
+3.2.8. Preferencialmente, ter experiência com plataformas GitHub ou GitLab para
+compartilhamento de programação e controle de versões;
+3.2.9. Indicar, no currículo, os repositórios (no GitHub, GitLab ou semelhantes) de até 3
+(três) projetos de LLM que o candidato considere mais relevantes em sua atuação
+profissional.
+Vaga: 01 (uma)
+
+3.3. Candidato 3 – Auxiliar de Pesquisa (Graduando)
+3.3.1. Estar regularmente matriculado no curso de graduação em umas das seguintes
+áreas: Economia, Ciência da Computação, Estatística ou Engenharia;
+3.3.2. Possuir conhecimentos intermediários de programação em R ou Python;
+3.3.3. Conhecimentos em Estatística; Econometria e Inferência Causal;
+3.3.4. Conhecimento em Ciência de Dados, incluindo desenvolvimento de soluções de
+acesso, manipulação e disponibilização de bancos de dados;
+3.3.5. Conhecimento em língua inglesa;
+3.3.6. Ter disponibilidade para executar as atividades inerentes ao projeto de pesquisa
+presencialmente no Ipea Brasília;
+3.3.7. Preferencialmente, ter experiência com plataformas GitHub ou GitLab para
+compartilhamento de programação e controle de versões;
+3.3.8. Anexar, no momento da inscrição, um ensaio (de 500 a 1000 palavras) sobre o
+tema “possíveis contribuições da inferência causal para o planejamento e avaliação de
+políticas públicas”. A não apresentação do ensaio sujeitará o candidato à sua exclusão
+da Chamada, mesmo que este possua experiência na área requerida.
+Vaga: 02 (duas)
+
+4. PARA TODOS OS CANDIDATOS
+4.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente;
+4.2. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos dos itens 3.1.1,
+3.2.1, 3.3.1, da Chamada Pública e o item 8. DA CONCESSÃO DA BOLSA – Item 8.2
+do Regulamento, com convocação do candidato classificado na posição subsequente;
+4.3. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+4.4. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+4.5. Caso o candidato tenha possuído bolsa de pesquisa IPEA e seu relatório final tenha
+obtido avaliação péssima, ou caso esteja em situação de pendência na entrega de
+relatórios de atividades, este poderá, a critério do comitê julgador, ser desclassificado;
+4.6. Solicita-se aos candidatos atualizarem e adaptarem seus currículos,
+ressaltando os pontos requeridos neste edital;
+4.7. A existência de algum tipo de inadimplência por parte do candidato selecionado
+junto à Administração Pública Federal, direta ou indireta, constituirá fator impeditivo para
+a concessão da bolsa pesquisa.
+
+
+                                                                                          2
+4.8. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou
+artigos científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou
+tese defendida, coordenação e/ou participação em projetos de pesquisas, carteira de
+trabalho, entre outros.
+
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. As inscrições deverão ser realizadas exclusivamente através SISTEMA DE
+CADASTRO DE BOLSA- https://bolsas.ipea.gov.br/bolsas, disponível na página do
+IPEA www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando:
+a) Currículo ou informando endereço lattes;
+b) Ensaio – Para os candidatos (3.1. Candidato 1 – Bolsa de Incentivo a Pesquisa (II)
+e 3.3. Candidatos 3 – Auxiliar de Pesquisa (graduando)).
+Obs.: O candidato que não anexar o currículo e o ensaio, será desclassificado
+automaticamente.
+5.2. O candidato que não tem cadastro deverá acessar o SISTEMA DE CADASTRO
+DE BOLSA - https://bolsas.ipea.gov.br/bolsas, opção “Ainda não sou cadastrado”
+e preencher os dados. A Senha deverá ser composta apenas por letras e números,
+no intervalo de 8 a 10 caracteres, não podendo conter caracteres especiais.
+5.3. O candidato, ao concluir sua inscrição, receberá um e-mail de confirmação da
+inscrição, devendo, caso não o receba, entrar em contato através do e-mail
+pnpd@ipea.gov.br noticiando o ocorrido para esclarecimentos visando a
+conclusão da inscrição.
+5.4. O candidato que não concluir a inscrição será eliminado automaticamente.
+5.5. A inscrição será aceita única e exclusivamente através do SISTEMA DE
+CADASTRO DE BOLSA - https://bolsas.ipea.gov.br/bolsas.
+5.6. Caso o candidato se inscreva para mais de uma modalidade de bolsa, dentro da
+mesma chamada pública, sendo exigido anexar projeto para cada solicitação de
+inscrição, este deverá incluir, sob pena de desclassificação, em cada uma delas arquivo
+com o projeto, mesmo quando o escopo ou tema for semelhante.
+5.7. Para candidato que já possui o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 5.1. desta Chamada
+Pública.
+5.8. Constatando-se projetos idênticos encaminhados por diferentes candidatos, todas
+as propostas envolvidas serão desclassificadas.
+5.9. Os projetos de pesquisas citados na letra “b” do item 5.1, não serão
+necessariamente desenvolvidos no âmbito desta Chamada Pública, e terão meramente
+o papel de objeto para a avaliação do candidato pelo Comitê Julgador.
+
+5. CRONOGRAMA
+                      EVENTOS                                        DATAS
+Início do envio das candidaturas                         22 de outubro de 2024
+Data limite para submissão das candidaturas              31 de outubro de 2024
+Previsão da divulgação do resultado no Diário Oficial A partir de 07 de novembro de
+da União e na página do IPEA na internet              2024
+Previsão do início da bolsa                              A partir de 13 de novembro de
+                                                         2024
+
+
+                                                                                         3
+5.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+5.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+6. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+7. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+7.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito à indenização
+ou reclamação de qualquer natureza.
+7.2. O IPEA poderá cancelar a presente chamada pública, caso o Comitê julgador não
+se pronuncie no prazo de 30 dias, a contar da entrega das propostas para análise.
+
+8. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+8.1. A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+8.2. Decairá do direito de impugnar os termos da presente Chamada, o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceito sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+8.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+9. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+                                                      Brasília, 21 de outubro de 2024.
+
+
+                        MARINÉSIA LEMOS SOUTO
+  Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa –
+                                 CGCAP
+
+
+
+
+                                                                                     4
+                                   REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+Chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+Os candidatos deverão atender aos requisitos constantes do item 3 da Chamada
+Pública, os quais serão avaliados pelo comitê julgador mediante análise curricular,
+ensaio e entrevista.
+
+4. MODALIDADES E VALORES DAS BOLSAS
+                                                                        VALOR EM
+ QUANTIDADE                       MODALIDADE
+                                                                         R$/MÊS
+
+       02          Auxiliar de Pesquisa (Graduando)                       1.225,00
+
+
+       02          Bolsa de Incentivo a Pesquisa (II)                     6.240,00
+
+4.1. O candidato vinculado a instituição pública deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa
+se exercer cargo de pesquisador, professor universitário ou equivalentes. Este
+candidato será enquadrado na modalidade de Pesquisador Visitante com o valor
+referente de R$ 4.940,00.
+4.3. O candidato selecionado que for servidor, empregado público e professor
+universitário inativo de instituições públicas, será enquadrado na modalidade
+Profissional Sênior com o valor referente de R$ 6.240,00 e deverá apresentar a devida
+comprovação.
+4.4. Caso a modalidade inicialmente prevista estiver fixada em valor inferior ao indicado,
+nos itens 4.2. e 4.3., prevalecerá a modalidade de menor valor.
+
+
+
+
+                                                                                        5
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto.
+5.1. Poderão, a critério do comitê julgador, ser entrevistados 03 (três) candidatos por
+vaga com o melhor desempenho nos de itens de A a C.
+5.2. Poderá, a critério do comitê julgador, ser desclassificado o candidato que obtiver
+nota inferior a 50% do total proposto nos itens de A a C desta Chamada.
+5.3. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que emitirá
+nota de justificativa.
+
+3.1. Candidato 1 – Bolsa de Incentivo a Pesquisa (II)
+ ITEM                   CRITÉRIO DE AVALIAÇÃO                                PESO
+        Currículo: conhecimentos e experiência do candidato em
+ A                                                             3
+        projetos de Avaliação Ex-ante de Políticas Públicas.
+
+        Qualidade da proposta metodológica para a análise ex-ante da
+ B                                                                     3
+        reformulação do "Programa Brasil Mais Produtivo" – item 3.1.5.
+
+        Currículo: Experiência em análise e produção de indicadores
+ C                                                                  2
+        para avaliação e acompanhamento de Políticas Públicas.
+
+ D      Entrevista                                                       2
+
+
+3.2. Candidato 2 – Bolsa de Incentivo a Pesquisa (II)
+ ITEM                   CRITÉRIO DE AVALIAÇÃO                                PESO
+        Currículo: experiência profissional em projetos envolvendo
+ A                                                                 3
+        modelos de linguagem natural (LLMs).
+
+        Currículo: experiência em Ciência de Dados, incluindo
+ B      desenvolvimento de soluções de acesso, manipulação e 2
+        disponibilização de bancos de dados.
+
+ C      Projetos de LLM indicados no currículo.                          3
+
+ D      Entrevista                                                       2
+
+
+
+3.3. Candidato 3 – Auxiliar de Pesquisa (Graduando)
+ ITEM                    CRITÉRIO DE AVALIAÇÃO                               PESO
+        Currículo: experiência profissional e/ou acadêmica em projetos
+ A                                                                     3
+        de Ciência de Dados, com programação em R ou Python.
+
+        Currículo: conhecimentos em Estatística; Econometria e
+ B      Inferência Causal; e participação de projetos de pesquisa ou 3
+        avaliação de políticas públicas.
+
+
+
+
+                                                                                     6
+        Qualidade do ensaio anexado no momento da inscrição da
+ C                                                             2
+        Chamada - item 3.3.8
+
+ D      Entrevista                                                           2
+
+
+6. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor pedido de recurso ao resultado do julgamento,
+deverá apresentá-lo exclusivamente por meio do SISTEMA DE CADASTRO DE
+BOLSA - https://bolsas.ipea.gov.br/bolsas e as contrarrazões deverão ser enviadas
+através do e-mail pnpd@ipea.gov.br
+7.1.1. O pedido de recurso administrativo serve para revisar o resultado do julgamento
+por razões de legalidade e de mérito.
+7.1.2. O pedido de contrarrazões é uma espécie de recurso administrativo que visa
+refutar ou combater as razões de um pedido de recurso encaminhado por outro
+candidato.
+7.2. Caso o participante queira interpor recurso ao resultado do julgamento das
+propostas, deverá apresentá-lo, por meio SISTEMA DE CADASTRO DE BOLSA
+- https://bolsas.ipea.gov.br/bolsas no prazo de 03 (três) dias úteis, a contar do dia
+seguinte da data de publicação do resultado no Diário Oficial da União, para interpor
+pedidos de recursos administrativos contra as notas recebidas ou a classificação
+definida.
+7.3. Caso o participante sinta-se prejudicado pelo pedido de recurso de outro
+candidato, cabe o envio do pedido de contrarrazões através do e-mail
+pnpd@ipea.gov.br, indicando o número da chamada e o nome do recorrente no prazo
+de até 03 (três) dias úteis, a contar o dia seguinte da resposta no site do Ipea. O pedido
+de contrarrazões, todavia, só será avaliado se o pedido de recurso de outro candidato
+for deferido. Neste período, mediante solicitação também por e-mail, poderão ser
+enviados aos participantes os teores do pedido de reconsideração deferido.
+7.4. O pedido de recurso ou de contrarrazões deverá ser remetido ao Ipea em forma
+de petição, em formato de PDF, com pelo menos os seguintes campos:
+a) objeto do pedido
+b) exposição de motivos;
+c) embasamento normativo;
+d) pedido.
+7.5. No campo de texto do sistema, o candidato deverá informar a relação dos
+documentos apresentados, iniciada pelo próprio pedido.
+7.6. Será negado conhecimento ao pedido de recurso ou de contrarrazões que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos e não
+apresentar os documentos necessários por e-mail para contrarrazões;
+b) estiver fora das regras estabelecidas neste edital, dos procedimentos previstos na
+Lei 9.784, de 29 de janeiro de 1999 ou em outras instruções e normatizações;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de
+gênero, e/ou religioso, sendo o candidato eliminado do presente certame, podendo
+ainda o Ipea realizar comunicação às instituições competentes em caso de crime;
+
+
+                                                                                         7
+d) lhe faltar pedido ou causa de pedir;
+e) o pedido for indeterminado;
+f) da narração dos fatos não decorrer logicamente a conclusão;
+g) contiver pedidos incompatíveis entre si.
+7.7. Os pedidos de recurso ou de contrarrazões, caso não sejam negados
+conhecimento pela Coordenação de Apoio à Pesquisa do Ipea, deverão ser dirigidos
+ao comitê julgador que, após exame, poderá julgar pela reconsideração de sua
+decisão, bem como confirmação, modificação, anulação ou revogação total ou parcial,
+nos termos da Lei 9.784, de 29 de janeiro de 1999. Caso o comitê julgue pelo
+indeferimento da reconsideração, os pedidos de recurso e ou de contrarrazões serão
+encaminhados para deliberação final da Presidência do Ipea.
+
+8. DA CONCESSÃO DA BOLSA
+8.1.O (A) candidato (a) deverá manifestar interesse de assumir a bolsa, pelo e-mail
+pnpd@ipea.gov.br, imediatamente após a publicação dos resultados, sob pena de não
+ter a bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade às Portarias IPEA Nº
+491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+na presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Autorização da instituição de origem para atuação no projeto (para candidatos
+vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e, assim, sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providências cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato, adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+
+
+
+                                                                                  8
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e às suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio do IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXO
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+
+
+
+                                                                                9
+                                      ANEXO I
+
+       TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+ " IpeaData-Lab”.
+
+
+2. PROPÓSITO DO TRABALHO
+ O Ipea tem a missão de aprimorar as políticas públicas essenciais ao
+ desenvolvimento brasileiro, por meio da produção e disseminação de conhecimento
+ e da assessoria ao Estado nas suas decisões estratégicas. Nesse contexto, a
+ Coordenação Geral de Ciência de Dados e Tecnologia (CGDTI) e o IpeaData-Lab
+ tem o papel de desenvolver e implementar soluções de ciências de dados para apoio
+ ao desenvolvimento de pesquisas, o planejamento, monitoramento e avaliação de
+ políticas públicas. Um dos temas importantes na agenda de trabalho do Ipea são os
+ programas de desenvolvimento, produtividade e fomento ao empreendedorismo, em
+ torno dos quais o Ipea vem historicamente desenvolvendo projetos em parceria com
+ o Ministério do Desenvolvimento, Indústria, Comércio e Serviços (MDIC).
+ Esta chamada pública visa selecionar bolsistas para atuar com os projetos de
+ assessoria ao MDIC. Devido às reformulações recentes de alguns dos programas e
+ ações da Secretaria de Desenvolvimento Industrial, Inovação, Comércio e Serviços -
+ SDIC/MDIC (como o programa Brasil Mais Produtivo e as políticas de apoio a startups
+ e à inovação aberta), faz-se necessária uma série de novos estudos e avaliações (ex-
+ ante, de implementação e de resultados) de cada uma dessas diferentes iniciativas.
+
+ A primeira vaga desta chamada pública será destinada exclusivamente ao apoio do
+ desenho e elaboração dos programas a serem reformulados (avaliação ex-ante),
+ envolvendo o desenvolvimento do marco lógico das políticas e a construção de
+ indicadores de monitoramento e avaliação. As demais vagas serão dedicadas ao
+ desenvolvimento de instrumentos de Ciência de Dados e Inteligência Artificial para a
+ avaliação da implementação e dos resultados dos programas.
+
+ Além de fazerem parte de recomendações do Tribunal de Contas da União no âmbito
+ do Referencial de Controle de Políticas Públicas (RC-PP), esses estudos e avaliações
+ da remodelagem dos programas fornecerão dados essenciais para a tomada de
+ decisões informadas por evidências, no sentido de fortalecer o aprendizado contínuo
+ no ciclo das políticas públicas. Dessa forma, ajudarão a assegurar a transparência,
+ eficiência e efetividade da atuação do Estado.
+
+3. ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER
+
+3.1. Candidato 1 - Bolsa de Incentivo a Pesquisa (II)
+
+      Pesquisar e revisar a literatura relevante para o projeto;
+      Ajudar a desenvolver a metodologia da Avaliação Ex-Ante da reformulação de
+       duas políticas públicas;
+      Participar de reuniões de equipe do projeto;
+      Coletar e analisar dados:
+      Auxiliar na elaboração de indicadores de monitoramento e avaliação;
+      Preparar relatórios técnicos e metodológicos;
+
+
+
+                                                                                   10
+      Apoiar a comunicação dos resultados do projeto por meio da produção de textos
+       informativos e apresentações.
+
+3.2. Candidato 2 - Bolsa de Incentivo a Pesquisa (II)
+
+      Desenvolver e implementar Modelos de Linguagem (LLMs).
+      Colaborar na criação de pipelines para coleta, limpeza e processamento de
+       grandes volumes de dados.
+      Criar scripts em R ou Python organizados e documentados para acesso,
+       manipulação e análise de dados e visualização de resultados;
+      Documentar scripts de análise e tratamento de dados no GitHub;
+      Realizar análise de dados usando métodos estatísticos e/ou de aprendizado de
+       máquina;
+      Auxiliar na redação de relatórios técnicos e artigos científicos;
+      Colaborar com a gestão e o monitoramento das atividades do projeto.
+
+3.3. Candidato 3 – Auxiliar de Pesquisa (Graduando)
+     Criar scripts em R ou Python organizados e documentados para acesso,
+       manipulação e análise de dados e visualização de resultados;
+     Documentar scripts de análise e tratamento de dados no GitHub;
+     Realizar análise de dados usando métodos estatísticos, econométricos
+       (inferência causal) e/ou de aprendizado de máquina;
+     Auxiliar na redação de relatórios técnicos e artigos científicos.
+     Colaborar com a gestão e o monitoramento das atividades do projeto
+
+
+4. RESULTADOS ESPERADOS
+
+3.1. Candidato 1 - Bolsa de Incentivo a Pesquisa (II)
+
+As contribuições do bolsista outros integrantes do projeto serão consolidados em
+relatórios parciais e finais nos quais constarão as etapas completas da Avaliação ex-
+ante de duas políticas públicas:
+
+    Diagnóstico do problema;
+    Caracterização da política: objetivos, ações, público-alvo e resultados
+     esperados;
+    Desenho da política e Teoria da Mudança;
+    Estratégia de construção de confiabilidade e credibilidade;
+    Estratégia de implementação;
+    Estratégias de monitoramento, de avaliação e de controle;
+    Análise de custo-benefício; e
+    Impacto orçamentário e financeiro.
+
+3.2. Candidato 2 - Bolsa de Incentivo a Pesquisa (II)
+
+    Implementação de modelos de linguagem ajustados para aplicações específicas
+     de análise de textos e áudios, como classificação, sumarização ou extração de
+     informações.
+    Criação de pipelines para análise de textos e áudios;
+
+
+
+
+                                                                                  11
+    Scripts em R ou Python organizados e documentados para acesso, manipulação
+     e análise de dados e visualização de resultados com memória de cálculo e
+     metodologia;
+    Relatórios técnicos e artigos científicos
+
+3.3. Candidato 3 – Auxiliar de Pesquisa (Graduando)
+
+    Scripts em R ou Python organizados e documentados para acesso, manipulação
+     e análise de dados e visualização de resultados com memória de cálculo e
+     metodologia;
+    Relatórios com análises de dados usando métodos estatísticos, econométricos
+     (inferência causal) e/ou de aprendizado de máquina;
+    Implementação de ferramentais de análise de dados.
+
+
+
+
+                                                                             12
+

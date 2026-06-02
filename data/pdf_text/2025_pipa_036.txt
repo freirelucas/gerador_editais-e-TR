@@ -1,0 +1,615 @@
+CHAMADA PÚBLICA - ESPECIALIZADA IPEA/PIPA - Nº 036/2025 - SELEÇÃO DE CANDIDATOS PARA
+                              CONCESSÃO DE BOLSA
+
+
+
+O Instituto de Pesquisa Econômica Aplicada – IPEA, fundação pública vinculada ao Ministério do
+Planejamento e Orçamento, divulga a presente chamada pública especializada e convida interessados a
+participar do processo seletivo para a concessão de bolsas de pesquisa, no âmbito do Programa de Incentivo
+à Pesquisa Aplicada - PIPA.
+
+
+1. OBJETO
+Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto:
+“Plano Nacional de Habitação 2023-2040”.
+
+2. QUANTIDADE E DURAÇÃO DA BOLSA
+ Serão concedidas 05 (cinco) bolsas com duração prevista de 07 (sete) meses, podendo ser renovada,
+conforme Portaria nº 317/2025.
+
+3. VAGAS
+3.1. As vagas estão distribuídas conforme o quadro a seguir:
+ Seleção       Modalidade       Valor da bolsa   Vagas imediatas       Cadastro Reserva
+                                                 AC ER M         PCD AC ER M PCD
+ 1             Assistente de    R$ 1.582,00      01 *        *   *     04 *       *     *
+               Pesquisa e
+               ciência de
+               dados iniciante
+ 2e3           Assistente de    R$ 2.785,00      02 *        *   *     08 *       *     *
+               Pesquisa e
+               Ciência de
+               Dados Júnior
+ 4e5           Doutor           R$ 6.760,00      02 *        *   *     08 *       *     *
+               Bolsista
+*Não haverá reserva de vagas para esse público na presente chamada, conforme os critérios estabelecidos
+na Portaria nº 317/2025.
+
+AC: Ampla concorrência.
+EC: Étnico-racial (pretos, pardos e indígenas).
+M: Mulheres.
+PCD: Pessoa com deficiência.
+3.2. As vagas para cadastro reserva permitem provimento adicional, conforme necessidade do IPEA.
+3.3. O cadastro reserva terá validade de 07 (sete) meses.
+
+4. REQUISITOS E DISPOSIÇÕES APLICAVEIS A TODOS OS CANDIDATOS
+
+4.1. Os requisitos aplicáveis aos candidatos estão descritos abaixo:
+
+    Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante – Estatística – Sistema de
+                                     Informações em Habitação
+ Requisitos  4.1.1. Estar regularmente matriculado no curso de graduação em Estatística, Matemática,
+             Engenharia, Ciências da Computação.
+             4.1.2. Conhecimento em programação de microdados, com utilização de pacotes
+             estatísticos e econométricos;
+             4.1.3. Conhecimento de software Power bi;
+             4.1.4. Ter disponibilidade para desenvolver as atividades de pesquisa no Ipea Rio de
+             Janeiro.
+    Seleção 2 - Assistente de pesquisa e Ciência de Dados Júnior – Estatística – Sistema de
+                                    Informações em Habitação
+Requisitos: 4.2.1. Possuir graduação completa em Estatística, Matemática, Engenharia, Ciências da
+            Computação.
+            4.2.2. Desejável pós-graduação completa ou cursando na área de Estatística, Economia,
+            Engenharia, Ciência da Computação;
+            4.2.3. Possuir conhecimento e experiência em análise espacial de indicadores
+            socioeconômicos;
+            4.2.4. Possuir conhecimento e experiência em tratamento, manipulação e atualização de
+            bases de dados dos Censos Demográficos, e registros administrativos;
+            4.2.5. Possuir conhecimento e experiência em programação de microdados, com utilização
+            de pacotes estatísticos e econométricos;
+            4.2.6. Conhecimentos avançados de programação e análise de dados em software R, ou
+            Stata;
+            4.2.7. Desejável conhecimento de software Power bi;
+            4.2.8. Desejável ter experiência em manipulação de dados do cadastro único de programas
+            sociais;
+            4.2.9. Ter disponibilidade para desenvolver as atividades de pesquisa no Ipea Rio de
+            Janeiro.
+
+   Seleção 3 - Assistente de Pesquisa e Ciência de Dados Júnior - Geografia – Habitação de
+                           Interesse social e áreas de risco ambiental
+Requisitos: 4.3.1. Possuir graduação completa em Geografia;
+            4.3.2. Conhecimento e experiência em análise espacial de dados sobre habitação,
+            especialmente em áreas de risco ambiental;
+            4.3.3. Conhecimento e experiência em tratamento, manipulação e atualização de bases de
+            dados dos Censos Demográficos, e registros administrativos;
+            4.3.4. Conhecimento e experiência avançados de softwares de geoprocessamento
+            aplicados a análises urbanas e regionais, e risco ambiental.
+
+  Seleção 4 - Doutor bolsista – Planejamento Urbano e Regional – Sistema de Informações em
+                                                habitação
+Requisitos:  4.4.1. Possuir título de doutor na área de Planejamento Urbano e Regional ou Planejamento
+             e Gestão do Território;
+             4.4.2. Conhecimentos na área de planejamento urbano e regional, políticas habitacionais,
+             análise de risco ambiental, favelas e comunidades urbanas, saneamento básico, tipologias
+             de municípios e metrópoles;
+             4.4.3. Amplos Conhecimentos e experiência em indicadores para avaliação de políticas
+             habitacionais;
+             4.4.4. Experiência em organização de banco de dados, e dados geo-referenciados sobre
+             habitação e risco ambiental;
+             4.4.5. Conhecimento e experiência em softwares estatísticos e uso de microdados, e
+             sistemas GIS - Informar no currículo, caso não seja informado a Comissão Julgadora
+             poderá eliminar o candidato mesmo que atenda aos demais requisitos.
+             4.4.6. Ter disponibilidade para desenvolver as atividades de pesquisa no Ipea Rio de
+             Janeiro.
+
+    Seleção 5 - Doutor bolsista – Demografia - Habitação de Interesse social e áreas de risco
+                                              ambiental
+Requisitos: 4.5.1. Possuir título de doutor em Engenharia Ambiental, Geografia ou Demografia;
+            4.5.2. Conhecimentos e experiência na área de planejamento urbano, políticas
+            habitacionais, habitação em áreas de risco ambiental;
+            4.5.3. Experiência em desenho, avaliação e gestão de políticas habitacionais;
+            4.5.4. Possuir extensa produção bibliográfica na área de habitação social (20 ou mais
+            artigos publicados em periódicos, e 10 ou mais livros publicados como autor/a ou
+            organizador/a) – Informar no currículo, caso não seja informado a Comissão
+            Julgadora poderá eliminar o candidato mesmo que atenda aos demais requisitos.
+4.6. Constituem disposições aplicáveis a todos os candidatos:
+4.6.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados em conformidade
+com a legislação vigente.
+4.6.2. A comprovação das experiências solicitadas dar-se-á por meio das atividades profissionais ou
+acadêmicas relatadas no currículo do candidato (informar link), tais como: textos ou artigos científicos
+publicados, autoria ou coautoria de capítulos de livros, dissertação ou tese defendida.
+4.6.3. Caso a proficiência em língua inglesa seja um requisito, serão aceitos como certificados:
+TOEFL/TOEFL iBT, EFSET, Cambridge, IELTS, TOEIC e Duolingo English Test, Michigan ou certificado
+emitido pelo Centro de Línguas Faculdade, Instituto ou departamento vinculado à universidade de origem
+do candidato. No caso de o candidato apresentar outros certificados de proficiência que não os enunciados
+nessa chamada, caberá à comissão julgadora decidir sobre sua aceitação.
+4.6.4. Os documentos serão analisados no momento da implementação da bolsa, podendo esta não ser
+implementada caso não cumpra os requisitos deste edital.
+4.6.5. Solicita-se aos candidatos atualizarem e adaptarem seus currículos, ressaltando os pontos requeridos
+neste edital.
+4.6.6. A existência de algum tipo de inadimplência por parte do candidato selecionado junto à Administração
+Pública Federal, direta ou indireta, constituirá fator impeditivo para a concessão da bolsa pesquisa.
+4.6.7. O candidato selecionado poderá acumular a bolsa do IPEA com os vencimentos provenientes do
+exercício de cargo de professor, pesquisador universitário ou de cargos públicos cujas atribuições incluam
+expressamente atividades de pesquisa científica, pesquisa aplicada às políticas públicas e ao
+desenvolvimento do país, de ciência de dado, de tecnologia da informação e de inovação.
+4.6.8. Na situação prevista no item 4.2.7., o IPEA pagará o montante correspondente a 60% (sessenta por
+cento) do valor da bolsa, segundo a modalidade para a qual o candidato foi selecionado.
+4.6.9. A acumulação da bolsa do IPEA com quaisquer outras bolsas, mesmo aquelas vinculadas à programa
+de pós-graduação, não será permitida.
+
+5. INFORMAÇÕES SOBRE O PROJETO
+Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir:
+
+ Propósito do trabalho:
+                               O presente projeto visa a realização de estudos, pesquisas e análises para
+                               subsidiar a elaboração e definição do Plano Nacional de Habitação
+                               (Planhab), para o período 2024-2040, de acordo com a Lei 11124/2005, que
+                               instituiu o Sistema Nacional de Habitação de Interesse Social.
+                               O direito à moradia no Brasil é garantido pela Constituição Federal, e pela
+                               adesão do Estado brasileiro à um conjunto de tratados internacionais
+                               atinentes ao tema. Na Constituição, o direito à moradia está inscrito no
+                               artigo 6º, no rol dos chamados direitos sociais. A Constituição também
+                               estabelece, em seu artigo 21º, item XX, como competência da União:
+                               “instituir diretrizes para o desenvolvimento urbano, inclusive habitação,
+                               saneamento básico e transportes urbanos”. E, como competência conjunta
+                               da União, dos Estados e do Distrito Federal, artigo 23º, item IX: “promover
+                               programas de construção de moradias e a melhoria das condições
+                               habitacionais e de saneamento básico”.
+                               No âmbito do sistema das Nações Unidas, o país é signatário de um
+                               conjunto de tratados internacionais que garantem o direito à moradia
+                               adequada, e especificam os critérios básicos para a sua realização. Entre
+                               eles, o Pacto Internacional sobre os Direitos Econômicos, Sociais e
+                               Culturais (PINDESC), em seu artigo 11º, garante o direito à moradia
+                               adequada, definida como aquela que promove, simultaneamente: a
+                               segurança da posse; a disponibilidade de serviços, infraestrutura e
+                               equipamentos públicos; o custo acessível; as condições de habitabilidade;
+                               a não discriminação e priorização de grupos vulneráveis; a localização
+                               adequada e a adequação cultural (comentário geral número 4).
+                               De acordo com a Lei 11.124/2005, é atribuição do Ministério das Cidades
+                               a “elaboração e definição do Plano Nacional de Habitação de Interesse
+                               Social”, como também “monitorar a implementação da Política Nacional de
+Habitação de Interesse Social”, e “instituir sistema de informações para
+subsidiar a formulação, implementação, acompanhamento e controle das
+ações no âmbito do SNHIS”, entre outras atribuições.
+Em consonância com tais determinações, o governo federal lançou, em
+2009, o primeiro Plano Nacional de Habitação de Interesse Social, após o
+início da vigência do SNHIS, válido para o período 2009-2023. Tal plano,
+também conhecido como Planhab 2023, explicitou a diversidade e
+complexidade dos problemas habitacionais do país, e da governança das
+políticas a estes endereçadas, que envolvem amplo rol de agentes públicos
+e privados, nas três esferas de governo e diversas organizações da
+sociedade civil (Ministério das Cidades/SNH, 2010). Assim, o Planhab 2023
+se firmou como importante documento de diagnóstico dos problemas
+habitacionais, e de elaboração participativa de objetivos e estratégias para
+suas múltiplas dimensões.
+Ao longo do período 2021-2022, o Ministério de Desenvolvimento Regional
+(então responsável pelo Planhab) empreendeu esforços para a revisão do
+Planhab 2023 e elaboração do novo Planhab 2040. Neste contexto, foram
+realizadas consultas e estudos que compreenderam: i) processo
+participativo e colaborativo realizado junto à Comunidade PlanHab, através
+de webinários e oficinas, conformando uma “avaliação ex-ante e
+diagnóstico colaborativo”; estudos para a proposição de um “Eixo de
+sustentabilidade do PLANHAB”; estudos para “Avaliação ex post e
+elaboração de cenários demográficos e econômicos e metas”.
+Para a construção do novo Planhab (2024-2040), deverão ser elaborados
+diagnósticos dos principais problemas habitacionais do país, assim como
+definidas as estratégias para enfrentá-los, estabelecendo metas para
+avançar substancialmente no alcance da moradia adequada para a
+população que dela carece, visando a garantia dos direitos sociais no país.
+Não obstante, pretende-se contextualizar o Plano dentro dos cenários
+projetados para o mercado imobiliário dentro do período considerado.
+O processo de elaboração do Planhab 2040 deverá contar com os
+seguintes elementos principais:
+Os estudos já realizados para o Planhab 2040 (citados acima) deverão ser
+avaliados e, quando necessário, atualizados; e poderão servir como
+subsídios para a elaboração do plano.
+Deverão ser realizadas projeções e cenários quanto à disponibilidade de
+financiamento e subsídios, assim como da demanda habitacional futura, e
+da evolução dos componentes do déficit habitacional para o horizonte do
+Plano.
+Os componentes do déficit habitacional e de inadequação de domicílios
+(atuais e projetados) deverão ser tomados como indicadores principais
+para a definição dos problemas a serem enfrentados, e como parâmetros
+para os objetivos e metas do novo plano. Não obstante, outros indicadores
+deverão ser utilizados para mensurar os problemas habitacionais não
+compreendidos em tais estatísticas, tais como as áreas de risco, as favelas
+e comunidades urbanas, as áreas que concentram imóveis abandonados
+em centros urbanos, os municípios que enfrentam fortes correntes
+migratórias, entre outros.
+As diversas linhas programáticas para a habitação de interesse social no
+país, previstas na Lei 14620/2023, deverão ser associadas aos problemas
+habitacionais específicos aos quais são endereçadas. Entre estas
+modalidades, estão os programas já em andamento no Ministério das
+Cidades, como também outras, como a locação social, a produção de lotes
+urbanizados, o apoio financeiro a programas e ações habitacionais de
+interesse social desenvolvidos por Estados e Munícipios, entre outros
+programas que podem vir a ser implementados no horizonte de
+desenvolvimento do Planhab 2024-2040.
+Também farão parte do Planhab 2040 as linhas programáticas ou ações
+destinadas a capacitação dos agentes do SNHIS, assim como à cadeia
+produtiva da construção civil, sustentabilidade ambiental, entre outras.
+Serão definidos os “eixos estratégicos” do plano, e cada linha programática
+deverá explicitar as estratégias para sua implementação em cada eixo. Tais
+eixos poderão ser organizados nas seguintes dimensões, entre outras
+possíveis: financiamento e subsídios, arranjos institucionais (inclusive
+gestão pós-ocupação), cadeia produtiva da construção civil, política urbana
+e regional, sustentabilidade ambiental.
+Deverão ser lançadas as bases para a constituição de um sistema de
+informações sobre a habitação de interesse social no âmbito do SNHIS, tal
+como preconiza a Lei 11124/05. Desta forma, o novo plano deverá
+contribuir para a construção de instrumentos de monitoramento e avaliação
+da política habitacional.
+Os objetivos e metas do plano serão alinhados aos demais instrumentos
+de planejamento do governo federal, tais como a Lei Orçamentária Anual,
+os Planos Plurianuais, o novo Programa de Aceleração do Crescimento
+(PAC), entre outros.
+Serão estabelecidos mecanismos de participação social e consultas à
+Estados e Municípios, para a elaboração da política habitacional,
+monitoramento e avaliação do Planhab.
+Metodologia
+O Modelo Lógico IPEA tem sido adotado pelo Ministério do Planejamento
+no âmbito dos programas do PPA, desde 2007, pois serve ao propósito de
+organizar o desenho de programas ex-ante, visando a gestão e
+monitoramento, como também para construir os elementos necessários
+para a avaliação ex-post.
+Com efeito,
+“A metodologia proposta (modelo lógico Ipea) procura contribuir para o
+adequado desenho de um programa e que o mesmo possa ser gerenciado
+por resultados. Neste sentido, deve orientar a estratégia de execução do
+programa e a definição dos indicadores para o monitoramento e a
+avaliação. O processo de formulação do modelo lógico do programa deverá
+contribuir para garantir as seguintes condições: definição clara e plausível
+dos objetivos e resultados esperados do programa; identificação de
+indicadores relevantes de desempenho, que possam ser obtidos a um
+custo razoável; e comprometimento dos gestores do programa com o que
+está proposto no modelo lógico. Atendidas essas condições, o modelo
+lógico serve como um organizador para desenhar avaliação e medidas de
+desempenho, focalizando nos elementos constitutivos do programa e
+identificando quais questões devem ser colocadas para avaliação e quais
+medidas de desempenho são relevantes (Cassiolato e Gueresi, 2010).”
+Com efeito, o Modelo Lógico Ipea é uma forma “apresentar e compartilhar
+a compreensão das relações entre os recursos disponíveis para as ações
+programadas e as mudanças ou resultados que se espera alcançar” (op.
+cit.). No caso do Planhab, o modelo lógico pode ser adaptado para
+organizar o conjunto de linhas programáticas (ou programas) relacionadas
+à habitação de interesse social do Ministério das Cidades, e relacioná-los
+aos objetivos específicos ou as mudanças esperadas em cada problema
+identificado, assim como construir seus indicadores de desempenho. Assim
+pretende-se utilizar o Modelo Lógico em sua versão mais complexa, para
+organizar as estratégias de todos os programas do Planab de forma
+compreensiva, assim como mostrar suas inter-relações.
+
+
+METAS DA PESQUISA:
+ META 1 – ELABORAÇÃO DE PROJEÇÕES E CENÁRIOS PARA O
+ PLANHAB 2040
+
+ ETAPA DESCRIÇÃO
+
+          Avaliação das projeções e cenários já realizados e elaboração
+ 1.1      de nova metodologia
+        Atualização das projeções e cenários para o horizonte 2024-
+1.2     2040
+
+        Disponibilização à SNH das Planilhas de cálculo das projeções
+1.3     e cenários
+META 2 – CONSOLIDAÇÃO DE DIAGNÓSTICOS E DOCUMENTAÇÃO
+DOS PROGRAMAS EXISTENTES
+
+DESCRIÇÃO
+
+
+Síntese dos estudos e fóruns já realizados para revisão do
+Planhab, em seus 5 eixos temáticos
+
+Realização de Encontros Regionais: contextualização dos
+problemas habitacionais para cada região do país
+Elaboração de estudo sobre o estado atual dos programas de
+locação social, e pagamentos de ‘vouchers’ de “aluguél social”,
+por estados e municípios
+
+Coleta e organização da documentação das linhas programáticas
+do Ministério das Cidades e mapeamento das fontes de recursos
+Meta 3 - ELABORAÇÃO DAS ESTRATÉGIAS PARA AS LINHAS
+PROGRAMÁTICAS DO PLANHAB 2040
+
+DESCRIÇÃO
+
+
+Realização de Oficinas para Elaboração do Modelo Lógico do
+Plano Nacional de Habitação 2023-2040.
+
+Elaboração de texto técnico referencial de apoio, Parte 1:
+diagnóstico, linhas programáticas e estratégias do Planhab 2040
+
+
+Elaboração de indicadores do Modelo Lógico Planhab
+Elaboração de Texto Técnico Referencial de Apoio, parte II:
+Projeções, indicadores e Metas para o Planhab 2040
+
+META 4 – CONSTRUÇÃO DE BASES DE DADOS PARA O SISTEMA
+DE INFORMAÇÃO, MONITORAMENTO E AVALIAÇÃO
+
+DESCRIÇÃO
+
+
+Organização de banco de dados já disponíveis (Ministério das
+Cidades, Caixa, MDS, Fontes de finaciamento, IBGE, Bacen)
+Consolidação e revisão dos dados constantes no formulário
+PLHIS, mantidos pelo Ministério das Cidades
+
+Elaboração de proposta para o monitoramento dos programas
+habitacionais do governo federal inseridos no Planhab
+
+
+
+
+META 5 – VALIDAÇÃO E CONSOLIDAÇÃO DOS RESULTADOS
+                           DESCRIÇÃO
+
+
+                           Processo participativo online, alimentação da página web do
+                           Planhab, organização e gestão do TED:
+
+                           Consolidação do Texto Técnico Referencial de Apoio (partes 1 e
+                           2) e encaminhamento para publicação (livro) Planhab 2040
+
+Atividades a serem
+desenvolvidas pelos        Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante –
+pesquisadores bolsistas:   Estatística – Sistema de Informações em Habitação
+                           Seleção 2 - Assistente de pesquisa e Ciência de Dados Júnior –
+                           Estatística – Sistema de Informações em Habitação
+
+                            Apoiar na construção de bancos de dados e análise de dados, e
+                           elaboração de relatórios e dashboards em power bi de: programas sociais
+                           e habitacionais, déficit e demanda habitacional, favelas e comunidades
+                           urbanas, dados censitários e de registros administrativo, entre outros
+
+                           Seleção 3 - Assistente de Pesquisa e Ciência de Dados Júnior -
+                           Geografia – Habitação de Interesse social e áreas de risco ambiental
+
+                           Apoiar para a construção e análise de bases de dados geo-referenciadas
+                           de habitação em áreas de risco ambiental e programas sociais,
+                           habitacionais, déficit e demanda habitacional, favelas e comunidades
+                           urbanas, dados censitários e registros administrativos, entre outros
+
+                           Seleção 4 - Doutor bolsista – Planejamento Urbano e Regional –
+                           Sistema de Informações em habitação
+                            Apoiar para a coordenação da construção e análise de bases de dados
+                           quantitativos e geo-referenciados, e elaboração de relatórios e
+                           dashboards em power-bi, de programas sociais, habitacionais, déficit e
+                           demanda habitacional, favelas e comunidades urbanas, dados
+                           censitários e registros administrativos, entre outros
+
+                           Seleção 5 - Doutor bolsista – Demografia - Habitação de Interesse
+                           social e áreas de risco ambiental
+                           Apoiar para a elaboração de análise sobre habitação em áreas de risco
+                           ambiental, e apoiar a coordenação de construção e análise de bases de
+                           dados geo-referenciadas de habitação em áreas de risco ambiental
+
+Resultados esperados:
+                             ➢ Bancos de dados, dashboards e relatórios relacionados à habitação
+
+                             ➢    Bancos de dados georreferenciados e mapas relacionados à
+                                 habitação, e habitação em áreas de risco
+
+                             ➢    Relatórios síntese de dados relacionados à habitação, de
+                                 preferência com uso do software power bi
+
+                             ➢ Capítulo de livro para o Planhab 2040 sobre habitação em áreas de
+                               risco ambiental
+6. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+6.1. As inscrições deverão ser realizadas exclusivamente por meio do SISBOLSAS -
+https://bolsas.ipea.gov.br/bolsas, disponível na página do IPEA www.ipea.gov.br, mediante a seleção do
+projeto de interesse, anexando Currículo ou informando endereço lattes;
+O candidato que não anexar o currículo e projeto (quando houver), será desclassificado automaticamente.
+6.2. O candidato que não tem cadastro deverá acessar o SISBOLSAS - https://bolsas.ipea.gov.br/bolsas,
+opção “Ainda não sou cadastrado” e preencher os dados. A Senha a ser criada deverá ser composta por
+letras, números e caracteres especiais, no intervalo de 8 a 10 caracteres.
+6.3. O candidato, ao concluir sua inscrição, receberá um e-mail de confirmação da inscrição, devendo, caso
+não o receba, entrar em contato por meio do e-mail pipa@ipea.gov.br noticiando o ocorrido para
+esclarecimentos visando a conclusão da inscrição.
+6.4. O candidato que não concluir a inscrição será eliminado automaticamente.
+6.5. O preenchimento dos dados e conferência é de inteira responsabilidade do candidato. Não será
+responsabilidade do IPEA eventuais erros cometidos pelos candidatos na operação do SISBOLSAS.
+6.6. Após a conclusão do processo de inscrição e a obtenção do status "Inscrição Finalizada", não será
+possível realizar alterações nos dados informados pelo candidato, bem como excluir ou incluir
+documentos.
+6.6.1. Caso o candidato necessite modificar dados após a inscrição ter sido finalizada no SISBOLSAS, este
+deverá clicar no botão “excluir candidatura” e realizar uma nova inscrição, respeitando os prazos
+estabelecidos no edital.
+6.7. Caso o candidato se inscreva para mais de uma modalidade de bolsa, dentro da mesma chamada
+pública, sendo exigido anexar projeto para cada solicitação de inscrição, este deverá incluir, sob pena de
+desclassificação, em cada uma delas arquivo com o projeto, mesmo quando o escopo ou tema for
+semelhante.
+6.8. Para candidato que já possui o cadastro, será necessário acessar o SISBOLSAS, selecionar o projeto
+e anexar a documentação exigida nesta Chamada Pública.
+
+7. JULGAMENTO
+7.1. Para julgamento da Chamada Pública será criada Comissão Julgadora, composta de pelo menos 03
+(três) membros titulares e 01 (um) suplente.
+
+7.2. Constituem os critérios de julgamento aplicáveis as seleções abaixo:
+
+ Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante – Estatística – Sistema de
+ Informações em Habitação.
+
+ ITEM    CRITÉRIO DE JULGAMENTO                                                               PESO
+ A       Conhecimentos em programação de microdados                                           3
+ B       Conhecimentos em uso de softwares estatísticos                                       2
+ C       Conhecimento e experiência em produção de relatórios e dashboards                    3
+ D       Entrevista                                                                           2
+
+
+ Seleção 2 - Assistente de pesquisa e Ciência de Dados Júnior – Estatística – Sistema de
+ Informações em Habitação
+
+ ITEM    CRITÉRIO DE JULGAMENTO                                                               PESO
+ A       Conhecimento avançado em softwares estatísticos e uso de microdados                  3
+ B       Experiência em organização e banco de dados e produção de relatórios síntese         3
+         Conhecimento e experiência com dados sócio-econômicos, informações censitárias
+ C                                                                                            2
+         e registros administrativos
+ D       Entrevista                                                                           2
+ Seleção 3 - Assistente de Pesquisa e Ciência de Dados Júnior - Geografia – Habitação de Interesse
+ social e áreas de risco ambiental
+
+ ITEM    CRITÉRIO DE JULGAMENTO                                                                 PESO
+ A       Conhecimento em análise de dados censitários e de registros administrativos            2
+ B       Conhecimento e experiência em softwares de georreferenciamento e SIG                   3
+         Conhecimento e experiência em mapeamento de habitação em áreas de risco
+ C                                                                                              3
+         ambiental
+ D       Entrevista                                                                             2
+
+ Seleção 4 - Doutor bolsista – Planejamento Urbano e Regional – Sistema de Informações em
+ habitação
+
+ ITEM    CRITÉRIO DE JULGAMENTO                                                                 PESO
+ A       Conhecimento e experiência em indicadores para o planejamento urbano e regional        3
+         Conhecimento e experiência em softwares estatísticos e uso de microdados, e
+ B                                                                                              3
+         sistemas GIS (conforme item 4.4.5 dos requisitos)
+ C       Publicações na área                                                                    2
+ D       Entrevista                                                                             2
+
+ Seleção 5 - Doutor bolsista – Demografia - Habitação de Interesse social e áreas de risco ambiental
+
+ ITEM    CRITÉRIO DE JULGAMENTO                                                                 PESO
+         Conhecimento e experiência em demografia, planejamento urbano e política
+ A                                                                                              2
+         habitacional
+ B       Conhecimento e experiência em habitação em áreas de risco ambiental                    2
+ C       Publicações na área (conforme item 4.5.4 dos requisitos)                               4
+ D       Entrevista                                                                             2
+
+7.2.1. A critério da Comissão Julgadora poderão ser entrevistados os candidatos com melhores notas na
+combinação dos itens de A a C, sendo convocados para a entrevista a quantidade de candidatos que a
+Comissão julgar necessária para o preenchimento da vaga e do cadastro reserva.
+7.2.2. Poderá, a critério da Comissão Julgadora, ser desclassificado o candidato que obtiver nota inferior a
+50% do total proposto nos itens de A a D.
+7.2.3. Poderá a critério da Comissão Julgadora desclassificar o candidato que obtiver nota 0 (zero) em
+qualquer um dos critérios de julgamento.
+7.3. Não poderá participar da Comissão Julgadora, devendo ser substituído por suplente:
+a) cônjuge ou parente do avaliado, consanguíneo ou afim, em linha reta ou colateral, até o terceiro grau;
+b) orientador do avaliado nos últimos cinco anos;
+c) amigo íntimo ou inimigo do avaliado.
+7.4 – Em caso de empate entre candidatos, será utilizado como critério de desempate a idade informada no
+SISBOLSAS, dando-se preferência para o candidato com maior idade.
+
+8. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA, disponível na Internet
+no endereço www.ipea.gov.br e seu extrato publicado no Diário Oficial da União.
+
+9. RECURSOS ADMINISTRATIVOS
+9.1. Caso o candidato tenha interesse em interpor pedido de recurso ao resultado do julgamento, deverá
+apresentá-lo exclusivamente por meio do SISBOLSAS - https://bolsas.ipea.gov.br/bolsas no prazo de 03
+(três) dias úteis, a contar do dia seguinte da data de publicação do resultado no Diário Oficial da União.
+9.2. O pedido de recurso deverá ser remetido ao Ipea, pelo SISBOLSAS, em forma de petição em formato
+de PDF com pelo menos os seguintes campos:
+a) objeto do pedido;
+b) exposição de motivos;
+c) embasamento normativo;
+d) pedido.
+9.3. No campo de texto do sistema, o candidato deverá informar a relação dos documentos apresentados,
+iniciada pelo próprio pedido.
+9.4. Será negado conhecimento ao pedido de recurso que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos;
+b) estiver fora das regras estabelecidas nesta chamada, dos procedimentos previstos na Lei nº 9.784, de 29
+de janeiro de 1999 ou em outras leis, instruções e normatizações federais;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de gênero, e/ou religioso,
+sendo o candidato eliminado do presente certame, podendo ainda o Ipea realizar comunicação às
+instituições competentes em caso de crime.
+9.5. Os pedidos de recurso, caso atendam, aos requisitos desta chamada, serão dirigidos a Comissão
+Julgadora que, após exame, poderá julgar pela reconsideração de sua decisão, bem como confirmação,
+modificação, anulação ou revogação total ou parcial, nos termos da Lei nº 9.784, de 29 de janeiro de 1999.
+Caso a Comissão Julgadora julgue pelo indeferimento da reconsideração, os pedidos de recurso serão
+encaminhados para deliberação final pela Diretoria de Desenvolvimento Institucional - DIDES - do Ipea.
+
+10. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela diretoria responsável a qualquer momento, de acordo com
+seu interesse e conveniência, sem prejuízo de outras providências cabíveis, em decisão devidamente
+fundamentada, não implicando qualquer tipo de indenização e não cabendo qualquer tipo de recurso por
+parte do bolsista.
+
+11. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+ É de exclusiva responsabilidade de cada candidato adotar todas as providências que envolvam permissões
+e autorizações especiais de caráter ético ou legal, necessárias para a execução do projeto.
+
+12. AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à diretoria interessada, visando adequação ao Plano de
+Trabalho do IPEA e às suas metas institucionais.
+
+13. ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta chamada poderão ser obtidos por
+intermédio do endereço eletrônico pipa@ipea.gov.br ou através dos telefones (61) 2026-5219 e (61) 2026-
+5511, referenciando-se ao número da chamada e nome do projeto.
+
+14. ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+A qualquer tempo, a presente chamada poderá ser revogada ou anulada, no todo ou em parte, a critério do
+IPEA, sem que isso implique em direito à indenização ou reclamação de qualquer natureza.
+
+15. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+A chamada poderá ser impugnada, até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. O pedido de impugnação deverá apresentar exposição de motivos e embasamento
+normativo, e deverá ser enviado, por meio eletrônico, para o endereço pipa@ipea.gov.br.
+
+16. CLÁUSULA DE RESERVA
+ O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas na presente
+chamada.
+
+17. DISPOSIÇÕES GERAIS
+17.1. As informações geradas com a implementação das propostas selecionadas serão de domínio do IPEA,
+disponibilizadas em sua base de dados, com divulgação ao público.
+17.2. É dever do pesquisador bolsista apresentar relatórios semestrais e final sobre as atividades
+desenvolvidas durante o período de sua bolsa, devidamente avaliado pelo coordenador do projeto.
+17.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de pesquisa, apoiados pela
+presente chamada, deverão citar, obrigatoriamente, o apoio do IPEA.
+17.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser convocado o segundo
+colocado e, assim, sucessivamente, a fim de dar continuidade às atividades do projeto de pesquisa.
+17.5. A concessão da bolsa de pesquisa não configura vínculo empregatício, nem se caracteriza como
+contraprestação de serviço.
+
+18. ANEXOS
+18.1. Anexo I – Cronograma
+18.2. Anexo II – Concessão da Bolsa/Documentos para implementação da Bolsa
+
+                                                                             Brasília, 26 de junho de 2025.
+
+
+                                 MARINÉSIA LEMOS SOUTO
+        Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa – CGCAP
+                                                ANEXO I
+
+1. CRONOGRAMA
+O cronograma está disposto abaixo:
+
+ EVENTOS                                                                        DATAS
+ Início do envio das candidaturas                                               30 de junho de 2025
+ Data limite para submissão das candidaturas                                    09 de julho de 2025
+ Previsão da divulgação do resultado no Diário Oficial da União e na página do  A partir do dia 18 de
+ IPEA na internet                                                               julho de 2025
+ Previsão do início da bolsa                                                    A partir do dia 24 de
+                                                                                julho de 2025
+1.1. As inscrições devem ser enviadas ao IPEA até às 23h59min (vinte e três horas e cinquenta e nove
+minutos), horário de Brasília, na data limite para submissão das candidaturas.
+                                                ANEXO II
+
+
+1. CONCESSÃO DA BOLSA/DOCUMENTOS PARA IMPLEMENTAÇÃO DA BOLSA
+1.1. O candidato deverá manifestar interesse de assumir a bolsa, sob pena de não ter a bolsa implementada,
+receberá um link por e-mail, devendo estar logado no SISTEMA DE CADASTRO DE BOLSA para aparecer
+a página de aceite.
+1.2. A bolsa será concedida na duração prevista em conformidade com a Portaria 317 de 18 de abril de
+2025, mediante a apresentação, no prazo determinado por comunicação oficial do IPEA, dos seguintes
+documentos:
+a) formulário de solicitação de bolsa;
+b) termo de compromisso assinado em duas vias;
+c) autorização da instituição de origem para atuação no projeto (para candidatos vinculados a órgãos
+públicos - autenticada);
+d) cópia da carteira de identidade (autenticada);
+e) cópia CPF (autenticada);
+f) comprovante de residência (emitido nos últimos 90 dias);
+g) comprovante de escolaridade (autenticada);
+h) comprovante bancário de conta corrente.
+
