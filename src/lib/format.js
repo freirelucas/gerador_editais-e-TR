@@ -4,6 +4,14 @@
 export const BRL = (v) =>
   v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
+// Valor de bolsa conforme a moeda da modalidade (Anexo I da Portaria 317/2025).
+export const fmtValor = (valor, moeda) => {
+  if (moeda === "NONE") return "sem bolsa (serviço voluntário)";
+  if (moeda === "USD")
+    return valor.toLocaleString("pt-BR", { style: "currency", currency: "USD" }).replace("US$", "US$ ");
+  return BRL(valor);
+};
+
 // Número por extenso no feminino (até doze), usado para "uma bolsa", "dois meses" etc.
 export const extenso = (n) => {
   const u = [

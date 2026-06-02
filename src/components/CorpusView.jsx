@@ -27,7 +27,7 @@ export default function CorpusView() {
   );
 
   const selStyle = {
-    fontFamily: "'IBM Plex Mono',monospace",
+    fontFamily: "'Source Sans 3',sans-serif",
     fontSize: 12,
     padding: "7px 10px",
     background: C.paper,
@@ -64,7 +64,7 @@ export default function CorpusView() {
       </div>
       <div
         style={{
-          fontFamily: "'IBM Plex Mono',monospace",
+          fontFamily: "'Source Sans 3',sans-serif",
           fontSize: 11,
           color: C.muted,
           marginBottom: 12,
@@ -80,7 +80,7 @@ export default function CorpusView() {
             style={{
               border: `1px solid ${C.line}`,
               borderLeft: `3px solid ${(c.situacao || "").toUpperCase() === "ABERTA" ? C.cerrado : C.line}`,
-              background: "#faf7ef",
+              background: "#ffffff",
               padding: "13px 16px",
               borderRadius: 2,
               display: "flex",
@@ -93,7 +93,7 @@ export default function CorpusView() {
                 href={c.url}
                 target="_blank"
                 rel="noreferrer"
-                style={{ fontFamily: "Spectral,serif", fontSize: 16, fontWeight: 600, color: C.ink, textDecoration: "none" }}
+                style={{ fontFamily: "'Source Sans 3',sans-serif", fontSize: 16, fontWeight: 600, color: C.ink, textDecoration: "none" }}
               >
                 {c.titulo}
               </a>
@@ -103,11 +103,11 @@ export default function CorpusView() {
               </div>
             </div>
             {c.projeto && (
-              <div style={{ fontFamily: "Spectral,serif", fontStyle: "italic", fontSize: 14, color: C.ink }}>“{c.projeto}”</div>
+              <div style={{ fontFamily: "'Source Sans 3',sans-serif", fontStyle: "italic", fontSize: 14, color: C.ink }}>“{c.projeto}”</div>
             )}
             <div
               style={{
-                fontFamily: "'IBM Plex Mono',monospace",
+                fontFamily: "'Source Sans 3',sans-serif",
                 fontSize: 11,
                 color: C.muted,
                 display: "flex",
