@@ -55,7 +55,7 @@ export default function App() {
         <div style={{ display: "flex", gap: 0, marginBottom: 28, borderBottom: `1px solid ${C.line}` }}>
           {[
             ["builder", "Gerador"],
-            ["corpus", "Corpus de editais"],
+            ["corpus", "Explorador de projetos"],
             ["analytics", "Analytics dos dados"],
           ].map(([k, l]) => (
             <button key={k} onClick={() => setTab(k)} style={{

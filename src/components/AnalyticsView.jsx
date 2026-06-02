@@ -1,7 +1,7 @@
 import { C } from "../theme.js";
 import * as S from "../lib/stats.js";
 import quality from "../data/quality.json";
-import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
+import { COR_PROGRAMA, PALETA, MONO, SERIF } from "./charts/primitives.js";
 import Bars from "./charts/Bars.jsx";
 import StackedBars from "./charts/StackedBars.jsx";
 import Line from "./charts/Line.jsx";
@@ -49,12 +49,28 @@ export default function AnalyticsView() {
     { label: "Português", value: bib.idioma.pt, color: C.cerrado },
     { label: "Inglês", value: bib.idioma.en, color: C.terra },
   ];
+  const enr = quality.enriquecimento || {};
+  const coberturaData = [
+    { label: "com texto (PDF)", value: enr.com_texto },
+    { label: "objeto", value: enr.objeto },
+    { label: "papel/modalidade", value: enr.papel },
+    { label: "formação", value: enr.formacao },
+    { label: "requisitos", value: enr.requisitos },
+    { label: "diretoria", value: enr.diretoria },
+    { label: "função (classif.)", value: enr.categoria_funcao },
+    { label: "tema (classif.)", value: enr.categoria_tema },
+  ];
+  const coresFunc = Object.fromEntries(S.funcoesLabels.map((f, i) => [f, PALETA[i % PALETA.length]]));
+  const projNota = S.projParcial
+    ? ` 2026 é parcial (até ${S.refDate}); o projetado é pró-rata linear (real ÷ fração do ano decorrida ≈ ${Math.round(S.fracAnoCorr * 100)}%).`
+    : "";
 
   return (
     <div style={{ fontFamily: SERIF, color: C.ink }}>
       <p style={{ fontSize: 15, lineHeight: 1.6, color: C.muted, margin: "0 0 6px", maxWidth: 760 }}>
-        Análise do corpus de <b>{S.totalChamadas} chamadas</b> (2023–2026) e da biblioteca de cláusulas.
-        Os dados vêm de uma raspagem do portal IPEA — começamos pelo que <i>não</i> dá para afirmar.
+        Análise do corpus de <b>{S.totalChamadas} chamadas</b> (2023–2026), agora <b>enriquecido</b> com
+        campos extraídos dos PDFs dos editais (objeto, perfil, formação, diretoria, tema). Os dados vêm de
+        uma raspagem do portal IPEA — começamos pelo que <i>não</i> dá para afirmar.
       </p>
 
       {/* ---------- QUALIDADE PRIMEIRO ---------- */}
@@ -80,21 +96,58 @@ export default function AnalyticsView() {
               { label: "cláusulas (depois)", value: prov.biblioteca_depois.clausulas, color: C.cerrado },
             ]} />
         </Figura>
+        <Figura titulo="Cobertura do enriquecimento (extraído dos PDFs)" wide
+          insight={`De ${enr.total} chamadas, ${enr.com_texto} tiveram texto utilizável (${enr.texto_curto} eram PDFs curtos/escaneados, ${enr.pdf_404 || 0} indisponíveis). Tudo é máquina-extraído e imperfeito — a diretoria é o campo mais esparso e fica explícito quando ausente.`}>
+          <Bars data={coberturaData} horizontal color={C.cerrado} />
+        </Figura>
       </Secao>
 
       {/* ---------- TEMPO E PROGRAMAS ---------- */}
       <Secao titulo="Programas ao longo do tempo">
         <Figura titulo="Programa × ano — a virada estrutural" wide
-          insight="O achado mais forte: PROMOB domina 2023–2024 (90, 73) e some em 2026; PIPA só aparece em 2025 (37) e cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA (Anexo II) — por isso o gerador é, corretamente, PIPA-only.">
-          <StackedBars data={S.programaPorAno} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} />
+          insight={"PROMOB domina 2023–2024 (90, 73) e some em 2026; PIPA cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA — por isso o gerador é PIPA-only. A fatia hachurada de 2026 é o projetado." + projNota}>
+          <StackedBars data={S.programaPorAnoProj} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} projected />
         </Figura>
-        <Figura titulo="Chamadas por ano"
-          insight="Tendência de queda no nº de chamadas; 2026 é parcial (snapshot ~junho/2026).">
-          <Line data={S.porAno.map((a) => ({ label: a.ano, value: a.total }))} />
+        <Figura titulo="Chamadas por ano — real e projetado"
+          insight={"Tendência de queda no nº de chamadas." + (projNota || " 2026 é parcial.")}>
+          <Line data={S.porAnoProjetado.map((a) => ({ label: a.ano, value: a.total }))}
+            projected={S.porAnoProjetado.map((a) => a.projetado)} />
         </Figura>
         <Figura titulo="Participação por programa"
           insight="PROMOB responde por ~76% de todo o corpus.">
           <Donut data={dadosPrograma} />
+        </Figura>
+      </Secao>
+
+      {/* ---------- PERFIS SOLICITADOS ---------- */}
+      <Secao titulo="Perfis solicitados nas chamadas">
+        <Figura titulo="Função do perfil (classificação)"
+          insight="São perfis SOLICITADOS pelas chamadas — não há dados de contratação/resultado no acervo. Classificação por regras sobre objeto+requisitos (taxonomia editável em data/taxonomia.json).">
+          <Bars data={S.porFuncao} horizontal />
+        </Figura>
+        <Figura titulo="Função × ano"
+          insight="Como a composição de perfis pedidos evolve no tempo (multi-rótulo, então as séries podem somar mais que o total de chamadas).">
+          <StackedBars data={S.perfilPorAno} xKey="ano" keys={S.funcoesLabels} cores={coresFunc} />
+        </Figura>
+        <Figura titulo="Papel/modalidade pedido por seleção" wide
+          insight="Papel nomeado em cada seleção do edital — oficial (PIPA) e legado (PROMOB). Variantes de acento/caixa foram agrupadas; só os 8 nomes oficiais entram em modalidade_canonica.">
+          <Bars data={S.porPapel} horizontal />
+        </Figura>
+        <Figura titulo="Formação exigida"
+          insight="Titulação mínima citada nos requisitos (multi-rótulo).">
+          <Bars data={S.porFormacao} horizontal color={C.gold} />
+        </Figura>
+      </Secao>
+
+      {/* ---------- DIRETORIA & TEMAS ---------- */}
+      <Secao titulo="Diretoria & temas">
+        <Figura titulo="Chamadas por diretoria (substantiva)"
+          insight={`Diretoria de pesquisa identificada no texto em ${enr.diretoria}/${enr.total} chamadas — a DIDES (que aprova o programa) é excluída por aparecer em quase todas. As 'não identificadas' ficam explícitas, não imputadas.`}>
+          <Bars data={S.porDiretoria} horizontal />
+        </Figura>
+        <Figura titulo="Temas / domínios (classificação)"
+          insight="Domínio temático por regras sobre objeto+projeto+requisitos — complementa os 'temas' lexicais brutos da seção de conteúdo.">
+          <Bars data={S.porTema} horizontal color={C.gold} />
         </Figura>
       </Secao>
 

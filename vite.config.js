@@ -8,5 +8,7 @@ import react from "@vitejs/plugin-react";
 // base relativa é segura. Em dev, raiz.
 export default defineConfig(({ command }) => ({
   base: command === "build" ? "./" : "/",
+  // data do build como referência determinística p/ a projeção pró-rata de 2026
+  define: { __BUILD_DATE__: JSON.stringify(new Date().toISOString().slice(0, 10)) },
   plugins: [react()],
 }));
