@@ -1,0 +1,60 @@
+                                                                            Planilha de avaliação - Chamada Pública nº 021/2023 - “IpeaDATA-lab”.
+
+
+
+                                                                    3                           4                     2                     2
+                                                                    Item A                    Item B                Item C                Item D                Item E              Item F                       Observação              Class
+
+Nº                     Nome do Candidato                    Nota   Peso       Total    Nota   Peso Total     Nota   Peso Total     Nota   Peso Total     Nota   Peso Total   Nota   Peso Total   TOTAL
+
+                                                                                                                                                                                                        Candidato 1 – Auxiliar de
+ 71 Ana Clara Quaglia Silva Bartholomeu Fernandes              6        3         18    6,5         4   26    2           2   4       7         2   14              0    0              0    0       62 Pesquisa (Graduando            1º lugar
+                                                                                                                                                                                                        Candidato 1 – Auxiliar de
+ 73 David Luiz                                                 6        3         18      6         4   24    0           2   0       7         2   14             0     0              0    0       56 Pesquisa (Graduando            2º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+131 Peng Yaohao                                                8        3         24    8,5         4   34 4,5            2   9       9         2   18             0     0              0    0       85 Incentivo à Pesquisa II        1º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+129 Pedro Jorge Holanda Figueiredo Alves                     6,5        3       19,5    6,5         4   26    9           2   18      8         2   16              0    0              0    0     79,5 Incentivo à Pesquisa II        2º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+130 PEDRO MILREU CUNHA                                         7        3         21    6,5         4   26 4,5            2   9     7,5         2   15             0     0              0    0       71 Incentivo à Pesquisa II        3º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+ 95 Daniel Morais de Souza                                     6        3         18      7         4   28    3           2   6       9         2   18             0     0              0    0       70 Incentivo à Pesquisa II        4º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+145 Tiago Pinho da Silva                                     6,5        3       19,5      6         4   24 2,5            2   5       9         2   18              0    0              0    0     66,5 Incentivo à Pesquisa II        5º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+116 Leandro Marques da Silva                                   6        3         18    6,5         4   26    0           2   0       7         2   14              0    0              0    0       58 Incentivo à Pesquisa II        6º lugar
+                                                                                                                                                                                                        Candidato 2 – Bolsa de
+ 89 Bruno Benevit                                            6,5        3       19,5      6         4   24    1           2   2       6         2   12             0     0              0    0     57,5 Incentivo à Pesquisa II        7º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 20 Daniel Herszenhut Meirelles Santos                         7        3         21      8         4   32 10             2   20      8         2   16             0     0              0    0       89 Pesquisa (II)                  1º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 55 Peng Yaohao                                                8        3         24    8,5         4   34 4,5            2   9       9         2   18             0     0              0    0       85 Pesquisa (II)                  2º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 53 Pedro Jorge Holanda Figueiredo Alves                     6,5        3       19,5    6,5         4   26    9           2   18      8         2   16              0    0              0    0     79,5 Pesquisa (II)                  3º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 57 Rafael Miranda                                           7,5        3       22,5      7         4   28    3           2   6       9         2   18             0     0              0    0     74,5 Pesquisa (II)                  4º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 54 PEDRO MILREU CUNHA                                         7        3         21    6,5         4   26 4,5            2   9     7,5         2   15             0     0              0    0       71 Pesquisa (II)                  5º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 21 Daniel Morais de Souza                                     6        3         18      7         4   28    3           2   6       9         2   18             0     0              0    0       70 Pesquisa (II)                  6º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 66 Tiago Pinho da Silva                                     6,5        3       19,5      6         4   24 2,5            2   5       9         2   18              0    0              0    0     66,5 Pesquisa (II)                  7º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 44 Luiz Alexandre Moreira Barros                            5,5        3       16,5    6,5         4   26    1           2   2       8         2   16             0     0              0    0     60,5 Pesquisa (II)                  8º lugar
+                                                                                                                                                                                                        . Candidatos 3, 4, e 5 -
+                                                                                                                                                                                                        Bolsa de Incentivo à
+ 13 Bruno Benevit                                            6,5        3       19,5      6         4   24    1           2   2       6         2   12             0     0              0    0     57,5 Pesquisa (II)                  9º lugar
+ 17 Charles Araujo de Souza                                    5        3         15      7         4   28    0           2   0       7         2   14             0     0              0    0       57 . Candidatos 3, 4, e 5 - Bolsa de
+                                                                                                                                                                                                                                       10ºIncentivo
+                                                                                                                                                                                                                                            lugar à Pesquisa (II)
+
+            Comunicamos que são disponibilizadas no Site do IPEA, apenas as notas dos candidatos selecionados. Os demais candidatos podem ter acesso a sua avaliação individual mediante requerimento
+

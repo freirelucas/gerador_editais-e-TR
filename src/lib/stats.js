@@ -100,3 +100,96 @@ export const flagsCount = (() => {
 })();
 
 export const totalChamadas = N;
+
+// ===================== enriquecimento (extraído dos PDFs) =====================
+const semAcento = (s) => (s || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+// contagem multi-rótulo sobre um campo array (categoria_funcao, categoria_tema, ...)
+const contaLista = (campo) => {
+  const m = new Map();
+  for (const c of CORPUS) for (const v of c[campo] || []) m.set(v, (m.get(v) || 0) + 1);
+  return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+};
+
+export const porFuncao = contaLista("categoria_funcao");
+export const porTema = contaLista("categoria_tema");
+export const porFormacao = contaLista("formacao");
+
+// papel solicitado — agrupa variantes (acento/caixa) e exibe a forma mais comum
+export const porPapel = (() => {
+  const g = new Map();
+  for (const c of CORPUS) {
+    if (!c.papel) continue;
+    const k = semAcento(c.papel).replace(/\s+/g, " ").trim();
+    const e = g.get(k) || { total: 0, sur: new Map() };
+    e.total++;
+    e.sur.set(c.papel, (e.sur.get(c.papel) || 0) + 1);
+    g.set(k, e);
+  }
+  return [...g.values()]
+    .map((e) => ({ label: [...e.sur.entries()].sort((a, b) => b[1] - a[1])[0][0], value: e.total }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 14);
+})();
+
+// diretoria substantiva + bucket honesto de "não identificada"
+export const porDiretoria = (() => {
+  const m = new Map();
+  let sem = 0;
+  for (const c of CORPUS) c.diretoria ? m.set(c.diretoria, (m.get(c.diretoria) || 0) + 1) : sem++;
+  const arr = [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+  if (sem) arr.push({ label: "não identificada", value: sem, color: "#c9d4d7" });
+  return arr;
+})();
+
+// função × ano (StackedBars) — categorias de função realmente presentes
+export const funcoesLabels = porFuncao.map((f) => f.label);
+export const perfilPorAno = ANOS.map((ano) => {
+  const linha = { ano };
+  for (const f of funcoesLabels)
+    linha[f] = CORPUS.filter((c) => c.ano === ano && (c.categoria_funcao || []).includes(f)).length;
+  return linha;
+});
+
+// ===================== 2026 real (YTD) + projetado (pró-rata linear) =====================
+// "hoje" = data do build (snapshot determinístico); fallback p/ relógio em runtime/SSR.
+const HOJE = (() => {
+  try {
+    return new Date(typeof __BUILD_DATE__ !== "undefined" ? __BUILD_DATE__ : Date.now());
+  } catch {
+    return new Date();
+  }
+})();
+export const refDate = HOJE.toISOString().slice(0, 10);
+export const anoCorrente = String(HOJE.getFullYear());
+export function fracaoAno(hoje = HOJE) {
+  const ini = new Date(hoje.getFullYear(), 0, 1);
+  const fim = new Date(hoje.getFullYear() + 1, 0, 1);
+  return (hoje - ini) / (fim - ini);
+}
+export const fracAnoCorr = fracaoAno();
+const projeta = (realYTD) => (fracAnoCorr > 0 ? Math.round(realYTD / fracAnoCorr) : realYTD);
+export const projParcial = ANOS.includes(anoCorrente) && fracAnoCorr < 0.999;
+
+// série anual com projeção só no ano corrente parcial (incremento = projetado - total)
+export const porAnoProjetado = porAno.map((d) => ({
+  ano: d.ano,
+  total: d.total,
+  projetado: d.ano === anoCorrente && projParcial ? projeta(d.total) : null,
+}));
+export const programaPorAnoProj = programaPorAno.map((linha) => {
+  if (linha.ano !== anoCorrente || !projParcial) return { ...linha };
+  const out = { ...linha };
+  for (const p of PROGRAMAS) out[p + "_proj"] = Math.max(projeta(linha[p]) - linha[p], 0);
+  return out;
+});
+
+// ===================== cobertura do enriquecimento (captions honestas) =====================
+export const cobertura = {
+  comTexto: CORPUS.filter((c) => c.enriquecido).length,
+  objeto: CORPUS.filter((c) => c.objeto).length,
+  diretoria: CORPUS.filter((c) => c.diretoria).length,
+  funcao: CORPUS.filter((c) => (c.categoria_funcao || []).length).length,
+  tema: CORPUS.filter((c) => (c.categoria_tema || []).length).length,
+  papel: CORPUS.filter((c) => c.papel).length,
+};

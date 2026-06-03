@@ -13,11 +13,19 @@ Três abas:
   modalidades e valores atuais** (Anexo I). Os campos descritivos (projeto, perfil,
   atividades, critérios) oferecem **padrões de descrição** extraídos dos modelos antigos —
   úteis apenas fora do núcleo regulado. Copia ou baixa em `.txt`.
-- **Corpus de editais** — busca e filtros (ano, programa, situação) sobre 253 chamadas
-  raspadas do portal IPEA (2023–2026).
+- **Explorador de projetos** — busca e filtros (ano, programa, situação, **diretoria,
+  função, tema**) sobre 253 chamadas, com cartões **enriquecidos** (objeto, papel,
+  formação, valores, função/tema) e requisitos/atividades expansíveis.
 - **Analytics dos dados** — painel de gráficos (SVG próprio, sem dependências) que
-  **começa pela qualidade/limitações** dos dados e mostra a virada estrutural
-  PROMOB→PIPA, prazos, sazonalidade, temas e a biblioteca de cláusulas.
+  **começa pela qualidade/limitações** (incl. cobertura do enriquecimento) e mostra a
+  virada PROMOB→PIPA, **perfis solicitados**, **diretorias**, temas, prazos e a biblioteca.
+  Comparações por ano trazem **2026 real (até a data do build) + projetado** (pró-rata linear).
+
+Os campos descritivos são **enriquecidos** baixando e parseando os PDFs dos editais
+(`scripts/fetch_pdfs.py` → `enrich_corpus.py` → `classify.py`); a classificação de
+função/tema é **configurável** em [`data/taxonomia.json`](data/taxonomia.json). Tudo é
+máquina-extraído e imperfeito — a aba Analytics reporta a cobertura honestamente, e **não
+há dados de contratação** (os "perfis" são os *solicitados* pelas chamadas).
 
 > ⚠️ O documento gerado é um **rascunho de trabalho**: revisão jurídica e conferência com a
 > versão vigente da norma são obrigatórias antes da publicação. As portarias anteriores
@@ -45,6 +53,9 @@ A **semente bruta** da raspagem fica imutável em `data/raw/`; os arquivos canô
 ```bash
 python scripts/clean_corpus.py      # normaliza programa/datas, deriva campos e flags
 python scripts/clean_biblioteca.py  # funde chaves OCR, desfaz \n, dedup (5895 -> 3060)
+python scripts/fetch_pdfs.py        # baixa editais + extrai texto → data/pdf_text/ (única etapa com rede)
+python scripts/enrich_corpus.py     # objeto, papel, formação, requisitos, diretoria (por seção do PDF)
+python scripts/classify.py          # categoria_funcao/tema (edite data/taxonomia.json e rode de novo)
 python scripts/build_app_data.py    # gera src/data/quality.json + clausulas_sugeridas.json
 python scripts/validate_data.py     # porta de qualidade (exit != 0 se violar invariantes)
 ```
@@ -64,8 +75,8 @@ pip install matplotlib && python scripts/generate_charts.py
 App Vite tem etapa de build, então o deploy é via **GitHub Actions** (não "deploy from a
 branch"). O workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) roda a
 porta de qualidade, builda e publica `dist/` no Pages a cada push em `main`. Ative em
-**Settings → Pages → Source = GitHub Actions**. O `base` do Vite já aponta para
-`/gerador_editais-e-tr/` em produção.
+**Settings → Pages → Source = GitHub Actions**. O `base` do Vite é **relativo (`./`)** em
+produção, então o app funciona em `/<repo>/` independentemente da caixa do nome.
 
 ## Estrutura do repositório
 
@@ -89,10 +100,13 @@ porta de qualidade, builda e publica `dist/` no Pages a cada push em `main`. Ati
 │       ├── Pill.jsx · CorpusView.jsx · BuilderView.jsx
 │       ├── AnalyticsView.jsx
 │       └── charts/                  # Bars, StackedBars, Line, Donut, Heatmap (SVG puro)
-├── scripts/                         # pipeline de dados + gerador de gráficos (Python)
+├── scripts/                         # pipeline (Python): clean_* → fetch_pdfs → enrich_corpus
+│                                    #   → classify → build_app_data → validate (+ generate_charts)
 ├── data/
-│   ├── raw/                         # SEMENTES brutas (imutáveis)
-│   ├── corpus_chamadas_2023-2026.json   # canônico limpo
+│   ├── raw/                         # SEMENTES brutas (imutáveis) + raw/pdfs/ (gitignored)
+│   ├── pdf_text/                    # texto dos editais — cache COMMITADO (reprodutibilidade)
+│   ├── taxonomia.json               # taxonomia editável (função/tema) p/ classify.py
+│   ├── corpus_chamadas_2023-2026.json   # canônico limpo + enriquecido do PDF
 │   ├── biblioteca_clausulas.json        # canônico limpo
 │   └── DATA.md                      # dicionário, proveniência e limites
 ├── analytics/

@@ -1,0 +1,158 @@
+   SIMPLIFIED SELECTION PROCESS IPEA/PROCIN No. 003/2023 - SCHOLARSHIP
+                                AWARD
+
+The Institute for Applied Economic Research (IPEA), a public foundation linked to the
+Brazil’s Ministry of Planning and Budget which conducts research and provides technical
+and institutional support for government actions in the formulation and evaluation of
+development policies a888nd programs, hereby INFORMS, those interested in the grant
+selection process for Senior Doctor Reseacher, pursuant to IPEA Ordinances No. 339 of
+08/12/2010 and 345 of 08/18/2010 and their amendments.
+
+1. OBJECT
+This Simplified Selection Process aims to select a foreign researcher interested in
+developing activities in the Research Project: “Studies on the improvement of the workforce
+and management processes at the Federal Civil Service”.
+
+2. OBJECTIVE
+Collaborate with Ipea and the Ministry of Management and Inovation in Public Services
+teams in the execution of preliminary research and the development of a dynamic alghoritm
+to be used to fullfill the vacancies provided in public contests, as well as its monitoring and
+impletation. Considering that the model to be developed will be used for the 2024 National
+Unified Public Contest, which may have three million candidates, the hiring of a foreign
+expert may prevent conflicts of interest.
+
+3. SCHOLARSHIP QUANTITY AND DURATION
+01 (one) scholarship will be awarded with a duration of 8 (eigth) months, which may be
+renewed.
+
+4. CANDIDATE REQUIREMENTS
+4.1. Being a foreign researcher from a country with which Brazil has an international
+cooperation agreement.
+4.2. Experience in design, monitoring and evaluating public selection processes and
+stablishing rankings of candidates that presented themselves before a public contest.
+4.3. Having effective, relevant and current performance abroad.
+
+5. IDENTIFICATION OF THE RECOMMENDED RESEARCHER
+Name: Ignacio Guerberoff Lanari Bó
+Academic background/areas of expertise: Economics
+Country of origin: China
+
+6. JUSTIFICATION FOR THE CANDIDATE'S RECOMMENDATION
+The researcher is a microeconomist with extensive experience in designing, monitoring and
+evaluating personal through public contests. Among their most recent works, we may
+emphasize:
+  1. Pick-an-object Mechanisms (with Rustamdjan Hakimov), Management Science
+  (forthcoming).
+  2. Racial and income-based affirmative action in higher education admissions: lessons
+  from the Brazilian experience (with Rodrigo Zeidan, Silvio Luiz de Almeida and Neil
+  Lewis, Jr. ), Journal of Economic Surveys (forthcoming).
+  3. Assignment Maximization (with Mustafa Oguz Afacan and Bertan Turhan), Journal of
+  Public Economic Theory (forthcoming).
+  4. The Iterative Deferred Acceptance Mechanism (with Rustamdjan Hakimov), Games
+  and Economic Behavior, (2022) Vol. 135, September, P. 411–433.
+  5. Popular mechanisms (with Mustafa Oguz Afacan), Journal of Mathematical
+  Economics, (2022) Vol. 102, October.
+  6. Hiring from a pool of workers (with Azar Abizada), Journal of Economic Behavior and
+  Organization, (2021) Vol. 186, P. 576-591.
+  7. Competitive Screening and Information Transmission (with Chiu Yu Ko), Journal of
+  Public Economic Theory, (2021) Vol. 23, No. 3, P. 407-437 Inacio Bo C.V. Page 1 of 4.
+  8. College admissions with multidimensional reserves: the Brazillian affirmative action
+  case (with Orhan Aygün), American Economic Journal: Microeconomics, (2021) Vol. 13,
+  No. 3, P. 1-28.
+  9. Iterative Versus Standard Deferred Acceptance: Experimental Evidence (with
+  Rustamdjan Hakimov), The Economic Journal, (2020) Vol. 130, No. 626, P. 356–392
+
+7. MODALITY OF THE SCHOLARSHIP
+Considering that the tasks to be performed are extremely complex, requiring a candidate
+that is not only qualified, but also experient, we ask the selected researcher to be a Senior
+Doctor.
+
+7.1 MODALITY OF SUPPORT
+The grant will be funded in the modality described below:
+
+
+Category/Type of Grant          Values (US$/Month)
+Senior Doctor                   2,400.00
+
+
+7.1.1. Payment of the monthly scholarship amount may either take place in Brazil through a
+Payment Order, with the value converted at the exchange rate of the issue date of the
+payment, or transferred to the bank account of the researcher, net of bank charges.
+
+8. CHRONOGRAM
+EVENTS                                           DATES
+Deadline for challenging the selection process   December 25, 2023
+
+Implementation of scholarship                    Starting on January 2st, 2024
+9. CHALLENGING THE SIMPLIFIED SELECTION PROCESS
+The present selection process may be challenged until the date stated at the Chronogram
+above, by any researcher who fulfills the requirements for candidacy listed on Section 4
+(four) of the present selection process, by submitting his/her curriculum. In the case of
+approval, a public call will be open pursuant to Section 5 of IPEA’s Ordinance No. 339 of
+August 12, 2010. The challenge shall be e-mailed to IPEA at the following
+address: pnpd@ipea.gov.br.
+
+10. IMPLEMENTATION OF THE SCHOLARSHIP
+After the deadline for challenges, the selected candidate must submit the following
+documentation:
+      Registration Form;
+      Copy of the passport.
+
+
+11. REVOCATION OR ANULLMENT OF THE SIMPLIFIED SELECTION PROCESS
+At any moment, the present selection process may be revoked or annulled, entirely or in
+part, either as a unilateral decision made by IPEA as a result of a reasoned decision, or due
+to public interest or legal requirements, without providing rights to compensation or claims of
+any nature.
+
+12. FOR CLARIFICATIONS AND ADDITIONAL INFORMATION:
+Clarification or additional information concerning the contents of this selection process may
+be obtained through the following email address pnpd@ipea.gov.br and telefone number 55
+(61) 3515-5219, by referring to the number of the selection process.
+
+13. RESERVATION CLAUSE
+IPEA holds the right to resolve omitted cases and unforeseen events in the present selective
+process.
+
+
+
+                                                            Brasília, 11 de dezembro de 2023
+
+
+
+
+                                MARINÉSIA LEMOS SOUTO
+   General Contracting, General Services, and Research Support Coordinator – CGCAP
+                                      ANNEX I
+
+        AWARD OF RESEARCH SCHOLARSHIP - TERM OF REFERENCE
+
+
+1. PROJECT TITLE
+
+“Studies on the improvement of the workforce and management processes at the
+Federal Civil Service”.
+
+2. PURPOSE OF THE RESEARCH
+
+Collaborate with the Ipea and MGI teams in the preparation of studies to support the
+construction of the model for filling vacancies in the 2024 National Unified Public
+Contest.
+
+3. ACTIVITIES TO BE DEVELOPED
+
+   Perform an exploratory study on standard methods of filling vacancies, using quotas
+    and ranking submission.
+   Develop algorithms relative to the identified standard methods.
+   Propose an alternative method for filling vacancies, based on the SISU model.
+   Develop dynamic algorithm relative to the proposed alternative method.
+   Produce a study on the structuring of quotas and occupation of positions, comparing
+    the standard methods and the alternative method.
+   Monitor the implementation of the proposed alternative model.
+   Produce a study on the implementation activities of the proposed alternative model.
+
+
+4. EXPECTED RESULTS
+
+Development of a dynamic algorithm to fill vacancies in public contests.
+

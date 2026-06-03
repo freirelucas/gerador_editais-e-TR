@@ -1,0 +1,790 @@
+  CHAMADA PÚBLICA IPEA/PNPD Nº 017/2025 - SELEÇÃO DE CANDIDATO PARA
+                       CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao Ministério
+do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte técnico e
+institucional às ações governamentais para a formulação e avaliação de políticas e programas
+de desenvolvimento, CONVIDA interessados(as) a apresentarem propostas nos termos aqui
+estabelecidos para seleção pública de candidato a bolsa de pesquisa, no âmbito do
+Subprograma de Pesquisa para o Desenvolvimento Nacional – PNPD do Programa de
+Mobilização da Competência Nacional para Estudos sobre o Desenvolvimento - PROMOB.
+
+1. OBJETO
+
+ A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de
+ pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no
+ REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Desinformação,
+ políticas públicas e democracia.”.
+
+2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 02 (duas) bolsas, com duração prevista de 12 (doze) meses, podendo ser
+renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+
+3.1. Candidato 1 - Assistente de Pesquisa III (Mestre)
+3.1.1. Possuir título de mestre em uma das seguintes áreas: Ciências Sociais, Ciência da
+Informação, Ciência Política, Sociologia, Administração Pública, Políticas Públicas, Economia
+ou Estatística.
+3.1.1.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados em
+conformidade com a legislação vigente.
+3.1.1.1.1. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos dos itens 3.1.1., da
+Chamada Pública e o item 8. DA CONCESSÃO DA BOLSA – Item 8.2 do Regulamento, com
+convocação do candidato classificado na posição subsequente.
+3.1.2. Ter experiência no trabalho com bases de dados complexas, incluindo organização,
+limpeza e manipulação de grandes conjuntos de dados;
+3.1.3. Domínio do software estatístico, preferencialmente em R, para análises estatísticas
+avançadas;
+3.1.4. Conhecimento de modelagem estatística, incluindo regressões logísticas, análises
+fatoriais e modelos multiníveis;
+3.1.5. Desejável experiência na aplicação de métodos estatísticos para estudos sobre
+percepções públicas, enviesamento informacional e desinformação;
+3.1.6. Desejável conhecimento em técnicas de aprendizado de máquina para análise de
+padrões de desinformação em grandes bases de dados;
+3.1.7. Desejável experiência com técnicas de amostragem probabilísticas e não
+probabilísticas e imputação de dados ausentes, em especial em estudos de aplicação
+de surveys;
+3.1.8. Desejável ter domínio na leitura em língua inglesa e em língua espanhola;
+
+
+                                                                                           1
+3.1.9. Apresentar uma proposta de trabalho de até 10 (dez) páginas, contendo uma
+justificativa para o uso de técnicas estatísticas na análise de dados de surveys, com foco na
+identificação de padrões de percepção e nos impactos da desinformação sobre a
+administração pública. A proposta deverá incluir abordagens metodológicas adequadas para
+a análise desse fenômeno, incluindo técnicas estatísticas para tratamento e modelagem dos
+dados. Além disso, o candidato deverá indicar as possíveis contribuições da pesquisa,
+demonstrando como os métodos propostos podem fornecer insights relevantes para a
+compreensão da desinformação e seus efeitos na formulação e implementação de políticas
+públicas. Vale esclarecer que o projeto é requerido apenas para fins de avaliação e não para
+fins de implementação.
+3.1.10. As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas o
+bolsista deverá ter disponibilidade para a realização de reuniões periódicas, sempre que
+solicitadas pela coordenadora do projeto.
+Vaga: 01 (uma)
+
+
+3.2. Candidato 2 – Doutor
+3.2.1. Possuir título de doutor em uma das seguintes áreas: Ciências Sociais, Direito, Ciência
+da Informação, Ciência Política, Sociologia, Comunicação, Administração Pública ou Políticas
+Públicas.
+3.2.1.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados em
+conformidade com a legislação vigente.
+3.2.1.1.1. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos dos itens 3.2.1., da
+Chamada Pública e o item 8. DA CONCESSÃO DA BOLSA – Item 8.2 do Regulamento, com
+convocação do candidato classificado na posição subsequente.
+3.2.2. Experiência em pesquisa no tema da desinformação, com domínio aprofundado do
+debate acadêmico e das principais correntes teóricas que consideram conceitos como fake
+news, misinformation, disinformation, pós-verdade, propaganda e manipulação informacional
+e seus correlatos ou possuir experiência acadêmica/profissional em áreas correlatas (como
+comunicação, políticas públicas, sociologia, ciência da informação, direito, entre outras) e
+demonstrar clara trajetória de transição para o estudo da desinformação. Candidatos que
+tenham produção acadêmica ou atuação profissional aplicável ao tema serão considerados;
+3.2.3. Desejável ter conhecimento sobre as dinâmicas da desinformação, seus mecanismos
+de disseminação e suas consequências para a sociedade, a opinião pública e os processos
+comunicacionais;
+3.2.4. Desejável ter experiência em pesquisa na análise de fenômenos de desinformação em
+contextos nacionais e internacionais, compreendendo sua relação com redes sociais, mídia
+tradicional e ecossistemas digitais;
+3.2.5. Desejável a capacidade de contribuir para o desenvolvimento de instrumentos e
+metodologias para identificar, categorizar e mitigar a desinformação, com foco na construção
+de diretrizes aplicáveis a diferentes contextos;
+3.2.6. Desejável ter experiência na produção de materiais analíticos e didáticos, como
+manuais, guias e relatórios sobre desinformação e governança da informação;
+3.2.7. Desejável conhecimento sobre os impactos da desinformação no governo e na
+formulação de políticas públicas, bem como estratégias institucionais para enfrentamento
+desse fenômeno;
+3.2.8. Desejável experiência multidisciplinar, envolvendo abordagens da comunicação,
+ciência política, sociologia e políticas públicas para o estudo da desinformação;
+
+
+                                                                                            2
+3.2.9. Desejável ter domínio na leitura em língua inglesa e em língua espanhola;
+3.2.10. Apresentar uma proposta de trabalho de até 10 (dez) páginas, contendo uma
+justificativa para a importância da pesquisa sobre desinformação, com foco no
+aprofundamento teórico e conceitual do tema, considerando as principais correntes
+acadêmicas e debates contemporâneos. A proposta deverá incluir abordagens metodológicas
+adequadas para a análise do fenômeno, explorando estratégias para a categorização,
+identificação e mitigação da desinformação, além de sua relação com os ecossistemas digitais
+e as dinâmicas de circulação da informação. O candidato deverá indicar as possíveis
+contribuições da pesquisa, demonstrando como o conhecimento gerado pode aprimorar a
+compreensão da desinformação e subsidiar o desenvolvimento de diretrizes e metodologias
+aplicáveis a políticas públicas. Vale esclarecer que o projeto é requerido apenas para fins de
+avaliação e não para fins de implementação.
+ Vaga: 01 (uma)
+
+4. PARA TODOS OS CANDIDATOS
+4.1. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta bolsa,
+exceto se a bolsa de outra instituição estiver suspensa;
+4.2. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou Municipal,
+deverá exercer a função de Pesquisador, Professor Universitário ou equivalente;
+4.3. Caso o candidato tenha possuído bolsa de pesquisa IPEA e seu relatório final tenha obtido
+avaliação péssima, ou caso esteja em situação de pendência na entrega de relatórios de
+atividades, este poderá, a critério do comitê julgador, ser desclassificado;
+4.4. Solicita-se aos candidatos atualizarem e adaptarem seus currículos, ressaltando os
+pontos requeridos neste edital;
+4.5. A existência de algum tipo de inadimplência por parte do candidato selecionado junto à
+Administração Pública Federal, direta ou indireta, constituirá fator impeditivo para a concessão
+da bolsa de pesquisa;
+4.6. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou artigos
+científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou tese
+defendida, coordenação e/ou participação em projetos de pesquisas, carteira de trabalho,
+entre outros.
+
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. As inscrições deverão ser realizadas exclusivamente através SISTEMA DE CADASTRO
+DE BOLSA- https://bolsas.ipea.gov.br/bolsas, disponível na página do IPEA
+www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando:
+a) Currículo ou informando endereço lattes;
+b) Proposta de execução do projeto.
+Obs.: O candidato que não anexar o currículo e o projeto (quando houver), será
+desclassificado automaticamente.
+5.2. O candidato que não tem cadastro deverá acessar o SISTEMA DE CADASTRO DE
+BOLSA - https://bolsas.ipea.gov.br/bolsas, opção “Ainda não sou cadastrado” e
+preencher os dados. A Senha deverá ser composta apenas por letras e números, no
+intervalo de 8 a 10 caracteres, não podendo conter caracteres especiais.
+5.3. O candidato, ao concluir sua inscrição, receberá um e-mail de confirmação da
+inscrição, devendo, caso não o receba, entrar em contato através do e-mail
+pnpd@ipea.gov.br noticiando o ocorrido para esclarecimentos visando a conclusão da
+inscrição.
+5.4. O candidato que não concluir a inscrição será eliminado automaticamente.
+                                                                                              3
+5.5. A inscrição será aceita única e exclusivamente através do SISTEMA DE CADASTRO DE
+BOLSA - https://bolsas.ipea.gov.br/bolsas.
+5.6. O preenchimento dos dados e conferência é de inteira responsabilidade do
+candidato. Havendo erro o Ipea não se responsabiliza
+5.7. Caso o candidato se inscreva para mais de uma modalidade de bolsa, dentro da mesma
+chamada pública, sendo exigido anexar projeto para cada solicitação de inscrição, este
+deverá incluir, sob pena de desclassificação, em cada uma delas arquivo com o projeto,
+mesmo quando o escopo ou tema for semelhante.
+5.8. Para candidato que já possui o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 5.1. desta Chamada
+Pública.
+5.9. Constatando-se projetos idênticos encaminhados por diferentes candidatos, todas as
+propostas envolvidas serão desclassificadas.
+5.10. Os projetos de pesquisas citados na letra “b” do item 5.1, não serão necessariamente
+desenvolvidos no âmbito desta Chamada Pública, e terão meramente o papel de objeto para
+a avaliação do candidato pelo Comitê Julgador.
+
+6. CRONOGRAMA
+                       EVENTOS                                         DATAS
+Início do envio das candidaturas                           18 de março de 2025
+Data limite para submissão das candidaturas                26 de março de 2025
+Previsão da divulgação do resultado no Diário Oficial da A partir de 04 de abril de 2025
+União e na página do IPEA na internet
+Previsão do início da bolsa                              A partir de 10 de abril de 2025
+6.1. As solicitações devem ser enviadas ao IPEA até às 23h59min (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+6.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não se
+responsabiliza por propostas não recebidas em decorrência de eventuais problemas técnicos
+e congestionamentos.
+
+
+7. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada poderão
+ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou através do telefone
+(61) 2026-5219, referenciando-se ao número da Chamada e nome do projeto.
+
+8. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+8.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada, no todo
+ou em parte, a critério do IPEA, sem que isso implique em direito à indenização ou reclamação
+de qualquer natureza.
+8.2. O IPEA poderá cancelar a presente chamada pública, caso o Comitê julgador não se
+pronuncie no prazo de 30 dias, a contar da entrega das propostas para análise.
+
+9. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+9.1. A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior ao
+prazo final estabelecido para submissão das candidaturas.
+9.2. Decairá do direito de impugnar os termos da presente Chamada, o candidato que não o
+fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão das
+                                                                                           4
+candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o tendo aceito
+sem objeção, venha apontar, posteriormente ao julgamento, eventuais falhas ou imperfeições.
+9.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada Pública,
+por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+10. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas na
+presente Chamada.
+
+                                                              Brasília, 17 de março de 2025.
+
+
+                              MARINÉSIA LEMOS SOUTO
+ Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa – CGCAP
+
+
+
+
+                                                                                           5
+                                     REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a seleção de
+pesquisadores para atuação nos projetos relacionados, em conformidade com as condições
+estabelecidas deste REGULAMENTO e nas normas contidas nas Portarias IPEA N° 491, de
+28 de dezembro de 2010 e Nº 492, de 29 de dezembro de 2010, e suas alterações, que faz
+parte integrante da presente chamada independente de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+O detalhamento do trabalho está descrito no Termo de Referência, Anexo I da presente
+Chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+Os candidatos deverão atender aos requisitos constantes do item 3 da Chamada Pública, os
+quais serão avaliados pelo comitê julgador mediante análise curricular, entrevista e proposta
+de projeto (dentro do escopo da pesquisa), conforme modelo previsto no Anexo II da presente
+Chamada, que detalhe a metodologia a ser empregada e as atividades a serem realizadas.
+    1) O projeto deverá constar os seguintes itens:
+1.1)    Contextualização da proposta quanto à inserção das EMENTAS DOS OBJETIVOS
+        ESTRATÉGICOS do IPEA;
+1.2)    Objetivo geral;
+1.3)    Objetivos específicos;
+1.4)    Justificativa;
+1.5)    Referencial teórico;
+1.6)    Metodologia proposta;
+1.7)    Atividade e cronogramas;
+1.8)    Resultados esperados;
+1.9)    Outras informações relevantes;
+1.10) Referências Bibliográficas.
+
+
+4. MODALIDADES E VALORES DAS BOLSAS
+
+ QUANTIDADE                      MODALIDADE                         VALOR EM R$/MÊS
+
+       01         Assistente de Pesquisa III (Mestre)                      4.030,00
+
+
+       01         Doutor                                                   6.760,00
+
+4.1. O candidato vinculado a instituição pública deverá apresentar autorização da instituição
+de origem, comprovando, ainda, que a legislação que rege sua carreira permite atuação em
+projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa se
+
+
+                                                                                            6
+exercer cargo de pesquisador, professor universitário ou equivalentes. Este candidato será
+enquadrado na modalidade de Pesquisador Visitante com o valor referente de R$ 4.940,00.
+4.3. O candidato selecionado que for servidor, empregado público e professor universitário
+inativo de instituições públicas, será enquadrado na modalidade Profissional Sênior com o
+valor referente de R$ 6.240,00 e deverá apresentar a devida comprovação.
+4.4. Caso a modalidade inicialmente prevista estiver fixada em valor inferior ao indicado, nos
+itens 4.2. e 4.3., prevalecerá a modalidade de menor valor.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno nomeado
+para esse fim quanto ao mérito técnico-científico do projeto proposto.
+
+     ➢ Poderão, a critério do comitê julgador, ser selecionados para a entrevista 04 (quatro)
+       candidatos por vaga, com melhor pontuação nos itens de A a D;
+     ➢ Poderá, ser desclassificado o candidato que obtiver nota final inferior a 50% do total
+       proposto na presente chamada.
+     ➢ Nos casos de empate, o desempate ficará a critério do comitê julgador, que emitirá
+       nota de justificativa.
+
+3.1. Candidato 1 - Assistente de Pesquisa III (Mestre)
+ ITEM                        CRITÉRIO DE JULGAMENTO                                     PESO
+          Experiência comprovada com manipulação, tratamento e modelagem
+          estatística de bases de dados complexas., incluindo dados de surveys
+ A                                                                             2
+          aplicados para análises avançadas, limpeza de dados, regressões
+          logísticas e análise de efeitos de tratamento
+          Capacidade de realizar amostragem e ajuste de amostras para
+ B                                                                                  2
+          surveys.
+          Familiaridade com as abordagens metodológicas para análise da
+ C                                                                                  1
+          desinformação utilizadas na literatura nacional e internacional.
+
+          Avaliação do projeto (critérios a serem avaliados: 1) linguagem, lógica
+          de argumentação; 2) conteúdo: aderência ao projeto da Chamada
+ D        Pública (Conf. Item 2. PROPÓSITO DO TRABALHO); 3) metodologia             2
+          proposta, sugerindo aplicação de técnicas atualizadas e coerentes ao
+          objetivo da pesquisa)
+
+          Entrevista (que poderá ser presencial, por e-mail, telefone ou
+ E                                                                                  2
+          videoconferência)
+
+
+
+
+                                                                                               7
+3.2. Candidato 2 – Doutor
+
+ ITEM                       CRITÉRIO DE JULGAMENTO                               PESO
+         Experiência em pesquisa sobre desinformação, com domínio dos
+         conceitos     e   debates     acadêmicos,      incluindo fake   news,
+ A                                                                             2
+         misinformation, disinformation e pós-verdade, e sua relação com
+         ecossistemas informacionais.
+         Conhecimento      das    principais    abordagens       metodológicas
+ B       para identificação, categorização e mitigação da desinformação, 2
+         considerando estratégias nacionais e internacionais.
+ C       Experiência na produção de manuais, guias e relatórios técnicos.           1
+
+         Avaliação do projeto apresentado pelo candidato, considerando clareza
+         na estruturação, coerência argumentativa e contribuição para o
+         debate sobre desinformação e políticas públicas. (critérios a serem
+ D       avaliados: 1) linguagem, lógica de argumentação; 2) conteúdo: 2
+         aderência ao projeto da Chamada Pública (Conf. Item 2. PROPÓSITO
+         DO TRABALHO); 3) metodologia proposta, sugerindo aplicação de
+         técnicas atualizadas e coerentes ao objetivo da pesquisa)
+
+         Entrevista (que poderá ser presencial, por e-mail, telefone ou
+ E                                                                                  2
+         videoconferência)
+
+
+6. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário Oficial
+da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor pedido de recurso ao resultado do julgamento, deverá
+apresentá-lo exclusivamente por meio do SISTEMA DE CADASTRO DE BOLSA
+- https://bolsas.ipea.gov.br/bolsas e as contrarrazões deverão ser enviadas através do e-
+mail pnpd@ipea.gov.br
+7.1.1. O pedido de recurso administrativo serve para revisar o resultado do julgamento por
+razões de legalidade e de mérito.
+7.1.2. O pedido de contrarrazões é uma espécie de recurso administrativo que visa refutar
+ou combater as razões de um pedido de recurso encaminhado por outro candidato.
+7.2. Caso o participante queira interpor recurso ao resultado do julgamento das propostas,
+deverá apresentá-lo,        por meio SISTEMA DE CADASTRO DE BOLSA
+- https://bolsas.ipea.gov.br/bolsas no prazo de 03 (três) dias úteis, a contar do dia seguinte
+da data de publicação do resultado no Diário Oficial da União, para interpor pedidos de
+recursos administrativos contra as notas recebidas ou a classificação def inida.
+7.3. Caso o participante sinta-se prejudicado pelo pedido de recurso de outro candidato, cabe
+o envio do pedido de contrarrazões através do e-mail pnpd@ipea.gov.br, indicando o
+número da chamada e o nome do recorrente no prazo de até 03 (três) dias úteis, a contar o
+dia seguinte da resposta no site do Ipea. O pedido de contrarrazões, todavia, só será
+avaliado se o pedido de recurso de outro candidato for deferido. Neste período, mediante
+solicitação também por e-mail, poderão ser enviados aos participantes os teores do pedido
+de reconsideração deferido.
+
+                                                                                             8
+7.4. O pedido de recurso ou de contrarrazões deverá ser remetido ao Ipea em forma de
+petição, no formato de PDF com pelo menos os seguintes campos:
+a) objeto do pedido
+b) exposição de motivos;
+c) embasamento normativo;
+d) pedido.
+7.5. No campo de texto do sistema, o candidato deverá informar a relação dos documentos
+apresentados, iniciada pelo próprio pedido.
+7.6. Será negado conhecimento ao pedido de recurso ou de contrarrazões que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos e não
+apresentar os documentos necessários por e-mail para contrarrazões;
+b) estiver fora das regras estabelecidas neste edital, dos procedimentos previstos na Lei
+9.784, de 29 de janeiro de 1999 ou em outras instruções e normatizações;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de
+gênero, e/ou religioso, sendo o candidato eliminado do presente certame, podendo ainda o
+Ipea realizar comunicação às instituições competentes em caso de crime;
+d) lhe faltar pedido ou causa de pedir;
+e) o pedido for indeterminado;
+f) da narração dos fatos não decorrer logicamente a conclusão;
+g) contiver pedidos incompatíveis entre si.
+7.7. Os pedidos de recurso ou de contrarrazões, caso não sejam negados conhecimento
+pela Coordenação de Apoio à Pesquisa do Ipea, deverão ser dirigidos ao comitê julgador
+que, após exame, poderá julgar pela reconsideração de sua decisão, bem como
+confirmação, modificação, anulação ou revogação total ou parcial, nos termos da Lei 9.784,
+de 29 de janeiro de 1999. Caso o comitê julgue pelo indeferimento da reconsideração, os
+pedidos de recurso e ou de contrarrazões serão encaminhados para deliberação final da
+Presidência do Ipea.
+
+8. DA CONCESSÃO DA BOLSA
+8.1. O (A) candidato (a) deverá manifestar interesse de assumir a bolsa, pelo e-mail
+pnpd@ipea.gov.br, imediatamente após a publicação dos resultados, sob pena de não ter a
+bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade às Portarias IPEA Nº 491,
+de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base no item 2
+da presente Chamada, mediante a apresentação, no prazo determinado por comunicação
+oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Autorização da instituição de origem para atuação no projeto (para candidatos vinculados
+a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de pesquisa,
+apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser convocado
+o segundo colocado e, assim, sucessivamente, a fim de dar continuidade às atividades do
+projeto de pesquisa.
+                                                                                          9
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer momento,
+de acordo com seu interesse e conveniência, sem prejuízo de outras providências cabíveis,
+em decisão devidamente fundamentada, não implicando qualquer tipo de indenização e não
+cabendo qualquer tipo de recurso por parte do bolsista.
+
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato, adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias para a
+execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando adequação ao
+Plano de Trabalho do IPEA e às suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de domínio
+do IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXOS
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+ANEXO II – MODELO DE PROPOSTA DE PROJETO
+ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+
+
+
+
+                                                                                         10
+                                         ANEXO I
+
+         TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+ Desinformação, políticas públicas e democracia.”
+
+
+2. PROPÓSITO DO TRABALHO
+A atuação dos pesquisadores selecionados visa apoiar pesquisa que investigará os impactos
+da desinformação na formulação e implementação de políticas públicas no Brasil, analisando
+seus efeitos sobre a percepção e o uso de informações por burocratas da adm inistração
+pública federal. A pesquisa adotará uma abordagem mista, incluindo a aplicação de um
+survey, entrevistas qualitativas e análise documental, com o objetivo de compreender como
+conteúdos falsos, enganosos ou distorcidos influenciam a tomada de decisão governamental
+e a governança informada por evidências. O estudo também examinará os desafios
+institucionais e as estratégias adotadas para mitigar a desinformação no setor público.
+A relação entre desinformação e políticas públicas é especialmente crítica no contexto atual,
+em que a circulação massiva de narrativas desinformativas compromete a confiança
+institucional e impacta a formulação de políticas em áreas estratégicas, como saúde,
+educação e meio ambiente. Além disso, a presença de atores que intencionalmente
+disseminam incerteza sobre evidências científicas — os chamados "mercadores da dúvida"
+— tem se consolidado como um obstáculo adicional para a institucionalização de prátic as
+informadas por evidências no governo. Assim, torna-se essencial compreender como os
+burocratas percebem e reagem à desinformação, quais estratégias adotam para filtrar
+informações confiáveis e como esse fenômeno afeta sua capacidade de produzir e
+implementar políticas eficazes.
+Para tanto, os dois bolsistas em pauta atuarão em frentes complementares. O bolsista
+“Assistente de Pesquisa III” atuará na etapa de amostragem, tratamento e análise estatística
+dos dados de surveys a serem aplicados, incluindo a organização, limpeza e estruturação das
+bases de dados, além da aplicação de técnicas estatísticas avançadas para identificar
+padrões na percepção e nos impactos da desinformação sobre a burocracia pública de modo
+a fornecer subsídios quantitativos essenciais para os diagnósticos da pesquisa.
+O bolsista Doutor desempenhará um papel central na revisão bibliográfica e na análise
+qualitativa dos resultados do survey e das demais fontes de dados da pesquisa, contribuindo
+para um aprofundamento teórico e metodológico do fenômeno da desinformação e seus
+impactos sobre a administração pública. Sua contribuição envolverá a sistematização e a
+análise crítica das principais abordagens acadêmicas sobre fake news, misinformation,
+disinformation, negacionismo e pós-verdade, além da exploração de conceitos
+complementares, como propaganda política, manipulação informacional e a disseminação
+estratégica de incerteza.
+Além da produção de conhecimento conceitual, o bolsista será irá articular as evidências
+empíricas coletadas na pesquisa com as tendências teóricas e metodológicas do campo,
+promovendo uma leitura integrada da influência da desinformação no ciclo das políticas
+públicas. Sua atuação será essencial para a identificação de padrões narrativos e dinâmicas
+de disseminação da desinformação, permitindo a formulação de hipóteses e recomendações
+aplicáveis ao contexto brasileiro.
+Outro eixo central será a contribuição para o desenvolvimento de metodologias e diretrizes
+para a mitigação da desinformação no setor público. Isso inclui a elaboração de instrumentos
+
+                                                                                          11
+analíticos para detecção e categorização de narrativas desinformativas, a produção de
+manuais e protocolos para gestores públicos, e a proposição de estratégias institucionais para
+o fortalecimento da governança informacional. O bolsista atuará ainda na definição de critérios
+de avaliação e validação de políticas de enfrentamento à desinformação, auxiliando na
+construção de diretrizes baseadas em evidências para fortalecer a resiliência institucional do
+Estado diante desse fenômeno.
+A contribuição do bolsista é essencial para garantir que a pesquisa não apenas produza
+conhecimento acadêmico robusto, mas também gere ferramentas práticas e aplicáveis para
+a administração pública, fortalecendo a capacidade do Estado de lidar com os desafios
+contemporâneos impostos pela desinformação.
+Com esses esforços, a pesquisa buscará avançar na compreensão dos desafios impostos
+pela desinformação ao processo de tomada de decisão governamental, fornecendo insumos
+analíticos e metodológicos para fortalecer a resiliência institucional do Estado e aprimorar a
+governança informacional no Brasil.
+
+
+3. ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER
+3.1. Candidato 1 – Assistente de Pesquisa III (Mestre)
+   ➢ Apoiar na definição e seleção da amostra de indivíduos pertencentes à população-
+     alvo do survey a ser aplicado com burocratas, seguindo critérios metodológicos
+     rigorosos, aplicando técnicas de amostragem probabilística e não probabilística,
+     conforme a disponibilidade de dados e a natureza da população estudada, garantindo
+     representatividade e minimização de vieses.
+   ➢ Auxiliar na organização e estruturação das bases de dados coletadas, garantindo
+     qualidade e consistência dos dados coletados.
+   ➢ Tratamento estatístico das bases de dados, incluindo limpeza, imputação de valores
+     ausentes, ajustes de ponderação e controle de viés amostral.
+   ➢ Aplicar técnicas estatísticas avançadas, como regressões logísticas, análise fatorial,
+     modelos multiníveis, modelagem de efeitos de mediação e moderação.
+   ➢ Geração de estatísticas descritivas e inferenciais para identificação de padrões na
+     percepção da desinformação entre os burocratas e advogados da administração
+     pública federal.
+   ➢ Auxiliar nas análises comparativas entre diferentes setores governamentais,
+     avaliando diferenças de exposição, impacto e percepção sobre a desinformação.
+   ➢ Colaborar na produção de relatórios estatísticos que subsidiem a equipe na
+     formulação de diagnósticos sobre os efeitos da desinformação na formulação e
+     implementação de políticas públicas.
+   ➢ Colaborar na construção de gráficos, tabelas e dashboards interativos, auxiliando na
+     visualização dos dados para publicação em notas técnicas e artigos científicos.
+   ➢ Participar na redação de materiais técnicos e acadêmicos, fornecendo suporte
+     metodológico para as análises empíricas.
+   ➢ Interpretar os resultados estatísticos em articulação com os achados qualitativos da
+     pesquisa, contribuindo para um diagnóstico integrado.
+   ➢ Apoiar na elaboração de relatórios técnicos do projeto;
+   ➢ Colaborar no acompanhamento da organização de publicações; e
+   ➢ Participar de reuniões e seminários para apresentação dos resultados das pesquisas
+     desenvolvidas no âmbito do projeto.
+
+                                                                                            12
+3.2. Candidato 2 – Doutor
+   ➢ Auxiliar na realização de uma revisão bibliográfica aprofundada sobre desinformação,
+     abrangendo os conceitos de fake news, misinformation, disinformation, pós-verdade,
+     dentre outros conceitos correlatos, e suas implicações na formulação de políticas
+     públicas.
+   ➢ Mapear as principais abordagens teóricas e metodológicas utilizadas na literatura
+     nacional e internacional para a identificação e mitigação da desinformação.
+   ➢ Auxiliar na análise qualitativa dos resultados de dados coletados (surveys e
+     raspagens de dados em redes sociais), interpretando padrões de resposta, variações
+     setoriais e impactos da desinformação sobre o uso de informações no setor público.
+   ➢ Auxiliar na elaboração de manuais e diretrizes metodológicas para a identificação,
+     monitoramento e mitigação da desinformação no contexto das políticas públicas.
+   ➢ Apoiar na construção de instrumentos analíticos para avaliar a resiliência institucional
+     à desinformação, considerando aspectos normativos, comunicacionais e
+     estratégicos.
+   ➢ Trazer subsídios para a interpretação dos achados qualitativos e quantitativos da
+     pesquisa, considerando o contexto político-institucional brasileiro, contribuindo para
+     um diagnóstico robusto dos efeitos da desinformação no ciclo das políticas públicas.
+   ➢ Participar na produção de notas técnicas e relatórios institucionais, estruturando
+     recomendações estratégicas para gestores públicos e formuladores de políticas.
+   ➢ Apoiar na redação de artigos científicos e materiais acadêmicos, consolidando os
+     achados da pesquisa e contribuindo para a agenda teórica sobre desinformação e
+     políticas públicas.
+   ➢ Apoiar na disseminação dos resultados da pesquisa, participando de seminários,
+     eventos acadêmicos e discussões interinstitucionais sobre estratégias de governança
+     informacional.
+   ➢ Apoiar na elaboração de relatórios técnicos;
+   ➢ Colaborar no acompanhamento da organização de publicações; e
+   ➢ Participar de reuniões e seminários para apresentação dos resultados das pesquisas
+     desenvolvidas no âmbito do projeto.
+
+
+4. RESULTADOS ESPERADOS
+
+   ➢ Base de dados a partir dos resultados do survey aplicado aos burocratas federais,
+     complementada por dados primários e secundários sobre desinformação e seu
+     impacto no setor público.
+   ➢ Geração de análises estatísticas avançadas sobre a percepção e os impactos da
+     desinformação na burocracia, incluindo padrões de exposição, confiança nas fontes
+     de informação e estratégias de mitigação adotadas pelos servidores públicos.
+   ➢ Mapeamento das principais narrativas desinformativas que impactam a formulação e
+     implementação de políticas públicas, identificando os setores mais vulneráveis e os
+     tipos de conteúdo enganosos mais recorrentes.
+   ➢ Estudos qualitativos e revisão bibliográfica aprofundada, consolidando o estado da
+     arte sobre desinformação e suas interseções com governança, comunicação
+     governamental e políticas públicas.
+
+
+
+                                                                                           13
+➢ Desenvolvimento de metodologias para mitigação da desinformação, incluindo
+  diretrizes para identificação e combate à circulação de informações falsas no setor
+  público.
+➢ Manuais e protocolos institucionais, fornecendo ferramentas para que gestores
+  públicos possam detectar e responder à desinformação de forma sistemática e
+  baseada em evidências.
+➢ Geração de insumos para políticas públicas de enfrentamento da desinformação, com
+  recomendações concretas para fortalecer a governança informacional e aprimorar a
+  comunicação institucional do governo federal.
+➢ Avaliação da resiliência dos burocratas diante da desinformação, analisando suas
+  estratégias para validar informações e minimizar os riscos associados à disseminação
+  de conteúdos falsos.
+➢ Apoio à redação de notas técnicas e relatórios institucionais, consolidando os achados
+  da pesquisa e fornecendo recomendações estratégicas para órgãos governamentais.
+➢ Ampliação da capacidade do Ipea de assessorar a administração pública federal na
+  avaliação dos impactos da desinformação na formulação de políticas públicas,
+  contribuindo para o fortalecimento da cultura de uso de evidências.
+➢ Produção de artigos científicos e disseminação do conhecimento, permitindo a
+  divulgação dos achados da pesquisa em eventos acadêmicos, publicações
+  institucionais e periódicos especializados.
+
+
+
+
+                                                                                     14
+                                 ANEXO II
+                      MODELO DE PROPOSTA DE PROJETO
+
+
+                                 MODELO DA CAPA
+                IPEA – Instituto de Pesquisa Econômica Aplicada
+          Programa de Pesquisa para o Desenvolvimento Nacional - PNPD
+
+
+
+
+                              PROPOSTA DE PROJETO
+
+
+
+
+Nome do Candidato:
+
+
+( ) 3.1. Candidato 1 – Assistente de Pesquisa III (Mestre)
+
+(   ) 3.2. Candidato 2 – Doutor
+
+
+
+
+                       Chamada Pública PNPD nº _____/______
+
+
+
+
+                                                                        15
+                             ANEXO II – CONTINUAÇÃO
+
+                  ROTEIRO PARA A ELABORAÇÃO DO PROJETO
+
+
+
+
+  1) O projeto deverá constar os seguintes itens:
+     1.1)   Contextualização da proposta quanto à inserção das EMENTAS DOS
+            OBJETIVOS ESTRATÉGICOS do IPEA;
+     1.2)   Objetivo geral;
+     1.3)   Objetivos específicos;
+     1.4)   Justificativa;
+     1.5)   Referencial teórico;
+     1.6)   Metodologia proposta;
+     1.7)   Atividade e cronogramas;
+     1.8)   Resultados esperados;
+     1.9)   Outras informações relevantes;
+     1.10) Referências Bibliográficas.
+
+
+
+
+IMPORTANTE:
+
+  a) Tipo de arquivo: “doc” ou “pdf”.
+
+
+
+
+                                                                         16
+               ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+                 OBJETIVOS ESTRATÉGICOS FINALÍSTICOS
+
+I - AVALIAR E PROPOR POLÍTICAS PÚBLICAS E PROGRAMAS ESSENCIAIS AO
+DESENVOLVIMENTO DO PAÍS
+1. Realizar pesquisa de excelência para apoiar as políticas públicas e programas essenciais
+ao desenvolvimento.
+2. Garantir a representação do IPEA em colegiados consultivos e deliberativos de políticas
+públicas para influenciar a construção da agenda institucional.
+3. Ampliar o assessoramento e a cooperação com os órgãos governamentais mais relevantes
+para influenciar a avaliação e formulação de políticas públicas e programas.
+4. Manter o quadro técnico do IPEA informado e atualizado sobre a agenda institucional de
+políticas públicas.
+5. Ampliar o acesso e uso de bases de dados necessárias à avaliação e à proposição de
+políticas públicas.
+
+II - FORMULAR ESTUDOS PROSPECTIVOS PARA ORIENTAR ESTRATÉGIAS DE
+DESENVOLVIMENTO DE MÉDIO E LONGO PRAZO
+1. Ofertar aos órgãos decisórios estudos prospectivos para antecipar impactos e identificar
+temas estratégicos para o desenvolvimento brasileiro.
+2. Ofertar aos órgãos decisórios estudos prospectivos setoriais e regionais que subsidiem o
+aprimoramento de políticas públicas e programas estratégicos.
+3. Propor e desenvolver pesquisas e metodologias relacionadas à prospecção.
+4. Assessorar instituições públicas na elaboração de estudos prospectivos.
+
+III - ASSESSORAR O ESTADO NA MELHORIA DA QUALIDADE DE SUAS DECISÕES
+1. Pesquisar e produzir diagnósticos sobre os principais problemas que impactam na agenda
+prioritária do Estado.
+2. Pesquisar e disseminar temas, propostas e métodos inovadores.
+3. Ampliar a prestação de serviços de assessoria ao Estado, de forma que resulte em
+respostas rápidas e consistentes para solução de problemas prioritários do desenvolvimento.
+4. Ter sistema atualizado com informações, estudos e indicação de pessoas e instituições
+relacionados às políticas e programas prioritários do Estado.
+5. Aumentar a capacidade de resposta do IPEA, por meio da mobilização de redes e maior
+produtividade no uso de bases de dados.
+
+IV - CONTRIBUIR PARA A QUALIFICAÇÃO DO DEBATE PÚBLICO QUANTO AOS RUMOS
+DO DESENVOLVIMENTO DO PAÍS E DA AÇÃO DO ESTADO
+1. Identificar, pesquisar e disseminar temas relevantes e emergentes na sociedade.
+2. Disponibilizar, em formatos adequados, as informações e conhecimentos produzidos pelo
+Ipea para atores da sociedade, incluindo locais e internacionais.
+3. Auscultar, articular e subsidiar os atores sociais relevantes para o desenvolvimento, por
+meio de redes e de diferentes canais de interação.
+
+
+
+
+                                                                                         17
+                   OBJETIVOS ESTRATÉGICOS DE GESTÃO
+
+I - ASSEGURAR PRODUTIVIDADE COM QUALIDADE E QUANTITATIVO ADEQUADO DE
+SERVIDORES
+1. Desenvolver a qualificação dos servidores, particularmente em metodologias de avaliação,
+prospecção e competências gerenciais, alinhada ao Plano Estratégico.
+2. Estruturar e qualificar a gestão de pessoas com uma política de incentivo ao desempenho.
+3. Propiciar ambiente e condições de trabalho motivadores.
+4. Viabilizar a adequação permanente do perfil e do quantitativo de pessoal por meio de
+políticas de ingresso, alocação e retenção de talentos.
+5. Implantar política corporativa para relacionamento com pesquisadores externos, bolsistas
+e terceirizados, com foco na profissionalização das relações, monitoramento e fiscalização.
+
+II - GARANTIR CONFIABILIDADE, AGILIDADE E EFETIVIDADE AOS PROCESSOS E
+SISTEMAS DE GESTÃO
+1. Assegurar a gestão estratégica para garantir a atualização e o monitoramento do Plano
+Estratégico.
+2. Aprimorar a gestão por projetos com critérios claros para a alocação de recursos.
+3. Aprimorar e integrar os processos e os sistemas de gestão para assegurar transparência,
+agilidade e economicidade.
+4. Redesenhar os processos críticos, de modo a aumentar sua confiabilidade, eficiência e
+eficácia.
+III - FORTALECER E ARTICULAR A COMUNICAÇÃO INTERNA E EXTERNA
+1. Qualificar a comunicação interna, com o intuito de criar um ambiente cooperativo e de amplo
+acesso às informações de interesse do servidor.
+2. Assegurar transparência às decisões tomadas no âmbito da diretoria colegiada e de outras
+instâncias decisórias.
+3. Definir uma política institucional de relacionamento com o público externo, particularmente
+com a mídia.
+4. Divulgar os resultados de estudos e pesquisas em linguagem adequada aos diferentes
+atores nacionais e internacionais.
+5. Aprimorar canais e espaços de diálogo entre o IPEA e seus principais parceiros e públicos.
+IV - GARANTIR FOCO E SINERGIA AO PLANO DE TRABALHO
+1. Aprimorar o processo de elaboração do Plano de Trabalho, de modo a garantir a definição
+e o desdobramento dos projetos em conformidade com o Plano Estratégico.
+2. Promover e incentivar a construção coletiva de projetos entre diretorias e coordenações.
+3. Aprimorar política de celebração e operacionalização de acordos e convênios visando
+garantir seu alinhamento com o Plano Estratégico do IPEA.
+4. Aperfeiçoar e institucionalizar a gestão do conhecimento e da inovação.
+5. Criar espaços e instrumentos institucionais de acompanhamento e debate sobre a
+conjuntura nacional, com disseminação de seus resultados na Instituição.
+
+
+
+
+                                                                                           18
+

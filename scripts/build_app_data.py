@@ -15,8 +15,35 @@ import clean_biblioteca as cb  # limpa_texto, chave_normalizada, aplica_ocr
 ROOT = Path(__file__).resolve().parent.parent
 RAW_BIB = ROOT / "data" / "raw" / "biblioteca_clausulas.json"
 CLEAN_BIB = ROOT / "data" / "biblioteca_clausulas.json"
+CORPUS_JSON = ROOT / "data" / "corpus_chamadas_2023-2026.json"
+MANIFEST = ROOT / "data" / "pdf_text" / "manifest.json"
 OUT_QUALITY = ROOT / "src" / "data" / "quality.json"
 OUT_SUG = ROOT / "src" / "data" / "clausulas_sugeridas.json"
+
+
+def cobertura_enriquecimento():
+    """Quantas chamadas tiveram cada campo extraído do PDF — para o painel de
+    honestidade (deixa explícito o que é máquina-extraído e imperfeito)."""
+    corpus = json.loads(CORPUS_JSON.read_text(encoding="utf-8"))
+    n = len(corpus)
+    tem = lambda r, k: bool(r.get(k))
+    enr = {
+        "total": n,
+        "com_texto": sum(1 for r in corpus if r.get("enriquecido")),
+        "objeto": sum(1 for r in corpus if tem(r, "objeto")),
+        "papel": sum(1 for r in corpus if tem(r, "papel")),
+        "modalidade_canonica": sum(1 for r in corpus if tem(r, "modalidade_canonica")),
+        "formacao": sum(1 for r in corpus if tem(r, "formacao")),
+        "requisitos": sum(1 for r in corpus if tem(r, "requisitos")),
+        "diretoria": sum(1 for r in corpus if tem(r, "diretoria")),
+        "categoria_funcao": sum(1 for r in corpus if tem(r, "categoria_funcao")),
+        "categoria_tema": sum(1 for r in corpus if tem(r, "categoria_tema")),
+    }
+    if MANIFEST.exists():
+        itens = json.loads(MANIFEST.read_text(encoding="utf-8")).get("itens", [])
+        enr["pdf_404"] = sum(1 for e in itens if str(e.get("flag", "")).startswith("http_"))
+        enr["texto_curto"] = sum(1 for e in itens if e.get("flag") == "texto_curto")
+    return enr
 
 # Sugestões SOMENTE para campos descritivos (fora do núcleo regulado): as cláusulas dos
 # modelos antigos servem como padrões de descrição de projetos/atividades/perfil — não
@@ -80,6 +107,7 @@ def main():
             "biblioteca_antes": {"categorias": len(raw), "clausulas": sum(len(v) for v in raw.values())},
             "biblioteca_depois": {"categorias": len(clean), "clausulas": sum(counts.values())},
         },
+        "enriquecimento": cobertura_enriquecimento(),
         "biblioteca": {
             "top_categorias": top,
             "duplicacao_por_categoria": dup_por_cat[:15],
@@ -98,6 +126,10 @@ def main():
           f"{quality['proveniencia']['biblioteca_antes']['clausulas']}->"
           f"{quality['proveniencia']['biblioteca_depois']['clausulas']} cláusulas, "
           f"{len(en)} EN")
+    e = quality["enriquecimento"]
+    print(f"enriquecimento: {e['com_texto']}/{e['total']} c/ texto | objeto {e['objeto']} | "
+          f"papel {e['papel']} | diretoria {e['diretoria']} | "
+          f"função {e['categoria_funcao']} | tema {e['categoria_tema']}")
 
 
 if __name__ == "__main__":

@@ -6,13 +6,13 @@ import BuilderView from "./components/BuilderView.jsx";
 import CorpusView from "./components/CorpusView.jsx";
 import AnalyticsView from "./components/AnalyticsView.jsx";
 
-// Logotipo "ipea" (wordmark) + quadradinhos institucionais.
+// Logotipo "idea" (wordmark) + quadradinhos.
 function Wordmark() {
   const cores = [C.azulClaro, C.gold, "#5a9e6f", "#ffffff"];
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
       <span style={{ fontFamily: WORDMARK, fontWeight: 700, fontSize: 30, color: "#fff", letterSpacing: "-.01em", lineHeight: 1 }}>
-        ipea
+        idea
       </span>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2 }}>
         {cores.map((c, i) => <span key={i} style={{ width: 7, height: 7, background: c, borderRadius: 1 }} />)}
@@ -27,13 +27,10 @@ export default function App() {
     <div style={{ background: C.paper, minHeight: "100vh", color: C.ink, fontFamily: SANS }}>
       <style>{FONTS}</style>
 
-      {/* faixa institucional IPEA */}
+      {/* faixa institucional */}
       <div style={{ background: C.azulEscuro }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "14px 28px", display: "flex", alignItems: "center", gap: 16 }}>
           <Wordmark />
-          <span style={{ fontFamily: SANS, fontSize: 12.5, color: "rgba(255,255,255,.82)", borderLeft: "1px solid rgba(255,255,255,.3)", paddingLeft: 16 }}>
-            Instituto de Pesquisa Econômica Aplicada
-          </span>
         </div>
       </div>
 
@@ -55,7 +52,7 @@ export default function App() {
         <div style={{ display: "flex", gap: 0, marginBottom: 28, borderBottom: `1px solid ${C.line}` }}>
           {[
             ["builder", "Gerador"],
-            ["corpus", "Corpus de editais"],
+            ["corpus", "Explorador de projetos"],
             ["analytics", "Analytics dos dados"],
           ].map(([k, l]) => (
             <button key={k} onClick={() => setTab(k)} style={{

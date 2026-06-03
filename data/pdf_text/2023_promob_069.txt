@@ -1,0 +1,436 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº069/2023 - SELEÇÃO DE CANDIDATO PARA
+                     CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA interessados(as) a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa
+de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo
+I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto:
+“Monitoramento continuado dos programas e do gasto Federal em
+desenvolvimento urbano”.
+
+
+2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 02 (duas) bolsas com duração prevista de 12 (doze) meses, podendo
+ser renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+3.1. Candidato 1 – Assistente de Pesquisa II – (Mestrando)
+3.1.1. Estar regularmente matriculado em curso de mestrado na área de Ciências
+Econômicas, Arquitetura e Urbanismo, Direito, Geografia, Ciências Sociais,
+Antropologia, Ciência Política, Políticas Públicas, Planejamento Urbano e Regional,
+Desenvolvimento Urbano, Desenvolvimento Territorial, Estatística, Ciências de Dados,
+Análise de Sistemas ou áreas de conhecimento similares
+3.1.2. Experiência com o tratamento, manipulação, e programação de bases de dados
+no software R.;
+3.1.3. Ter conhecimentos em análise estatística;
+3.1.4. Ter conhecimento e experiência em tratamento e manipulação de base de dados
+estatísticos e geográficos, nas áreas de finanças públicas, social, econômica e urbana;
+3.1.5. Desejável conhecimento em orçamento e finanças públicas;
+3.1.6. Ter disponibilidade para desenvolver as atividades inerentes ao projeto de
+pesquisa, nas instalações do IPEA – Rio de Janeiro-RJ, quando necessário.
+Vaga: 01 (Uma)
+
+3.2 . Candidato 2 – Auxiliar de Pesquisa (Graduando)
+3.2.1. Estar regularmente matriculado em curso de graduação na área de geografia,
+geologia, ou qualquer curso de graduação que tenha em sua base curricular disciplinas
+da área de geotecnologias;
+3.2.2. Ter experiência com o tratamento e manipulação de bases de dados
+georreferenciadas, e programação em softwares de Sistemas de Informações
+Geográficas (SIG), tais como ArcGis, Spring, Terraview, e Google Earth Engine;
+3.2.3. Desejável conhecimento em orçamento e finanças públicas;
+
+
+                                                                                     1
+3.2.4. Ter disponibilidade para desenvolver as atividades de pesquisa inerentes ao
+projeto no Ipea – Rio de Janeiro-RJ.
+Vaga: 01 (Uma)
+
+4. PARA TODOS OS CANDIDATOS
+4.1.1. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+4.1.2. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+4.1.3. Caso o candidato tenha possuído bolsa de pesquisa IPEA e seu relatório final
+tenha obtido avaliação péssima, ou caso esteja em situação de pendência na entrega
+de relatórios de atividades, este poderá, a critério do Comitê Julgador, ser
+desclassificado;
+4.1.4. Solicita-se aos candidatos e candidatas atualizarem e adaptarem seus currículos,
+ressaltando os pontos requeridos neste edital.
+
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. A solicitação deve ser apresentada pelo candidato mediante o cadastramento de
+seus dados no Sistema de Cadastro de Bolsista, disponível na página do IPEA
+www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando Currículo ou
+informando endereço lattes;
+5.2. Para candidatos que já possuem o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 5.1.desta Chamada
+Pública.
+
+6. CRONOGRAMA
+                     EVENTOS                                      DATAS
+Início do envio das candidaturas                       09 de novembro de 2023
+Data limite para submissão das candidaturas            19 de novembro de 2023
+Divulgação do resultado no Diário Oficial da União e A partir de 24 de novembro de
+na página do IPEA na internet                        2023
+Início da bolsa                                       A partir de 30 de novembro de
+                                                      2023
+6.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+6.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+7. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+
+
+                                                                                     2
+8. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+8.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito à indenização
+ou reclamação de qualquer natureza.
+8.2. O IPEA poderá cancelar a presente chamada pública, caso o Comitê Julgador não
+se pronuncie no prazo de 30 dias, a contar da entrega das propostas para análise.
+
+9. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+9.1. A presente chamada pública poderá ser impugnada até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+9.2. Decairá do direito de impugnar os termos da presente chamada, o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceito sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+9.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+10. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+                                                    Brasília, 07 de novembro de 2023.
+
+
+                          Marinésia Lemos Souto
+   Coordenador-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa –
+                                  CGCAP
+
+
+
+
+                                                                                     3
+                                  REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+Os candidatos deverão atender aos requisitos constantes do item 3 da Chamada
+Pública, os quais serão avaliados pelo Comitê Julgador mediante análise curricular e
+entrevista (quando for o caso)
+
+4. MODALIDADE E VALORES DAS BOLSAS
+ QUANTIDADE                     MODALIDADE                      VALOR EM R$/MÊS
+
+       01         Auxiliar de Pesquisa (Graduando)                    1.225,00
+
+
+       01         Assistente de Pesquisa II (Mestrando)               3.360,00
+
+4.1. O candidato vinculado a Instituição Pública deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa
+se exercer cargo de Pesquisador, professor Universitário ou equivalentes.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto (Quando
+for o caso) nas seguintes notas:
+NOTA: (0) Insuficiente; (1 – 4) Fraco; (5 – 6) Regular; (7 – 8) Bom – (9-10) Excelente
+PESO NOTA: (1 a 5)
+
+5.1.1. A critério do Comitê Julgador poderão ser entrevistados 03 (três) candidatos por
+vaga que obtiverem o melhor desempenho nos itens de A a D (Candidato 1) e A a E
+(Candidato 2);
+
+
+
+                                                                                     4
+5.1.2. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que
+emitirá nota de justificativa.
+5.1.3. Poderá, a critério do Comitê Julgador, ser desclassificado o candidato que obtiver
+nota final inferior a 50% do total proposto na presente chamada poderá, a critério do
+comitê julgador, ser desclassificado.
+
+3.1. Candidato 1 – Assistente de Pesquisa II - Mestrando
+ ITEM                       CRITÉRIO DE AVALIAÇÃO                               PESO
+        Experiência com o tratamento e manipulação de bases de dados
+ A                                                                             3
+        no software R
+
+        Ter conhecimento e experiência em tratamento, manipulação de
+        base de dados estatísticos e geográficos, inclusive de dados de
+ B                                                                             3
+        registro administrativo nas áreas social, econômica e urbana e
+        conhecimentos intermediários em análise estatística
+
+ C      Conhecimento em orçamento e finanças públicas                          2
+
+ D      Conhecimentos em análise estatística                                   1
+
+ E      Entrevista                                                             1
+
+
+3.2. Candidato 2 – Auxiliar de Pesquisa - Graduando
+ ITEM                       CRITÉRIO DE AVALIAÇÃO                               PESO
+        Ter experiência com o tratamento e manipulação de bases de
+ A                                                                             3
+        dados georreferenciadas
+
+        Ter conhecimentos em softwares de Sistemas de Informações
+ B                                                                             2
+        Geográficas (SIG), tais como ArcGis, Spring, Terraview
+
+ C      Ter experiência com Google Earth Engine                                1
+
+ D      Ter conhecimento em orçamento e finanças públicas                      1
+
+ E      Ter conhecimento em políticas urbanas e habitacionais                  1
+
+ F      Entrevista                                                             2
+
+
+6. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor recurso ao resultado do julgamento das
+propostas, poderá apresentá-lo por meio do e-mail pnpd@ipea.gov.br, no prazo de 03
+(três) dias úteis, a contar do dia seguinte da data de publicação do resultado no Diário
+Oficial da União.
+
+
+
+                                                                                       5
+7.2. Os participantes, a contar da divulgação das notas no site do Ipea, terão 03 (três)
+dias úteis para interpor recursos contra as notas recebidas ou a classificação definida.
+7.3.O teor dos recursos será publicado no site do Ipea para conhecimento dos demais
+participantes.
+7.4. Da data da publicação da resposta do recurso no site do Ipea, será concedido o
+prazo de 03 (três) dias úteis para contrarrazões.
+7.5. O direito de contrarrazões é instrumento de defesa que visa refutar ou combater
+as razões do recurso encaminhado. Caso o interessado sinta-se prejudicado pelo
+pedido do recurso, cabe o envio das contrarrazões indicando o número da chamada e
+o nome do recorrente no caso de ter-se mais de um recurso para a mesma chamada,
+observando o prazo mencionado no item 7.4.
+7.6. O recurso e as contrarrazões deveram ser dirigidos ao Comitê Julgador que, após
+o exame, poderá julgar pelo deferimento. Caso o Comitê julgue pelo indeferimento, o
+recurso com as contrarrazões será encaminhado para deliberação final da Presidência
+do IPEA.
+
+8. DA CONCESSÃO DA BOLSA
+8.1.O (A) candidato (a) deverá manifestar interesse de assumir a bolsa, pelo e-mail
+pnpd@ipea.gov.br, imediatamente após a publicação dos resultados, sob pena de não
+ter a bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade às Portarias IPEA Nº
+491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+no item 2 da presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Autorização da instituição de origem para atuação no projeto (para candidatos
+vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e, assim, sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providências cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+
+
+
+                                                                                      6
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato, adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e às suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXO
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+
+
+
+                                                                                 7
+                                         ANEXO I
+
+        TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+“Monitoramento continuado          dos    programas     e   do   gasto    Federal    em
+desenvolvimento urbano”.
+
+2. PROPÓSITO DO TRABALHO
+
+Constituir processo permanente de monitoramento dos recursos alocados em
+desenvolvimento urbano no governo federal, com vistas a subsidiar estudos, análises e
+avaliações, e disseminar informações de acesso público para a sociedade interessada.
+O foco inicial são os programas e ações do Plano Plurianual (PPA) e Orçamento Geral
+da União (OGU) - PPA/OGU - destinados às políticas de desenvolvimento urbano,
+primordialmente organizados no Ministério das Cidades. Nas etapas seguintes, a ideia
+é incorporar outras fontes relevantes na execução destas políticas.
+
+O monitoramento não representa apenas um fim em si mesmo, e, para além de gerar
+produtos próprios, visa fornecer subsídios a outras pesquisas da Diretoria de estudos
+regionais e urbanos - DIRUR. Considerando que parte significativa das políticas
+públicas são efetivadas mediante algum tipo de gasto, ainda que na forma de subsídios
+e financiamentos, renúncias, etc., o monitoramento continuado dos programas e do
+gasto federal pode trazer elementos significativos à avaliação das políticas de
+desenvolvimento urbano.
+
+Tratamento das bases de informações e produção de indicadores e análises a partir das
+bases dos PPAs, OGU e Carteira de Investimentos do Ministério das Cidades, do
+Desenvolvimento Regional e da Fundação Nacional de saúde - FUNASA; de recursos
+onerosos controlados pela União, como o Fundo de Garantia do Tempo de Serviço
+(FGTS), Caixa Econômica Federal, Fundo de Arrendamento Residencial (FAR), Fundo
+de Desenvolvimento Social (FDS); linhas de financiamento do BNDES; emissão de
+debêntures Incentivadas; Sistema Brasileiro de Poupança e Empréstimo (SBPE); bases
+do Banco Central e da Secretaria do Tesouro Nacional; de gasto/social/renúncia fiscal,
+entre outras, visando identificar o perfil, entes beneficiados, montantes aplicados,
+localização no território, assim como sua evolução histórica.
+
+A atuação do Governo Federal no tema envolve tanto ações de natureza orçamentária
+quanto as não orçamentárias, e não obstante a intenção maior em focalizar o gasto
+destas políticas, também permanece como questão fundamental compreender a
+natureza e a dinâmica das fontes que lhe provêm sustentação financeira, de forma que
+o lado das receitas também será objeto de análise. O foco inicial do trabalho concentrará
+sua atenção nos programas e ações do Orçamento Geral da União destinados às
+políticas de desenvolvimento urbano, que em 2023 estão primordialmente organizados
+no escopo de atuação do Ministério das Cidades, e, a cada etapa subsequente,
+incorporar outras fontes não orçamentárias ao monitoramento, dado que recursos como
+os do FGTS, entre outros, cumprem papel fundamental na execução destas políticas.
+
+
+
+
+                                                                                       8
+3. ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER
+
+3.1.   Candidato 1 – Assistente de Pesquisa II – Mestrando
+
+    Manipular e gerir dados oriundos de bancos/bases de dados públicas, com forte
+     ênfase em dados orçamentários, financeiros, parcerias público-privadas e de
+     execução de contratos do setor público e demais bases ligadas a políticas de
+     financiamento do desenvolvimento urbano;
+    Elaborar regularmente análises descritivas ad-hoc para exploração de bases de
+     dados e cruzamentos entre variáveis de interesse constante em bases de dados
+     públicas;
+    Apoiar a elaboração de painéis de monitoramento de variáveis de interesse
+     como suporte a pesquisas do IPEA;
+    Apoiar a elaboração de propostas de aperfeiçoamento das bases de dados e do
+     seu tratamento;
+    Apoiar análises ad-hoc com técnicas de estatística inferencial;
+    Apoiar a elaboração de apresentações (ex: Powerpoint, Canva, etc) e elementos
+     visuais (ex: infográficos) destinados a peças de comunicação e divulgação
+     regular da metodologia/resultados;
+    Apoiar o processo regular de coleta de dados e relações com as instituições
+     envolvidas na pesquisa;
+    Participação na elaboração de artigos, capítulos de livros e outras publicações
+     científicas;
+    Elaboração de Relatórios semestrais de atividades.
+
+3.2.   Candidato 2 – Auxiliar de Pesquisa – Graduando
+
+    Manipular e/ou construir bases de dados georeferenciadas sobre a distribuição
+     de recursos orçamentários, e indicadores de monitoramento das políticas de
+     desenvolvimento urbano
+    Elaborar mapas temáticos sobre a distribuição espacial dos recursos federais e
+     indicadores de monitoramento das políticas de desenvolvimento urbano
+    Apoiar a elaboração de painéis de monitoramento de variáveis de interesse
+     como suporte a pesquisas do IPEA;
+    Apoiar a elaboração de propostas de aperfeiçoamento das bases de dados e do
+     seu tratamento;
+    Apoiar a elaboração de apresentações e elementos visuais (ex: Mapas
+     temáticos) destinados a peças de comunicação e divulgação regular da
+     metodologia/resultados;
+    Apoiar o processo regular de coleta de dados e relações com as instituições
+     envolvidas na pesquisa;
+    Participação na elaboração de artigos, capítulos de livros e outras publicações
+     científicas.
+
+4. RESULTADOS ESPERADOS
+
+Contribuir e atuar para a produção de:
+
+      Bases de dados georreferenciadas sobre execução de contratos, gastos
+       orçamentários e mobilização de recursos de diversas fontes não orçamentárias,
+       que subsidiarão o monitoramento dos Programas e Ações Finalísticos federais
+       voltados para o desenvolvimento urbano;
+
+
+
+
+                                                                                  9
+ Relatórios, notas técnicas e artigos/capítulos contendo análises dos dados
+  produzidos, em especial, do relatório anual sobre a evolução da aplicação dos
+  recursos no tema;
+ Revisão e validação dos produtos elaborados pelos pesquisadores.
+
+
+
+
+                                                                            10
+

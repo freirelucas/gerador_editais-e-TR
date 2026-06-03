@@ -1,0 +1,18 @@
+{
+  "_nota": "Taxonomia editável. Ajuste categorias/palavras-chave e rode `python scripts/classify.py` (não precisa re-baixar nem re-enriquecer). Casamento por substring, sem acentos, minúsculas, sobre objeto+projeto+papel+modalidades+requisitos+formação. Multi-rótulo.",
+  "FUNCAO": {
+    "Ciência de Dados – Engenharia": ["engenharia de dados", "engenheiro de dados", "pipeline", "etl", "raspagem", "web scraping", "banco de dados", "base de dados", "bancos de dados", "data warehouse", "infraestrutura de dados", "integracao de dados", "big data", "spark", "mlops"],
+    "Ciência de Dados – Analytics/ML": ["cientista de dados", "ciencia de dados", "machine learning", "aprendizado de maquina", "aprendizado profundo", "mineracao de dados", "inteligencia artificial", "modelos preditivos", "visualizacao de dados", "ciencia de dados pleno", "ciencia de dados iniciante", "ciencia de dados junior", "ciencia de dados senior"],
+    "Métodos quantitativos": ["econometr", "estatistic", "avaliacao de impacto", "avaliacao de politicas", "microdados", "analise quantitativa", "series temporais", "amostragem", "modelagem"],
+    "Especialista de domínio": ["especialista", "consultor", "notorio saber", "reconhecida experiencia", "profissional senior"],
+    "Apoio à pesquisa": ["assistente de pesquisa", "auxiliar de pesquisa", "apoio a pesquisa", "incentivo a pesquisa", "revisao de literatura", "levantamento bibliografico", "coleta de dados"]
+  },
+  "TEMA": {
+    "Macroeconomia e finanças": ["macroeconom", "politica fiscal", "politica monetaria", "inflacao", "juros", "pib", "contas nacionais", "divida publica", "sistema financeiro", "tributa"],
+    "Social, trabalho e renda": ["pobreza", "desigualdade", "educacao", "saude", "assistencia social", "mercado de trabalho", "emprego", "renda", "previdencia", "seguridade", "genero", "raca", "racial", "direitos humanos"],
+    "Estado, instituições e democracia": ["democracia", "institui", "gestao publica", "administracao publica", "judicia", "federalismo", "governanca", "participacao social", "transparencia", "corrupcao", "seguranca publica"],
+    "Regional, urbano e ambiental": ["desenvolvimento regional", "urban", "cidade", "metropol", "habitacao", "mobilidade", "meio ambiente", "ambiental", "mudanca climatica", "clima", "saneamento", "territor"],
+    "Setorial, inovação e infraestrutura": ["inovacao", "industri", "produtividade", "ciencia e tecnologia", "infraestrutura", "energia", "transporte", "agropecuar", "agro", "propriedade intelectual", "digital"],
+    "Internacional e comércio": ["comercio internacional", "comercio exterior", "relacoes internacionais", "geopolit", "cooperacao internacional", "exportacao", "importacao", "cadeias globais", "integracao regional"]
+  }
+}

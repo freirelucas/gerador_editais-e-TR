@@ -1,0 +1,334 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº 045/2023 - SELEÇÃO DE CANDIDATO PARA
+                      CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA os interessados a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+
+A presente Chamada tem por objetivo selecionar interessados, para concessão de bolsa
+pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e
+no REGULAMENTO desta Chamada, em realizar pesquisa no âmbito do Projeto:
+“Análise das Políticas de Emprego e Boletim Mercado de Trabalho: Conjuntura e
+Análise”.
+
+2. QUANTIDADE E DURAÇÃO DA BOLSA
+
+Será concedida 01 (uma) bolsa, com duração prevista 12 (doze) meses podendo ser
+renovada.
+
+3. REQUISITOS DO CANDIDATO
+
+3.1. Candidato 1 – Bolsa de Incentivo à Pesquisa II
+3.1.1. Graduação completa na área de Economia e Pós-graduação completa ou
+cursando na área de Economia ou Estatística;
+3.1.1.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente.
+3.1.2. Experiência com leitura, manipulação, processamento e tabulação de dados
+primários (microdados) da PNAD Contínua do IBGE, em particular com os dados em
+formato de painel;
+3.1.3. Experiência com leitura e tabulação de dados primários (microdados) dos
+registros administrativos do Ministério do Trabalho e Emprego (RAIS e/ou CAGED);
+3.1.4. Conhecimento do software estatístico SAS;
+3.1.5. Conhecimento do software estatístico Stata;
+3.1.6. Conhecimento do software estatístico R;
+3.1.7. Conhecimento em Língua Inglesa;
+3.1.8. Conhecimento em bancos de dados;
+3.1.9.Ter disponibilidade para desenvolver as atividades inerente ao projeto no Ipea
+Brasília/DF ou Ipea Rio de Janeiro/RJ;
+3.1.10. Ter cumprido o interstício de 01 (um) ano caso esteja concorrendo para a mesma
+modalidade, salvo, se a vigência da bolsa anterior for inferior a 12 meses;
+3.1.11. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+
+
+
+                                                                                        1
+3.1.12. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+3.1.13. Caso o candidato tenha recebido bolsa de pesquisa IPEA e seu relatório final
+tenha obtido avaliação péssima, ou caso esteja em situação de pendência na entrega
+de relatórios de atividades, este poderá, a critério do comitê julgador, ser
+desclassificado;
+3.1.14. Solicita-se aos candidatos e candidatas atualizarem e adaptarem seus
+currículos, ressaltando os pontos requeridos neste edital.
+Vaga 01 (uma)
+
+4. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+4.1. A solicitação deve ser apresentada, pelo candidato, mediante o cadastramento de
+seus dados no Sistema de Cadastro de Bolsista, disponível na página do IPEA
+www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando Currículo ou
+informar endereço lattes;
+4.2. Todo e qualquer documento anexado no Sistema de Cadastro de Bolsista fora do
+prazo de inscrição não será considerado;
+4.3. Para candidatos que já possuem o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 4.1. desta Chamada
+Pública.
+
+5. CRONOGRAMA
+
+EVENTOS                                                     DATAS
+Início do envio das candidaturas                             31 de julho de 2023
+Data limite para submissão das candidaturas                 09 de agosto de 2023
+Divulgação dos resultados no Diário Oficial da União e na A partir de 15 de agosto
+página do IPEA na internet                                  2023
+                                                            A partir de 21 de agosto
+Início das bolsas
+                                                            de 2023
+5.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+5.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+6. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+7. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+7.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito a indenização
+ou reclamação de qualquer natureza.
+7.2. O IPEA poderá cancelar a presente chamada pública caso o Comitê julgador não
+se pronuncie no prazo de 30 dias a contar da entrega das propostas para análise.
+
+                                                                                     2
+8. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+8.1. A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+8.2. Decairá do direito de impugnar os termos da presente chamada o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceito sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+8.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+9. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+
+                                                        Brasília, 27 de julho de 2023.
+
+
+
+                         Marinésia Lemos Souto
+  Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa -
+                                 CGCAP
+
+
+
+
+                                                                                    3
+                                   REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+ O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+O candidato deverá atender aos requisitos constantes do item 3 da Chamada Pública,
+o qual será avaliado pelo comitê julgador mediante análise curricular e entrevista
+(quando for o caso).
+
+4. MODALIDADE E VALOR DA BOLSA
+Quantidade Modalidade                                    Valor em R$/Mês
+01           Bolsa de Incentivo à Pesquisa II            4.800,00
+4.1. O candidato vinculado a Instituição Pública, deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal, só poderá ser contemplado com a bolsa de pesquisa
+se exercer cargo de Pesquisador, professor Universitário ou equivalentes. Este
+candidato será enquadrado na Modalidade de Pesquisador Visitante com o valor
+referente de R$ 3.800,00.
+4.3. O candidato selecionado que for servidor, empregado público e professor
+universitário inativo de instituições públicas, será enquadrado na modalidade
+Profissional Sênior com o valor referente de R$ 4.800,00 e deverá apresentar a devida
+comprovação.
+4.4. Caso a modalidade inicialmente prevista estiver fixada em valor inferior ao indicado,
+nos itens 4.2. e 4.3., prevalecerá a modalidade de menor valor.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto (quando
+for o caso) nas seguintes notas:
+NOTA: (0) Insuficiente; (1 – 4) Fraco; (5 – 6) Regular; (7 – 8) Bom – (9-10) Excelente
+PESO NOTA: (1 a 5)
+
+
+                                                                                        4
+3.1. Candidato 1 – Bolsa de Incentivo à Pesquisa II
+ITEM CRITÉRIO DE AVALIAÇÃO                                                   PESO
+A       Conhecimento do software estatístico SAS                             2
+B       Conhecimento do software estatístico Stata                           1,5
+C       Conhecimento do software estatístico R                               1,5
+        Experiência com leitura, processamento e tabulação de dados
+D       primários (microdados) da PNAD Contínua do IBGE, em particular 2
+        com os dados em formato de painel
+        Experiência com leitura e tabulação de dados primários
+E       (microdados) dos registros administrativos do Ministério do Trabalho 2
+        e Emprego (RAIS e/ou CAGED);
+F       Desempenho na entrevista                                             1
+5.1. Poderá, a critério do comitê julgador, ser desclassificado o candidato que obtiver
+nota final inferior a 50% do total proposto na presente Chamada.
+5.2. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que emitirá
+nota de justificativa.
+5.3. A critério do Comitê Julgador poderão ser entrevistados 03 (três) candidatos entre
+os mais bem classificados nos itens de A a E.
+
+6. RESULTADO DO JULGAMENTO
+A relação dos candidatos aprovados será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor recurso ao resultado do julgamento das
+propostas, poderá apresenta-lo, por meio do e-mail pnpd@ipea.gov.br , no prazo de 03
+(três) dias úteis, a contar do dia seguinte da data de publicação do resultado no Diário
+Oficial da União.
+7.2. Os participantes, a contar da divulgação das notas no site do Ipea, terão 03 (três)
+dias úteis para interpor recursos contra as notas recebidas ou a classificação definida.
+7.3. O teor dos recursos serão publicados no site do Ipea para conhecimento dos
+demais participantes.
+7.4. Da data da publicação do recurso no site do Ipea, será concedido o prazo de 03
+(três) dias úteis para contrarrazões.
+7.5. O direito de contrarrazões é instrumento de defesa que visa refutar ou combater
+as razões do recurso encaminhado. Caso o interessado sinta-se prejudicado pelo
+pedido do recurso, cabe o envio das contrarrazões indicando o número da chamada e
+o nome do recorrente no caso de ter-se mais de um recurso para a mesma chamada,
+observando o prazo mencionado no item 7.4.
+7.6. O recurso e as contrarrazões deveram ser dirigidos ao Comitê Julgador que, após
+o exame, poderá julgar pelo deferimento. Caso o Comitê julgue pelo indeferimento, o
+recurso com as contrarrazões será encaminhado para deliberação final da Presidência
+do IPEA.
+
+
+
+
+                                                                                      5
+8. DA CONCESSÃO DA BOLSA
+8.1. O (A) candidato(a) deverá manifestar interesse na concessão da bolsa, pelo e-mail
+pnpd@ipea.gov.br, no prazo de 05 (cinco) dias corridos após a publicação dos
+resultados, sob pena de não ter a bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade as Portarias IPEA
+Nº 491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+no item 2 da presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Cópia da Autorização da instituição de origem para atuação no projeto (para
+candidatos vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Cópia Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e assim sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providencias cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e as suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXO
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+
+
+
+                                                                                    6
+                              ANEXO I
+        TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+
+“Análise das Políticas de Emprego e Boletim Mercado de Trabalho: Conjuntura e
+Análise”
+
+
+2. PROPÓSITO DO TRABALHO
+
+Produzir e disponibilizar indicadores do mercado de trabalho brasileiro ao longo dos
+últimos 20 anos, bem como analisar os indicadores para subgrupos populacionais
+definidos pela escolaridade, a idade, a cor ou raça e o gênero do indivíduo, e analisar
+possíveis alterações na estrutura ocupacional do mercado de trabalho brasileiro no
+mesmo período. Este projeto se justifica por ao menos dois motivos. Em primeiro lugar
+novas fontes de informação sobre o Mercado de Trabalho estão sendo colocadas a
+disposição do IPEA ou da sociedade em geral; com destaque para a PNAD contínua do
+IBGE e alguns registros administrativos do Ministério da Economia. A segunda
+justificativa é a relativa escassez de fontes de indicadores sistematizados sobre o
+mercado de trabalho que permitam uma análise ampla das tendências de longo-prazo
+do mercado de trabalho brasileiro. Esse tipo de informação pode ser de imensa utilidade
+para formuladores de políticas, pesquisadores e a sociedade de maneira geral. Esses
+indicadores seriam disponibilizados no âmbito do Boletim de Mercado de Trabalho do
+IPEA, que inclusive faria uso de grande parte dos indicadores em seu texto de análise
+
+3. ATIVIDADES QUE O BOLSISTA IRÁ DESENVOLVER
+
+    Processar dados relacionados ao projeto de pesquisa, incluindo análises
+     estatísticas;
+    Elaborar tabelas e gráficos relativos ao projeto de pesquisa;
+    Apoiar na confecção de relatórios técnicos;
+    Participar de reuniões do projeto.
+
+
+
+4. RESULTADOS ESPERADOS
+
+A pesquisa tem prevista alguns relatórios a serem entregues ao Ministério da Economia
+bem como a publicação semestral do Boletim Mercado de Trabalho: Conjuntura e
+Análise. O bolsista contribuirá em diversas fases, mas espera-se um envolvimento maior
+do bolsista em alguns passos intermediários da pesquisa, a saber: i) Programas em
+SAS, Stata e R devidamente documentados, e ii) um relatório preliminar expondo a
+arquitetura das bases de dados e a consistência das informações.
+
+
+
+
+                                                                                     7
+

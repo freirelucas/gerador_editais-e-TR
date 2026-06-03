@@ -1,0 +1,686 @@
+CHAMADA PÚBLICA IPEA/PNPD Nº 042/2024 - SELEÇÃO DE CANDIDATO PARA
+                      CONCESSÃO DE BOLSA
+
+
+
+O Instituto de Pesquisa Econômica Aplicada (IPEA), fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, que desenvolve pesquisas e fornece suporte
+técnico e institucional às ações governamentais para a formulação e avaliação de
+políticas e programas de desenvolvimento, CONVIDA interessados(as) a apresentarem
+propostas nos termos aqui estabelecidos para seleção pública de candidato a bolsa de
+pesquisa, no âmbito do Subprograma de Pesquisa para o Desenvolvimento Nacional –
+PNPD do Programa de Mobilização da Competência Nacional para Estudos sobre o
+Desenvolvimento - PROMOB.
+
+1. OBJETO
+
+A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa
+de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo
+I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto:
+"Precificação de tecnologias e avaliação de políticas de desenvolvimento do
+complexo industrial da saúde".
+
+2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 10 (dez) com previsão de 09 (nove) meses, podendo ser renovadas.
+
+3. REQUISITOS DOS CANDIDATOS
+
+3.1. Candidatos 1 e 2 – Doutor
+3.1.1. Possuir título de Doutor em uma das seguintes áreas: Economia, Políticas
+Públicas em Ciência, Tecnologia e Inovação ou na área da Saúde;
+3.1.2. Possuir pelo menos 10 anos de experiência acadêmica;
+3.1.3. Conhecimento em Língua Inglesa;
+3.1.4. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou
+artigos científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou
+tese defendida, coordenação e/ou participação em projetos de pesquisas, carteira de
+trabalho, entre outros.
+3.1.5. Apresentar proposta de projeto de pesquisa sobre o tema, com no máximo 10
+(dez) páginas, de acordo com o Anexo II – Modelo de Proposta de Projeto. A não
+apresentação da proposta sujeitará ao candidato a sua exclusão da Chamada, mesmo
+que este possua experiência na área requerida.
+Vaga: 02 (duas)
+
+3.2. Candidatos 3 a 6 – Doutor
+3.2.1. Possuir título de Doutor em uma das seguintes áreas: Economia, Políticas
+Públicas em Ciência, Tecnologia e Inovação ou na área da Saúde;
+3.2.2. Possuir pelo menos 10 anos de experiência acadêmica;
+3.2.3. Conhecimento em Língua Inglesa;
+3.2.4. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou
+
+
+
+                                                                                         1
+artigos científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou
+tese defendida, coordenação e/ou participação em projetos de pesquisas, carteira de
+trabalho, entre outros.
+3.2.5. Apresentar proposta de projeto de pesquisa sobre o tema, com no máximo 10
+(dez) páginas, de acordo com o Anexo II – Modelo de Proposta de Projeto. A não
+apresentação da proposta sujeitará ao candidato a sua exclusão da Chamada, mesmo
+que este possua experiência na área requerida.
+Vaga: 04 (quatro)
+
+3.3. Candidato 7 – Incentivo à Pesquisa II
+3.3.1. Possuir diploma de Graduação e Pós-graduação completa em uma das seguintes
+áreas: Estatística, Economia, Engenharia ou Ciência da Computação.
+3.3.2. Possuir conhecimentos avançados na operação de pesquisas amostrais e
+registros administrativos de empresas e de emprego, tais como: PINTEC, PIA, PAC,
+PAS, RAIS etc.
+3.3.3.Ter domínio de estatística avançada e econometria;
+3.3.4. Conhecimento avançado de pelo menos uma das seguintes ferramentas: SAS,
+STATA ou R.
+3.3.5. Ter domínio em desenvolvimento de soluções WEB;
+3.3.6. Possuir conhecimento avançado em Língua Inglesa;
+3.3.7. Disponibilidade para realização de teste prático de proficiência de software nas
+dependências do IPEA/Rio de Janeiro-RJ.
+3.3.8. Disponibilidade para execução das atividades inerentes ao projeto de pesquisa
+nas instalações do IPEA/Rio de Janeiro-RJ.
+Vaga: 01 (uma)
+
+3.4. Candidatos 8 a 10 – Assistente de Pesquisa III (Mestre)
+3.4.1. Possuir título de Mestre em uma das seguintes áreas: em Economia ou em
+Políticas Públicas em Ciência, Tecnologia e Inovação e/ou na área da Saúde;
+3.4.2. Possuir pelo menos 5 anos de experiência acadêmica;
+3.4.3. Conhecimento em Língua Inglesa;
+3.4.4. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo do candidato, tais como: textos ou
+artigos científicos publicados, autoria ou coautoria de capítulos de livros, dissertação ou
+tese defendida, coordenação e/ou participação em projetos de pesquisas, carteira de
+trabalho, entre outros.
+3.4.5. Apresentar proposta de projeto de pesquisa sobre o tema, com no máximo 10
+(dez) páginas, de acordo com o Anexo II– Modelo de Proposta de Projeto. A não
+apresentação da proposta sujeitará ao candidato a sua exclusão da Chamada, mesmo
+que este possua experiência na área requerida.
+Vaga: 03 (três)
+
+4. PARA TODOS OS CANDIDATOS
+4.1. Não possuir bolsa IPEA ou de outra instituição no ato da implementação desta
+bolsa, exceto se a bolsa de outra instituição estiver suspensa;
+4.2. Caso tenha vínculo com Instituições Públicas nas esferas Federal, Estadual ou
+Municipal, deverá exercer a função de Pesquisador, Professor Universitário ou
+equivalente;
+
+
+
+
+                                                                                         2
+4.3. Caso o candidato tenha possuído bolsa de pesquisa IPEA e seu relatório final tenha
+obtido avaliação péssima, ou caso esteja em situação de pendência na entrega de
+relatórios de atividades, este poderá, a critério do comitê julgador, ser desclassificado;
+4.4. Solicita-se aos candidatos e candidatas atualizarem e adaptarem seus
+currículos, ressaltando os pontos requeridos neste edital;
+4.5. A existência de algum tipo de inadimplência por parte do candidato selecionado
+junto à Administração Pública Federal, direta ou indireta, constituirá fator impeditivo para
+a concessão da bolsa de pesquisa;
+4.6. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente;
+4.7. As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas
+o bolsista deverá ter disponibilidade para a realização de reuniões periódicas, sempre
+que solicitadas pela Coordenação da pesquisa - (exceto para o candidato 3.3.
+Candidato 7 – Incentivo à Pesquisa II).
+
+5. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+5.1. As inscrições deverão ser realizadas exclusivamente através SISTEMA DE
+CADASTRO DE BOLSA- https://bolsas.ipea.gov.br/bolsas, disponível na página do
+IPEA www.ipea.gov.br, mediante a seleção do projeto de interesse, anexando:
+a) Currículo ou informando endereço lattes;
+b) Proposta de execução do projeto.
+Obs.: O candidato que não anexar o currículo e o projeto (quando houver), será
+desclassificado automaticamente.
+5.2. O candidato que não tem cadastro deverá acessar o SISTEMA DE CADASTRO
+DE BOLSA - https://bolsas.ipea.gov.br/bolsas, opção “Ainda não sou cadastrado”
+e preencher os dados. A Senha deverá ser composta apenas por letras e números,
+no intervalo de 8 a 10 caracteres, não podendo conter caracteres especiais.
+5.3. O candidato, ao concluir sua inscrição, receberá um e-mail de confirmação da
+inscrição, devendo, caso não o receba, entrar em contato através do e-mail
+pnpd@ipea.gov.br noticiando o ocorrido para esclarecimentos visando a
+conclusão da inscrição.
+5.4. O candidato que não concluir a inscrição será eliminado automaticamente.
+5.5. A inscrição será aceita única e exclusivamente através do SISTEMA DE
+CADASTRO DE BOLSA - https://bolsas.ipea.gov.br/bolsas.
+5.6. Caso o candidato se inscreva para mais de uma modalidade de bolsa, dentro da
+mesma chamada pública, sendo exigido anexar projeto para cada solicitação de
+inscrição, este deverá incluir, sob pena de desclassificação, em cada uma delas arquivo
+com o projeto, mesmo quando o escopo ou tema for semelhante.
+5.7. Para candidato que já possui o cadastro, será necessário acessar a ferramenta,
+selecionar o projeto e anexar a documentação mencionada no item 5.1. desta Chamada
+Pública.
+5.8. Constatando-se projetos idênticos encaminhados por diferentes candidatos, todas
+as propostas envolvidas serão desclassificadas.
+5.9. Os projetos de pesquisas citados na letra “b” do item 5.1, não serão desenvolvidos
+no âmbito desta Chamada Pública, e terão meramente o papel de objeto para a
+avaliação do candidato pelo Comitê Julgador.
+
+
+
+
+                                                                                          3
+6. CRONOGRAMA
+                     EVENTOS                                      DATAS
+Início do envio das candidaturas                       19 de agosto de 2024
+Data limite para submissão das candidaturas            03 de setembro de 2024
+Previsão para divulgação do resultado no Diário A partir de 09 de setembro de
+Oficial da União e na página do IPEA na internet 2024
+Previsão para o início da bolsa                        A partir de 15 de setembro de
+                                                       2024
+6.1. As solicitações devem ser enviadas ao IPEA até às 23h59min. (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+6.2. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+
+7. DOS ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta Chamada
+poderão ser obtidos por intermédio do endereço eletrônico pnpd@ipea.gov.br ou
+através do telefone (61) 2026-5219, referenciando-se ao número da Chamada e nome
+do projeto.
+
+8. DA ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+8.1. A qualquer tempo, a presente Chamada Pública poderá ser revogada ou anulada,
+no todo ou em parte, a critério do IPEA, sem que isso implique em direito à indenização
+ou reclamação de qualquer natureza.
+8.2. O IPEA poderá cancelar a presente chamada pública, caso o Comitê julgador não
+se pronuncie no prazo de 30 dias, a contar da entrega das propostas para análise.
+
+9. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+9.1.A presente chamada pública poderá ser impugnada, até o segundo dia útil anterior
+ao prazo final estabelecido para submissão das candidaturas.
+9.2. Decairá do direito de impugnar os termos da presente chamada, o candidato que
+não o fizer até o segundo dia útil anterior ao prazo final estabelecido para submissão
+das candidaturas. Não terá efeito de recurso a impugnação feita por aquele que, em o
+tendo aceito sem objeção, venha apontar, posteriormente ao julgamento, eventuais
+falhas ou imperfeições.
+9.3. A impugnação deverá ser dirigida à Coordenação responsável pela Chamada
+Pública, por meio eletrônico, para o endereço pnpd@ipea.gov.br.
+
+
+
+
+                                                                                       4
+10. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente Chamada.
+
+                                                      Brasília, 16 de agosto de 2024.
+
+                          Marinésia Lemos Souto
+  Coordenadora Geral de Contratações, Serviços Gerais e Apoio a Pesquisa –
+                                 CGCAP
+
+
+
+
+                                                                                   5
+                                 REGULAMENTO
+
+1. OBJETIVO
+A presente Chamada tem por objetivo apoiar atividades de pesquisa, mediante a
+seleção de pesquisadores para atuação nos projetos relacionados, em conformidade
+com as condições estabelecidas deste REGULAMENTO e nas normas contidas nas
+Portarias IPEA N° 491, de 28 de dezembro de 2010 e Nº 492, de 29 de dezembro de
+2010, e suas alterações, que faz parte integrante da presente chamada independente
+de transcrição.
+
+2. DAS INFORMAÇÕES DO PROJETO
+O detalhamento do projeto está descrito no Termo de Referência, Anexo I da presente
+chamada, onde consta:
+a) Título do Projeto;
+b) Propósito do Trabalho;
+c) Atividades a serem desenvolvidas pelo Bolsista; e
+d) Resultados Esperados.
+
+3. REQUISITOS DOS CANDIDATOS
+Os candidatos deverão atender aos requisitos constantes do item 3 da Chamada
+Pública, os quais serão avaliados pelo comitê julgador mediante análise curricular,
+entrevista e proposta de projeto (dentro do escopo da pesquisa), conforme modelo
+previsto no Anexo II da presente Chamada, que detalhe a metodologia a ser empregada
+e as atividades a serem realizadas. O projeto deverá constar os seguintes itens:
+1.1) Contextualização da proposta quanto à inserção das EMENTAS DOS OBJETIVOS
+ESTRATÉGICOS do IPEA;
+1.2) Objetivo geral;
+1.3) Objetivos específicos;
+1.4) Justificativa;
+1.5) Referencial teórico;
+1.6) Metodologia proposta;
+1.7) Atividade e cronogramas;
+1.8) Resultados esperados;
+1.9) Outras informações relevantes;
+1.10) Referências Bibliográficas.
+
+4. MODALIDADES E VALORES DAS BOLSAS
+                                                                  VALOR EM
+ QUANTIDADE                    MODALIDADE
+                                                                   R$/MÊS
+
+       03        Assistente de Pesquisa III (Mestre)               4.030,00
+
+       06        Doutor                                            6.760,00
+
+
+       01        Bolsa de Incentivo a Pesquisa II                  6.240,00
+
+
+
+
+                                                                                 6
+4.1. O candidato vinculado a Instituição Pública deverá apresentar autorização da
+instituição de origem, comprovando, ainda, que a legislação que rege sua carreira
+permite atuação em projetos de pesquisa do IPEA.
+4.2. O candidato selecionado que possui vínculo com Instituições Públicas nas esferas
+Federal, Estadual ou Municipal só poderá ser contemplado com a bolsa de pesquisa se
+exercer cargo de Pesquisador, professor Universitário ou equivalentes. Este candidato
+será enquadrado na Modalidade de Pesquisador Visitante com o valor referente de R$
+4.940,00
+4.3. O candidato selecionado que for servidor, empregado público e professor
+universitário inativo de instituições públicas será enquadrado na modalidade
+Profissional Sênior com o valor referente de R$ 6.240,00 e deverá apresentar a devida
+comprovação.
+4.4. Caso a modalidade inicialmente prevista estiver fixada em valor inferior ao indicado,
+nos itens 4.2. e 4.3., prevalecerá a modalidade de menor valor.
+
+5. CRITÉRIOS DE JULGAMENTO
+A seleção das propostas submetidas ao IPEA, em atendimento a esta Chamada, será
+realizada por intermédio de análises e avaliações comparativas por comitê interno
+nomeado para esse fim quanto ao mérito técnico-científico do projeto proposto.
+
+5.1. No critério Entrevista (quando houver), as notas serão atribuídas entre 1 (um) e 10
+(dez) – Sendo 1 (um) equivalente a zero em outros sistemas de pontuação.
+5.2. Poderão, a critério do Comitê Julgador, ser entrevistados 03 (três) candidatos por
+vaga que obtiverem a melhor pontuação nos critérios de avaliação A a C.
+5.3. Poderá, a critério do comitê julgador, ser desclassificado o candidato que obtiver
+nota final inferior a 50% em qualquer um dos critérios de avaliação na presente
+Chamada.
+5.4. Nos casos de empate, o desempate ficará a critério do Comitê Julgador, que
+emitirá nota de justificativa.
+5.5. Considerando que os estudos envolvem a análise de políticas voltadas a
+laboratórios públicos, não serão aceitos candidatos que estejam atuando nessas
+instituições por potencial conflito de interesse.
+3.1. Candidatos 1 e 2 – Doutor
+3.2. Candidatos 3 e 6 – Doutor
+3.4. Candidatos 8 a 10 – Assistente de Pesquisa III (Mestre)
+ ITEM                      CRITÉRIO DE AVALIAÇÃO                               PESO
+ ITEM CRITÉRIO DE AVALIAÇÃO                                                       PESO
+
+ A      Avaliação curricular                                                        2
+
+ B      Experiência acadêmica                                                       2
+
+ C      Avaliação do projeto                                                        3
+
+        Entrevista (as entrevistas poderão, a critério do Comitê
+ D      Julgador, ser realizadas por e-mail, por videochamada, por                      3
+        telefone ou presencialmente)
+
+
+
+
+                                                                                            7
+3.3. Candidato 7 – Incentivo à Pesquisa II
+ ITEM                    CRITÉRIO DE AVALIAÇÃO                                    PESO
+ A        Análise curricular                                                         1
+
+          Conhecimento de pesquisas por empresas do IBGE: PIA,
+          PAS, PAC, Pintec e registros administrativos de emprego,
+ B                                                                                   2
+          como a Rais, e de compras públicas, como Siasg, por meio de
+          análise curricular
+
+          Conhecimento de R e/ou Stata e/ou SAS, métodos
+ C                                                                                   4
+          quantitativos e manipulação de bases de dados
+
+          Entrevista (as entrevistas poderão, a critério do Comitê
+ D        Julgador, ser realizadas por e-mail, por videochamada, por                 3
+          telefone ou presencialmente)
+
+
+6. RESULTADO DO JULGAMENTO
+A relação das candidaturas aprovadas será divulgada na página eletrônica do IPEA,
+disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no Diário
+Oficial da União.
+
+7. DOS RECURSOS ADMINISTRATIVOS
+7.1. Caso o proponente queira interpor pedido de recurso ao resultado do julgamento,
+deverá apresentá-lo exclusivamente por meio do SISTEMA DE CADASTRO DE
+BOLSA - https://bolsas.ipea.gov.br/bolsas e as contrarrazões deverão ser enviadas
+através do e-mail pnpd@ipea.gov.br
+7.1.1. O pedido de recurso administrativo serve para revisar o resultado do julgamento
+por razões de legalidade e de mérito.
+7.1.2. O pedido de contrarrazões é uma espécie de recurso administrativo que visa
+refutar ou combater as razões de um pedido de recurso encaminhado por outro
+candidato.
+7.2. Caso o participante queira interpor recurso ao resultado do julgamento das
+propostas, deverá apresentá-lo, por meio SISTEMA DE CADASTRO DE BOLSA
+- https://bolsas.ipea.gov.br/bolsas no prazo de 03 (três) dias úteis, a contar do dia
+seguinte da data de publicação do resultado no Diário Oficial da União, para interpor
+pedidos de recursos administrativos contra as notas recebidas ou a classificação
+definida.
+7.3. Caso o participante sinta-se prejudicado pelo pedido de recurso de outro
+candidato, cabe o envio do pedido de contrarrazões através do e-mail
+pnpd@ipea.gov.br, indicando o número da chamada e o nome do recorrente no prazo
+de até 03 (três) dias úteis, a contar o dia seguinte da resposta no site do Ipea. O pedido
+de contrarrazões, todavia, só será avaliado se o pedido de recurso de outro candidato
+for deferido. Neste período, mediante solicitação também por e-mail, poderão ser
+enviados aos participantes os teores do pedido de reconsideração deferido.
+7.4. O pedido de recurso ou de contrarrazões deverá ser remetido ao Ipea em formato
+de petição, com pelo menos os seguintes campos:
+a) objeto do pedido
+b) exposição de motivos;
+
+
+                                                                                         8
+c) embasamento normativo;
+d) pedido.
+7.5. No campo de texto do sistema, o candidato deverá informar a relação dos
+documentos apresentados, iniciada pelo próprio pedido.
+7.6. Será negado conhecimento ao pedido de recurso ou de contrarrazões que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos e não
+apresentar os documentos necessários por e-mail para contrarrazões;
+b) estiver fora das regras estabelecidas neste edital, dos procedimentos previstos na
+Lei 9.784, de 29 de janeiro de 1999 ou em outras instruções e normatizações;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de
+gênero, e/ou religioso, sendo o candidato eliminado do presente certame, podendo
+ainda o Ipea realizar comunicação às instituições competentes em caso de crime;
+d) lhe faltar pedido ou causa de pedir;
+e) o pedido for indeterminado;
+f) da narração dos fatos não decorrer logicamente a conclusão;
+g) contiver pedidos incompatíveis entre si.
+7.7. Os pedidos de recurso ou de contrarrazões, caso não sejam negados
+conhecimento pela Coordenação de Apoio à Pesquisa do Ipea, deverão ser dirigidos
+ao comitê julgador que, após exame, poderá julgar pela reconsideração de sua
+decisão, bem como confirmação, modificação, anulação ou revogação total ou parcial,
+nos termos da Lei 9.784, de 29 de janeiro de 1999. Caso o comitê julgue pelo
+indeferimento da reconsideração, os pedidos de recurso e ou de contrarrazões serão
+encaminhados para deliberação final da Presidência do Ipea.
+
+8. DA CONCESSÃO DA BOLSA
+8.1.O (A) candidato (a) deverá manifestar interesse de assumir a bolsa, pelo e-mail
+pnpd@ipea.gov.br, imediatamente após a publicação dos resultados, sob pena de não
+ter a bolsa implementada.
+8.2. A bolsa será concedida na duração prevista em conformidade às Portarias IPEA Nº
+491, de 28 de dezembro de 2010 e N° 492, de 29 de dezembro de 2010, e com base
+no item 2 da presente Chamada, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) Formulário de Solicitação de Bolsa;
+b) Termo de Compromisso assinado em duas vias;
+c) Autorização da instituição de origem para atuação no projeto (para candidatos
+vinculados a órgãos públicos - autenticada);
+d) Cópia da carteira de identidade (autenticada);
+e) Cópia CPF (autenticada);
+f) Comprovante de Residência (emitido nos últimos 90 dias);
+g) Comprovante de escolaridade (autenticada);
+h) Comprovante Bancário de conta corrente.
+8.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente Chamada, deverão citar, obrigatoriamente, o apoio
+do IPEA.
+8.4. Caso haja desistência do selecionado ou cancelamento da bolsa, poderá ser
+convocado o segundo colocado e, assim, sucessivamente, a fim de dar continuidade às
+atividades do projeto de pesquisa.
+
+
+
+
+                                                                                       9
+9. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela Diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providências cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+10. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada candidato, adotar todas as providências que
+envolvam permissões e autorizações especiais de caráter ético ou legal, necessárias
+para a execução do projeto.
+
+11. DOS AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à Diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e às suas metas institucionais.
+
+12. DAS DISPOSIÇÕES GERAIS
+As informações geradas com a implementação das propostas selecionadas serão de
+domínio do IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+
+13. ANEXOS
+ANEXO I – TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+ANEXO II – MODELO DE PROPOSTA DE PROJETO
+ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+
+
+
+
+                                                                                10
+                             ANEXO I
+       TERMO DE REFERÊNCIA DE CONCESSÃO DE BOLSA PESQUISA
+
+1. TÍTULO DO PROJETO
+ "Precificação de tecnologias e avaliação de políticas de desenvolvimento do
+ complexo industrial da saúde”.
+
+
+2. PROPÓSITO DO TRABALHO
+
+Esta chamada destina-se à avaliação do Programa para o Desenvolvimento do
+Complexo Industrial da Saúde (Procis) e das Parcerias para o Desenvolvimento
+Produtivo (PDPs) do Ministério da Saúde (MS), que tem como objetivo ampliar o acesso
+a medicamentos considerados estratégicos para o Sistema Único de Saúde (SUS) e
+fortalecer o Complexo Econômico-Industrial de Saúde do País.
+
+3. ATIVIDADES QUE OS CANDIDATOS IRÃO DESENVOLVER
+
+3.1. Candidatos 1 e 2 – Doutor
+ Realizar estudo sobre o Programa para o Desenvolvimento do Complexo Industrial
+ da Saúde (Procis), incluindo i) análise do desenho e da implementação do programa
+ ou ii) levantamento, análise de indicadores e avaliação de impacto do Procis sobre a
+ competitividade do Complexo Econômico-Industrial da Saúde (CEIS).
+
+
+3.2. Candidatos 3 a 6 – Doutor
+ Realizar estudo sobre as Parcerias para o Desenvolvimento Produtivo, que pode
+ incluir avaliação do diagnóstico, objetivos e desenho do programa; estudos de caso;
+ análises de impacto ou avaliação de características especificas do programa (tais
+ como propriedade intelectual, seleção de medicamentos, entre outros).
+
+
+3.3. Candidato 7 – Incentivo à Pesquisa II
+ Realizar atividades presenciais de cruzamento e tratamento de base de dados,
+ execução de modelos estatísticos e econométricos e construção de bases de dados
+ a partir de informações disponíveis nas instalações do IPEA Rio de Janeiro. Entre as
+ atividades, estão:
+        1.     Cruzamento e tabulação de dados provenientes de pesquisas e
+        registros administrativos de diversas fontes, tais como: Siasg e Rais;
+        disponíveis nos servidores do IPEA.
+        2.    Modelagem econométrica de dados.
+        3.    Tratamento de bases de dados.
+
+
+3.4. Candidatos 8 a 10 – Assistente de Pesquisa III (Mestre)
+ Realizar estudo sobre as Parcerias para o Desenvolvimento Produtivo, que pode
+ incluir avaliação do diagnóstico, objetivos e desenho do programa; estudos de caso;
+ análises de impacto ou avaliação de características especificas do programa (tais
+ como propriedade intelectual, seleção de medicamentos, entre outros).
+
+
+
+                                                                                   11
+4. RESULTADOS ESPERADOS
+3.1. Candidatos 1 e 2 – Doutor
+3.2. Candidatos 3 a 6 – Doutor
+3.4. Candidatos 8 a 10 – Assistente de Pesquisa III (Mestre)
+     Artigo acadêmico sobre o tema escolhido e participação em seminários, a
+      serem agendados pela coordenação do projeto.
+
+
+3.3. Candidato 7 – Incentivo à Pesquisa II
+     Bases de dados organizadas e documentadas com metadados e dicionários;
+     Relatórios de pesquisa contendo análises dos resultados;
+     Rotinas computacionais de programação organizadas e documentadas;
+
+
+
+
+                                                                           12
+                                ANEXO II
+                     MODELO DE PROPOSTA DE PROJETO
+
+
+                             MODELO DA CAPA
+             IPEA – Instituto de Pesquisa Econômica Aplicada
+       Programa de Pesquisa para o Desenvolvimento Nacional - PNPD
+
+
+
+
+                           PROPOSTA DE PROJETO
+
+
+
+
+Nome do Candidato:
+
+
+
+
+( ) 3.1. Candidatos 1 e 2 – Doutor
+( ) 3.2. Candidatos 3 a 6 – Doutor
+( ) 3.4. Candidatos 8 a 10 – Assistente de Pesquisa III (Mestre)
+
+
+
+
+                     Chamada Pública PNPD nº _____/______
+
+
+
+
+                                                                     13
+                           ANEXO II – CONTINUAÇÃO
+
+                ROTEIRO PARA A ELABORAÇÃO DO PROJETO
+
+
+1) O projeto deverá constar os seguintes itens:
+1.1)   Contextualização da proposta quanto à inserção das EMENTAS DOS
+       OBJETIVOS ESTRATÉGICOS do IPEA;
+1.2)   Objetivo geral;
+1.3)   Objetivos específicos;
+1.4)   Justificativa;
+1.5)   Referencial teórico;
+1.6)   Metodologia proposta;
+1.7)   Atividade e cronogramas;
+1.8)   Resultados esperados;
+1.9)   Outras informações relevantes;
+1.10) Referências Bibliográficas.
+
+
+
+
+IMPORTANTE:
+
+  a) Tipo de arquivo: “doc” ou “pdf”.
+
+
+
+
+                                                                    14
+             ANEXO III - EMENTAS DOS OBJETIVOS ESTRATÉGICOS
+               OBJETIVOS ESTRATÉGICOS FINALÍSTICOS
+
+I - AVALIAR E PROPOR POLÍTICAS PÚBLICAS E PROGRAMAS ESSENCIAIS AO
+DESENVOLVIMENTO DO PAÍS
+1. Realizar pesquisa de excelência para apoiar as políticas públicas e programas
+essenciais ao desenvolvimento.
+2. Garantir a representação do IPEA em colegiados consultivos e deliberativos de
+políticas públicas para influenciar a construção da agenda institucional.
+3. Ampliar o assessoramento e a cooperação com os órgãos governamentais mais
+relevantes para influenciar a avaliação e formulação de políticas públicas e programas.
+4. Manter o quadro técnico do IPEA informado e atualizado sobre a agenda institucional
+de políticas públicas.
+5. Ampliar o acesso e uso de bases de dados necessárias à avaliação e à proposição
+de políticas públicas.
+
+II - FORMULAR ESTUDOS PROSPECTIVOS PARA ORIENTAR ESTRATÉGIAS DE
+DESENVOLVIMENTO DE MÉDIO E LONGO PRAZO
+1. Ofertar aos órgãos decisórios estudos prospectivos para antecipar impactos e
+identificar temas estratégicos para o desenvolvimento brasileiro.
+2. Ofertar aos órgãos decisórios estudos prospectivos setoriais e regionais que
+subsidiem o aprimoramento de políticas públicas e programas estratégicos.
+3. Propor e desenvolver pesquisas e metodologias relacionadas à prospecção.
+4. Assessorar instituições públicas na elaboração de estudos prospectivos.
+
+III - ASSESSORAR O ESTADO NA MELHORIA DA QUALIDADE DE SUAS
+DECISÕES
+1. Pesquisar e produzir diagnósticos sobre os principais problemas que impactam na
+agenda prioritária do Estado.
+2. Pesquisar e disseminar temas, propostas e métodos inovadores.
+3. Ampliar a prestação de serviços de assessoria ao Estado, de forma que resulte em
+respostas rápidas e consistentes para solução de problemas prioritários do
+desenvolvimento.
+4. Ter sistema atualizado com informações, estudos e indicação de pessoas e
+instituições relacionados às políticas e programas prioritários do Estado.
+5. Aumentar a capacidade de resposta do IPEA, por meio da mobilização de redes e
+maior produtividade no uso de bases de dados.
+
+IV - CONTRIBUIR PARA A QUALIFICAÇÃO DO DEBATE PÚBLICO QUANTO AOS
+RUMOS DO DESENVOLVIMENTO DO PAÍS E DA AÇÃO DO ESTADO
+1. Identificar, pesquisar e disseminar temas relevantes e emergentes na sociedade.
+2. Disponibilizar, em formatos adequados, as informações e conhecimentos produzidos
+pelo Ipea para atores da sociedade, incluindo locais e internacionais.
+3. Auscultar, articular e subsidiar os atores sociais relevantes para o desenvolvimento,
+por meio de redes e de diferentes canais de interação.
+
+
+
+
+                                                                                     15
+                    OBJETIVOS ESTRATÉGICOS DE GESTÃO
+
+I - ASSEGURAR PRODUTIVIDADE COM QUALIDADE E QUANTITATIVO ADEQUADO DE
+SERVIDORES
+1. Desenvolver a qualificação dos servidores, particularmente em metodologias de avaliação,
+prospecção e competências gerenciais, alinhada ao Plano Estratégico.
+2. Estruturar e qualificar a gestão de pessoas com uma política de incentivo ao desempenho.
+3. Propiciar ambiente e condições de trabalho motivadores.
+4. Viabilizar a adequação permanente do perfil e do quantitativo de pessoal por meio de
+políticas de ingresso, alocação e retenção de talentos.
+5. Implantar política corporativa para relacionamento com pesquisadores externos, bolsistas
+e terceirizados, com foco na profissionalização das relações, monitoramento e fiscalização.
+
+II - GARANTIR CONFIABILIDADE, AGILIDADE E EFETIVIDADE AOS PROCESSOS E
+SISTEMAS DE GESTÃO
+1. Assegurar a gestão estratégica para garantir a atualização e o monitoramento do Plano
+Estratégico.
+2. Aprimorar a gestão por projetos com critérios claros para a alocação de recursos.
+3. Aprimorar e integrar os processos e os sistemas de gestão para assegurar transparência,
+agilidade e economicidade.
+4. Redesenhar os processos críticos, de modo a aumentar sua confiabilidade, eficiência e
+eficácia.
+
+III - FORTALECER E ARTICULAR A COMUNICAÇÃO INTERNA E EXTERNA
+1. Qualificar a comunicação interna, com o intuito de criar um ambiente cooperativo e de amplo
+acesso às informações de interesse do servidor.
+2. Assegurar transparência às decisões tomadas no âmbito da diretoria colegiada e de outras
+instâncias decisórias.
+3. Definir uma política institucional de relacionamento com o público externo, particularmente
+com a mídia.
+4. Divulgar os resultados de estudos e pesquisas em linguagem adequada aos diferentes
+atores nacionais e internacionais.
+5. Aprimorar canais e espaços de diálogo entre o IPEA e seus principais parceiros e públicos.
+
+IV - GARANTIR FOCO E SINERGIA AO PLANO DE TRABALHO
+1. Aprimorar o processo de elaboração do Plano de Trabalho, de modo a garantir a definição
+e o desdobramento dos projetos em conformidade com o Plano Estratégico.
+2. Promover e incentivar a construção coletiva de projetos entre diretorias e coordenações.
+3. Aprimorar política de celebração e operacionalização de acordos e convênios visando
+garantir seu alinhamento com o Plano Estratégico do IPEA.
+4. Aperfeiçoar e institucionalizar a gestão do conhecimento e da inovação.
+5. Criar espaços e instrumentos institucionais de acompanhamento e debate sobre a
+conjuntura nacional, com disseminação de seus resultados na Instituição.
+
+
+
+
+                                                                                           16
+
