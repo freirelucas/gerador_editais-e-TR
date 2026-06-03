@@ -8,11 +8,14 @@ wordmark "ipea").
 
 Três abas:
 
-- **Gerador** — formulário enxuto que monta, em tempo real, o **Termo de Referência
+- **Gerador (assistente em 7 passos)** — monta, em tempo real, o **Termo de Referência
   (Art. 7º)** e a **minuta de Chamada Pública Especializada** derivada, com as **8
-  modalidades e valores atuais** (Anexo I). Os campos descritivos (projeto, perfil,
-  atividades, critérios) oferecem **padrões de descrição** extraídos dos modelos antigos —
-  úteis apenas fora do núcleo regulado. Copia ou baixa em `.txt`.
+  modalidades e valores atuais** (Anexo I). O fluxo guiado cobre identificação, projeto,
+  bolsa, **vagas & cotas** (quadro AC/ER/M/PCD + heteroidentificação), seleção, cronograma
+  e um passo de **conformidade** que checa o rascunho contra a norma (ex.: prazo de
+  inscrição ≥ 10 dias, Art. 8º §4º; ordem das datas; assinaturas). Os campos descritivos
+  oferecem **padrões de descrição** dos modelos antigos (fora do núcleo regulado). Exporta
+  em **Word (`.doc`)** — com títulos, parágrafos e tabelas — ou `.txt`, e copia.
 - **Explorador de projetos** — busca e filtros (ano, programa, situação, **diretoria,
   função, tema**) sobre 253 chamadas, com cartões **enriquecidos** (objeto, papel,
   formação, valores, função/tema) e requisitos/atividades expansíveis.
