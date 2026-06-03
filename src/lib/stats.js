@@ -180,6 +180,34 @@ export const cotaPorAno = ANOS.map((ano) => ({
   total: CORPUS.filter((c) => c.ano === ano && (c.vagas_por_cota || {}).tem_reserva).length,
 }));
 
+// --- cotas como % e a virada de regime (Portaria Normativa Ipea nº 317/2025) ---
+// O 7,9% "global" engana: mistura a era PROMOB (sem o quadro AC/ER/M/PCD) com a era PIPA.
+// A virada se mede por programa e por ano; conformidade aqui é ESTRUTURAL (o quadro aparece
+// onde a 317 vale), não numérica (os editais citam a 317 mas não repetem os percentuais, e
+// não contamos vagas por categoria — o quadro varia demais).
+export const cotaAnalisados = CORPUS.filter((c) => c.vagas_por_cota != null).length;
+export const cotaPctTotal = Math.round((comReserva / totalChamadas) * 1000) / 10;
+export const cotaPorAnoPct = ANOS.map((ano) => {
+  const sub = CORPUS.filter((c) => c.ano === ano);
+  const res = sub.filter((c) => (c.vagas_por_cota || {}).tem_reserva).length;
+  return { ano, total: sub.length, comReserva: res, pct: sub.length ? Math.round((res / sub.length) * 100) : 0 };
+});
+export const cotaPorPrograma = PROGRAMAS.map((programa) => {
+  const sub = CORPUS.filter((c) => c.programa === programa);
+  const analisados = sub.filter((c) => c.vagas_por_cota != null).length;
+  const res = sub.filter((c) => (c.vagas_por_cota || {}).tem_reserva).length;
+  return { programa, total: sub.length, analisados, comReserva: res,
+           pct: analisados ? Math.round((res / analisados) * 100) : 0 };
+}).filter((p) => p.analisados > 0).sort((a, b) => b.pct - a.pct);
+export const comHetero = CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).length;
+export const heteroProgramas = [...new Set(
+  CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).map((c) => c.programa)
+)];
+// categorias reservadas como % das chamadas COM reserva (presença, não nº de vagas)
+export const porCotaPct = porCota.map((d) => ({
+  label: d.label, value: comReserva ? Math.round((d.value / comReserva) * 100) : 0, n: d.value,
+}));
+
 // função × ano (StackedBars) — categorias de função realmente presentes
 export const funcoesLabels = porFuncao.map((f) => f.label);
 export const perfilPorAno = ANOS.map((ano) => {
