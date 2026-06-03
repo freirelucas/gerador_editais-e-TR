@@ -16,10 +16,11 @@ export const NORMA = {
   prazoMinEspecializadaDias: 10, // Art. 8º §4º
   prazoMinUnificadaDias: 7, // Art. 12 §5º
   comissaoMinIntegrantes: 3, // Art. 9º (mín. 3 + 1 suplente)
-  // Reserva de vagas (ação afirmativa) — percentuais por categoria fixados pela 317.
-  // A heteroidentificação é obrigatória na autodeclaração étnico-racial.
+  // Reserva de vagas (ação afirmativa) — percentuais sobre o TOTAL de vagas da chamada,
+  // fixados pela 317. A reserva étnico-racial abrange pretos, pardos e indígenas, com
+  // heteroidentificação obrigatória na autodeclaração.
   reserva: {
-    etnico_racial: 30,
+    etnico_racial: 30, // inclui pretos, pardos e indígenas
     mulheres: 40,
     pcd: 10,
   },
