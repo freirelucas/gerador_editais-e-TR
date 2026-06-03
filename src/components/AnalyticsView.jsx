@@ -1,6 +1,7 @@
 import { C } from "../theme.js";
 import * as S from "../lib/stats.js";
 import quality from "../data/quality.json";
+import { NORMA } from "../data/norma.js";
 import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
 import Bars from "./charts/Bars.jsx";
 import StackedBars from "./charts/StackedBars.jsx";
@@ -39,6 +40,11 @@ export default function AnalyticsView() {
   const prov = quality.proveniencia;
   const enr = quality.enriquecimento || {};
   const dadosPrograma = S.porPrograma.map((p) => ({ label: p.programa, value: p.total, color: COR_PROGRAMA[p.programa] }));
+  const reservaNorma = [
+    { label: "Étnico-racial", value: NORMA.reserva.etnico_racial },
+    { label: "Mulheres", value: NORMA.reserva.mulheres },
+    { label: "PCD", value: NORMA.reserva.pcd },
+  ];
   const projNota = S.projParcial
     ? ` 2026 é parcial (até ${S.refDate}); o projetado é pró-rata linear (real ÷ fração do ano ≈ ${Math.round(S.fracAnoCorr * 100)}%).`
     : "";
@@ -102,9 +108,13 @@ export default function AnalyticsView() {
           insight={`Conformidade ESTRUTURAL: o quadro aparece onde a 317 vale. ${S.cotaPorPrograma.map((p) => `${p.programa} ${p.pct}% (${p.comReserva}/${p.analisados})`).join("; ")}. Heteroidentificação em ${S.comHetero} chamadas — todas ${S.heteroProgramas.join("/")}.`}>
           <Bars data={S.cotaPorPrograma.map((p) => ({ label: p.programa, value: p.pct, color: COR_PROGRAMA[p.programa] }))} horizontal unit="%" />
         </Figura>
-        <Figura titulo="Categorias reservadas — % das chamadas com reserva"
-          insight={`Entre as ${S.comReserva} com reserva, étnico-racial/mulheres/PCD são quase universais; indígena é mais raro. É PRESENÇA da categoria, não nº de vagas: a conformidade NUMÉRICA (se o % de vagas bate com a 317) não é verificável aqui — os percentuais vivem no texto da portaria, não nos editais.`}>
+        <Figura titulo="Categorias citadas — % das chamadas com reserva"
+          insight={`PRESENÇA da categoria entre as ${S.comReserva} com reserva (o edital cita o grupo), não a fatia de vagas: étnico-racial/mulheres/PCD são quase universais; indígena é mais raro.`}>
           <Bars data={S.porCotaPct.map((d) => ({ label: d.label, value: d.value }))} horizontal unit="%" color={C.cerrado} />
+        </Figura>
+        <Figura titulo="Reserva exigida pela 317 — % por categoria"
+          insight={`A portaria FIXA o percentual de reserva por categoria: étnico-racial ${NORMA.reserva.etnico_racial}%, mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. Eixo distinto do gráfico ao lado — lá é a presença no texto; aqui, a fatia de vagas que a norma manda reservar. Como é fixa, o edital conforme aplica esse split; o corpus não guarda nº de vagas por categoria, então um desvio numérico edital-a-edital não é detectável aqui.`}>
+          <Bars data={reservaNorma} horizontal unit="%" color={C.gold} />
         </Figura>
       </Secao>
 
