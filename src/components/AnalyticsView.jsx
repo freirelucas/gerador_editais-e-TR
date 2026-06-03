@@ -109,11 +109,11 @@ export default function AnalyticsView() {
           <Bars data={S.cotaPorPrograma.map((p) => ({ label: p.programa, value: p.pct, color: COR_PROGRAMA[p.programa] }))} horizontal unit="%" />
         </Figura>
         <Figura titulo="Categorias citadas — % das chamadas com reserva"
-          insight={`PRESENÇA da categoria entre as ${S.comReserva} com reserva (o edital cita o grupo), não a fatia de vagas: étnico-racial/mulheres/PCD são quase universais; indígena é mais raro.`}>
+          insight={`PRESENÇA da categoria entre as ${S.comReserva} com reserva (o edital cita o grupo), não a fatia de vagas: étnico-racial/mulheres/PCD são quase universais; indígena é citado à parte, mas na 317 entra na cota étnico-racial.`}>
           <Bars data={S.porCotaPct.map((d) => ({ label: d.label, value: d.value }))} horizontal unit="%" color={C.cerrado} />
         </Figura>
-        <Figura titulo="Reserva exigida pela 317 — % por categoria"
-          insight={`A portaria FIXA o percentual de reserva por categoria: étnico-racial ${NORMA.reserva.etnico_racial}%, mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. Eixo distinto do gráfico ao lado — lá é a presença no texto; aqui, a fatia de vagas que a norma manda reservar. Como é fixa, o edital conforme aplica esse split; o corpus não guarda nº de vagas por categoria, então um desvio numérico edital-a-edital não é detectável aqui.`}>
+        <Figura titulo="Reserva exigida pela 317 — % do total de vagas"
+          insight={`A portaria FIXA o percentual de reserva sobre o TOTAL de vagas: étnico-racial ${NORMA.reserva.etnico_racial}% (pretos, pardos e indígenas), mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. Eixo distinto do gráfico ao lado — lá é a presença no texto; aqui, a fatia de vagas que a norma manda reservar. Como é fixa, o edital conforme aplica esse split; o corpus não guarda nº de vagas por categoria, então um desvio numérico edital-a-edital não é detectável aqui.`}>
           <Bars data={reservaNorma} horizontal unit="%" color={C.gold} />
         </Figura>
       </Secao>
