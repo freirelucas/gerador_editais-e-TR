@@ -39,6 +39,13 @@ def cobertura_enriquecimento():
         "categoria_funcao": sum(1 for r in corpus if tem(r, "categoria_funcao")),
         "categoria_tema": sum(1 for r in corpus if tem(r, "categoria_tema")),
     }
+    from collections import Counter
+    _cat = Counter()
+    for r in corpus:
+        for c in ((r.get("vagas_por_cota") or {}).get("categorias") or []):
+            _cat[c] += 1
+    enr["cotas_com_reserva"] = sum(1 for r in corpus if (r.get("vagas_por_cota") or {}).get("tem_reserva"))
+    enr["cotas_por_categoria"] = dict(_cat.most_common())
     if MANIFEST.exists():
         itens = json.loads(MANIFEST.read_text(encoding="utf-8")).get("itens", [])
         enr["pdf_404"] = sum(1 for e in itens if str(e.get("flag", "")).startswith("http_"))
@@ -129,7 +136,7 @@ def main():
     e = quality["enriquecimento"]
     print(f"enriquecimento: {e['com_texto']}/{e['total']} c/ texto | objeto {e['objeto']} | "
           f"papel {e['papel']} | diretoria {e['diretoria']} | "
-          f"função {e['categoria_funcao']} | tema {e['categoria_tema']}")
+          f"função {e['categoria_funcao']} | tema {e['categoria_tema']} | cotas {e['cotas_com_reserva']}")
 
 
 if __name__ == "__main__":

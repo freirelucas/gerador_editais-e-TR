@@ -16,6 +16,7 @@ export default function CorpusView() {
   const [dir, setDir] = useState("Todas");
   const [func, setFunc] = useState("Todas");
   const [tema, setTema] = useState("Todos");
+  const [cota, setCota] = useState("Todas");
   const [abertos, setAbertos] = useState(() => new Set());
 
   const anos = ["Todos", ...uniq(CORPUS.map((c) => c.ano)).sort().reverse()];
@@ -23,6 +24,8 @@ export default function CorpusView() {
   const dirs = ["Todas", ...uniq(CORPUS.map((c) => c.diretoria)).sort(), "—"];
   const funcs = ["Todas", ...flat("categoria_funcao").sort()];
   const temas = ["Todos", ...flat("categoria_tema").sort()];
+  const cotaCats = uniq(CORPUS.flatMap((c) => (c.vagas_por_cota || {}).categorias || [])).sort();
+  const cotas = ["Todas", "Com reserva", ...cotaCats];
 
   const rows = useMemo(
     () =>
@@ -33,6 +36,8 @@ export default function CorpusView() {
         if (dir === "—" ? c.diretoria : dir !== "Todas" && c.diretoria !== dir) return false;
         if (func !== "Todas" && !(c.categoria_funcao || []).includes(func)) return false;
         if (tema !== "Todos" && !(c.categoria_tema || []).includes(tema)) return false;
+        if (cota === "Com reserva" && !(c.vagas_por_cota || {}).tem_reserva) return false;
+        if (cota !== "Todas" && cota !== "Com reserva" && !((c.vagas_por_cota || {}).categorias || []).includes(cota)) return false;
         if (q) {
           const s = [c.titulo, c.projeto, c.objeto, c.papel, c.diretoria,
             (c.modalidades_extraidas || []).join(" "), (c.categoria_tema || []).join(" ")]
@@ -41,7 +46,7 @@ export default function CorpusView() {
         }
         return true;
       }),
-    [q, ano, prog, sit, dir, func, tema]
+    [q, ano, prog, sit, dir, func, tema, cota]
   );
 
   const enriquecidas = CORPUS.filter((c) => c.enriquecido).length;
@@ -73,6 +78,9 @@ export default function CorpusView() {
         <select value={tema} onChange={(e) => setTema(e.target.value)} style={sel} title="Tema">
           {temas.map((t) => <option key={t} value={t}>{t === "Todos" ? "Tema: todos" : t}</option>)}
         </select>
+        <select value={cota} onChange={(e) => setCota(e.target.value)} style={sel} title="Reserva de vagas">
+          {cotas.map((x) => <option key={x} value={x}>{x === "Todas" ? "Cotas: todas" : x === "Com reserva" ? "Com reserva" : "Cota: " + x}</option>)}
+        </select>
       </div>
       <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, marginBottom: 12, letterSpacing: ".04em" }}>
         {rows.length} de {CORPUS.length} chamadas · {enriquecidas} enriquecidas a partir do PDF
@@ -101,10 +109,11 @@ export default function CorpusView() {
                   {c.objeto && c.objeto !== c.projeto && <span style={{ color: C.muted }}>{c.objeto}</span>}
                 </div>
               )}
-              {((c.categoria_funcao || []).length || (c.categoria_tema || []).length) > 0 && (
+              {((c.categoria_funcao || []).length || (c.categoria_tema || []).length || ((c.vagas_por_cota || {}).categorias || []).length) > 0 && (
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                   {(c.categoria_funcao || []).map((f) => <span key={f}>{chip(f, C.azul)}</span>)}
                   {(c.categoria_tema || []).map((t) => <span key={t}>{chip(t, C.gold)}</span>)}
+                  {((c.vagas_por_cota || {}).categorias || []).map((x) => <span key={"k" + x}>{chip("reserva: " + x, "#3f7d54")}</span>)}
                 </div>
               )}
               <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, display: "flex", gap: 14, flexWrap: "wrap", alignItems: "center" }}>

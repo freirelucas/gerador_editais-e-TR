@@ -142,6 +142,19 @@ export const porDiretoria = (() => {
   return arr;
 })();
 
+// reserva de vagas (cotas) — presença EXPLÍCITA por categoria (multi-rótulo) e por ano.
+// Honesto: conta menção a reserva/cota/ação afirmativa nos PDFs, sem inferir nº de vagas.
+export const porCota = (() => {
+  const m = new Map();
+  for (const c of CORPUS) for (const cat of (c.vagas_por_cota || {}).categorias || []) m.set(cat, (m.get(cat) || 0) + 1);
+  return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+})();
+export const comReserva = CORPUS.filter((c) => (c.vagas_por_cota || {}).tem_reserva).length;
+export const cotaPorAno = ANOS.map((ano) => ({
+  ano,
+  total: CORPUS.filter((c) => c.ano === ano && (c.vagas_por_cota || {}).tem_reserva).length,
+}));
+
 // função × ano (StackedBars) — categorias de função realmente presentes
 export const funcoesLabels = porFuncao.map((f) => f.label);
 export const perfilPorAno = ANOS.map((ano) => {
@@ -192,4 +205,5 @@ export const cobertura = {
   funcao: CORPUS.filter((c) => (c.categoria_funcao || []).length).length,
   tema: CORPUS.filter((c) => (c.categoria_tema || []).length).length,
   papel: CORPUS.filter((c) => c.papel).length,
+  cotas: comReserva,
 };

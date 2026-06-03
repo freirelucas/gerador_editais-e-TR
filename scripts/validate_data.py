@@ -48,6 +48,12 @@ def main():
                 erros.append(f"corpus[{i}] {campo} deveria ser string")
         if r.get("diretoria") is not None and r["diretoria"] not in DIRETORIAS:
             erros.append(f"corpus[{i}] diretoria inválida: {r['diretoria']!r}")
+        vc = r.get("vagas_por_cota")
+        if vc is not None:
+            if not isinstance(vc, dict):
+                erros.append(f"corpus[{i}] vagas_por_cota deveria ser dict|null")
+            elif not isinstance(vc.get("categorias", []), list):
+                erros.append(f"corpus[{i}] vagas_por_cota.categorias deveria ser lista")
 
     tax = ROOT / "data" / "taxonomia.json"
     if tax.exists():
