@@ -68,6 +68,31 @@ export const heatmapMesAno = (() => {
   return grade;
 })();
 
+// --- série temporal mensal: aberturas por mês (mês de início das inscrições) ---
+// Usa o que já temos (datas em nível de mês); sem rede. Captura tendência + sazonalidade.
+export const serieMensal = (() => {
+  const cont = new Map();
+  let minYM = null, maxYM = null;
+  for (const c of CORPUS) {
+    if (!c.prazo_ini_iso) continue;
+    const ym = c.prazo_ini_iso.slice(0, 7);
+    cont.set(ym, (cont.get(ym) || 0) + 1);
+    if (!minYM || ym < minYM) minYM = ym;
+    if (!maxYM || ym > maxYM) maxYM = ym;
+  }
+  if (!minYM) return [];
+  const out = [];
+  let [y, m] = minYM.split("-").map(Number);
+  const [ey, em] = maxYM.split("-").map(Number);
+  while (y < ey || (y === ey && m <= em)) {
+    const ym = `${y}-${String(m).padStart(2, "0")}`;
+    out.push({ ym, ano: String(y), mes: m, value: cont.get(ym) || 0 });
+    if (++m > 12) { m = 1; y++; }
+  }
+  return out;
+})();
+export const serieMensalCobertura = CORPUS.filter((c) => c.prazo_ini_iso).length;
+
 // --- temas dos títulos de projeto ---
 const STOP = new Set(
   ("de da do das dos e a o as os para com no na nos nas em um uma sobre por que à á " +

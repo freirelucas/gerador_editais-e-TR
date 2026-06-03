@@ -62,9 +62,26 @@ python scripts/clean_biblioteca.py  # funde chaves OCR, desfaz \n, dedup (5895 -
 python scripts/fetch_pdfs.py        # baixa editais + extrai texto → data/pdf_text/ (única etapa com rede)
 python scripts/enrich_corpus.py     # objeto, papel, formação, requisitos, diretoria (por seção do PDF)
 python scripts/classify.py          # categoria_funcao/tema (edite data/taxonomia.json e rode de novo)
+python scripts/extract_cotas.py     # vagas_por_cota: reserva de vagas por categoria (conservador)
 python scripts/build_app_data.py    # gera src/data/quality.json + clausulas_sugeridas.json
 python scripts/validate_data.py     # porta de qualidade (exit != 0 se violar invariantes)
 ```
+
+## Atualização dos dados (refresh)
+
+Os dados são um **snapshot**. Para atualizar, rode o pipeline **localmente** (o `fetch` usa
+rede — por princípio, **nunca no CI**), revise o diff e faça commit:
+
+```bash
+bash scripts/refresh.sh   # fetch → enrich → classify → extract_cotas → build_app_data → validate
+git diff -- data/ src/data/   # curadoria humana antes do commit é intencional
+```
+
+**Automação — decisão em aberto:**
+- **Comando manual** (atual) — alinhado ao princípio "scraping offline"; previsível e revisável.
+- **Action agendada** (cron / `workflow_dispatch`) — exigiria liberar **rede no CI** e absorver
+  mudanças do portal **sem revisão humana**, rompendo o princípio atual. Viável como workflow
+  **opt-in**, mas com curadoria do diff antes do merge (o build/deploy seguem sem rede).
 
 ## Analytics e a varredura de gráficos
 
