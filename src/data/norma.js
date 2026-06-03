@@ -16,6 +16,13 @@ export const NORMA = {
   prazoMinEspecializadaDias: 10, // Art. 8º §4º
   prazoMinUnificadaDias: 7, // Art. 12 §5º
   comissaoMinIntegrantes: 3, // Art. 9º (mín. 3 + 1 suplente)
+  // Reserva de vagas (ação afirmativa) — percentuais por categoria fixados pela 317.
+  // A heteroidentificação é obrigatória na autodeclaração étnico-racial.
+  reserva: {
+    etnico_racial: 30,
+    mulheres: 40,
+    pcd: 10,
+  },
   sisbolsas: "https://bolsas.ipea.gov.br/",
   vinculo:
     "A participação no PIPA não gera vínculo empregatício, nem obrigação de natureza trabalhista, previdenciária ou afim (Art. 3º, §4º).",
