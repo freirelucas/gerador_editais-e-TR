@@ -7,6 +7,7 @@ import StackedBars from "./charts/StackedBars.jsx";
 import Line from "./charts/Line.jsx";
 import Donut from "./charts/Donut.jsx";
 import Heatmap from "./charts/Heatmap.jsx";
+import SerieMensal from "./charts/SerieMensal.jsx";
 
 const corte = (s, n = 26) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 
@@ -165,6 +166,10 @@ export default function AnalyticsView() {
 
       {/* ---------- PRAZOS E SAZONALIDADE ---------- */}
       <Secao titulo="Prazos & sazonalidade">
+        <Figura titulo="Aberturas por mês — série temporal" wide
+          insight={`Volume de chamadas por mês de abertura das inscrições (${S.serieMensalCobertura}/${S.totalChamadas} com data), no detalhe mensal: a tendência de queda e a sazonalidade ficam visíveis, e as linhas tracejadas marcam a virada de ano.`}>
+          <SerieMensal data={S.serieMensal} />
+        </Figura>
         <Figura titulo="Janela de inscrição (dias)"
           insight={`Mediana de ${S.janelaMediana} dias; a maioria concentra-se entre 10 e 14 dias.`}>
           <Bars data={S.histJanela.map((h) => ({ label: h.faixa, value: h.total }))} />
