@@ -151,6 +151,18 @@ export default function AnalyticsView() {
         </Figura>
       </Secao>
 
+      {/* ---------- RESERVA DE VAGAS (COTAS) ---------- */}
+      <Secao titulo="Reserva de vagas (cotas)">
+        <Figura titulo="Reserva por categoria — nº de chamadas"
+          insight={`${S.comReserva} de ${S.totalChamadas} chamadas preveem reserva EXPLÍCITA de vagas (menção a reserva/cota/ação afirmativa no edital). É presença por categoria — não o nº de vagas: o quadro AC/ER/M/PCD varia demais entre editais para extrair com confiança.`}>
+          <Bars data={S.porCota} horizontal color={C.cerrado} />
+        </Figura>
+        <Figura titulo="Reserva por ano — institucionalização com o PIPA"
+          insight="Quase ausente até 2024; salta em 2025–2026, quando o PIPA passa a padronizar a reserva de vagas nas chamadas.">
+          <Bars data={S.cotaPorAno.map((a) => ({ label: a.ano, value: a.total }))} />
+        </Figura>
+      </Secao>
+
       {/* ---------- PRAZOS E SAZONALIDADE ---------- */}
       <Secao titulo="Prazos & sazonalidade">
         <Figura titulo="Janela de inscrição (dias)"

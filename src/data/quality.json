@@ -25,6 +25,13 @@
     "diretoria": 62,
     "categoria_funcao": 170,
     "categoria_tema": 186,
+    "cotas_com_reserva": 20,
+    "cotas_por_categoria": {
+      "Étnico-racial": 18,
+      "Mulheres": 16,
+      "PCD": 16,
+      "Indígena": 7
+    },
     "pdf_404": 0,
     "texto_curto": 37
   },

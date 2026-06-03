@@ -17,18 +17,21 @@ Três abas:
   oferecem **padrões de descrição** dos modelos antigos (fora do núcleo regulado). Exporta
   em **Word (`.doc`)** — com títulos, parágrafos e tabelas — ou `.txt`, e copia.
 - **Explorador de projetos** — busca e filtros (ano, programa, situação, **diretoria,
-  função, tema**) sobre 253 chamadas, com cartões **enriquecidos** (objeto, papel,
-  formação, valores, função/tema) e requisitos/atividades expansíveis.
+  função, tema, reserva de vagas**) sobre 253 chamadas, com cartões **enriquecidos** (objeto,
+  papel, formação, valores, função/tema, cotas) e requisitos/atividades expansíveis.
 - **Analytics dos dados** — painel de gráficos (SVG próprio, sem dependências) que
   **começa pela qualidade/limitações** (incl. cobertura do enriquecimento) e mostra a
-  virada PROMOB→PIPA, **perfis solicitados**, **diretorias**, temas, prazos e a biblioteca.
+  virada PROMOB→PIPA, **perfis solicitados**, **diretorias**, temas, **reserva de vagas
+  (cotas)**, prazos e a biblioteca.
   Comparações por ano trazem **2026 real (até a data do build) + projetado** (pró-rata linear).
 
 Os campos descritivos são **enriquecidos** baixando e parseando os PDFs dos editais
-(`scripts/fetch_pdfs.py` → `enrich_corpus.py` → `classify.py`); a classificação de
-função/tema é **configurável** em [`data/taxonomia.json`](data/taxonomia.json). Tudo é
-máquina-extraído e imperfeito — a aba Analytics reporta a cobertura honestamente, e **não
-há dados de contratação** (os "perfis" são os *solicitados* pelas chamadas).
+(`scripts/fetch_pdfs.py` → `enrich_corpus.py` → `classify.py` → `extract_cotas.py`); a
+classificação de função/tema é **configurável** em [`data/taxonomia.json`](data/taxonomia.json).
+A **reserva de vagas (cotas)** é detectada de forma conservadora (presença explícita de
+reserva/cota/ação afirmativa e quais categorias — ER/M/PCD/Indígena —, **sem** inferir o nº
+de vagas). Tudo é máquina-extraído e imperfeito — a aba Analytics reporta a cobertura
+honestamente, e **não há dados de contratação** (os "perfis" são os *solicitados*).
 
 > ⚠️ O documento gerado é um **rascunho de trabalho**: revisão jurídica e conferência com a
 > versão vigente da norma são obrigatórias antes da publicação. As portarias anteriores
