@@ -1,17 +1,18 @@
 {
-  "_nota": "Taxonomia-SEMENTE editável. Ajuste categorias/palavras-chave e rode `python scripts/classify.py` (não precisa re-baixar nem re-enriquecer). Casamento por substring, sem acentos, minúsculas, sobre objeto+projeto+papel+modalidades+requisitos+formação. Multi-rótulo.",
+  "_nota": "Taxonomia editável. Ajuste categorias/palavras-chave e rode `python scripts/classify.py` (não precisa re-baixar nem re-enriquecer). Casamento por substring, sem acentos, minúsculas, sobre objeto+projeto+papel+modalidades+requisitos+formação. Multi-rótulo.",
   "FUNCAO": {
-    "Ciência de Dados – Engenharia": ["engenharia de dados", "engenheiro de dados", "pipeline", "etl", "banco de dados", "infraestrutura de dados", "mlops", "spark", "data warehouse", "big data", "web scraping", "raspagem"],
-    "Ciência de Dados – Analytics": ["ciencia de dados", "cientista de dados", "analise de dados", "machine learning", "aprendizado de maquina", "estatistic", "econometr", "modelagem", "visualizacao de dados", "microdados", "ciencia de dados pleno", "ciencia de dados iniciante", "ciencia de dados junior", "ciencia de dados senior"],
-    "Pesquisa aplicada": ["assistente de pesquisa", "doutor bolsista", "auxiliar de pesquisa", "incentivo a pesquisa", "avaliacao de politicas", "revisao de literatura", "pesquisador"],
-    "Especialista de domínio": ["especialista", "consultor", "profissional senior", "mestre na area", "especializacao em", "notorio saber", "doutor na area"]
+    "Ciência de Dados – Engenharia": ["engenharia de dados", "engenheiro de dados", "pipeline", "etl", "raspagem", "web scraping", "banco de dados", "base de dados", "bancos de dados", "data warehouse", "infraestrutura de dados", "integracao de dados", "big data", "spark", "mlops"],
+    "Ciência de Dados – Analytics/ML": ["cientista de dados", "ciencia de dados", "machine learning", "aprendizado de maquina", "aprendizado profundo", "mineracao de dados", "inteligencia artificial", "modelos preditivos", "visualizacao de dados", "ciencia de dados pleno", "ciencia de dados iniciante", "ciencia de dados junior", "ciencia de dados senior"],
+    "Métodos quantitativos": ["econometr", "estatistic", "avaliacao de impacto", "avaliacao de politicas", "microdados", "analise quantitativa", "series temporais", "amostragem", "modelagem"],
+    "Especialista de domínio": ["especialista", "consultor", "notorio saber", "reconhecida experiencia", "profissional senior"],
+    "Apoio à pesquisa": ["assistente de pesquisa", "auxiliar de pesquisa", "apoio a pesquisa", "incentivo a pesquisa", "revisao de literatura", "levantamento bibliografico", "coleta de dados"]
   },
   "TEMA": {
-    "Macroeconomia e Fiscal": ["macroeconom", "fiscal", "tributa", "monetaria", "inflacao", "juros", "pib", "contas nacionais", "divida publica", "orcament"],
-    "Social, Trabalho e Renda": ["social", "pobreza", "desigualdade", "educacao", "saude", "assistencia", "trabalho", "emprego", "renda", "previdencia", "genero", "raca", "racial", "igualdade"],
-    "Internacional e Comércio": ["internacional", "comercio", "exportacao", "importacao", "geopolit", "relacoes exteriores", "cadeias globais", "cooperacao", "estrangeir"],
-    "Regional, Urbano e Ambiental": ["regional", "urban", "cidade", "territor", "habitacao", "mobilidade", "ambiental", "clima", "sustentab", "saneamento", "infraestrutura"],
-    "Estado, Instituições e Democracia": ["estado", "institui", "democ", "governanca", "gestao publica", "federa", "judicia", "regulac", "politicas publicas", "transparencia"],
-    "Inovação, CT&I e Setorial": ["inovacao", "tecnologia", "industrial", "produtividade", "ciencia e tecnologia", "setorial", "energia", "agro", "digital", "propriedade intelectual"]
+    "Macroeconomia e finanças": ["macroeconom", "politica fiscal", "politica monetaria", "inflacao", "juros", "pib", "contas nacionais", "divida publica", "sistema financeiro", "tributa"],
+    "Social, trabalho e renda": ["pobreza", "desigualdade", "educacao", "saude", "assistencia social", "mercado de trabalho", "emprego", "renda", "previdencia", "seguridade", "genero", "raca", "racial", "direitos humanos"],
+    "Estado, instituições e democracia": ["democracia", "institui", "gestao publica", "administracao publica", "judicia", "federalismo", "governanca", "participacao social", "transparencia", "corrupcao", "seguranca publica"],
+    "Regional, urbano e ambiental": ["desenvolvimento regional", "urban", "cidade", "metropol", "habitacao", "mobilidade", "meio ambiente", "ambiental", "mudanca climatica", "clima", "saneamento", "territor"],
+    "Setorial, inovação e infraestrutura": ["inovacao", "industri", "produtividade", "ciencia e tecnologia", "infraestrutura", "energia", "transporte", "agropecuar", "agro", "propriedade intelectual", "digital"],
+    "Internacional e comércio": ["comercio internacional", "comercio exterior", "relacoes internacionais", "geopolit", "cooperacao internacional", "exportacao", "importacao", "cadeias globais", "integracao regional"]
   }
 }

@@ -21,14 +21,13 @@
     "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -87,13 +86,11 @@
     "modalidade_canonica": "Doutor Bolsista",
     "flags": [],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -154,12 +151,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -219,13 +216,12 @@
     "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -285,9 +281,7 @@
     "janela_dias": 12,
     "modalidade_canonica": "Doutor Bolsista",
     "flags": [],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
@@ -345,9 +339,7 @@
     "modalidade_canonica": null,
     "flags": [],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -375,9 +367,7 @@
     "modalidade_canonica": null,
     "flags": [],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -404,9 +394,7 @@
     "janela_dias": 13,
     "modalidade_canonica": "Doutor Bolsista",
     "flags": [],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
@@ -461,12 +449,13 @@
     "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -529,10 +518,10 @@
     "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -586,13 +575,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -655,7 +643,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": false
   },
@@ -716,11 +704,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -777,10 +765,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -838,11 +826,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -892,13 +879,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -954,7 +938,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -1000,13 +984,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -1077,11 +1060,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Ciência de Dados – Analytics/ML"
     ],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -1147,11 +1128,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
       "Especialista de domínio"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -1213,10 +1193,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -1249,12 +1226,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -1348,8 +1326,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": false
   },
@@ -1380,9 +1358,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -1443,7 +1419,7 @@
     "modalidade_canonica": null,
     "flags": [],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [],
     "enriquecido": false
@@ -1476,11 +1452,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -1558,8 +1534,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -1612,10 +1587,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -1647,8 +1619,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -1799,7 +1770,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": false
   },
@@ -1830,9 +1801,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -1873,9 +1842,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Internacional e Comércio"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -1909,9 +1876,9 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental",
+      "Internacional e comércio"
     ],
     "enriquecido": false
   },
@@ -1945,11 +1912,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -2008,8 +1973,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -2071,12 +2035,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2134,7 +2097,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": false
   },
@@ -2163,11 +2126,9 @@
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2222,12 +2183,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2287,10 +2247,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2376,12 +2337,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2451,14 +2411,12 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2527,11 +2485,9 @@
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2604,11 +2560,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2676,10 +2633,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2737,7 +2694,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2795,13 +2752,14 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2891,11 +2849,9 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -2961,7 +2917,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3013,11 +2969,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3088,13 +3044,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3154,8 +3110,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -3215,8 +3170,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Internacional e Comércio",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3261,12 +3216,9 @@
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3325,13 +3277,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3389,12 +3340,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3457,12 +3408,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3527,7 +3477,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3617,12 +3567,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3685,9 +3634,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Internacional e comércio"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Panorama da China: economia, sociedade e relações internacionais”",
@@ -3803,12 +3754,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3871,11 +3822,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -3939,9 +3889,8 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -4005,11 +3954,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4071,7 +4020,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": false
   },
@@ -4135,11 +4084,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4199,12 +4148,13 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4266,12 +4216,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4360,13 +4311,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4434,11 +4385,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4505,13 +4457,14 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4573,7 +4526,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4628,12 +4582,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
-    "categoria_tema": [
-      "Macroeconomia e Fiscal"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Acompanhamento da Conjuntura Econômica Brasileira - Suporte analítico e econométrico”",
@@ -4694,11 +4645,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4807,11 +4758,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4867,12 +4818,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4926,12 +4876,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -4989,13 +4939,10 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5053,12 +5000,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5119,8 +5066,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5184,12 +5130,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5248,11 +5193,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5311,10 +5257,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5373,14 +5319,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5442,11 +5387,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “REVISTA PLANEJAMENTO E POLÍTICAS PÚBLICAS: FORTALECIMENTO INSTITUCIONAL, MELHORIA DA QUALIDADE DA PRODUÇÃO CIENTÍFICA E AMPLIAÇÃO DO RECONHECIMENTO EXTERNO\"",
@@ -5502,8 +5445,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5630,7 +5573,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -5692,12 +5635,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5756,12 +5699,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5830,9 +5773,9 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5906,11 +5849,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -5967,10 +5910,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6031,10 +5975,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Estado, instituições e democracia"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Subsídios ao processo de revisão da matriz curricular nacional (MCN 2014) para ações formativas dos profissionais de segurança\"",
@@ -6097,12 +6043,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6161,13 +6106,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6226,12 +6169,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6292,12 +6235,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6354,10 +6296,10 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Inovação, CT&I e Setorial"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6418,11 +6360,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6479,12 +6421,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Regional, Urbano e Ambiental",
-      "Inovação, CT&I e Setorial"
+      "Macroeconomia e finanças",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6546,11 +6488,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6609,11 +6550,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6672,13 +6614,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6734,12 +6676,10 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio"
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6792,11 +6732,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6857,13 +6797,10 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6925,12 +6862,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -6994,11 +6931,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7052,13 +6991,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7117,11 +7053,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7182,11 +7118,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7370,9 +7307,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -7402,12 +7337,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7465,12 +7399,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7538,7 +7470,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7587,13 +7519,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7685,7 +7614,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7736,13 +7665,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7808,11 +7736,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7878,11 +7806,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -7941,11 +7869,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8002,13 +7930,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8109,13 +8037,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8205,12 +8132,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8267,10 +8194,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8326,12 +8254,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8388,11 +8315,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8454,10 +8382,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -8503,8 +8428,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": false
   },
@@ -8544,7 +8469,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Internacional e comércio"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -8597,11 +8524,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8712,13 +8639,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8777,13 +8703,14 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8844,12 +8771,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8906,10 +8833,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -8969,12 +8896,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9035,11 +8961,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9160,8 +9085,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Internacional e Comércio",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental",
+      "Internacional e comércio"
     ],
     "enriquecido": false
   },
@@ -9205,11 +9130,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Ciência de Dados – Analytics/ML"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": false
   },
@@ -9240,14 +9164,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9305,12 +9227,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9380,11 +9301,11 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9438,13 +9359,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Inovação, CT&I e Setorial"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9504,13 +9424,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9611,13 +9529,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9689,12 +9607,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9817,11 +9734,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Métodos quantitativos"
     ],
-    "categoria_tema": [
-      "Social, Trabalho e Renda"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -9876,8 +9791,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -9931,8 +9845,8 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -9993,8 +9907,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10042,12 +9956,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Atlas do Estado Brasileiro”",
@@ -10113,7 +10025,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10160,7 +10072,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10206,7 +10118,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -10258,13 +10170,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10328,11 +10239,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10394,12 +10306,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10462,12 +10374,12 @@
       "modalidade_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10528,13 +10440,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10598,10 +10509,13 @@
       "modalidade_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Estado, instituições e democracia"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Dados Nacionais de Segurança Pública”",
@@ -10672,14 +10586,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10779,12 +10691,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10842,8 +10754,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -10903,13 +10817,10 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Inovação, CT&I e Setorial"
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -10967,12 +10878,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11035,14 +10945,13 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11098,9 +11007,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Regional, Urbano e Ambiental"
-    ],
+    "categoria_tema": [],
     "enriquecido": false
   },
   {
@@ -11138,12 +11045,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11206,13 +11112,10 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11273,8 +11176,7 @@
       "Especialista de domínio"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11330,14 +11232,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
-    "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Agricultura Familiar e Políticas Públicas de Desenvolvimento Rural”",
@@ -11410,13 +11307,14 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11472,11 +11370,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11540,12 +11438,11 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11611,12 +11508,9 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11674,14 +11568,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Acompanhamento e Avaliação de Políticas – Subsídios para o Núcleo de Inteligência Regional”",
@@ -11739,14 +11629,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11804,13 +11693,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11878,12 +11766,12 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -11940,12 +11828,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12032,7 +11919,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Inovação, CT&I e Setorial"
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": false
   },
@@ -12062,11 +11949,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12121,11 +12007,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12183,13 +12069,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12247,13 +12131,12 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12311,13 +12194,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Especialista de domínio",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Núcleo de análise de dados e gestão de plataformas virtuais”",
@@ -12374,9 +12254,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Regional, Urbano e Ambiental"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -12469,8 +12347,8 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12566,13 +12444,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Macroeconomia e finanças",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12628,9 +12506,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -12678,9 +12554,7 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [
-      "Internacional e Comércio"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -12727,9 +12601,8 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -12791,8 +12664,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": false
   },
@@ -12822,11 +12694,12 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12885,12 +12758,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
+      "Métodos quantitativos",
       "Especialista de domínio"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -12948,12 +12821,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13013,11 +12885,10 @@
     ],
     "categoria_funcao": [
       "Ciência de Dados – Engenharia",
-      "Ciência de Dados – Analytics",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Estado, Instituições e Democracia"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13078,7 +12949,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Estado, instituições e democracia"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": null,
@@ -13126,11 +12999,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Estado, Instituições e Democracia"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Observatório do Estado Brasileiro”",
@@ -13188,7 +13059,7 @@
     ],
     "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13235,12 +13106,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13298,12 +13167,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13364,11 +13233,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13436,12 +13305,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio",
-      "Regional, Urbano e Ambiental"
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13507,12 +13376,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13574,12 +13443,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13639,12 +13508,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13752,13 +13621,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13816,11 +13683,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Inovação, CT&I e Setorial"
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13882,13 +13749,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -13947,10 +13812,10 @@
       "Especialista de domínio"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Regional, Urbano e Ambiental",
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14010,7 +13875,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Estado, instituições e democracia"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Dados Nacionais de Segurança Pública\"",
@@ -14063,11 +13930,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14126,8 +13993,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
@@ -14190,11 +14059,13 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14255,11 +14126,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio"
+      "Social, trabalho e renda",
+      "Internacional e comércio"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14318,13 +14189,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Internacional e Comércio",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14382,12 +14252,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal"
+      "Macroeconomia e finanças"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14443,10 +14312,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14504,10 +14374,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Ciência de Dados – Engenharia",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, Urbano e Ambiental"
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14564,11 +14435,9 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Especialista de domínio"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
-      "Social, Trabalho e Renda"
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14629,10 +14498,10 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Inovação, CT&I e Setorial"
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14691,13 +14560,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Estado, Instituições e Democracia",
-      "Inovação, CT&I e Setorial"
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14755,11 +14622,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, Trabalho e Renda",
-      "Estado, Instituições e Democracia"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14817,12 +14684,12 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e Fiscal",
-      "Social, Trabalho e Renda"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
@@ -14882,13 +14749,11 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada",
-      "Especialista de domínio"
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Regional, Urbano e Ambiental"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Tratamento e Disponibilização de base de dados regionalizadas\"",
@@ -14950,12 +14815,9 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics",
-      "Pesquisa aplicada"
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [
-      "Inovação, CT&I e Setorial"
-    ],
+    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
     "objeto": "A presente Chamada tem por objetivo selecionar interessados para concessão de bolsa de pesquisa, que atendam aos requisitos do Termo de Referência constante no Anexo I e no REGULAMENTO desta Chamada, em realizar pesquisa no Projeto: “Núcleo de análise de dados e gestão de plataformas virtuais”",

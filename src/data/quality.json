@@ -1,5 +1,5 @@
 {
-  "gerado_em": "2026-06-02",
+  "gerado_em": "2026-06-03",
   "proveniencia": {
     "corpus": {
       "semente": "data/raw/corpus_chamadas_2023-2026.json",
@@ -23,8 +23,8 @@
     "formacao": 194,
     "requisitos": 166,
     "diretoria": 62,
-    "categoria_funcao": 183,
-    "categoria_tema": 206,
+    "categoria_funcao": 170,
+    "categoria_tema": 186,
     "pdf_404": 0,
     "texto_curto": 37
   },
