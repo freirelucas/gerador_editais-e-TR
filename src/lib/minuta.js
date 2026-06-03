@@ -31,7 +31,26 @@ function caracteristicasBolsa(f, { mod, q, durB }) {
       : "Não haverá cadastro reserva.",
   ];
   if (ou(f.reservaVagas, "")) b.push(`Público-alvo / reserva de vagas (Art. 25): ${f.reservaVagas.trim()}`);
+  if (f.cotasOn) {
+    const er = parseInt(f.cotaER) || 0, m = parseInt(f.cotaM) || 0, pcd = parseInt(f.cotaPCD) || 0;
+    const ac = Math.max(q - er - m - pcd, 0);
+    b.push(`Reserva de vagas (cotas): das ${String(q).padStart(2, "0")} vaga(s), ${String(ac).padStart(2, "0")} de ampla concorrência e ${String(er + m + pcd).padStart(2, "0")} reservada(s), conforme o quadro abaixo e ${ou(f.fundamentoCotas, "a legislação aplicável e o disposto na chamada")}.`);
+    if (f.heteroident) b.push("A autodeclaração étnico-racial será confirmada por procedimento de heteroidentificação, na forma da chamada.");
+  }
   return b;
+}
+
+// Quadro de vagas por cota (AC/ER/M/PCD) — só categorias com reserva, mais AC e total.
+function quadroVagas(f, { q }) {
+  const er = parseInt(f.cotaER) || 0, m = parseInt(f.cotaM) || 0, pcd = parseInt(f.cotaPCD) || 0;
+  const ac = Math.max(q - er - m - pcd, 0);
+  const pad = (n) => String(n).padStart(2, "0");
+  const rows = [["Categoria", "Vagas"], ["Ampla concorrência (AC)", pad(ac)]];
+  if (er) rows.push(["Étnico-racial (ER)", pad(er)]);
+  if (m) rows.push(["Mulheres (M)", pad(m)]);
+  if (pcd) rows.push(["Pessoa com deficiência (PCD)", pad(pcd)]);
+  rows.push(["Total", pad(q)]);
+  return rows;
 }
 
 const criteriosDefault = (f) =>
@@ -71,7 +90,7 @@ export function buildTR(f) {
   S.push({ n: 3, t: "PERFIL DO BOLSISTA DESEJADO", b: [
     ou(f.perfil, "[Descrever titulação, conhecimentos, competências e experiência desejados.]"),
   ] });
-  S.push({ n: 4, t: "MODALIDADE, VALOR E QUANTITATIVO DA BOLSA", b: caracteristicasBolsa(f, d) });
+  S.push({ n: 4, t: "MODALIDADE, VALOR E QUANTITATIVO DA BOLSA", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
   S.push({ n: 5, t: "DURAÇÃO DA BOLSA E DA PESQUISA", b: [
     `Duração da bolsa: ${String(d.durB).padStart(2, "0")} (${extenso(d.durB)}) ${d.durB === 1 ? "mês" : "meses"}.`,
     `Tempo de duração da pesquisa: ${String(d.durP).padStart(2, "0")} (${extenso(d.durP)}) ${d.durP === 1 ? "mês" : "meses"}.`,
@@ -107,7 +126,7 @@ export function buildEdital(f) {
   S.push({ n: 1, t: "DO OBJETO", b: [
     `Seleção de bolsista para o projeto de pesquisa: ${ou(f.projeto, "[TÍTULO/OBJETO DO PROJETO]")}, conforme o Termo de Referência constante do Anexo I.`,
   ] });
-  S.push({ n: 2, t: "DA MODALIDADE, DO VALOR E DO QUANTITATIVO", b: caracteristicasBolsa(f, d) });
+  S.push({ n: 2, t: "DA MODALIDADE, DO VALOR E DO QUANTITATIVO", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
   S.push({ n: 3, t: "DOS REQUISITOS E DO PERFIL", b: [
     `Requisito da modalidade: ${ou(d.mod.requisito, "conforme Art. 4º da norma vigente.")}`,
     `Perfil desejado: ${ou(f.perfil, "[Descrever o perfil exigido.]")}`,
