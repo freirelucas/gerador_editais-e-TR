@@ -3,44 +3,24 @@ import { C, SANS } from "../theme.js";
 import { MODALIDADES } from "../data/modalidades.js";
 import { fmtValor } from "../lib/format.js";
 import { buildTR, buildEdital, minutaToText } from "../lib/minuta.js";
-import { clausulasDe } from "../data/clausulas.js";
 import { conformidade, resumoConf, diffDias } from "../lib/conformidade.js";
 import { downloadDoc } from "../lib/docExport.js";
-import { FUNCOES, TEMAS } from "../data/perfis.js";
-import { comporPerfil, comporAtividades } from "../lib/perfil.js";
-
-// Chips de "padrões de descrição" (cláusulas dos modelos antigos) — só para campos
-// descritivos, FORA do núcleo regulado. Clicar preenche o campo.
-function Padroes({ rotulo, onEscolher }) {
-  const opcoes = clausulasDe(rotulo).slice(0, 4);
-  if (!opcoes.length) return null;
-  return (
-    <div style={{ marginTop: 6, display: "flex", flexWrap: "wrap", gap: 6, alignItems: "center" }}>
-      <span style={{ fontFamily: SANS, fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: C.muted }}>
-        padrões (modelos antigos):
-      </span>
-      {opcoes.map((c, i) => (
-        <button key={i} type="button" title={c} onClick={() => onEscolher(c)}
-          style={{ fontFamily: SANS, fontSize: 11, border: `1px solid ${C.line}`, background: C.paper,
-            color: C.azul, borderRadius: 3, padding: "2px 8px", cursor: "pointer", maxWidth: 240,
-            overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-          {c.slice(0, 42)}…
-        </button>
-      ))}
-    </div>
-  );
-}
+import { FUNCOES, TEMAS, enfasesDe, recortesDe } from "../data/perfis.js";
+import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "../lib/perfil.js";
+import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
+import { exemplosPorTema } from "../data/objetos.js";
 
 const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
-const SEVC = { ok: "#3f7d54", warn: C.gold, err: "#c0392b" };
-const SEVI = { ok: "✓", warn: "!", err: "✕" };
+const SEVC = { ok: "#3f7d54", warn: C.gold, err: "#c0392b", info: C.azul };
+const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
 
 export default function BuilderView() {
   const [doc, setDoc] = useState("tr"); // "tr" | "edital"
   const [step, setStep] = useState(0);
   const [f, setF] = useState({
-    numero: "", unidade: "", coordenador: "", projeto: "", perfil: "",
-    temas: [], funcoes: [], experiencia: "",
+    numero: "", diretoriaSel: PADRAO_DIRETORIA, unidade: rotuloUnidade(PADRAO_DIRETORIA),
+    coordenador: "", projetoNome: "", projeto: "", perfil: "",
+    temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], funcoes: [], enfases: [], recortes: [], experiencia: "",
     modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
     cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
     duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
@@ -51,6 +31,12 @@ export default function BuilderView() {
   const setVal = (k, v) => setF({ ...f, [k]: v });
   const toggle = (k) => (e) => setF({ ...f, [k]: e.target.checked });
   const toggleIn = (k, v) => setF((p) => ({ ...p, [k]: p[k].includes(v) ? p[k].filter((x) => x !== v) : [...p[k], v] }));
+  // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
+  const setDiretoria = (sigla) => setF((p) => ({
+    ...p, diretoriaSel: sigla,
+    temas: DIRETORIA_TEMA[sigla] ? [DIRETORIA_TEMA[sigla]] : p.temas,
+    unidade: rotuloUnidade(sigla) || p.unidade,
+  }));
 
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
@@ -105,6 +91,28 @@ export default function BuilderView() {
       ))}
     </div>
   );
+  // Exemplos REAIS de projetos PIPA do(s) tema(s) selecionado(s) — ponto de partida editável.
+  const ExemplosPipa = ({ temas, onUsar }) => {
+    const ex = exemplosPorTema(temas);
+    if (!ex.length) return null;
+    return (
+      <div style={{ border: `1px solid ${C.line}`, borderRadius: 6, padding: "9px 11px", background: C.card }}>
+        <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 700, letterSpacing: ".05em", color: C.muted, marginBottom: 7 }}>
+          EXEMPLOS REAIS DE PROJETOS PIPA · {temas.join(" · ")}
+        </div>
+        <div style={{ display: "grid", gap: 8 }}>
+          {ex.map((e, i) => (
+            <div key={i} style={{ display: "flex", gap: 9, alignItems: "baseline" }}>
+              <button type="button" onClick={() => onUsar(e.proposito)} style={{ ...compBtn, flexShrink: 0, padding: "3px 9px" }}>usar</button>
+              <div style={{ fontFamily: SANS, fontSize: 12, color: C.ink, lineHeight: 1.4 }}>
+                <b>{e.projeto}</b> <span style={{ color: C.muted }}>— {e.proposito.slice(0, 104)}… <i>({e.fonte})</i></span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
   const compBtn = {
     fontFamily: SANS, fontSize: 11.5, fontWeight: 700, letterSpacing: ".03em", padding: "7px 12px",
     borderRadius: 3, cursor: "pointer", background: C.abertaBg, color: C.azulEscuro, border: `1px solid ${C.azul}`,
@@ -126,24 +134,36 @@ export default function BuilderView() {
   function stepBody() {
     switch (step) {
       case 0: return (<>
+        <Field l="Diretoria (área de pesquisa) — pré-seleciona o tema e prioriza sugestões da área">
+          <select style={inp} value={f.diretoriaSel} onChange={(e) => setDiretoria(e.target.value)}>
+            {DIRETORIAS.map((d) => <option key={d.sigla} value={d.sigla}>{d.sigla} — {d.nome}</option>)}
+          </select>
+        </Field>
         <Field l="Nº da chamada / TR"><input style={inp} placeholder="020/2026" value={f.numero} onChange={set("numero")} /></Field>
+        <Field l="Unidade responsável (preenchida pela diretoria; edite p/ coordenação específica)">
+          <input style={inp} placeholder="Diretoria / unidade responsável" value={f.unidade} onChange={set("unidade")} />
+        </Field>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
-          <Field l="Unidade responsável"><input style={inp} placeholder="DISET" value={f.unidade} onChange={set("unidade")} /></Field>
-          <Field l="Coordenação"><input style={inp} placeholder="Nome do coordenador" value={f.coordenador} onChange={set("coordenador")} /></Field>
+          <Field l="Coordenação do projeto"><input style={inp} placeholder="Nome do coordenador" value={f.coordenador} onChange={set("coordenador")} /></Field>
+          <Field l="Diretor(a) que assina o TR"><input style={inp} placeholder="Nome do(a) diretor(a)" value={f.diretoria} onChange={set("diretoria")} /></Field>
         </div>
-        <Field l="Diretor(a) que aprova o TR"><input style={inp} placeholder="Diretor da área" value={f.diretoria} onChange={set("diretoria")} /></Field>
       </>);
       case 1: return (<>
         <Field l="Tema / domínio do projeto — escolha um ou mais">
           <ChipsMulti campo="temas" opcoes={TEMAS} />
         </Field>
-        <Field l="Definição do projeto de pesquisa">
-          <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Objeto, justificativa e objetivos do projeto…" value={f.projeto} onChange={set("projeto")} />
-          <Padroes rotulo="DEFINIÇÃO DO PROJETO" onEscolher={(c) => setVal("projeto", c)} />
+        <Field l="Nome do projeto — entra na fórmula do objeto">
+          <input style={inp} placeholder="Ex.: Macroeconomia sob incerteza forte" value={f.projetoNome} onChange={set("projetoNome")} />
         </Field>
-        <div style={{ fontFamily: SANS, fontSize: 11.5, color: C.muted }}>
-          O tema escolhido alimenta a composição do perfil e das atividades nos próximos passos.
-        </div>
+        <Field l="Definição do projeto de pesquisa">
+          <textarea style={{ ...inp, minHeight: 120, resize: "vertical" }} placeholder="Objeto, justificativa e objetivos do projeto…" value={f.projeto} onChange={set("projeto")} />
+          <div style={{ marginTop: 6 }}>
+            <button type="button" style={compBtn} onClick={() => setVal("projeto", comporObjeto({ projetoNome: f.projetoNome }))}>
+              ✦ Compor objeto (estrutura real PIPA)
+            </button>
+          </div>
+        </Field>
+        <ExemplosPipa temas={f.temas} onUsar={(p) => setVal("projeto", p)} />
       </>);
       case 2: return (<>
         <Field l="Modalidade da bolsa (Portaria 317/2025)">
@@ -169,6 +189,16 @@ export default function BuilderView() {
         <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
           <ChipsMulti campo="funcoes" opcoes={FUNCOES} />
         </Field>
+        {enfasesDe(f.funcoes).length > 0 && (
+          <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
+            <ChipsMulti campo="enfases" opcoes={enfasesDe(f.funcoes)} />
+          </Field>
+        )}
+        {recortesDe(f.temas).length > 0 && (
+          <Field l="Recortes temáticos (do corpus) — opcional">
+            <ChipsMulti campo="recortes" opcoes={recortesDe(f.temas)} />
+          </Field>
+        )}
         <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, lineHeight: 1.5 }}>
           formação (da modalidade): <b>{mod ? mod.formacao : "—"}</b>
           {f.temas.length > 0 && <><br />temas: <b>{f.temas.join(", ")}</b></>}
@@ -177,7 +207,7 @@ export default function BuilderView() {
           <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={f.experiencia} onChange={set("experiencia")} />
         </Field>
         <button type="button" style={compBtn}
-          onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia }))}>
+          onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia, enfases: f.enfases, recortes: f.recortes }))}>
           ✦ Compor perfil a partir das escolhas
         </button>
         <Field l="Perfil do bolsista desejado (editável)">
@@ -216,8 +246,12 @@ export default function BuilderView() {
           </div>
         </Field>
         <Field l="Critérios de seleção">
-          <textarea style={{ ...inp, minHeight: 64, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={f.criterios} onChange={set("criterios")} />
-          <Padroes rotulo="CRITÉRIOS DE SELEÇÃO" onEscolher={(c) => setVal("criterios", c)} />
+          <textarea style={{ ...inp, minHeight: 96, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma; ou gere pelos critérios reais da modalidade…" value={f.criterios} onChange={set("criterios")} />
+          <div style={{ marginTop: 6 }}>
+            <button type="button" style={compBtn} onClick={() => setVal("criterios", sugerirCriterios({ modalidade: f.modalidade, funcoes: f.funcoes }))}>
+              ✦ Sugerir critérios (padrão real da modalidade)
+            </button>
+          </div>
         </Field>
         <Check k="cartaIntencoes" l="Exigir carta de intenções (Art. 8º, §1º)" />
         <Field l="Composição da comissão julgadora — opcional">

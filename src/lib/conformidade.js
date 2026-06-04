@@ -54,6 +54,20 @@ export function conformidade(f) {
   add("ok", "Comissão julgadora",
     `mín. ${NORMA.comissaoMinIntegrantes} integrantes + 1 suplente (Art. 9º)`);
 
+  // ---- Padrões empíricos do corpus PIPA (sev "info"; só aparecem quando há desvio) ----
+  const cdMod = f.modalidade === "Assistente em Ciência de Dados Pleno";
+  const cdFunc = (f.funcoes || []).some((fn) => fn.includes("Ciência de Dados"));
+  if (cdMod && !cdFunc)
+    add("info", "Coerência modalidade × função (corpus)",
+      "modalidade de Ciência de Dados sem função de Ciência de Dados — nas chamadas PIPA, 9/9 casam");
+  const qv = parseInt(f.qtd) || 1;
+  if (qv > 3)
+    add("info", "Quantitativo usual (corpus)",
+      `${qv} vagas — no corpus PIPA o usual é 1 bolsa (máximo observado: 3)`);
+  if (din != null && din >= NORMA.prazoMinEspecializadaDias && din > 21)
+    add("info", "Janela de inscrição usual (corpus)",
+      `${din} dias — mediana PIPA 13 (faixa típica 11–14 dias)`);
+
   return out;
 }
 
