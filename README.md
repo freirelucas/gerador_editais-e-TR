@@ -13,9 +13,14 @@ Três abas:
   modalidades e valores atuais** (Anexo I). O fluxo guiado cobre identificação, projeto,
   bolsa, **perfil**, **vagas & cotas** (quadro AC/ER/M/PCD + heteroidentificação), seleção,
   cronograma e um passo de **conformidade** que checa o rascunho contra a norma (ex.: prazo
-  de inscrição ≥ 10 dias, Art. 8º §4º; ordem das datas; assinaturas). Uma **árvore de
-  decisões** (modalidade → formação · tema · função) **compõe** rascunhos limpos de perfil
-  e atividades, ancorados na norma e na taxonomia, que o proponente edita. Exporta em
+  de inscrição ≥ 10 dias, Art. 8º §4º; ordem das datas; assinaturas) e contra **padrões
+  empíricos do corpus** (coerência modalidade × função, quantitativo e janela usuais — 9/9,
+  mediana 13 dias). Escolhe-se a **diretoria** (padrão **DIEST**) e o fluxo se otimiza para a
+  área: pré-seleciona o tema e prioriza as sugestões. Uma **árvore de decisões**
+  (diretoria · modalidade → formação · tema · função) **compõe** rascunhos ancorados na norma
+  **e no corpus PIPA real**: **objeto** no formato das chamadas (+ exemplos reais por tema),
+  **perfil** e **atividades** com vocabulário minerado do corpus, e **critérios** no padrão
+  real da modalidade (itens pontuados, entrevista, desempate). Tudo editável. Exporta em
   **Word (`.doc`)** — com títulos, parágrafos e tabelas — ou `.txt`, e copia.
 - **Explorador de projetos** — busca e filtros (ano, programa, situação, **diretoria,
   função, tema, reserva de vagas**) sobre 253 chamadas, com cartões **enriquecidos** (objeto,

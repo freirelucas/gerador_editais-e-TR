@@ -62,3 +62,34 @@ export const TEMA_LINHA = {
 
 export const FUNCOES = Object.keys(FUNCAO_PERFIL);
 export const TEMAS = Object.keys(TEMA_LINHA);
+
+// Vocabulário REAL minerado do corpus PIPA (data/pdf_text/{2025,2026}_pipa_*.txt) — termos
+// efetivamente recorrentes, com a contagem de ocorrências que os ancora. Servem de "ênfases"
+// selecionáveis que refinam o perfil composto (subníveis dentro de cada função). Curado:
+// ruído de OCR removido; "GIS"/"SIG" consolidados em "dados georreferenciados".
+export const FUNCAO_TERMOS = {
+  "Apoio à pesquisa": ["revisão de literatura", "levantamento bibliográfico", "coleta de dados", "sistematização de informações", "notas técnicas", "elaboração de relatórios"],
+  "Métodos quantitativos": ["econometria", "estatística", "microdados", "avaliação de políticas", "registros administrativos", "indicadores", "modelagem", "Stata", "R", "Python"],
+  "Ciência de Dados – Analytics/ML": ["ciência de dados", "análise de dados", "visualização de dados", "inteligência artificial", "Python", "análise qualitativa assistida (NVivo/Atlas.ti)"],
+  "Ciência de Dados – Engenharia": ["bases de dados", "banco de dados", "SQL", "ETL", "web scraping"],
+  "Especialista de domínio": ["doutorado", "produção acadêmica (Lattes)", "experiência comprovada", "consultoria especializada", "pesquisador(a) sênior"],
+};
+
+// Recortes temáticos REAIS por tema (sub-tópicos recorrentes no corpus PIPA, com contagem).
+// O recorte de "Estado, instituições e democracia" (DIEST) é o mais rico do corpus.
+export const TEMA_SUBTEMAS = {
+  "Macroeconomia e finanças": ["finanças públicas", "contas nacionais", "política fiscal", "tributação", "gastos públicos", "conjuntura econômica"],
+  "Social, trabalho e renda": ["raça", "gênero", "saúde", "emprego", "mercado de trabalho", "desigualdade", "assistência social", "indicadores sociais"],
+  "Estado, instituições e democracia": ["políticas públicas", "administração pública", "instituições", "regulação", "sociedade civil", "democracia", "transformação digital", "capacidade institucional"],
+  "Regional, urbano e ambiental": ["dados georreferenciados (SIG/GIS)", "meio ambiente", "habitação", "sustentabilidade", "territórios", "saneamento"],
+  "Setorial, inovação e infraestrutura": ["infraestrutura", "inovação", "transporte", "logística", "energia", "telecomunicações"],
+  "Internacional e comércio": ["relações internacionais", "comércio exterior", "comércio internacional", "integração regional", "exportação"],
+};
+
+const uniao = (mapa, chaves) => {
+  const out = [];
+  for (const k of chaves) for (const v of mapa[k] || []) if (!out.includes(v)) out.push(v);
+  return out;
+};
+export const enfasesDe = (funcoes = []) => uniao(FUNCAO_TERMOS, funcoes);
+export const recortesDe = (temas = []) => uniao(TEMA_SUBTEMAS, temas);
