@@ -96,24 +96,41 @@ export default function AnalyticsView() {
         </Figura>
       </Secao>
 
-      {/* ---------- 3. COTAS & CONFORMIDADE ---------- */}
-      <Secao titulo="Vagas de inclusão (cotas) & conformidade — Portaria 317/2025"
-        nota={`Vagas reservadas a ação afirmativa. Das ${S.totalChamadas} chamadas, ${S.comReserva} (${S.cotaPctTotal}%) preveem reserva EXPLÍCITA — mas essa média global engana: mistura a era PROMOB, sem o quadro, com a era PIPA. A 317 (18/04/2025), citada por todos os editais PIPA, criou o PIPA e o quadro padrão AC/ER/M/PCD + heteroidentificação. Contamos chamadas com reserva, não o nº de vagas (não está nos editais).`}>
+      {/* ---------- 3. VAGAS DE INCLUSÃO ---------- */}
+      <Secao titulo="Vagas de inclusão (cotas)"
+        nota={`Vagas reservadas a ação afirmativa. Das ${S.totalChamadas} chamadas, ${S.comReserva} (${S.cotaPctTotal}%) preveem reserva EXPLÍCITA — e concentram-se em PIPA 2025–2026 (ver evolução). Contamos chamadas com reserva, não o nº de vagas (não está nos editais); tema e função são multi-rótulo, somam mais que ${S.comReserva}.`}>
         <Figura titulo="Chamadas com reserva — por categoria (nº)"
-          insight={`Magnitude concreta entre as ${S.comReserva} chamadas com reserva: ${S.porCotaPct.map((d) => `${d.label} ${d.n} (${d.value}%)`).join(", ")}. Indígena é citado à parte, mas na 317 entra na cota étnico-racial.`}>
+          insight={`Magnitude entre as ${S.comReserva} chamadas com reserva: ${S.porCotaPct.map((d) => `${d.label} ${d.n} (${d.value}%)`).join(", ")}. Indígena é citado à parte, mas na 317 entra na cota étnico-racial.`}>
           <Bars data={S.porCotaPct.map((d) => ({ label: d.label, value: d.n }))} horizontal color={C.cerrado} />
         </Figura>
         <Figura titulo="Chamadas com reserva — por ano (nº e %)"
-          insight={`A reserva era ~ausente até 2024 e salta com a 317/2025 (abr): ${S.cotaPorAnoPct.map((a) => `${a.ano} ${a.comReserva}/${a.total} (${a.pct}%)`).join(" · ")}. O degrau coincide com a entrada da portaria — mudança de regime, não tendência suave.`}>
+          insight={`A reserva era ~ausente até 2024 e salta com a 317/2025 (abr): ${S.cotaPorAnoPct.map((a) => `${a.ano} ${a.comReserva}/${a.total} (${a.pct}%)`).join(" · ")}. Mudança de regime, não tendência suave.`}>
           <Bars data={S.cotaPorAnoPct.map((a) => ({ label: a.ano, value: a.comReserva }))}
             color={(d) => (d.label >= "2025" ? C.cerrado : C.line)} />
         </Figura>
+        <Figura titulo="Quais TEMAS reservam mais (nº de chamadas)" wide
+          insight={`A inclusão se concentra em temas sociais: ${S.reservaPorTema.slice(0, 3).map((t) => `${t.label} ${t.value}`).join(", ")}… É onde a reserva de vagas mais aparece.`}>
+          <Bars data={S.reservaPorTema} horizontal color={C.cerrado} />
+        </Figura>
+        <Figura titulo="Quais FUNÇÕES reservam mais (nº de chamadas)"
+          insight={`Por função pedida: ${S.reservaPorFuncao.map((f) => `${f.label} ${f.value}`).join(", ")}.`}>
+          <Bars data={S.reservaPorFuncao} horizontal color={C.cerrado} />
+        </Figura>
+        <Figura titulo="Quais DIRETORIAS reservam mais (nº de chamadas)"
+          insight={`Cuidado: a diretoria só foi extraída em ${S.comReserva - S.reservaDiretoriaSem} das ${S.comReserva} (${S.reservaDiretoriaSem} não identificadas) — entre as identificadas, distribui-se por igual entre as diretorias econômicas/sociais. Sinal fraco, leia com cautela.`}>
+          <Bars data={S.reservaPorDiretoria} horizontal color={C.cerrado} />
+        </Figura>
+      </Secao>
+
+      {/* ---------- 4. CONFORMIDADE ---------- */}
+      <Secao titulo="Conformidade — Portaria 317/2025"
+        nota={`A Portaria Normativa Ipea nº 317 (18/04/2025), citada por todos os editais PIPA, criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação. Aqui: a adesão dos editais ao quadro (conformidade estrutural) e o que a norma exige — distinto da magnitude da seção anterior.`}>
         <Figura titulo="Adesão ao quadro de reserva — por programa (% dos analisados)"
-          insight={`Conformidade ESTRUTURAL: o quadro aparece onde a 317 vale. ${S.cotaPorPrograma.map((p) => `${p.programa} ${p.pct}% (${p.comReserva}/${p.analisados})`).join("; ")}. Heteroidentificação em ${S.comHetero} chamadas — todas ${S.heteroProgramas.join("/")}.`}>
+          insight={`O quadro aparece onde a 317 vale: ${S.cotaPorPrograma.map((p) => `${p.programa} ${p.pct}% (${p.comReserva}/${p.analisados})`).join("; ")}. Heteroidentificação em ${S.comHetero} chamadas — todas ${S.heteroProgramas.join("/")}.`}>
           <Bars data={S.cotaPorPrograma.map((p) => ({ label: p.programa, value: p.pct, color: COR_PROGRAMA[p.programa] }))} horizontal unit="%" />
         </Figura>
         <Figura titulo="Reserva exigida pela 317 — % do total de vagas"
-          insight={`A portaria FIXA o percentual de reserva sobre o TOTAL de vagas: étnico-racial ${NORMA.reserva.etnico_racial}% (pretos, pardos e indígenas), mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. Eixo distinto do gráfico ao lado — lá é a presença no texto; aqui, a fatia de vagas que a norma manda reservar. Como é fixa, o edital conforme aplica esse split; o corpus não guarda nº de vagas por categoria, então um desvio numérico edital-a-edital não é detectável aqui.`}>
+          insight={`A portaria FIXA o percentual sobre o TOTAL de vagas: étnico-racial ${NORMA.reserva.etnico_racial}% (pretos, pardos e indígenas), mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. É a fatia de vagas exigida — distinta da magnitude (nº de chamadas) da seção de inclusão. Como o split é fixo, o edital conforme o aplica; o corpus não guarda nº de vagas por categoria, então desvio numérico edital-a-edital não é detectável aqui.`}>
           <Bars data={reservaNorma} horizontal unit="%" color={C.gold} />
         </Figura>
       </Secao>
