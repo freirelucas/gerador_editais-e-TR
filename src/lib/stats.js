@@ -208,6 +208,25 @@ export const porCotaPct = porCota.map((d) => ({
   label: d.label, value: comReserva ? Math.round((d.value / comReserva) * 100) : 0, n: d.value,
 }));
 
+// vagas de inclusão cruzadas com tema / função / diretoria — "quais áreas reservam mais"
+// subconjunto: as chamadas COM reserva explícita (tema/função são multi-rótulo, somam > N).
+const COM_RESERVA = CORPUS.filter((c) => (c.vagas_por_cota || {}).tem_reserva);
+const contaListaEm = (arr, campo) => {
+  const m = new Map();
+  for (const c of arr) for (const v of c[campo] || []) m.set(v, (m.get(v) || 0) + 1);
+  return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+};
+export const reservaPorTema = contaListaEm(COM_RESERVA, "categoria_tema");
+export const reservaPorFuncao = contaListaEm(COM_RESERVA, "categoria_funcao");
+export const reservaDiretoriaSem = COM_RESERVA.filter((c) => !c.diretoria).length;
+export const reservaPorDiretoria = (() => {
+  const m = new Map();
+  for (const c of COM_RESERVA) if (c.diretoria) m.set(c.diretoria, (m.get(c.diretoria) || 0) + 1);
+  const arr = [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+  if (reservaDiretoriaSem) arr.push({ label: "não identificada", value: reservaDiretoriaSem, color: "#c9d4d7" });
+  return arr;
+})();
+
 // função × ano (StackedBars) — categorias de função realmente presentes
 export const funcoesLabels = porFuncao.map((f) => f.label);
 export const perfilPorAno = ANOS.map((ano) => {
