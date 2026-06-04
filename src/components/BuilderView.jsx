@@ -6,6 +6,8 @@ import { buildTR, buildEdital, minutaToText } from "../lib/minuta.js";
 import { clausulasDe } from "../data/clausulas.js";
 import { conformidade, resumoConf, diffDias } from "../lib/conformidade.js";
 import { downloadDoc } from "../lib/docExport.js";
+import { FUNCOES, TEMAS } from "../data/perfis.js";
+import { comporPerfil, comporAtividades } from "../lib/perfil.js";
 
 // Chips de "padrões de descrição" (cláusulas dos modelos antigos) — só para campos
 // descritivos, FORA do núcleo regulado. Clicar preenche o campo.
@@ -29,7 +31,7 @@ function Padroes({ rotulo, onEscolher }) {
   );
 }
 
-const STEPS = ["Identificação", "Projeto", "Bolsa", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
+const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
 const SEVC = { ok: "#3f7d54", warn: C.gold, err: "#c0392b" };
 const SEVI = { ok: "✓", warn: "!", err: "✕" };
 
@@ -38,6 +40,7 @@ export default function BuilderView() {
   const [step, setStep] = useState(0);
   const [f, setF] = useState({
     numero: "", unidade: "", coordenador: "", projeto: "", perfil: "",
+    temas: [], funcoes: [], experiencia: "",
     modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
     cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
     duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
@@ -47,6 +50,7 @@ export default function BuilderView() {
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const setVal = (k, v) => setF({ ...f, [k]: v });
   const toggle = (k) => (e) => setF({ ...f, [k]: e.target.checked });
+  const toggleIn = (k, v) => setF((p) => ({ ...p, [k]: p[k].includes(v) ? p[k].filter((x) => x !== v) : [...p[k], v] }));
 
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
@@ -90,6 +94,22 @@ export default function BuilderView() {
       {l}
     </label>
   );
+  const chipStyle = (on) => ({
+    fontFamily: SANS, fontSize: 12, padding: "5px 11px", borderRadius: 14, cursor: "pointer", fontWeight: 600,
+    background: on ? C.azul : C.card, color: on ? "#fff" : C.ink, border: `1px solid ${on ? C.azul : C.line}`,
+  });
+  const ChipsMulti = ({ campo, opcoes }) => (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+      {opcoes.map((o) => (
+        <button key={o} type="button" onClick={() => toggleIn(campo, o)} style={chipStyle(f[campo].includes(o))}>{o}</button>
+      ))}
+    </div>
+  );
+  const compBtn = {
+    fontFamily: SANS, fontSize: 11.5, fontWeight: 700, letterSpacing: ".03em", padding: "7px 12px",
+    borderRadius: 3, cursor: "pointer", background: C.abertaBg, color: C.azulEscuro, border: `1px solid ${C.azul}`,
+    justifySelf: "start",
+  };
   const mod = MODALIDADES.find((m) => m.nome === f.modalidade);
   const q = parseInt(f.qtd) || 1;
   const reservaLive = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
@@ -114,14 +134,16 @@ export default function BuilderView() {
         <Field l="Diretor(a) que aprova o TR"><input style={inp} placeholder="Diretor da área" value={f.diretoria} onChange={set("diretoria")} /></Field>
       </>);
       case 1: return (<>
+        <Field l="Tema / domínio do projeto — escolha um ou mais">
+          <ChipsMulti campo="temas" opcoes={TEMAS} />
+        </Field>
         <Field l="Definição do projeto de pesquisa">
-          <textarea style={{ ...inp, minHeight: 96, resize: "vertical" }} placeholder="Objeto, justificativa e objetivos do projeto…" value={f.projeto} onChange={set("projeto")} />
+          <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Objeto, justificativa e objetivos do projeto…" value={f.projeto} onChange={set("projeto")} />
           <Padroes rotulo="DEFINIÇÃO DO PROJETO" onEscolher={(c) => setVal("projeto", c)} />
         </Field>
-        <Field l="Perfil do bolsista desejado">
-          <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Titulação, conhecimentos e experiência…" value={f.perfil} onChange={set("perfil")} />
-          <Padroes rotulo="PERFIL E REQUISITOS" onEscolher={(c) => setVal("perfil", c)} />
-        </Field>
+        <div style={{ fontFamily: SANS, fontSize: 11.5, color: C.muted }}>
+          O tema escolhido alimenta a composição do perfil e das atividades nos próximos passos.
+        </div>
       </>);
       case 2: return (<>
         <Field l="Modalidade da bolsa (Portaria 317/2025)">
@@ -130,8 +152,10 @@ export default function BuilderView() {
           </select>
         </Field>
         {mod && (
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, marginTop: -6 }}>
-            valor mensal: <b>{fmtValor(mod.valor, mod.moeda)}</b> · Anexo I
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, marginTop: -6, lineHeight: 1.55 }}>
+            valor mensal: <b>{fmtValor(mod.valor, mod.moeda)}</b> · Anexo I<br />
+            formação: <b>{mod.formacao}</b><br />
+            <span style={{ color: C.muted }}>requisito (Art. 4º): {mod.requisito}</span>
           </div>
         )}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
@@ -142,6 +166,25 @@ export default function BuilderView() {
         <Check k="cadastroReserva" l="Prever cadastro reserva (Art. 9º, §2º)" />
       </>);
       case 3: return (<>
+        <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
+          <ChipsMulti campo="funcoes" opcoes={FUNCOES} />
+        </Field>
+        <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, lineHeight: 1.5 }}>
+          formação (da modalidade): <b>{mod ? mod.formacao : "—"}</b>
+          {f.temas.length > 0 && <><br />temas: <b>{f.temas.join(", ")}</b></>}
+        </div>
+        <Field l="Experiência / habilidades desejáveis — opcional">
+          <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={f.experiencia} onChange={set("experiencia")} />
+        </Field>
+        <button type="button" style={compBtn}
+          onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia }))}>
+          ✦ Compor perfil a partir das escolhas
+        </button>
+        <Field l="Perfil do bolsista desejado (editável)">
+          <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Use ‘Compor perfil’ acima, ou escreva livremente…" value={f.perfil} onChange={set("perfil")} />
+        </Field>
+      </>);
+      case 4: return (<>
         <Field l="Público-alvo / reserva de vagas (Art. 25) — texto livre, opcional">
           <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
         </Field>
@@ -162,10 +205,15 @@ export default function BuilderView() {
           </Field>
         </>)}
       </>);
-      case 4: return (<>
+      case 5: return (<>
         <Field l="Atividades a desenvolver">
-          <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={f.atividades} onChange={set("atividades")} />
-          <Padroes rotulo="ATIVIDADES" onEscolher={(c) => setVal("atividades", c)} />
+          <textarea style={{ ...inp, minHeight: 88, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={f.atividades} onChange={set("atividades")} />
+          <div style={{ marginTop: 6 }}>
+            <button type="button" style={compBtn}
+              onClick={() => setVal("atividades", comporAtividades({ funcoes: f.funcoes, temas: f.temas }))}>
+              ✦ Compor atividades (das funções do perfil)
+            </button>
+          </div>
         </Field>
         <Field l="Critérios de seleção">
           <textarea style={{ ...inp, minHeight: 64, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={f.criterios} onChange={set("criterios")} />
@@ -176,7 +224,7 @@ export default function BuilderView() {
           <textarea style={{ ...inp, minHeight: 56, resize: "vertical" }} placeholder="Em branco usa a composição-padrão (mín. 3 + 1 suplente, Art. 9º)…" value={f.comissao} onChange={set("comissao")} />
         </Field>
       </>);
-      case 5: return (<>
+      case 6: return (<>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
           <Field l="Publicação"><input style={inp} type="date" value={f.dataPub} onChange={set("dataPub")} /></Field>
           <Field l="Início atividades"><input style={inp} type="date" value={f.inicio} onChange={set("inicio")} /></Field>
@@ -190,7 +238,7 @@ export default function BuilderView() {
           </div>
         )}
       </>);
-      case 6: return (<>
+      case 7: return (<>
         <div style={{ display: "flex", gap: 14, fontFamily: SANS, fontSize: 12.5, fontWeight: 600 }}>
           <span style={{ color: SEVC.ok }}>✓ {resumo.ok} ok</span>
           <span style={{ color: SEVC.warn }}>! {resumo.warn} avisos</span>
@@ -255,7 +303,7 @@ export default function BuilderView() {
               border: `1px solid ${doc === k ? C.azul : C.line}`, fontWeight: 600,
             }}>{l}</button>
           ))}
-          <button onClick={() => setStep(6)} title="Ver conformidade" style={{
+          <button onClick={() => setStep(STEPS.length - 1)} title="Ver conformidade" style={{
             marginLeft: 12, fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer",
             background: "transparent", border: `1px solid ${C.line}`, borderRadius: 3, padding: "6px 10px",
             color: resumo.err ? SEVC.err : resumo.warn ? SEVC.warn : SEVC.ok,
