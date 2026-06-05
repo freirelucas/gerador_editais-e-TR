@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { C, SANS } from "../theme.js";
+import { C, SANS, SERIF, RADIUS, SHADOW } from "../theme.js";
 import { MODALIDADES } from "../data/modalidades.js";
 import { fmtValor } from "../lib/format.js";
 import { buildTR, buildEdital, minutaToText } from "../lib/minuta.js";
@@ -10,9 +10,21 @@ import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "
 import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
 import { exemplosPorTema } from "../data/objetos.js";
 
+// Ícones inline (sem dependência).
+const IP = {
+  check: "M20 6 9 17l-5-5", copy: "M9 9h10v12H9zM5 15V3h10", eye: "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Zm10 3a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z",
+  download: "M12 3v12m0 0 4-4m-4 4-4-4M4 21h16", spark: "M12 3l2 5.2L19 10l-5 1.8L12 17l-2-5.2L5 10l5-1.8L12 3Z",
+  arrow: "M5 12h14m0 0-6-6m6 6-6 6", x: "M6 6l12 12M18 6 6 18",
+};
+function Ic({ d, size = 15, color = "currentColor", w = 1.8 }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d={IP[d]} /></svg>;
+}
+
+
 const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
 const STEP_SHORT = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
-const SEVC = { ok: "#3f7d54", warn: C.gold, err: "#c0392b", info: C.azul };
+const SEVC = { ok: C.ok, warn: C.warn, err: C.err, info: C.azul };
+const SEVBG = { ok: C.okBg, warn: C.warnBg, err: C.errBg, info: C.accentSoft };
 const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
 
 // Seções do documento afetadas por cada passo (casa por trecho de título; serve TR e edital).
@@ -28,23 +40,44 @@ const FOCO = [
   null,
 ];
 
-// Renderiza uma seção da minuta (cabeçalho, parágrafo, assinatura, seção numerada, tabela).
+// Texto entre [colchetes] = ainda não preenchido. Linha inteira entre colchetes vira
+// rascunho-fantasma (itálico esmaecido); colchetes no meio do texto viram "slots" de
+// preenchimento (campo de mesclagem) — fim do "template inacabado" com colchetes crus.
+const isGhost = (t) => typeof t === "string" && /^\s*\[[\s\S]*\]\s*$/.test(t.trim());
+const ghostText = (t) => t.trim().replace(/^\[/, "").replace(/\]$/, "");
+function Slot({ children }) {
+  return <span style={{ background: C.accentSoft, color: C.azulEscuro, borderRadius: 4, padding: "0 5px", fontStyle: "italic", fontSize: ".93em" }}>{children}</span>;
+}
+function Linha({ t, base }) {
+  if (isGhost(t)) return <p style={{ ...base, color: C.faint, fontStyle: "italic" }}>{ghostText(t)}</p>;
+  if (typeof t === "string" && t.includes("[")) {
+    return <p style={base}>{t.split(/(\[[^\]]*\])/g).map((seg, k) =>
+      /^\[[^\]]*\]$/.test(seg) ? <Slot key={k}>{seg.slice(1, -1)}</Slot> : <span key={k}>{seg}</span>)}</p>;
+  }
+  return <p style={base}>{t}</p>;
+}
+
+// Renderiza uma seção da minuta. O documento usa SERIFA (artefato oficial); rótulos em SANS.
 function renderSecao(s, i) {
-  if (s.head) return <h1 key={i} style={{ fontSize: 17, textAlign: "center", lineHeight: 1.4, margin: "0 0 24px", color: C.azulEscuro }}>{s.t}</h1>;
-  if (s.p) return <p key={i} style={{ textAlign: "justify", margin: "0 0 20px", color: C.muted }}>{s.p}</p>;
-  if (s.sign) return <div key={i} style={{ textAlign: "center", marginTop: 36, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
+  if (s.head) return <h1 key={i} style={{ fontFamily: SERIF, fontSize: 19, fontWeight: 700, textAlign: "center", lineHeight: 1.4, margin: "0 0 26px", color: C.ink }}>{s.t}</h1>;
+  if (s.p) return <Linha key={i} t={s.p} base={{ fontFamily: SERIF, textAlign: "justify", margin: "0 0 20px", color: C.muted }} />;
+  if (s.sign) return <div key={i} style={{ fontFamily: SERIF, textAlign: "center", marginTop: 40, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
   return (
-    <div key={i} style={{ margin: "0 0 20px" }}>
-      {s.n && <h2 style={{ fontFamily: SANS, fontSize: 13, letterSpacing: ".04em", color: C.azul, margin: "0 0 8px", fontWeight: 700 }}>{s.n}. {s.t}</h2>}
-      {(s.b || []).map((l, j) => <p key={j} style={{ textAlign: "justify", margin: "0 0 7px" }}>{l}</p>)}
+    <div key={i} style={{ margin: "0 0 22px" }}>
+      {s.n && (
+        <h2 style={{ display: "flex", alignItems: "baseline", gap: 8, fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, margin: "0 0 9px", fontWeight: 600, letterSpacing: ".01em" }}>
+          <span style={{ fontVariantNumeric: "tabular-nums", fontWeight: 700, color: C.azul }}>{s.n}.</span>{s.t}
+        </h2>
+      )}
+      {(s.b || []).map((l, j) => <Linha key={j} t={l} base={{ fontFamily: SERIF, fontSize: 14.5, textAlign: "justify", margin: "0 0 8px", lineHeight: 1.6 }} />)}
       {s.table && (
-        <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 0", fontSize: 13 }}>
+        <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: 0, margin: "10px 0 0", fontFamily: SANS, fontSize: 13, border: `1px solid ${C.line}`, borderRadius: RADIUS.sm, overflow: "hidden" }}>
           <tbody>{s.table.map((r, ri) => (
             <tr key={ri}>{r.map((cell, ci) => (
-              <td key={ci} style={{ border: `1px solid ${C.line}`, padding: "6px 10px",
-                fontWeight: ri === 0 ? 700 : 400, background: ri === 0 ? C.abertaBg : "transparent",
-                textTransform: ri === 0 ? "uppercase" : "none", fontSize: ri === 0 ? 11 : 13,
-                letterSpacing: ri === 0 ? ".05em" : 0, color: ri === 0 ? C.azul : C.ink }}>{cell}</td>
+              <td key={ci} style={{ borderBottom: ri < s.table.length - 1 ? `1px solid ${C.line}` : "none", borderRight: ci < r.length - 1 ? `1px solid ${C.line}` : "none", padding: "8px 11px",
+                fontWeight: ri === 0 ? 600 : 400, background: ri === 0 ? C.accentSoft : C.card,
+                fontSize: ri === 0 ? 11 : 13, letterSpacing: ri === 0 ? ".03em" : 0,
+                color: ri === 0 ? C.azulEscuro : C.ink }}>{cell}</td>
             ))}</tr>
           ))}</tbody>
         </table>
@@ -105,24 +138,25 @@ export default function BuilderView() {
   };
 
   const inp = {
-    fontFamily: SANS, fontSize: 14, padding: "8px 10px", background: C.card,
-    border: `1px solid ${C.line}`, color: C.ink, borderRadius: 3, outline: "none",
+    fontFamily: SANS, fontSize: 14, padding: "10px 12px", background: C.surface2,
+    border: `1px solid ${C.lineStrong}`, color: C.ink, borderRadius: RADIUS.sm, outline: "none",
     width: "100%", boxSizing: "border-box",
   };
   const lab = {
-    fontFamily: SANS, fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase",
-    color: C.muted, marginBottom: 4, display: "block", fontWeight: 600,
+    fontFamily: SANS, fontSize: 13, color: C.muted, marginBottom: 6, display: "block",
+    fontWeight: 500, lineHeight: 1.35,
   };
   const Field = ({ l, children }) => (<div><label style={lab}>{l}</label>{children}</div>);
   const Check = ({ k, l }) => (
-    <label style={{ display: "flex", gap: 8, alignItems: "center", fontFamily: SANS, fontSize: 13, color: C.ink, cursor: "pointer" }}>
-      <input type="checkbox" checked={f[k]} onChange={toggle(k)} style={{ accentColor: C.azul, width: 15, height: 15 }} />
+    <label style={{ display: "flex", gap: 9, alignItems: "center", fontFamily: SANS, fontSize: 13.5, color: C.ink, cursor: "pointer" }}>
+      <input type="checkbox" checked={f[k]} onChange={toggle(k)} style={{ accentColor: C.azul, width: 16, height: 16 }} />
       {l}
     </label>
   );
   const chipStyle = (on) => ({
-    fontFamily: SANS, fontSize: 12, padding: "5px 11px", borderRadius: 14, cursor: "pointer", fontWeight: 600,
-    background: on ? C.azul : C.card, color: on ? "#fff" : C.ink, border: `1px solid ${on ? C.azul : C.line}`,
+    fontFamily: SANS, fontSize: 12.5, padding: "6px 13px", borderRadius: RADIUS.pill, cursor: "pointer", fontWeight: 500,
+    background: on ? C.accentSoft : C.card, color: on ? C.azulEscuro : C.muted,
+    border: `1px solid ${on ? C.azulClaro : C.line}`,
   });
   const ChipsMulti = ({ campo, opcoes }) => (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -136,9 +170,9 @@ export default function BuilderView() {
     const ex = exemplosPorTema(temas);
     if (!ex.length) return null;
     return (
-      <div style={{ border: `1px solid ${C.line}`, borderRadius: 6, padding: "9px 11px", background: C.card }}>
-        <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 700, letterSpacing: ".05em", color: C.muted, marginBottom: 7 }}>
-          EXEMPLOS REAIS DE PROJETOS PIPA · {temas.join(" · ")}
+      <div style={{ border: `1px solid ${C.line}`, borderRadius: RADIUS.md, padding: "12px 14px", background: C.surface2 }}>
+        <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 600, letterSpacing: ".08em", textTransform: "uppercase", color: C.faint, marginBottom: 9 }}>
+          Exemplos reais de projetos PIPA · {temas.join(" · ")}
         </div>
         <div style={{ display: "grid", gap: 8 }}>
           {ex.map((e, i) => (
@@ -154,8 +188,8 @@ export default function BuilderView() {
     );
   };
   const compBtn = {
-    fontFamily: SANS, fontSize: 11.5, fontWeight: 700, letterSpacing: ".03em", padding: "7px 12px",
-    borderRadius: 3, cursor: "pointer", background: C.abertaBg, color: C.azulEscuro, border: `1px solid ${C.azul}`,
+    fontFamily: SANS, fontSize: 12, fontWeight: 600, padding: "8px 13px", display: "inline-flex", alignItems: "center", gap: 6,
+    borderRadius: RADIUS.sm, cursor: "pointer", background: C.accentSoft, color: C.azulEscuro, border: `1px solid ${C.azulClaro}`,
     justifySelf: "start",
   };
   const mod = MODALIDADES.find((m) => m.nome === f.modalidade);
@@ -165,10 +199,11 @@ export default function BuilderView() {
   const dInsc = diffDias(f.inscIni, f.inscFim);
 
   const btn = (primary) => ({
-    fontFamily: SANS, fontSize: 12, letterSpacing: ".04em", textTransform: "uppercase",
-    padding: "8px 14px", borderRadius: 3, cursor: "pointer", fontWeight: 600,
-    background: primary ? C.azul : "transparent", color: primary ? "#fff" : C.ink,
-    border: primary ? "none" : `1px solid ${C.ink}`,
+    fontFamily: SANS, fontSize: 13, padding: "9px 16px", borderRadius: RADIUS.sm, cursor: "pointer", fontWeight: 600,
+    display: "inline-flex", alignItems: "center", gap: 7,
+    background: primary ? C.azul : C.card, color: primary ? "#fff" : C.ink,
+    border: primary ? "none" : `1px solid ${C.lineStrong}`,
+    boxShadow: primary ? SHADOW.xs : "none",
   });
 
   function stepBody() {
@@ -307,29 +342,30 @@ export default function BuilderView() {
           <Field l="Resultado"><input style={inp} type="date" value={f.resultado} onChange={set("resultado")} /></Field>
         </div>
         {dInsc != null && (
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: dInsc >= 10 ? "#3f7d54" : "#c0392b", fontWeight: 600 }}>
-            prazo de inscrição: {dInsc} dia(s) {dInsc >= 10 ? "✓" : "✕ abaixo do mínimo de 10 (Art. 8º, §4º)"}
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: dInsc >= 10 ? C.ok : C.err, fontWeight: 600,
+            background: dInsc >= 10 ? C.okBg : C.errBg, padding: "8px 12px", borderRadius: RADIUS.sm }}>
+            Prazo de inscrição: {dInsc} dia(s) {dInsc >= 10 ? "✓ ok" : "✕ abaixo do mínimo de 10 (Art. 8º, §4º)"}
           </div>
         )}
       </>);
       case 7: return (<>
-        <div style={{ display: "flex", gap: 14, fontFamily: SANS, fontSize: 12.5, fontWeight: 600 }}>
-          <span style={{ color: SEVC.ok }}>✓ {resumo.ok} ok</span>
-          <span style={{ color: SEVC.warn }}>! {resumo.warn} avisos</span>
-          <span style={{ color: SEVC.err }}>✕ {resumo.err} erros</span>
+        <div style={{ display: "flex", gap: 8, fontFamily: SANS, fontSize: 12.5, fontWeight: 600 }}>
+          {[["ok", `${resumo.ok} ok`], ["warn", `${resumo.warn} avisos`], ["err", `${resumo.err} erros`]].map(([k, l]) => (
+            <span key={k} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: SEVC[k], background: SEVBG[k], padding: "5px 11px", borderRadius: RADIUS.pill }}>{SEVI[k]} {l}</span>
+          ))}
         </div>
-        <div style={{ display: "grid", gap: 8 }}>
+        <div style={{ display: "grid", gap: 2 }}>
           {conf.map((c, i) => (
-            <div key={i} style={{ display: "flex", gap: 10, alignItems: "baseline", fontFamily: SANS, fontSize: 13 }}>
+            <div key={i} style={{ display: "flex", gap: 11, alignItems: "baseline", fontFamily: SANS, fontSize: 13, padding: "8px 10px", borderRadius: RADIUS.sm, background: c.sev === "ok" ? "transparent" : SEVBG[c.sev] }}>
               <span style={{ color: SEVC[c.sev], fontWeight: 800, width: 12, flexShrink: 0 }}>{SEVI[c.sev]}</span>
-              <div><b>{c.label}</b> <span style={{ color: C.muted }}>— {c.detail}</span></div>
+              <div style={{ lineHeight: 1.45 }}><b>{c.label}</b> <span style={{ color: C.muted }}>— {c.detail}</span></div>
             </div>
           ))}
         </div>
-        <button onClick={dlDoc} style={{ ...btn(true), padding: "11px 16px", fontSize: 12.5, marginTop: 4 }}>
-          ⬇ Baixar Word (.doc) — {doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"}
+        <button onClick={dlDoc} style={{ ...btn(true), padding: "11px 16px", fontSize: 13, marginTop: 4 }}>
+          <Ic d="download" size={16} color="#fff" /> Baixar Word — {doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"}
         </button>
-        <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, lineHeight: 1.5 }}>
+        <div style={{ fontFamily: SANS, fontSize: 11.5, color: C.faint, lineHeight: 1.5 }}>
           Rascunho de trabalho — revisão jurídica obrigatória antes da publicação no SEI/DOU.
         </div>
       </>);
@@ -341,75 +377,85 @@ export default function BuilderView() {
   const foco = FOCO[step];
   let secoes = !foco ? minuta : minuta.filter((s) => s.head || (s.t && foco.some((k) => s.t.toUpperCase().includes(k))));
   if (foco && secoes.filter((s) => !s.head).length === 0) secoes = minuta; // fallback: nada casou
+  const sev = resumo.err ? "err" : resumo.warn ? "warn" : "ok";
   const confChip = (
     <button onClick={() => setStep(STEPS.length - 1)} title="Ver conformidade" style={{
-      fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer",
-      background: "transparent", border: `1px solid ${C.line}`, borderRadius: 3, padding: "6px 10px",
-      color: resumo.err ? SEVC.err : resumo.warn ? SEVC.warn : SEVC.ok,
-    }}>{resumo.err ? `✕ ${resumo.err} erro(s)` : resumo.warn ? `! ${resumo.warn} aviso(s)` : "✓ conforme"}</button>
+      fontFamily: SANS, fontSize: 12, fontWeight: 600, cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6,
+      background: SEVBG[sev], border: `1px solid ${SEVC[sev]}33`, borderRadius: RADIUS.pill, padding: "6px 12px", color: SEVC[sev],
+    }}>{SEVI[sev]} {resumo.err ? `${resumo.err} erro(s)` : resumo.warn ? `${resumo.warn} aviso(s)` : "conforme"}</button>
   );
   const docToggle = (
-    <div style={{ display: "flex", gap: 0 }}>
+    <div style={{ display: "inline-flex", background: C.sunken, borderRadius: RADIUS.sm, padding: 3, gap: 3 }}>
       {[["tr", "TR"], ["edital", "Chamada"]].map(([k, l]) => (
         <button key={k} onClick={() => setDoc(k)} style={{
-          fontFamily: SANS, fontSize: 12, letterSpacing: ".02em", padding: "6px 12px", cursor: "pointer",
-          background: doc === k ? C.azul : C.card, color: doc === k ? "#fff" : C.muted,
-          border: `1px solid ${doc === k ? C.azul : C.line}`, fontWeight: 600,
+          fontFamily: SANS, fontSize: 12, padding: "5px 12px", cursor: "pointer", borderRadius: 6, border: "none",
+          background: doc === k ? C.card : "transparent", color: doc === k ? C.azulEscuro : C.muted,
+          fontWeight: 600, boxShadow: doc === k ? SHADOW.xs : "none",
         }}>{l}</button>
       ))}
     </div>
   );
 
   return (
-    <div style={{
-      display: "grid", gap: 28, alignItems: "start",
-      gridTemplateColumns: docHero ? "minmax(0,360px) minmax(0,1fr)" : "minmax(0,1fr) minmax(300px,360px)",
+    <div className="twocol" style={{
+      display: "grid", gap: 26, alignItems: "start",
+      gridTemplateColumns: docHero ? "minmax(0,340px) minmax(0,1fr)" : "minmax(0,1fr) minmax(300px,372px)",
     }}>
       {/* ---------- ASSISTENTE (herói) ---------- */}
       <div style={{ display: "grid", gap: 18 }}>
         {/* stepper */}
         <div style={{ display: "flex", alignItems: "flex-start" }}>
-          {STEPS.map((s, i) => (
-            <div key={i} onClick={() => setStep(i)} title={s}
-              style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", cursor: "pointer" }}>
-              {i < STEPS.length - 1 && (
-                <div style={{ position: "absolute", top: 13, left: "50%", width: "100%", height: 2, background: i < step ? C.azul : C.line }} />
-              )}
-              <div style={{
-                width: 26, height: 26, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
-                fontFamily: SANS, fontSize: 12, fontWeight: 700, zIndex: 1, background: i < step ? C.azul : C.card,
-                color: i < step ? "#fff" : i === step ? C.azul : C.muted, border: `2px solid ${i <= step ? C.azul : C.line}`,
-              }}>{i < step ? "✓" : i + 1}</div>
-              <div style={{ fontFamily: SANS, fontSize: 9.5, marginTop: 5, textAlign: "center", lineHeight: 1.2,
-                color: i === step ? C.azulEscuro : C.muted, fontWeight: i === step ? 700 : 400 }}>{STEP_SHORT[i]}</div>
-            </div>
-          ))}
+          {STEPS.map((s, i) => {
+            const done = i < step, active = i === step;
+            return (
+              <div key={i} onClick={() => setStep(i)} title={s}
+                style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", cursor: "pointer" }}>
+                {i < STEPS.length - 1 && (
+                  <div style={{ position: "absolute", top: 14, left: "50%", width: "100%", height: 2, background: done ? C.azul : C.line }} />
+                )}
+                <div className={active ? "pop" : ""} style={{
+                  width: 28, height: 28, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                  fontFamily: SANS, fontSize: 12, fontWeight: 700, zIndex: 1,
+                  background: done ? C.azul : active ? C.card : C.surface2,
+                  color: done ? "#fff" : active ? C.azul : C.faint,
+                  border: `2px solid ${done || active ? C.azul : C.line}`,
+                  boxShadow: active ? SHADOW.focus : "none",
+                }}>{done ? <Ic d="check" size={14} color="#fff" w={2.4} /> : i + 1}</div>
+                <div style={{ fontFamily: SANS, fontSize: 9.5, marginTop: 6, textAlign: "center", lineHeight: 1.2,
+                  color: active ? C.azulEscuro : C.faint, fontWeight: active ? 600 : 500 }}>{STEP_SHORT[i]}</div>
+              </div>
+            );
+          })}
         </div>
 
-        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderTop: `3px solid ${C.azul}`, borderRadius: 3, padding: "24px 26px 26px" }}>
-          <div style={{ fontFamily: SANS, fontSize: 18, fontWeight: 700, color: C.azulEscuro, marginBottom: 4 }}>{STEPS[step]}</div>
-          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, marginBottom: 20 }}>Passo {step + 1} de {STEPS.length}</div>
-          <div style={{ display: "grid", gap: 16 }}>{stepBody()}</div>
+        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.lg, boxShadow: SHADOW.card, padding: "26px 28px 28px" }}>
+          <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: ".08em", textTransform: "uppercase", color: C.azul, marginBottom: 5 }}>
+            Passo {step + 1} de {STEPS.length}
+          </div>
+          <div style={{ fontFamily: SANS, fontSize: 20, fontWeight: 700, letterSpacing: "-.01em", color: C.ink, marginBottom: 22 }}>{STEPS[step]}</div>
+          <div key={step} className="fadeUp" style={{ display: "grid", gap: 17 }}>{stepBody()}</div>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <button disabled={step === 0} onClick={() => setStep((s) => Math.max(0, s - 1))}
-            style={{ ...btn(false), opacity: step === 0 ? 0.4 : 1, cursor: step === 0 ? "default" : "pointer" }}>← Voltar</button>
+            style={{ ...btn(false), opacity: step === 0 ? 0.45 : 1, cursor: step === 0 ? "default" : "pointer" }}>
+            <span style={{ display: "inline-flex", transform: "scaleX(-1)" }}><Ic d="arrow" size={15} color={C.ink} /></span>Voltar
+          </button>
           {step < STEPS.length - 1
-            ? <button onClick={() => setStep((s) => Math.min(STEPS.length - 1, s + 1))} style={btn(true)}>Avançar →</button>
-            : <button onClick={dlDoc} style={btn(true)}>⬇ Baixar Word</button>}
+            ? <button onClick={() => setStep((s) => Math.min(STEPS.length - 1, s + 1))} style={btn(true)}>Avançar <Ic d="arrow" size={15} color="#fff" /></button>
+            : <button onClick={dlDoc} style={btn(true)}><Ic d="download" size={15} color="#fff" /> Baixar Word</button>}
         </div>
       </div>
 
       {/* ---------- PRÉVIA (companion contextual) ---------- */}
-      <div style={{ position: docHero ? "static" : "sticky", top: 12 }}>
-        <div style={{ display: "flex", gap: 8, marginBottom: 10, alignItems: "center", flexWrap: "wrap" }}>
-          <span style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: C.muted }}>
-            {docHero ? "Documento completo" : `Prévia · ${STEP_SHORT[step]}`}
+      <div style={{ position: docHero ? "static" : "sticky", top: 76 }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 12, alignItems: "center", flexWrap: "wrap" }}>
+          <span style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: ".08em", textTransform: "uppercase", color: C.faint, display: "inline-flex", alignItems: "center", gap: 7 }}>
+            <Ic d="eye" size={13} color={C.faint} />{docHero ? "Documento completo" : `Prévia · ${STEP_SHORT[step]}`}
           </span>
           {!docHero && (
-            <button onClick={() => setShowFull(true)} style={{ fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: C.azul, padding: 0 }}>
-              ver completo ▸
+            <button onClick={() => setShowFull(true)} style={{ fontFamily: SANS, fontSize: 12, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: C.azul, padding: 0 }}>
+              ver completo →
             </button>
           )}
           <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
@@ -418,40 +464,40 @@ export default function BuilderView() {
         </div>
 
         {docHero && (
-          <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
-            <button onClick={copy} style={btn(true)}>{copied ? "copiado ✓" : "copiar"}</button>
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            <button onClick={copy} style={btn(true)}><Ic d={copied ? "check" : "copy"} size={15} color="#fff" />{copied ? "Copiado" : "Copiar"}</button>
             <button onClick={dlTxt} style={btn(false)}>.txt</button>
-            <button onClick={dlDoc} style={btn(false)}>Word</button>
+            <button onClick={dlDoc} style={btn(false)}><Ic d="download" size={15} color={C.ink} /> Word</button>
           </div>
         )}
 
-        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderTop: `3px solid ${C.azul}`,
-          padding: docHero ? "44px 50px" : "26px 28px", fontFamily: SANS, color: C.ink, fontSize: 14, lineHeight: 1.6,
-          minHeight: docHero ? 600 : 0, maxHeight: docHero ? "none" : "78vh", overflow: docHero ? "visible" : "auto" }}>
+        <div className={docHero ? "" : "cardhover"} style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.lg, boxShadow: SHADOW.card,
+          padding: docHero ? "52px 60px" : "26px 30px", color: C.ink,
+          minHeight: docHero ? 620 : 0, maxHeight: docHero ? "none" : "76vh", overflow: docHero ? "visible" : "auto" }}>
           {!docHero && (
-            <div style={{ fontFamily: SANS, fontSize: 10, letterSpacing: ".05em", textTransform: "uppercase", color: C.azulClaro, marginBottom: 16, paddingBottom: 8, borderBottom: `1px dashed ${C.line}` }}>
-              trecho que este passo preenche — o documento se forma aqui
+            <div style={{ fontFamily: SANS, fontSize: 10.5, letterSpacing: ".04em", textTransform: "uppercase", color: C.azul, fontWeight: 600, marginBottom: 18, paddingBottom: 12, borderBottom: `1px solid ${C.line}`, display: "flex", alignItems: "center", gap: 7 }}>
+              <Ic d="spark" size={13} color={C.azul} />o documento se forma aqui
             </div>
           )}
-          {secoes.map(renderSecao)}
+          <div key={`${doc}-${step}`} className="fadeUp">{secoes.map(renderSecao)}</div>
         </div>
       </div>
 
       {/* ---------- MODAL: documento completo sob demanda ---------- */}
       {showFull && (
-        <div onClick={() => setShowFull(false)} style={{ position: "fixed", inset: 0, background: "rgba(10,30,40,.45)", zIndex: 50, display: "flex", justifyContent: "center", alignItems: "flex-start", padding: "28px 16px", overflow: "auto" }}>
-          <div onClick={(e) => e.stopPropagation()} style={{ background: C.card, maxWidth: 840, width: "100%", borderRadius: 6, boxShadow: "0 24px 60px rgba(0,0,0,.32)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px", borderBottom: `1px solid ${C.line}`, position: "sticky", top: 0, background: C.card, borderRadius: "6px 6px 0 0", flexWrap: "wrap" }}>
-              <b style={{ fontFamily: SANS, fontSize: 13, color: C.azulEscuro }}>{doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"} — completo</b>
+        <div onClick={() => setShowFull(false)} style={{ position: "fixed", inset: 0, background: "rgba(20,28,40,.42)", backdropFilter: "blur(3px)", zIndex: 50, display: "flex", justifyContent: "center", alignItems: "flex-start", padding: "30px 16px", overflow: "auto" }}>
+          <div onClick={(e) => e.stopPropagation()} className="fadeUp" style={{ background: C.card, maxWidth: 860, width: "100%", borderRadius: RADIUS.lg, boxShadow: SHADOW.lg }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "14px 18px", borderBottom: `1px solid ${C.line}`, position: "sticky", top: 0, background: "rgba(255,255,255,.9)", backdropFilter: "blur(8px)", borderRadius: `${RADIUS.lg}px ${RADIUS.lg}px 0 0`, flexWrap: "wrap" }}>
+              <b style={{ fontFamily: SANS, fontSize: 14, color: C.ink }}>{doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"}</b>
               {confChip}
               <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
                 {docToggle}
-                <button onClick={copy} style={btn(true)}>{copied ? "copiado ✓" : "copiar"}</button>
-                <button onClick={dlDoc} style={btn(false)}>Word</button>
-                <button onClick={() => setShowFull(false)} style={btn(false)}>fechar ✕</button>
+                <button onClick={copy} style={btn(true)}><Ic d={copied ? "check" : "copy"} size={15} color="#fff" />{copied ? "Copiado" : "Copiar"}</button>
+                <button onClick={dlDoc} style={btn(false)}><Ic d="download" size={15} color={C.ink} /> Word</button>
+                <button onClick={() => setShowFull(false)} style={{ ...btn(false), padding: "9px 11px" }}><Ic d="x" size={15} color={C.ink} /></button>
               </div>
             </div>
-            <div style={{ padding: "40px 48px", fontFamily: SANS, color: C.ink, fontSize: 14, lineHeight: 1.6 }}>
+            <div style={{ padding: "48px 56px", color: C.ink }}>
               {minuta.map(renderSecao)}
             </div>
           </div>
