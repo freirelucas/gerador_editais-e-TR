@@ -1,10 +1,11 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { C, SANS, SERIF, RADIUS, SHADOW } from "../theme.js";
 import { MODALIDADES } from "../data/modalidades.js";
 import { fmtValor } from "../lib/format.js";
 import { buildTR, buildEdital, minutaToText } from "../lib/minuta.js";
 import { conformidade, resumoConf, diffDias } from "../lib/conformidade.js";
-import { downloadDoc } from "../lib/docExport.js";
+import { downloadDoc, printDoc } from "../lib/docExport.js";
+import { chamadasSimilares } from "../lib/similares.js";
 import { FUNCOES, TEMAS, enfasesDe, recortesDe } from "../data/perfis.js";
 import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "../lib/perfil.js";
 import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
@@ -58,12 +59,15 @@ function Linha({ t, base }) {
 }
 
 // Renderiza uma seção da minuta. O documento usa SERIFA (artefato oficial); rótulos em SANS.
-function renderSecao(s, i) {
-  if (s.head) return <h1 key={i} style={{ fontFamily: SERIF, fontSize: 19, fontWeight: 700, textAlign: "center", lineHeight: 1.4, margin: "0 0 26px", color: C.ink }}>{s.t}</h1>;
-  if (s.p) return <Linha key={i} t={s.p} base={{ fontFamily: SERIF, textAlign: "justify", margin: "0 0 20px", color: C.muted }} />;
-  if (s.sign) return <div key={i} style={{ fontFamily: SERIF, textAlign: "center", marginTop: 40, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
-  return (
-    <div key={i} style={{ margin: "0 0 22px" }}>
+// `flash` (Set de chaves) acende a seção que acabou de mudar — prévia viva.
+function renderSecao(s, i, flash) {
+  const fl = flash && flash.has(JSON.stringify(s)) ? "flash" : undefined;
+  let inner;
+  if (s.head) inner = <h1 style={{ fontFamily: SERIF, fontSize: 19, fontWeight: 700, textAlign: "center", lineHeight: 1.4, margin: "0 0 26px", color: C.ink }}>{s.t}</h1>;
+  else if (s.p) inner = <Linha t={s.p} base={{ fontFamily: SERIF, textAlign: "justify", margin: "0 0 20px", color: C.muted }} />;
+  else if (s.sign) inner = <div style={{ fontFamily: SERIF, textAlign: "center", marginTop: 40, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
+  else inner = (
+    <div style={{ margin: "0 0 22px" }}>
       {s.n && (
         <h2 style={{ display: "flex", alignItems: "baseline", gap: 8, fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, margin: "0 0 9px", fontWeight: 600, letterSpacing: ".01em" }}>
           <span style={{ fontVariantNumeric: "tabular-nums", fontWeight: 700, color: C.azul }}>{s.n}.</span>{s.t}
@@ -84,21 +88,49 @@ function renderSecao(s, i) {
       )}
     </div>
   );
+  return <div key={i} className={fl}>{inner}</div>;
 }
+
+// Estado inicial do formulário (extraído p/ permitir hidratação de rascunho/link).
+const DEFAULTS = {
+  numero: "", diretoriaSel: PADRAO_DIRETORIA, unidade: rotuloUnidade(PADRAO_DIRETORIA),
+  coordenador: "", projetoNome: "", projeto: "", perfil: "",
+  temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], funcoes: [], enfases: [], recortes: [], experiencia: "",
+  modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
+  cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
+  duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
+  cartaIntencoes: false, comissao: "", diretoria: "",
+  dataPub: "", inscIni: "", inscFim: "", resultado: "", inicio: "",
+};
+const STORE = "pipa-gerador-rascunho";
+function carregarInicial() {
+  try {
+    const h = new URLSearchParams(location.hash.slice(1)).get("s");
+    if (h) return { ...DEFAULTS, ...JSON.parse(decodeURIComponent(escape(atob(h)))) };
+  } catch { /* link inválido — ignora */ }
+  try {
+    const sv = localStorage.getItem(STORE);
+    if (sv) return { ...DEFAULTS, ...JSON.parse(sv) };
+  } catch { /* sem storage */ }
+  return DEFAULTS;
+}
+
+// Conformidade relevante a cada passo (casa por trecho do rótulo) — guardrails inline.
+const STEP_CONF = [
+  ["Número da chamada", "Unidade, coordenação"],
+  ["Definição do projeto"],
+  ["Modalidade e valor"],
+  ["Perfil do bolsista"],
+  ["Reserva", "Quantitativo usual", "Coerência modalidade"],
+  ["Comissão"],
+  ["Prazo de inscrição", "Ordem:", "Janela de inscrição"],
+  null,
+];
 
 export default function BuilderView() {
   const [doc, setDoc] = useState("tr"); // "tr" | "edital"
   const [step, setStep] = useState(0);
-  const [f, setF] = useState({
-    numero: "", diretoriaSel: PADRAO_DIRETORIA, unidade: rotuloUnidade(PADRAO_DIRETORIA),
-    coordenador: "", projetoNome: "", projeto: "", perfil: "",
-    temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], funcoes: [], enfases: [], recortes: [], experiencia: "",
-    modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
-    cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
-    duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
-    cartaIntencoes: false, comissao: "", diretoria: "",
-    dataPub: "", inscIni: "", inscFim: "", resultado: "", inicio: "",
-  });
+  const [f, setF] = useState(carregarInicial);
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
   const setVal = (k, v) => setF({ ...f, [k]: v });
   const toggle = (k) => (e) => setF({ ...f, [k]: e.target.checked });
@@ -113,13 +145,58 @@ export default function BuilderView() {
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
   const resumo = resumoConf(conf);
+  const confForStep = (st) => {
+    const keys = STEP_CONF[st];
+    if (!keys) return [];
+    return conf.filter((c) => c.sev !== "ok" && keys.some((k) => c.label.includes(k)));
+  };
+
+  // Autosave (localStorage) — rascunho de trabalho persiste entre sessões.
+  const [saved, setSaved] = useState(false);
+  useEffect(() => {
+    try { localStorage.setItem(STORE, JSON.stringify(f)); setSaved(true); } catch { /* ignore */ }
+  }, [f]);
+
+  // Prévia viva: acende a(s) seção(ões) que acabaram de mudar.
+  const minutaKeys = useMemo(() => minuta.map((s) => JSON.stringify(s)), [minuta]);
+  const prevKeys = useRef(minutaKeys);
+  const [flash, setFlash] = useState(() => new Set());
+  useEffect(() => {
+    const prev = prevKeys.current;
+    const changed = new Set();
+    minutaKeys.forEach((k, i) => { if (k !== prev[i]) changed.add(k); });
+    prevKeys.current = minutaKeys;
+    if (!changed.size) return;
+    setFlash(changed);
+    const t = setTimeout(() => setFlash(new Set()), 1100);
+    return () => clearTimeout(t);
+  }, [minutaKeys]);
 
   const [copied, setCopied] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const [showFull, setShowFull] = useState(false);
   const copy = () => {
     navigator.clipboard.writeText(minutaToText(minuta));
     setCopied(true);
     setTimeout(() => setCopied(false), 1600);
+  };
+  const sub = doc === "tr" ? "Termo de Referência — Programa PIPA" : "Chamada Pública — Programa PIPA";
+  const dlPdf = () => printDoc(minuta, doc === "tr" ? "Termo de Referência" : "Chamada Pública", sub);
+  const shareLink = () => {
+    try {
+      const s = btoa(unescape(encodeURIComponent(JSON.stringify(f))));
+      const url = `${location.origin}${location.pathname}#s=${s}`;
+      navigator.clipboard.writeText(url);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 1800);
+    } catch { /* ignore */ }
+  };
+  const limpar = () => {
+    if (confirm("Limpar o rascunho e recomeçar do zero?")) {
+      try { localStorage.removeItem(STORE); } catch { /* ignore */ }
+      if (location.hash) location.hash = "";
+      setF(DEFAULTS); setStep(0);
+    }
   };
   const nomeArq = (ext) => {
     const pref = doc === "tr" ? "TR_PIPA" : "Chamada_PIPA";
@@ -134,7 +211,7 @@ export default function BuilderView() {
   };
   const dlDoc = () => {
     const titulo = doc === "tr" ? "Termo de Referência — PIPA" : "Chamada Pública — PIPA";
-    downloadDoc(minuta, titulo, nomeArq("doc"));
+    downloadDoc(minuta, titulo, nomeArq("doc"), sub);
   };
 
   const inp = {
@@ -206,6 +283,48 @@ export default function BuilderView() {
     boxShadow: primary ? SHADOW.xs : "none",
   });
 
+  // Prefill do corpus: chamadas PIPA reais parecidas, com botão p/ puxar o texto ao campo.
+  const sims = useMemo(() => chamadasSimilares(f, 3), [f.modalidade, f.temas, f.funcoes, f.diretoriaSel]);
+  const Similares = ({ campo }) => {
+    const map = { projeto: ["def", "definição"], perfil: ["perfil", "perfil"], atividades: ["atividades", "atividades"] };
+    const [key, nome] = map[campo];
+    const rel = sims.filter((x) => x[key]);
+    if (!rel.length) return null;
+    return (
+      <div style={{ border: `1px solid ${C.line}`, borderRadius: RADIUS.md, background: C.surface2, padding: "12px 14px", display: "grid", gap: 9 }}>
+        <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 600, letterSpacing: ".06em", textTransform: "uppercase", color: C.faint, display: "flex", alignItems: "center", gap: 7 }}>
+          <Ic d="spark" size={13} color={C.azul} /> Chamadas PIPA parecidas — puxe a {nome} real
+        </div>
+        {rel.map((x, i) => (
+          <div key={i} style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
+            <button type="button" onClick={() => setVal(campo, x[key])} style={{ ...compBtn, flexShrink: 0, padding: "5px 11px" }}>usar</button>
+            <div style={{ fontFamily: SANS, fontSize: 12, color: C.ink, lineHeight: 1.45 }}>
+              <b>{x.titulo}</b> <span style={{ color: C.faint }}>· {x.modalidade}</span><br />
+              <span style={{ color: C.muted }}>{x[key].slice(0, 116)}…</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  // Validação inline: guardrails do passo atual (warn/err/info), quieto quando tudo ok.
+  const InlineConf = () => {
+    const items = confForStep(step);
+    if (!items.length) return null;
+    return (
+      <div style={{ display: "grid", gap: 6, marginTop: 2 }}>
+        {items.map((c, i) => (
+          <div key={i} style={{ display: "flex", gap: 9, alignItems: "baseline", fontFamily: SANS, fontSize: 12.5,
+            background: SEVBG[c.sev], color: SEVC[c.sev], padding: "8px 11px", borderRadius: RADIUS.sm }}>
+            <span style={{ fontWeight: 800, flexShrink: 0 }}>{SEVI[c.sev]}</span>
+            <div style={{ lineHeight: 1.4, color: C.ink }}><b style={{ color: SEVC[c.sev] }}>{c.label}</b> — {c.detail}</div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   function stepBody() {
     switch (step) {
       case 0: return (<>
@@ -239,6 +358,7 @@ export default function BuilderView() {
           </div>
         </Field>
         <ExemplosPipa temas={f.temas} onUsar={(p) => setVal("projeto", p)} />
+        <Similares campo="projeto" />
       </>);
       case 2: return (<>
         <Field l="Modalidade da bolsa (Portaria 317/2025)">
@@ -288,6 +408,7 @@ export default function BuilderView() {
         <Field l="Perfil do bolsista desejado (editável)">
           <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Use ‘Compor perfil’ acima, ou escreva livremente…" value={f.perfil} onChange={set("perfil")} />
         </Field>
+        <Similares campo="perfil" />
       </>);
       case 4: return (<>
         <Field l="Público-alvo / reserva de vagas (Art. 25) — texto livre, opcional">
@@ -319,6 +440,7 @@ export default function BuilderView() {
               ✦ Compor atividades (das funções do perfil)
             </button>
           </div>
+          <div style={{ marginTop: 9 }}><Similares campo="atividades" /></div>
         </Field>
         <Field l="Critérios de seleção">
           <textarea style={{ ...inp, minHeight: 96, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma; ou gere pelos critérios reais da modalidade…" value={f.criterios} onChange={set("criterios")} />
@@ -362,11 +484,21 @@ export default function BuilderView() {
             </div>
           ))}
         </div>
-        <button onClick={dlDoc} style={{ ...btn(true), padding: "11px 16px", fontSize: 13, marginTop: 4 }}>
-          <Ic d="download" size={16} color="#fff" /> Baixar Word — {doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"}
-        </button>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
+          <button onClick={dlDoc} style={{ ...btn(true), padding: "11px 16px", fontSize: 13 }}>
+            <Ic d="download" size={16} color="#fff" /> Word (.doc)
+          </button>
+          <button onClick={dlPdf} style={{ ...btn(false), padding: "11px 16px", fontSize: 13 }}><Ic d="doc" size={15} color={C.ink} /> PDF</button>
+          <button onClick={shareLink} style={{ ...btn(false), padding: "11px 16px", fontSize: 13 }}>
+            <Ic d={linkCopied ? "check" : "compass"} size={15} color={C.ink} /> {linkCopied ? "Link copiado" : "Copiar link"}
+          </button>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, fontFamily: SANS, fontSize: 11.5, color: C.faint }}>
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}><Ic d="check" size={13} color={C.ok} /> {saved ? "Rascunho salvo neste navegador" : "—"}</span>
+          <button onClick={limpar} style={{ background: "none", border: "none", color: C.azul, cursor: "pointer", fontFamily: SANS, fontSize: 11.5, fontWeight: 600, padding: 0 }}>limpar e recomeçar</button>
+        </div>
         <div style={{ fontFamily: SANS, fontSize: 11.5, color: C.faint, lineHeight: 1.5 }}>
-          Rascunho de trabalho — revisão jurídica obrigatória antes da publicação no SEI/DOU.
+          O link guarda todo o preenchimento (sem servidor). Rascunho de trabalho — revisão jurídica obrigatória antes da publicação no SEI/DOU.
         </div>
       </>);
       default: return null;
@@ -433,7 +565,10 @@ export default function BuilderView() {
             Passo {step + 1} de {STEPS.length}
           </div>
           <div style={{ fontFamily: SANS, fontSize: 20, fontWeight: 700, letterSpacing: "-.01em", color: C.ink, marginBottom: 22 }}>{STEPS[step]}</div>
-          <div key={step} className="fadeUp" style={{ display: "grid", gap: 17 }}>{stepBody()}</div>
+          <div key={step} className="fadeUp" style={{ display: "grid", gap: 17 }}>
+            {stepBody()}
+            <InlineConf />
+          </div>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -479,7 +614,7 @@ export default function BuilderView() {
               <Ic d="spark" size={13} color={C.azul} />o documento se forma aqui
             </div>
           )}
-          <div key={`${doc}-${step}`} className="fadeUp">{secoes.map(renderSecao)}</div>
+          <div key={`${doc}-${step}`} className="fadeUp">{secoes.map((s, i) => renderSecao(s, i, flash))}</div>
         </div>
       </div>
 
@@ -498,7 +633,7 @@ export default function BuilderView() {
               </div>
             </div>
             <div style={{ padding: "48px 56px", color: C.ink }}>
-              {minuta.map(renderSecao)}
+              {minuta.map((s, i) => renderSecao(s, i, flash))}
             </div>
           </div>
         </div>
