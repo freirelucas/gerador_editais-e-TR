@@ -92,6 +92,12 @@ function perfilMultivagas(f) {
     return `Seleção ${i + 1} — ${m.nome}: ${req}${esp ? ` ${esp}` : ""}`;
   });
 }
+// Atividades por seleção.
+const atividadesMultivagas = (f) => f.vagas.map((v, i) =>
+  `Seleção ${i + 1} — ${modOf(v.modalidade).nome}: ${ou(v.atividades, "[descrever as atividades de pesquisa desta seleção].")}`);
+// Critérios por seleção (texto próprio ou o padrão da norma).
+const criteriosMultivagas = (f) => f.vagas.map((v, i) =>
+  `Seleção ${i + 1} — ${modOf(v.modalidade).nome}: ${ou(v.criterios, criteriosDefault(f))}`);
 
 const criteriosDefault = (f) =>
   f.cartaIntencoes
@@ -137,10 +143,10 @@ export function buildTR(f) {
     `Duração da bolsa: ${String(d.durB).padStart(2, "0")} (${extenso(d.durB)}) ${d.durB === 1 ? "mês" : "meses"}.`,
     `Tempo de duração da pesquisa: ${String(d.durP).padStart(2, "0")} (${extenso(d.durP)}) ${d.durP === 1 ? "mês" : "meses"}.`,
   ] });
-  S.push({ n: 6, t: "ATIVIDADES A SEREM DESENVOLVIDAS", b: [
-    ou(f.atividades, "[Descrever as atividades de pesquisa que o bolsista irá desenvolver.]"),
-  ] });
-  S.push({ n: 7, t: "CRITÉRIOS DE SELEÇÃO", b: [ou(f.criterios, criteriosDefault(f))] });
+  S.push({ n: 6, t: "ATIVIDADES A SEREM DESENVOLVIDAS", b: ehMulti(f)
+    ? atividadesMultivagas(f)
+    : [ou(f.atividades, "[Descrever as atividades de pesquisa que o bolsista irá desenvolver.]")] });
+  S.push({ n: 7, t: "CRITÉRIOS DE SELEÇÃO", b: ehMulti(f) ? criteriosMultivagas(f) : [ou(f.criterios, criteriosDefault(f))] });
   S.push({ n: 8, t: "COMISSÃO JULGADORA", b: [comissaoTexto(f)] });
   S.push({ n: 9, t: "INSCRIÇÕES, RESULTADO E RECURSOS", b: [
     `As inscrições serão realizadas pelo SISBOLSAS (${NORMA.sisbolsas}), pelo prazo mínimo de ${NORMA.prazoMinEspecializadaDias} (dez) dias (Art. 8º, §4º).`,
@@ -180,7 +186,7 @@ export function buildEdital(f) {
   S.push({ n: 4, t: "DAS INSCRIÇÕES", b: [
     `As candidaturas serão realizadas exclusivamente pelo SISBOLSAS (${NORMA.sisbolsas}), no período do cronograma, observado o prazo mínimo de ${NORMA.prazoMinEspecializadaDias} (dez) dias.`,
   ], table: cronograma(f) });
-  S.push({ n: 5, t: "DOS CRITÉRIOS DE SELEÇÃO", b: [ou(f.criterios, criteriosDefault(f))] });
+  S.push({ n: 5, t: "DOS CRITÉRIOS DE SELEÇÃO", b: ehMulti(f) ? criteriosMultivagas(f) : [ou(f.criterios, criteriosDefault(f))] });
   S.push({ n: 6, t: "DA COMISSÃO JULGADORA", b: [comissaoTexto(f)] });
   S.push({ n: 7, t: "DO RESULTADO E DOS RECURSOS", b: [
     "O resultado será divulgado no sítio do IPEA e seu extrato publicado no Diário Oficial da União (Art. 10).",
