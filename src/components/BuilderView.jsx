@@ -11,8 +11,47 @@ import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../
 import { exemplosPorTema } from "../data/objetos.js";
 
 const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
+const STEP_SHORT = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
 const SEVC = { ok: "#3f7d54", warn: C.gold, err: "#c0392b", info: C.azul };
 const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
+
+// Seções do documento afetadas por cada passo (casa por trecho de título; serve TR e edital).
+// A prévia mostra só estas seções — feedback vivo do passo atual; null = documento inteiro.
+const FOCO = [
+  ["UNIDADE"],
+  ["DEFINIÇÃO DO PROJETO", "OBJETO"],
+  ["MODALIDADE", "DURAÇÃO"],
+  ["PERFIL", "REQUISITOS"],
+  ["MODALIDADE", "QUANTITATIVO"],
+  ["ATIVIDADES", "CRITÉRIOS", "COMISSÃO"],
+  ["INSCRIÇÕES", "CRONOGRAMA", "RESULTADO"],
+  null,
+];
+
+// Renderiza uma seção da minuta (cabeçalho, parágrafo, assinatura, seção numerada, tabela).
+function renderSecao(s, i) {
+  if (s.head) return <h1 key={i} style={{ fontSize: 17, textAlign: "center", lineHeight: 1.4, margin: "0 0 24px", color: C.azulEscuro }}>{s.t}</h1>;
+  if (s.p) return <p key={i} style={{ textAlign: "justify", margin: "0 0 20px", color: C.muted }}>{s.p}</p>;
+  if (s.sign) return <div key={i} style={{ textAlign: "center", marginTop: 36, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
+  return (
+    <div key={i} style={{ margin: "0 0 20px" }}>
+      {s.n && <h2 style={{ fontFamily: SANS, fontSize: 13, letterSpacing: ".04em", color: C.azul, margin: "0 0 8px", fontWeight: 700 }}>{s.n}. {s.t}</h2>}
+      {(s.b || []).map((l, j) => <p key={j} style={{ textAlign: "justify", margin: "0 0 7px" }}>{l}</p>)}
+      {s.table && (
+        <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 0", fontSize: 13 }}>
+          <tbody>{s.table.map((r, ri) => (
+            <tr key={ri}>{r.map((cell, ci) => (
+              <td key={ci} style={{ border: `1px solid ${C.line}`, padding: "6px 10px",
+                fontWeight: ri === 0 ? 700 : 400, background: ri === 0 ? C.abertaBg : "transparent",
+                textTransform: ri === 0 ? "uppercase" : "none", fontSize: ri === 0 ? 11 : 13,
+                letterSpacing: ri === 0 ? ".05em" : 0, color: ri === 0 ? C.azul : C.ink }}>{cell}</td>
+            ))}</tr>
+          ))}</tbody>
+        </table>
+      )}
+    </div>
+  );
+}
 
 export default function BuilderView() {
   const [doc, setDoc] = useState("tr"); // "tr" | "edital"
@@ -43,6 +82,7 @@ export default function BuilderView() {
   const resumo = resumoConf(conf);
 
   const [copied, setCopied] = useState(false);
+  const [showFull, setShowFull] = useState(false);
   const copy = () => {
     navigator.clipboard.writeText(minutaToText(minuta));
     setCopied(true);
@@ -297,25 +337,59 @@ export default function BuilderView() {
     }
   }
 
+  const docHero = step === STEPS.length - 1; // último passo: o documento completo é o foco
+  const foco = FOCO[step];
+  let secoes = !foco ? minuta : minuta.filter((s) => s.head || (s.t && foco.some((k) => s.t.toUpperCase().includes(k))));
+  if (foco && secoes.filter((s) => !s.head).length === 0) secoes = minuta; // fallback: nada casou
+  const confChip = (
+    <button onClick={() => setStep(STEPS.length - 1)} title="Ver conformidade" style={{
+      fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer",
+      background: "transparent", border: `1px solid ${C.line}`, borderRadius: 3, padding: "6px 10px",
+      color: resumo.err ? SEVC.err : resumo.warn ? SEVC.warn : SEVC.ok,
+    }}>{resumo.err ? `✕ ${resumo.err} erro(s)` : resumo.warn ? `! ${resumo.warn} aviso(s)` : "✓ conforme"}</button>
+  );
+  const docToggle = (
+    <div style={{ display: "flex", gap: 0 }}>
+      {[["tr", "TR"], ["edital", "Chamada"]].map(([k, l]) => (
+        <button key={k} onClick={() => setDoc(k)} style={{
+          fontFamily: SANS, fontSize: 12, letterSpacing: ".02em", padding: "6px 12px", cursor: "pointer",
+          background: doc === k ? C.azul : C.card, color: doc === k ? "#fff" : C.muted,
+          border: `1px solid ${doc === k ? C.azul : C.line}`, fontWeight: 600,
+        }}>{l}</button>
+      ))}
+    </div>
+  );
+
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "minmax(330px,420px) 1fr", gap: 26, alignItems: "start" }}>
-      {/* ---------- WIZARD ---------- */}
-      <div style={{ display: "grid", gap: 14, position: "sticky", top: 12 }}>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+    <div style={{
+      display: "grid", gap: 28, alignItems: "start",
+      gridTemplateColumns: docHero ? "minmax(0,360px) minmax(0,1fr)" : "minmax(0,1fr) minmax(300px,360px)",
+    }}>
+      {/* ---------- ASSISTENTE (herói) ---------- */}
+      <div style={{ display: "grid", gap: 18 }}>
+        {/* stepper */}
+        <div style={{ display: "flex", alignItems: "flex-start" }}>
           {STEPS.map((s, i) => (
-            <button key={i} onClick={() => setStep(i)} style={{
-              fontFamily: SANS, fontSize: 11, padding: "5px 9px", borderRadius: 3, cursor: "pointer", fontWeight: 600,
-              background: step === i ? C.azul : C.card, color: step === i ? "#fff" : C.muted,
-              border: `1px solid ${step === i ? C.azul : C.line}`,
-            }}>{i + 1}. {s}</button>
+            <div key={i} onClick={() => setStep(i)} title={s}
+              style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", cursor: "pointer" }}>
+              {i < STEPS.length - 1 && (
+                <div style={{ position: "absolute", top: 13, left: "50%", width: "100%", height: 2, background: i < step ? C.azul : C.line }} />
+              )}
+              <div style={{
+                width: 26, height: 26, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                fontFamily: SANS, fontSize: 12, fontWeight: 700, zIndex: 1, background: i < step ? C.azul : C.card,
+                color: i < step ? "#fff" : i === step ? C.azul : C.muted, border: `2px solid ${i <= step ? C.azul : C.line}`,
+              }}>{i < step ? "✓" : i + 1}</div>
+              <div style={{ fontFamily: SANS, fontSize: 9.5, marginTop: 5, textAlign: "center", lineHeight: 1.2,
+                color: i === step ? C.azulEscuro : C.muted, fontWeight: i === step ? 700 : 400 }}>{STEP_SHORT[i]}</div>
+            </div>
           ))}
         </div>
 
-        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderTop: `3px solid ${C.azul}`, borderRadius: 3, padding: "18px 18px 20px" }}>
-          <div style={{ fontFamily: SANS, fontSize: 14.5, fontWeight: 700, color: C.azulEscuro, marginBottom: 14 }}>
-            Passo {step + 1} de {STEPS.length} · {STEPS[step]}
-          </div>
-          <div style={{ display: "grid", gap: 13 }}>{stepBody()}</div>
+        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderTop: `3px solid ${C.azul}`, borderRadius: 3, padding: "24px 26px 26px" }}>
+          <div style={{ fontFamily: SANS, fontSize: 18, fontWeight: 700, color: C.azulEscuro, marginBottom: 4 }}>{STEPS[step]}</div>
+          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, marginBottom: 20 }}>Passo {step + 1} de {STEPS.length}</div>
+          <div style={{ display: "grid", gap: 16 }}>{stepBody()}</div>
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -323,61 +397,66 @@ export default function BuilderView() {
             style={{ ...btn(false), opacity: step === 0 ? 0.4 : 1, cursor: step === 0 ? "default" : "pointer" }}>← Voltar</button>
           {step < STEPS.length - 1
             ? <button onClick={() => setStep((s) => Math.min(STEPS.length - 1, s + 1))} style={btn(true)}>Avançar →</button>
-            : <button onClick={dlDoc} style={btn(true)}>⬇ Word</button>}
+            : <button onClick={dlDoc} style={btn(true)}>⬇ Baixar Word</button>}
         </div>
       </div>
 
-      {/* ---------- PREVIEW ---------- */}
-      <div>
-        <div style={{ display: "flex", gap: 0, marginBottom: 14, alignItems: "center", flexWrap: "wrap" }}>
-          {[["tr", "Termo de Referência"], ["edital", "Minuta de Chamada"]].map(([k, l]) => (
-            <button key={k} onClick={() => setDoc(k)} style={{
-              fontFamily: SANS, fontSize: 12.5, letterSpacing: ".03em", padding: "8px 16px", cursor: "pointer",
-              background: doc === k ? C.azul : C.card, color: doc === k ? "#fff" : C.muted,
-              border: `1px solid ${doc === k ? C.azul : C.line}`, fontWeight: 600,
-            }}>{l}</button>
-          ))}
-          <button onClick={() => setStep(STEPS.length - 1)} title="Ver conformidade" style={{
-            marginLeft: 12, fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer",
-            background: "transparent", border: `1px solid ${C.line}`, borderRadius: 3, padding: "6px 10px",
-            color: resumo.err ? SEVC.err : resumo.warn ? SEVC.warn : SEVC.ok,
-          }}>
-            {resumo.err ? `✕ ${resumo.err} erro(s)` : resumo.warn ? `! ${resumo.warn} aviso(s)` : "✓ conforme"}
-          </button>
-          <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+      {/* ---------- PRÉVIA (companion contextual) ---------- */}
+      <div style={{ position: docHero ? "static" : "sticky", top: 12 }}>
+        <div style={{ display: "flex", gap: 8, marginBottom: 10, alignItems: "center", flexWrap: "wrap" }}>
+          <span style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: C.muted }}>
+            {docHero ? "Documento completo" : `Prévia · ${STEP_SHORT[step]}`}
+          </span>
+          {!docHero && (
+            <button onClick={() => setShowFull(true)} style={{ fontFamily: SANS, fontSize: 11.5, fontWeight: 600, cursor: "pointer", background: "transparent", border: "none", color: C.azul, padding: 0 }}>
+              ver completo ▸
+            </button>
+          )}
+          <div style={{ marginLeft: "auto", display: "flex", gap: 8, alignItems: "center" }}>
+            {docToggle}{docHero && confChip}
+          </div>
+        </div>
+
+        {docHero && (
+          <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
             <button onClick={copy} style={btn(true)}>{copied ? "copiado ✓" : "copiar"}</button>
             <button onClick={dlTxt} style={btn(false)}>.txt</button>
             <button onClick={dlDoc} style={btn(false)}>Word</button>
           </div>
-        </div>
+        )}
 
         <div style={{ background: C.card, border: `1px solid ${C.line}`, borderTop: `3px solid ${C.azul}`,
-          padding: "44px 50px", fontFamily: SANS, color: C.ink, fontSize: 14, lineHeight: 1.6, minHeight: 600 }}>
-          {minuta.map((s, i) => {
-            if (s.head) return <h1 key={i} style={{ fontSize: 17, textAlign: "center", lineHeight: 1.4, margin: "0 0 24px", color: C.azulEscuro }}>{s.t}</h1>;
-            if (s.p) return <p key={i} style={{ textAlign: "justify", margin: "0 0 20px", color: C.muted }}>{s.p}</p>;
-            if (s.sign) return <div key={i} style={{ textAlign: "center", marginTop: 36, lineHeight: 1.9 }}>{s.b.map((l, j) => <div key={j} style={{ fontWeight: j === 1 ? 600 : 400 }}>{l}</div>)}</div>;
-            return (
-              <div key={i} style={{ margin: "0 0 20px" }}>
-                {s.n && <h2 style={{ fontFamily: SANS, fontSize: 13, letterSpacing: ".04em", color: C.azul, margin: "0 0 8px", fontWeight: 700 }}>{s.n}. {s.t}</h2>}
-                {(s.b || []).map((l, j) => <p key={j} style={{ textAlign: "justify", margin: "0 0 7px" }}>{l}</p>)}
-                {s.table && (
-                  <table style={{ width: "100%", borderCollapse: "collapse", margin: "8px 0 0", fontSize: 13 }}>
-                    <tbody>{s.table.map((r, ri) => (
-                      <tr key={ri}>{r.map((cell, ci) => (
-                        <td key={ci} style={{ border: `1px solid ${C.line}`, padding: "6px 10px",
-                          fontWeight: ri === 0 ? 700 : 400, background: ri === 0 ? C.abertaBg : "transparent",
-                          textTransform: ri === 0 ? "uppercase" : "none", fontSize: ri === 0 ? 11 : 13,
-                          letterSpacing: ri === 0 ? ".05em" : 0, color: ri === 0 ? C.azul : C.ink }}>{cell}</td>
-                      ))}</tr>
-                    ))}</tbody>
-                  </table>
-                )}
-              </div>
-            );
-          })}
+          padding: docHero ? "44px 50px" : "26px 28px", fontFamily: SANS, color: C.ink, fontSize: 14, lineHeight: 1.6,
+          minHeight: docHero ? 600 : 0, maxHeight: docHero ? "none" : "78vh", overflow: docHero ? "visible" : "auto" }}>
+          {!docHero && (
+            <div style={{ fontFamily: SANS, fontSize: 10, letterSpacing: ".05em", textTransform: "uppercase", color: C.azulClaro, marginBottom: 16, paddingBottom: 8, borderBottom: `1px dashed ${C.line}` }}>
+              trecho que este passo preenche — o documento se forma aqui
+            </div>
+          )}
+          {secoes.map(renderSecao)}
         </div>
       </div>
+
+      {/* ---------- MODAL: documento completo sob demanda ---------- */}
+      {showFull && (
+        <div onClick={() => setShowFull(false)} style={{ position: "fixed", inset: 0, background: "rgba(10,30,40,.45)", zIndex: 50, display: "flex", justifyContent: "center", alignItems: "flex-start", padding: "28px 16px", overflow: "auto" }}>
+          <div onClick={(e) => e.stopPropagation()} style={{ background: C.card, maxWidth: 840, width: "100%", borderRadius: 6, boxShadow: "0 24px 60px rgba(0,0,0,.32)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px", borderBottom: `1px solid ${C.line}`, position: "sticky", top: 0, background: C.card, borderRadius: "6px 6px 0 0", flexWrap: "wrap" }}>
+              <b style={{ fontFamily: SANS, fontSize: 13, color: C.azulEscuro }}>{doc === "tr" ? "Termo de Referência" : "Minuta de Chamada"} — completo</b>
+              {confChip}
+              <div style={{ marginLeft: "auto", display: "flex", gap: 8 }}>
+                {docToggle}
+                <button onClick={copy} style={btn(true)}>{copied ? "copiado ✓" : "copiar"}</button>
+                <button onClick={dlDoc} style={btn(false)}>Word</button>
+                <button onClick={() => setShowFull(false)} style={btn(false)}>fechar ✕</button>
+              </div>
+            </div>
+            <div style={{ padding: "40px 48px", fontFamily: SANS, color: C.ink, fontSize: 14, lineHeight: 1.6 }}>
+              {minuta.map(renderSecao)}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
