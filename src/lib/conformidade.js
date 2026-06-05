@@ -45,7 +45,16 @@ export function conformidade(f) {
       dd >= 0 ? "datas coerentes" : "data fora de ordem");
   });
 
-  if (f.cotasOn) {
+  if (f.multivagas && Array.isArray(f.vagas) && f.vagas.length) {
+    const tot = f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0);
+    add("ok", "Seleções (multivagas)", `${f.vagas.length} seleção(ões), ${tot} bolsa(s) no total`);
+    f.vagas.forEach((v, i) => {
+      const q = parseInt(v.qtd) || 1;
+      const res = (parseInt(v.cotaER) || 0) + (parseInt(v.cotaM) || 0) + (parseInt(v.cotaPCD) || 0);
+      if (!v.modalidade) add("warn", `Seleção ${i + 1}: modalidade`, "defina a modalidade da seleção");
+      if (res > q) add("err", `Seleção ${i + 1}: reserva ≤ vagas`, `${res} reservada(s) de ${q}`);
+    });
+  } else if (f.cotasOn) {
     const q = parseInt(f.qtd) || 1;
     const res = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
     add(res <= q ? "ok" : "err", "Reserva ≤ total de vagas", `${res} reservada(s) de ${q}`);
