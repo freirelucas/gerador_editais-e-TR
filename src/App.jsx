@@ -5,11 +5,13 @@ import { CORPUS } from "./data/corpus.js";
 import BuilderView from "./components/BuilderView.jsx";
 import CorpusView from "./components/CorpusView.jsx";
 import AnalyticsView from "./components/AnalyticsView.jsx";
+import RedesView from "./components/RedesView.jsx";
 
 const TABS = [
   ["builder", "Gerador", "doc"],
   ["corpus", "Explorador", "compass"],
   ["analytics", "Analytics", "chart"],
+  ["redes", "Redes", "net"],
 ];
 const PAGE = {
   builder: {
@@ -24,6 +26,10 @@ const PAGE = {
     eyebrow: "Inteligência do corpus", h1: "Analytics dos dados",
     sub: "O que os dados sustentam — e o que não — sobre a virada PROMOB → PIPA.",
   },
+  redes: {
+    eyebrow: "Dependências bayesianas", h1: "Rede entre as variáveis",
+    sub: "Como modalidade, tema, função, formação, cota e diretoria se condicionam no corpus — força por informação mútua e probabilidade condicional P(alvo|origem).",
+  },
 };
 
 // Ícones inline (sem dependência): traço fino, estilo produto.
@@ -32,6 +38,7 @@ const PATHS = {
   compass: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3.6-12.6-2.1 5.1-5.1 2.1 2.1-5.1 5.1-2.1Z",
   chart: "M4 20V11M9.5 20V4M15 20v-6M20.5 20V8",
   spark: "M12 3l2 5.2L19 10l-5 1.8L12 17l-2-5.2L5 10l5-1.8L12 3Z",
+  net: "M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.6 13.5l6.8 3.9M15.4 6.6 8.6 10.5",
 };
 export function Icon({ name, size = 16, color = "currentColor", w = 1.7 }) {
   return (
@@ -103,7 +110,7 @@ export default function App() {
           <p style={{ fontFamily: SANS, color: C.muted, margin: 0, fontSize: 15, lineHeight: 1.5, maxWidth: 760 }}>{page.sub}</p>
         </header>
 
-        {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : <AnalyticsView />}
+        {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView /> : <RedesView />}
 
         <footer style={{
           marginTop: 50, paddingTop: 18, borderTop: `1px solid ${C.line}`, fontFamily: SANS,
