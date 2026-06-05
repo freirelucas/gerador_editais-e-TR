@@ -98,6 +98,7 @@ const DEFAULTS = {
   temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], funcoes: [], enfases: [], recortes: [], experiencia: "",
   modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
   cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
+  multivagas: false, vagas: [],
   duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
   cartaIntencoes: false, comissao: "", diretoria: "",
   dataPub: "", inscIni: "", inscFim: "", resultado: "", inicio: "",
@@ -121,7 +122,7 @@ const STEP_CONF = [
   ["Definição do projeto"],
   ["Modalidade e valor"],
   ["Perfil do bolsista"],
-  ["Reserva", "Quantitativo usual", "Coerência modalidade"],
+  ["Reserva", "Quantitativo usual", "Coerência modalidade", "Seleção", "Seleções"],
   ["Comissão"],
   ["Prazo de inscrição", "Ordem:", "Janela de inscrição"],
   null,
@@ -135,6 +136,19 @@ export default function BuilderView() {
   const setVal = (k, v) => setF({ ...f, [k]: v });
   const toggle = (k) => (e) => setF({ ...f, [k]: e.target.checked });
   const toggleIn = (k, v) => setF((p) => ({ ...p, [k]: p[k].includes(v) ? p[k].filter((x) => x !== v) : [...p[k], v] }));
+  // ---- Multivagas: edital com várias seleções (Seleção 1, 2, …), cada uma com modalidade,
+  // vagas, cotas e perfil próprios — formato real das chamadas PIPA.
+  const novaVaga = (base = {}) => ({ modalidade: MODALIDADES[0].nome, qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0", perfil: "", ...base });
+  const setVaga = (i, k, v) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: v } : x)) }));
+  const addVaga = () => setF((p) => ({ ...p, vagas: [...p.vagas, novaVaga()] }));
+  const rmVaga = (i) => setF((p) => ({ ...p, vagas: p.vagas.filter((_, j) => j !== i) }));
+  const toggleMultivagas = (on) => setF((p) => ({
+    ...p, multivagas: on,
+    // ao ligar, semeia a 1ª seleção com o que já foi preenchido no fluxo simples
+    vagas: on && !p.vagas.length
+      ? [novaVaga({ modalidade: p.modalidade, qtd: p.qtd, cotaER: p.cotaER, cotaM: p.cotaM, cotaPCD: p.cotaPCD, perfil: p.perfil }), novaVaga()]
+      : p.vagas,
+  }));
   // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
   const setDiretoria = (sigla) => setF((p) => ({
     ...p, diretoriaSel: sigla,
@@ -411,24 +425,75 @@ export default function BuilderView() {
         <Similares campo="perfil" />
       </>);
       case 4: return (<>
-        <Field l="Público-alvo / reserva de vagas (Art. 25) — texto livre, opcional">
-          <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
-        </Field>
-        <Check k="cotasOn" l="Prever reserva de vagas por cota (quadro AC/ER/M/PCD)" />
-        {f.cotasOn && (<>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
-            <Field l="Étnico-racial (ER)"><input style={inp} type="number" min="0" value={f.cotaER} onChange={set("cotaER")} /></Field>
-            <Field l="Mulheres (M)"><input style={inp} type="number" min="0" value={f.cotaM} onChange={set("cotaM")} /></Field>
-            <Field l="PCD"><input style={inp} type="number" min="0" value={f.cotaPCD} onChange={set("cotaPCD")} /></Field>
+        <label style={{ display: "flex", gap: 11, alignItems: "flex-start", cursor: "pointer", background: f.multivagas ? C.accentSoft : C.surface2, border: `1px solid ${f.multivagas ? C.azulClaro : C.line}`, borderRadius: RADIUS.md, padding: "12px 14px" }}>
+          <input type="checkbox" checked={f.multivagas} onChange={(e) => toggleMultivagas(e.target.checked)} style={{ accentColor: C.azul, width: 16, height: 16, marginTop: 2 }} />
+          <div>
+            <div style={{ fontFamily: SANS, fontSize: 13.5, fontWeight: 600, color: C.ink }}>Edital com múltiplas seleções (multivagas)</div>
+            <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, lineHeight: 1.45, marginTop: 2 }}>
+              Uma chamada com Seleção 1, 2, 3…, cada uma com modalidade, vagas, cotas e perfil próprios — como nas chamadas PIPA reais.
+            </div>
           </div>
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: reservaLive > q ? "#c0392b" : C.azul }}>
-            ampla concorrência (AC): <b>{acLive}</b> · reservadas: <b>{reservaLive}</b> · total: <b>{q}</b>
-            {reservaLive > q && <span style={{ fontWeight: 600 }}> — excede o total de vagas</span>}
-          </div>
-          <Check k="heteroident" l="Exigir procedimento de heteroidentificação" />
-          <Field l="Fundamento legal das cotas — opcional">
-            <input style={inp} placeholder="Ex.: Lei nº 12.990/2014; Decreto nº 9.508/2018…" value={f.fundamentoCotas} onChange={set("fundamentoCotas")} />
+        </label>
+
+        {!f.multivagas ? (<>
+          <Field l="Público-alvo / reserva de vagas (Art. 25) — texto livre, opcional">
+            <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
           </Field>
+          <Check k="cotasOn" l="Prever reserva de vagas por cota (quadro AC/ER/M/PCD)" />
+          {f.cotasOn && (<>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
+              <Field l="Étnico-racial (ER)"><input style={inp} type="number" min="0" value={f.cotaER} onChange={set("cotaER")} /></Field>
+              <Field l="Mulheres (M)"><input style={inp} type="number" min="0" value={f.cotaM} onChange={set("cotaM")} /></Field>
+              <Field l="PCD"><input style={inp} type="number" min="0" value={f.cotaPCD} onChange={set("cotaPCD")} /></Field>
+            </div>
+            <div style={{ fontFamily: SANS, fontSize: 12.5, color: reservaLive > q ? C.err : C.azul }}>
+              ampla concorrência (AC): <b>{acLive}</b> · reservadas: <b>{reservaLive}</b> · total: <b>{q}</b>
+              {reservaLive > q && <span style={{ fontWeight: 600 }}> — excede o total de vagas</span>}
+            </div>
+            <Check k="heteroident" l="Exigir procedimento de heteroidentificação" />
+            <Field l="Fundamento legal das cotas — opcional">
+              <input style={inp} placeholder="Ex.: Lei nº 12.990/2014; Decreto nº 9.508/2018…" value={f.fundamentoCotas} onChange={set("fundamentoCotas")} />
+            </Field>
+          </>)}
+        </>) : (<>
+          {f.vagas.map((v, i) => {
+            const er = parseInt(v.cotaER) || 0, m = parseInt(v.cotaM) || 0, pcd = parseInt(v.cotaPCD) || 0;
+            const vq = parseInt(v.qtd) || 1, vres = er + m + pcd;
+            return (
+              <div key={i} style={{ border: `1px solid ${C.line}`, borderRadius: RADIUS.md, padding: "14px 15px", background: C.surface2, display: "grid", gap: 12 }}>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <span style={{ fontFamily: SANS, fontSize: 12.5, fontWeight: 700, color: C.azulEscuro }}>Seleção {i + 1}</span>
+                  <button type="button" onClick={() => rmVaga(i)} title="Remover seleção" style={{ marginLeft: "auto", background: "none", border: "none", color: C.muted, cursor: "pointer", fontFamily: SANS, fontSize: 12, fontWeight: 600 }}>remover ✕</button>
+                </div>
+                <Field l="Modalidade">
+                  <select style={inp} value={v.modalidade} onChange={(e) => setVaga(i, "modalidade", e.target.value)}>
+                    {MODALIDADES.map((mm) => <option key={mm.nome} value={mm.nome}>{mm.nome} — {fmtValor(mm.valor, mm.moeda)}</option>)}
+                  </select>
+                </Field>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 12 }}>
+                  <Field l="Nº de vagas"><input style={inp} type="number" min="1" value={v.qtd} onChange={(e) => setVaga(i, "qtd", e.target.value)} /></Field>
+                  <Field l="Tipo de vaga">
+                    <select style={inp} value={v.tipo} onChange={(e) => setVaga(i, "tipo", e.target.value)}>
+                      {["Imediata", "Cadastro reserva", "Imediata + cadastro reserva"].map((t) => <option key={t} value={t}>{t}</option>)}
+                    </select>
+                  </Field>
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+                  <Field l="Cota ER"><input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} /></Field>
+                  <Field l="Cota M"><input style={inp} type="number" min="0" value={v.cotaM} onChange={(e) => setVaga(i, "cotaM", e.target.value)} /></Field>
+                  <Field l="Cota PCD"><input style={inp} type="number" min="0" value={v.cotaPCD} onChange={(e) => setVaga(i, "cotaPCD", e.target.value)} /></Field>
+                </div>
+                {vres > vq && <div style={{ fontFamily: SANS, fontSize: 12, color: C.err, fontWeight: 600 }}>reserva ({vres}) excede as vagas ({vq})</div>}
+                <Field l="Perfil/requisitos específicos desta seleção — opcional">
+                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Em branco usa o requisito da modalidade…" value={v.perfil} onChange={(e) => setVaga(i, "perfil", e.target.value)} />
+                </Field>
+              </div>
+            );
+          })}
+          <button type="button" onClick={addVaga} style={{ ...compBtn, padding: "9px 14px" }}>+ Adicionar seleção</button>
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.muted }}>
+            Total: <b style={{ color: C.ink }}>{f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0)}</b> bolsa(s) em <b style={{ color: C.ink }}>{f.vagas.length}</b> seleção(ões).
+          </div>
         </>)}
       </>);
       case 5: return (<>

@@ -53,6 +53,46 @@ function quadroVagas(f, { q }) {
   return rows;
 }
 
+// ---------- Multivagas: edital com várias seleções (Seleção 1, 2, …) ----------
+const modOf = (nome) => MODALIDADES.find((m) => m.nome === nome) || { nome: nome || "[MODALIDADE]", valor: 0, moeda: "BRL", requisito: "" };
+const ehMulti = (f) => f.multivagas && Array.isArray(f.vagas) && f.vagas.length > 0;
+
+// Quadro consolidado: uma linha por seleção (modalidade, valor, vagas, reserva) + total.
+function quadroMultivagas(f) {
+  const pad = (n) => String(n).padStart(2, "0");
+  const rows = [["Seleção", "Modalidade", "Valor mensal", "Vagas", "Reserva"]];
+  let tot = 0;
+  f.vagas.forEach((v, i) => {
+    const m = modOf(v.modalidade);
+    const q = parseInt(v.qtd) || 1; tot += q;
+    const er = parseInt(v.cotaER) || 0, mu = parseInt(v.cotaM) || 0, pcd = parseInt(v.cotaPCD) || 0;
+    const res = [er && `ER ${pad(er)}`, mu && `M ${pad(mu)}`, pcd && `PCD ${pad(pcd)}`].filter(Boolean).join(", ") || "—";
+    rows.push([`Seleção ${i + 1}${v.tipo ? ` — ${v.tipo}` : ""}`, m.nome, fmtValor(m.valor, m.moeda), pad(q), res]);
+  });
+  rows.push(["Total", "", "", pad(tot), ""]);
+  return rows;
+}
+
+function caracteristicasMultivagas(f) {
+  const tot = f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0);
+  const temReserva = f.vagas.some((v) => (parseInt(v.cotaER) || 0) + (parseInt(v.cotaM) || 0) + (parseInt(v.cotaPCD) || 0) > 0);
+  const b = [
+    `Esta chamada compreende ${String(f.vagas.length).padStart(2, "0")} (${extenso(f.vagas.length)}) seleção(ões), totalizando ${String(tot).padStart(2, "0")} (${extenso(tot)}) bolsa(s), conforme o quadro a seguir. Cada seleção possui modalidade, valor e requisitos próprios (Art. 4º e Anexo I da ${NORMA.portaria}).`,
+  ];
+  if (temReserva) b.push("As vagas reservadas (cotas) observam, em cada seleção, a ordem de classificação e a legislação aplicável, conforme detalhado na chamada.");
+  return b;
+}
+
+// Perfil/requisitos por seleção (requisito da modalidade + texto específico, se houver).
+function perfilMultivagas(f) {
+  return f.vagas.map((v, i) => {
+    const m = modOf(v.modalidade);
+    const req = ou(m.requisito, "requisitos conforme Art. 4º da norma vigente.");
+    const esp = ou(v.perfil, "");
+    return `Seleção ${i + 1} — ${m.nome}: ${req}${esp ? ` ${esp}` : ""}`;
+  });
+}
+
 const criteriosDefault = (f) =>
   f.cartaIntencoes
     ? "A seleção considerará a carta de intenções (trajetória profissional, competências aplicáveis ao objeto e motivações) e a análise curricular, conforme modelo divulgado na chamada (Art. 8º, §1º)."
@@ -87,10 +127,12 @@ export function buildTR(f) {
   S.push({ n: 2, t: "DEFINIÇÃO DO PROJETO DE PESQUISA", b: [
     ou(f.projeto, "[Descrever o projeto de pesquisa: objeto, justificativa, objetivos e resultados esperados.]"),
   ] });
-  S.push({ n: 3, t: "PERFIL DO BOLSISTA DESEJADO", b: [
-    ou(f.perfil, "[Descrever titulação, conhecimentos, competências e experiência desejados.]"),
-  ] });
-  S.push({ n: 4, t: "MODALIDADE, VALOR E QUANTITATIVO DA BOLSA", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
+  S.push({ n: 3, t: "PERFIL DO BOLSISTA DESEJADO", b: ehMulti(f)
+    ? perfilMultivagas(f)
+    : [ou(f.perfil, "[Descrever titulação, conhecimentos, competências e experiência desejados.]")] });
+  S.push(ehMulti(f)
+    ? { n: 4, t: "MODALIDADES, VALORES E QUADRO DE VAGAS", b: caracteristicasMultivagas(f), table: quadroMultivagas(f) }
+    : { n: 4, t: "MODALIDADE, VALOR E QUANTITATIVO DA BOLSA", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
   S.push({ n: 5, t: "DURAÇÃO DA BOLSA E DA PESQUISA", b: [
     `Duração da bolsa: ${String(d.durB).padStart(2, "0")} (${extenso(d.durB)}) ${d.durB === 1 ? "mês" : "meses"}.`,
     `Tempo de duração da pesquisa: ${String(d.durP).padStart(2, "0")} (${extenso(d.durP)}) ${d.durP === 1 ? "mês" : "meses"}.`,
@@ -126,11 +168,15 @@ export function buildEdital(f) {
   S.push({ n: 1, t: "DO OBJETO", b: [
     `Seleção de bolsista para o projeto de pesquisa: ${ou(f.projeto, "[TÍTULO/OBJETO DO PROJETO]")}, conforme o Termo de Referência constante do Anexo I.`,
   ] });
-  S.push({ n: 2, t: "DA MODALIDADE, DO VALOR E DO QUANTITATIVO", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
-  S.push({ n: 3, t: "DOS REQUISITOS E DO PERFIL", b: [
-    `Requisito da modalidade: ${ou(d.mod.requisito, "conforme Art. 4º da norma vigente.")}`,
-    `Perfil desejado: ${ou(f.perfil, "[Descrever o perfil exigido.]")}`,
-  ] });
+  S.push(ehMulti(f)
+    ? { n: 2, t: "DAS MODALIDADES, DOS VALORES E DO QUADRO DE VAGAS", b: caracteristicasMultivagas(f), table: quadroMultivagas(f) }
+    : { n: 2, t: "DA MODALIDADE, DO VALOR E DO QUANTITATIVO", b: caracteristicasBolsa(f, d), ...(f.cotasOn ? { table: quadroVagas(f, d) } : {}) });
+  S.push({ n: 3, t: "DOS REQUISITOS E DO PERFIL", b: ehMulti(f)
+    ? perfilMultivagas(f)
+    : [
+      `Requisito da modalidade: ${ou(d.mod.requisito, "conforme Art. 4º da norma vigente.")}`,
+      `Perfil desejado: ${ou(f.perfil, "[Descrever o perfil exigido.]")}`,
+    ] });
   S.push({ n: 4, t: "DAS INSCRIÇÕES", b: [
     `As candidaturas serão realizadas exclusivamente pelo SISBOLSAS (${NORMA.sisbolsas}), no período do cronograma, observado o prazo mínimo de ${NORMA.prazoMinEspecializadaDias} (dez) dias.`,
   ], table: cronograma(f) });
