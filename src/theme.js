@@ -66,6 +66,8 @@ button:active{transform:translateY(.5px);}
 ::-webkit-scrollbar-thumb:hover{background:#c2c7d0;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
 @keyframes pop{0%{transform:scale(.96);}60%{transform:scale(1.015);}100%{transform:scale(1);}}
+@keyframes flashbg{0%{background:rgba(91,91,214,.18);}100%{background:transparent;}}
+.flash{animation:flashbg 1.1s ease-out;border-radius:6px;margin:0 -8px;padding:0 8px;}
 .fadeUp{animation:fadeUp .24s cubic-bezier(.2,.7,.3,1) both;}
 .fadeUp>*{animation:fadeUp .26s cubic-bezier(.2,.7,.3,1) both;}
 .fadeUp>*:nth-child(2){animation-delay:.03s;}
