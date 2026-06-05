@@ -138,7 +138,7 @@ export default function BuilderView() {
   const toggleIn = (k, v) => setF((p) => ({ ...p, [k]: p[k].includes(v) ? p[k].filter((x) => x !== v) : [...p[k], v] }));
   // ---- Multivagas: edital com várias seleções (Seleção 1, 2, …), cada uma com modalidade,
   // vagas, cotas e perfil próprios — formato real das chamadas PIPA.
-  const novaVaga = (base = {}) => ({ modalidade: MODALIDADES[0].nome, qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0", perfil: "", ...base });
+  const novaVaga = (base = {}) => ({ modalidade: MODALIDADES[0].nome, qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0", perfil: "", atividades: "", criterios: "", ...base });
   const setVaga = (i, k, v) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: v } : x)) }));
   const addVaga = () => setF((p) => ({ ...p, vagas: [...p.vagas, novaVaga()] }));
   const rmVaga = (i) => setF((p) => ({ ...p, vagas: p.vagas.filter((_, j) => j !== i) }));
@@ -146,7 +146,7 @@ export default function BuilderView() {
     ...p, multivagas: on,
     // ao ligar, semeia a 1ª seleção com o que já foi preenchido no fluxo simples
     vagas: on && !p.vagas.length
-      ? [novaVaga({ modalidade: p.modalidade, qtd: p.qtd, cotaER: p.cotaER, cotaM: p.cotaM, cotaPCD: p.cotaPCD, perfil: p.perfil }), novaVaga()]
+      ? [novaVaga({ modalidade: p.modalidade, qtd: p.qtd, cotaER: p.cotaER, cotaM: p.cotaM, cotaPCD: p.cotaPCD, perfil: p.perfil, atividades: p.atividades, criterios: p.criterios }), novaVaga()]
       : p.vagas,
   }));
   // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
@@ -487,6 +487,18 @@ export default function BuilderView() {
                 <Field l="Perfil/requisitos específicos desta seleção — opcional">
                   <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Em branco usa o requisito da modalidade…" value={v.perfil} onChange={(e) => setVaga(i, "perfil", e.target.value)} />
                 </Field>
+                <Field l="Atividades desta seleção — opcional">
+                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Atividades de pesquisa específicas desta seleção…" value={v.atividades} onChange={(e) => setVaga(i, "atividades", e.target.value)} />
+                </Field>
+                <Field l="Critérios de seleção desta seleção — opcional">
+                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={v.criterios} onChange={(e) => setVaga(i, "criterios", e.target.value)} />
+                  <div style={{ marginTop: 6 }}>
+                    <button type="button" style={{ ...compBtn, padding: "6px 11px", fontSize: 11.5 }}
+                      onClick={() => setVaga(i, "criterios", sugerirCriterios({ modalidade: v.modalidade, funcoes: f.funcoes }))}>
+                      ✦ Sugerir critérios (padrão da modalidade)
+                    </button>
+                  </div>
+                </Field>
               </div>
             );
           })}
@@ -497,6 +509,11 @@ export default function BuilderView() {
         </>)}
       </>);
       case 5: return (<>
+        {f.multivagas && (
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, background: C.accentSoft, border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.sm, padding: "10px 12px", lineHeight: 1.45 }}>
+            <b>Multivagas ativo:</b> atividades e critérios são definidos <b>por seleção</b> no passo <b>Vagas</b>. Os campos abaixo valem como base/rascunho.
+          </div>
+        )}
         <Field l="Atividades a desenvolver">
           <textarea style={{ ...inp, minHeight: 88, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={f.atividades} onChange={set("atividades")} />
           <div style={{ marginTop: 6 }}>
