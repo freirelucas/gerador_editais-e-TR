@@ -16,8 +16,8 @@ export const C = {
   sunken: "#eff1f5",
   // texto
   ink: "#1c2024",
-  muted: "#60646c",
-  faint: "#9aa1a9",
+  muted: "#565a61",
+  faint: "#6e737b",
   line: "#e8eaef",
   lineStrong: "#d9dce3",
   // acento (índigo — produto)
@@ -74,6 +74,12 @@ button:active{transform:translateY(.5px);}
 .fadeUp>*:nth-child(3){animation-delay:.06s;}
 .fadeUp>*:nth-child(4){animation-delay:.09s;}
 .pop{animation:pop .2s ease;}
+/* Realce e tooltip nos gráficos SVG: barras/fatias clareiam no hover; alvos transparentes
+   (.chDot) dão um halo onde se pode ler o ponto. O tooltip em si é o <title> nativo do SVG. */
+.chHover{transition:opacity .12s ease}
+.chHover:hover{opacity:.78;cursor:default}
+.chDot{fill:transparent;cursor:default;transition:fill .12s ease}
+.chDot:hover{fill:rgba(91,91,214,.16)}
 @media (max-width:880px){.twocol{grid-template-columns:1fr!important;}}
 /* Desktop-first: o app é desenhado para tela grande; abaixo de 720px só adaptamos o cabeçalho
    (que não cabe) e folgas — sem mudar o desktop. A nav vira uma faixa própria, todas as abas

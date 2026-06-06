@@ -140,10 +140,11 @@ export const porFuncao = contaLista("categoria_funcao");
 export const porTema = contaLista("categoria_tema");
 export const porFormacao = contaLista("formacao");
 
-// papel solicitado — agrupa variantes (acento/caixa) e exibe a forma mais comum
-export const porPapel = (() => {
+// papel solicitado — agrupa variantes (acento/caixa) e exibe a forma mais comum.
+// Forma reutilizável (recebe subconjunto) p/ o explorador interativo; o export default usa CORPUS.
+export const porPapelDe = (arr = CORPUS) => {
   const g = new Map();
-  for (const c of CORPUS) {
+  for (const c of arr) {
     if (!c.papel) continue;
     const k = semAcento(c.papel).replace(/\s+/g, " ").trim();
     const e = g.get(k) || { total: 0, sur: new Map() };
@@ -155,17 +156,19 @@ export const porPapel = (() => {
     .map((e) => ({ label: [...e.sur.entries()].sort((a, b) => b[1] - a[1])[0][0], value: e.total }))
     .sort((a, b) => b.value - a.value)
     .slice(0, 14);
-})();
+};
+export const porPapel = porPapelDe();
 
 // diretoria substantiva + bucket honesto de "não identificada"
-export const porDiretoria = (() => {
+export const porDiretoriaDe = (arr = CORPUS) => {
   const m = new Map();
   let sem = 0;
-  for (const c of CORPUS) c.diretoria ? m.set(c.diretoria, (m.get(c.diretoria) || 0) + 1) : sem++;
-  const arr = [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
-  if (sem) arr.push({ label: "não identificada", value: sem, color: "#c9d4d7" });
-  return arr;
-})();
+  for (const c of arr) c.diretoria ? m.set(c.diretoria, (m.get(c.diretoria) || 0) + 1) : sem++;
+  const out = [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+  if (sem) out.push({ label: "não identificada", value: sem, color: "#c9d4d7" });
+  return out;
+};
+export const porDiretoria = porDiretoriaDe();
 
 // reserva de vagas (cotas) — presença EXPLÍCITA por categoria (multi-rótulo) e por ano.
 // Honesto: conta menção a reserva/cota/ação afirmativa nos PDFs, sem inferir nº de vagas.
@@ -298,6 +301,48 @@ export const programaPorAnoProj = programaPorAno.map((linha) => {
   for (const p of PROGRAMAS) out[p + "_proj"] = Math.max(projeta(linha[p]) - linha[p], 0);
   return out;
 });
+
+// ===================== explorador interativo (filtro × dimensão) =====================
+// Tudo recalculado ao vivo sobre o CORPUS — os rótulos já vêm por registro, então "explorar"
+// é só re-agregar um subconjunto com as MESMAS convenções dos gráficos curados acima.
+export const PROGRAMAS_OPC = ["Todos", ...PROGRAMAS];
+export const ANOS_OPC = ["Todos", ...ANOS];
+export const RESERVA_OPC = ["Todas", "Com reserva", "Sem reserva"];
+const temReserva = (c) => !!(c.vagas_por_cota || {}).tem_reserva;
+
+export function filtrar({ programa = "Todos", ano = "Todos", reserva = "Todas" } = {}) {
+  return CORPUS.filter((c) => {
+    if (programa !== "Todos" && c.programa !== programa) return false;
+    if (ano !== "Todos" && c.ano !== ano) return false;
+    if (reserva === "Com reserva" && !temReserva(c)) return false;
+    if (reserva === "Sem reserva" && temReserva(c)) return false;
+    return true;
+  });
+}
+
+const porProgramaDe = (arr) =>
+  PROGRAMAS.map((p) => ({ label: p, value: arr.filter((c) => c.programa === p).length })).filter((d) => d.value);
+const porAnoDe = (arr) =>
+  ANOS.map((a) => ({ label: a, value: arr.filter((c) => c.ano === a).length })).filter((d) => d.value);
+const porCotaCatDe = (arr) => {
+  const m = new Map();
+  for (const c of arr) for (const cat of (c.vagas_por_cota || {}).categorias || []) m.set(cat, (m.get(cat) || 0) + 1);
+  return [...m.entries()].sort((a, b) => b[1] - a[1]).map(([label, value]) => ({ label, value }));
+};
+
+// dimensões cruzáveis — cada uma recebe o subconjunto filtrado e devolve [{label,value}].
+// multi = rótulo múltiplo (a soma pode passar do nº de chamadas).
+export const DIMENSOES = {
+  "Função do perfil": { fn: (arr) => contaListaEm(arr, "categoria_funcao"), multi: true, horizontal: true },
+  "Tema / domínio": { fn: (arr) => contaListaEm(arr, "categoria_tema"), multi: true, horizontal: true },
+  "Formação exigida": { fn: (arr) => contaListaEm(arr, "formacao"), multi: true, horizontal: true },
+  "Papel / modalidade": { fn: porPapelDe, multi: false, horizontal: true },
+  "Diretoria": { fn: porDiretoriaDe, multi: false, horizontal: true },
+  "Categoria de cota": { fn: porCotaCatDe, multi: true, horizontal: true },
+  "Programa": { fn: porProgramaDe, multi: false, horizontal: false },
+  "Ano de abertura": { fn: porAnoDe, multi: false, horizontal: false },
+};
+export const DIMENSOES_LISTA = Object.keys(DIMENSOES);
 
 // ===================== cobertura do enriquecimento (captions honestas) =====================
 export const cobertura = {
