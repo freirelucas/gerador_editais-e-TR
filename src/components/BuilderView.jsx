@@ -8,6 +8,7 @@ import { downloadDoc, printDoc } from "../lib/docExport.js";
 import { chamadasSimilares } from "../lib/similares.js";
 import { FUNCOES, TEMAS, enfasesDe, recortesDe } from "../data/perfis.js";
 import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "../lib/perfil.js";
+import { sugerirModalidade } from "../lib/sugestao.js";
 import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
 import { exemplosPorTema } from "../data/objetos.js";
 
@@ -322,6 +323,46 @@ export default function BuilderView() {
     );
   };
 
+  // Sugestão de modalidade a partir da rede de dependências (DAG/CPT) sobre o corpus PIPA,
+  // condicionada à evidência já preenchida (diretoria → tema → função). Recalcula só quando
+  // a evidência muda; o DAG é aprendido uma vez (memoizado em lib/sugestao).
+  const sugMod = useMemo(() => sugerirModalidade(f), [f.diretoriaSel, f.temas.join("|"), f.funcoes.join("|")]);
+  const SugestaoModalidade = () => {
+    if (!sugMod) return null;
+    const s = sugMod;
+    const aplicada = f.modalidade === s.modalidade.nome;
+    const pct = Math.round(s.p * 100);
+    const via = s.base ? "base histórica PIPA" : `via ${s.via.nome}${s.via.pai ? " · pai no DAG" : ""}`;
+    return (
+      <div style={{ border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.md, background: C.accentSoft, padding: "12px 14px", display: "grid", gap: 9 }}>
+        <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 600, letterSpacing: ".06em", textTransform: "uppercase", color: C.azul, display: "flex", alignItems: "center", gap: 7 }}>
+          <Ic d="spark" size={13} color={C.azul} /> Sugestão do histórico · rede de dependências
+        </div>
+        <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.ink, lineHeight: 1.5 }}>
+          O histórico PIPA aponta modalidade do tipo <b>{s.grupo}</b> →{" "}
+          <b style={{ color: C.azulEscuro }}>{s.modalidade.nome}</b>{" "}
+          <span style={{ color: C.muted }}>({fmtValor(s.modalidade.valor, s.modalidade.moeda)} · {s.modalidade.formacao})</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ flex: 1, height: 6, background: C.line, borderRadius: 99, overflow: "hidden" }}>
+            <div style={{ width: `${pct}%`, height: "100%", background: C.azul }} />
+          </div>
+          <span style={{ fontFamily: SANS, fontSize: 11.5, fontWeight: 700, color: C.azulEscuro, fontVariantNumeric: "tabular-nums" }}>{pct}%</span>
+          <span style={{ fontFamily: SANS, fontSize: 11, color: C.muted, whiteSpace: "nowrap" }}>n={s.n} · {via}</span>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 11, flexWrap: "wrap" }}>
+          <button type="button" disabled={aplicada} onClick={() => setVal("modalidade", s.modalidade.nome)}
+            style={{ ...compBtn, opacity: aplicada ? 0.55 : 1, cursor: aplicada ? "default" : "pointer" }}>
+            {aplicada ? "✓ modalidade aplicada" : "Aplicar modalidade"}
+          </button>
+          <span style={{ fontFamily: SANS, fontSize: 10.5, color: C.faint, lineHeight: 1.35 }}>
+            Estimativa do corpus (55 chamadas) — dependência estatística, não regra. Ajuste à vontade.
+          </span>
+        </div>
+      </div>
+    );
+  };
+
   // Validação inline: guardrails do passo atual (warn/err/info), quieto quando tudo ok.
   const InlineConf = () => {
     const items = confForStep(step);
@@ -387,6 +428,7 @@ export default function BuilderView() {
             <span style={{ color: C.muted }}>requisito (Art. 4º): {mod.requisito}</span>
           </div>
         )}
+        <SugestaoModalidade />
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
           <Field l="Qtd. bolsas"><input style={inp} type="number" min="1" value={f.qtd} onChange={set("qtd")} /></Field>
           <Field l="Bolsa (meses)"><input style={inp} type="number" min="1" value={f.duracaoBolsa} onChange={set("duracaoBolsa")} /></Field>
