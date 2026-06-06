@@ -118,14 +118,14 @@ export default function AnalyticsView() {
 
       {/* ---------- 4. CONFORMIDADE ---------- */}
       <Secao titulo="Conformidade — Portaria 317/2025"
-        nota={`A Portaria Normativa Ipea nº 317 (18/04/2025) criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação, citado por todos os editais PIPA. A conformidade só se mede no PIPA: PROMOB e PROCIN são programas anteriores que a 317 revogou/converteu — não os rege. E é ESTRUTURAL (o quadro aparece), não numérica: o corpus não guarda nº de vagas por categoria e os editais com reserva são de vaga única, então não há split de vagas a verificar.`}>
+        nota={`A Portaria Normativa Ipea nº 317 (18/04/2025) criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação, citado por todos os editais PIPA. Só se mede no PIPA: PROMOB e PROCIN são programas anteriores que a 317 revogou/converteu — não os rege. Duas faces: a adesão estrutural (o quadro aparece) e, onde o edital traz a tabela numérica (3.1), a fração REAL de vagas reservadas — esta lida diretamente do texto dos editais.`}>
         <Figura titulo="Adesão ao quadro de reserva no PIPA — por ano (% dos editais analisados)"
           insight={`Fração dos editais PIPA analisados que trazem o quadro AC/ER/M/PCD: ${S.adesaoPipaPorAno.map((a) => `${a.ano} ${a.pct}% (${a.comReserva}/${a.analisados})`).join(" · ")}. O quadro se consolida ano a ano — não é universal porque o edital de vaga única costuma citá-lo sem aplicar split.`}>
           <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.pct }))} horizontal unit="%" color={C.azul} />
         </Figura>
-        <Figura titulo="Heteroidentificação no PIPA — por ano (nº de editais)"
-          insight={`Editais que exigem o procedimento de heteroidentificação (verificação da autodeclaração étnico-racial): ${S.adesaoPipaPorAno.map((a) => `${a.ano} ${a.hetero}`).join(" · ")}. Exigência crescente entre os que reservam.`}>
-          <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.hetero }))} horizontal color={C.cerrado} />
+        <Figura titulo="Vagas reservadas no PIPA — % do total de vagas (medido no quadro)"
+          insight={`Lido do quadro numérico (seção 3.1) de ${S.vagasPipaQuadro.n} editais PIPA: ${S.vagasPipaQuadro.reservadas} de ${S.vagasPipaQuadro.total} vagas são reservadas (${S.vagasPipaQuadro.pct}%); o resto é ampla concorrência. Por categoria do total: ${S.vagasPipaQuadro.porCategoriaPct.map((c) => `${c.label} ${c.value}% (${c.n})`).join(", ")}. A norma fixa 30/40/10, mas a aplicação real difere — a reserva de PcD não foi acionada. Salto por ano: ${S.vagasPipaQuadro.porAno.map((a) => `${a.ano} ${a.pct}%`).join(" · ")}.`}>
+          <Bars data={S.vagasPipaQuadro.porCategoriaPct} horizontal unit="%" color={C.cerrado} />
         </Figura>
       </Secao>
 

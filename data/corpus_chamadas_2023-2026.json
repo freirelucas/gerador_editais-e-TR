@@ -70,7 +70,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 2,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 2,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -141,7 +152,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": true
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 2,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 2,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -218,7 +240,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": true
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 10,
+        "ampla_concorrencia": 2,
+        "reservadas": 8,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 4,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -291,7 +324,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 1,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 2,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -547,7 +591,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 8,
+        "ampla_concorrencia": 8,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -684,7 +739,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": true
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 12,
+        "ampla_concorrencia": 0,
+        "reservadas": 12,
+        "por_categoria": {
+          "Étnico-racial": 12,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -1134,7 +1200,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1284,7 +1361,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 0,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 2,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1394,7 +1482,18 @@
         "Mulheres",
         "PCD"
       ],
-      "heteroidentificacao": true
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 8,
+        "ampla_concorrencia": 4,
+        "reservadas": 4,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -2407,7 +2506,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2482,7 +2592,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 4,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2585,7 +2706,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -2667,7 +2799,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2748,7 +2891,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2843,7 +2997,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 25,
+        "ampla_concorrencia": 25,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -3050,7 +3215,18 @@
         "PCD",
         "Indígena"
       ],
-      "heteroidentificacao": false
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {

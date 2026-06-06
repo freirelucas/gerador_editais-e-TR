@@ -182,9 +182,9 @@ export const cotaPorAno = ANOS.map((ano) => ({
 
 // --- cotas como % e a virada de regime (Portaria Normativa Ipea nº 317/2025) ---
 // O 7,9% "global" engana: mistura a era PROMOB (sem o quadro AC/ER/M/PCD) com a era PIPA.
-// A virada se mede por programa e por ano; conformidade aqui é ESTRUTURAL (o quadro aparece
-// onde a 317 vale), não numérica (os editais citam a 317 mas não repetem os percentuais, e
-// não contamos vagas por categoria — o quadro varia demais).
+// A virada se mede por programa e por ano. Conformidade tem duas faces: ESTRUTURAL (o quadro
+// aparece — adesaoPipaPorAno) e NUMÉRICA, onde o edital traz a tabela 3.1 com as contagens por
+// categoria (vagasPipaQuadro) — aí dá para medir a fração real de vagas reservadas.
 export const cotaAnalisados = CORPUS.filter((c) => c.vagas_por_cota != null).length;
 export const cotaPctTotal = Math.round((comReserva / totalChamadas) * 1000) / 10;
 export const cotaPorAnoPct = ANOS.map((ano) => {
@@ -195,8 +195,7 @@ export const cotaPorAnoPct = ANOS.map((ano) => {
 // Adesão estrutural ao quadro AC/ER/M/PCD — SÓ no PIPA, único programa que a 317 (abr/2025)
 // rege. PROMOB/PROCIN são programas anteriores que a 317 revogou/converteu, então medir
 // "adesão à 317" neles não faz sentido (a norma não os governa). Por ano, mostra o quadro se
-// consolidando. % é sobre EDITAIS analisados (presença do quadro), não sobre vagas — o corpus
-// não guarda nº de vagas por categoria e os editais com reserva são de vaga única.
+// consolidando. % é sobre EDITAIS analisados (presença do quadro), não sobre vagas.
 export const adesaoPipaPorAno = ANOS.map((ano) => {
   const sub = CORPUS.filter((c) => c.programa === "PIPA" && c.ano === ano);
   const analisados = sub.filter((c) => c.vagas_por_cota != null).length;
@@ -205,6 +204,31 @@ export const adesaoPipaPorAno = ANOS.map((ano) => {
   return { ano, analisados, comReserva: res, hetero,
            pct: analisados ? Math.round((res / analisados) * 100) : 0 };
 }).filter((a) => a.analisados > 0);
+
+// Quadro NUMÉRICO de vagas (seção 3.1) agregado no PIPA, onde o edital traz a tabela
+// AC/ER/M/PCD — extraído por scripts/extract_cotas.py em vagas_por_cota.quadro. Diferente da
+// norma (que FIXA 30/40/10), aqui é o que os editais REALMENTE distribuíram: a fração medida
+// de vagas reservadas sobre o total. Cobre só os editais com o quadro tabular (n abaixo).
+export const vagasPipaQuadro = (() => {
+  const eds = CORPUS.filter((c) => c.programa === "PIPA" && (c.vagas_por_cota || {}).quadro);
+  const cat = { "Étnico-racial": 0, "Mulheres": 0, "PCD": 0 };
+  const porAnoMap = {};
+  let total = 0, reservadas = 0, ac = 0;
+  for (const c of eds) {
+    const q = c.vagas_por_cota.quadro;
+    total += q.total; reservadas += q.reservadas; ac += q.ampla_concorrencia;
+    for (const k in cat) cat[k] += q.por_categoria[k] || 0;
+    const a = (porAnoMap[c.ano] = porAnoMap[c.ano] || { total: 0, reservadas: 0, n: 0 });
+    a.total += q.total; a.reservadas += q.reservadas; a.n++;
+  }
+  const pctOf = (x) => (total ? Math.round((x / total) * 100) : 0);
+  return {
+    n: eds.length, total, reservadas, ac, pct: pctOf(reservadas),
+    porCategoriaPct: Object.entries(cat).map(([label, n]) => ({ label, value: pctOf(n), n })),
+    porAno: Object.entries(porAnoMap).sort((a, b) => a[0].localeCompare(b[0]))
+      .map(([ano, d]) => ({ ano, ...d, pct: d.total ? Math.round((d.reservadas / d.total) * 100) : 0 })),
+  };
+})();
 export const comHetero = CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).length;
 export const heteroProgramas = [...new Set(
   CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).map((c) => c.programa)
