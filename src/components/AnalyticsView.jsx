@@ -1,7 +1,6 @@
 import { C } from "../theme.js";
 import * as S from "../lib/stats.js";
 import quality from "../data/quality.json";
-import { NORMA } from "../data/norma.js";
 import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
 import Bars from "./charts/Bars.jsx";
 import StackedBars from "./charts/StackedBars.jsx";
@@ -40,11 +39,6 @@ export default function AnalyticsView() {
   const prov = quality.proveniencia;
   const enr = quality.enriquecimento || {};
   const dadosPrograma = S.porPrograma.map((p) => ({ label: p.programa, value: p.total, color: COR_PROGRAMA[p.programa] }));
-  const reservaNorma = [
-    { label: "Étnico-racial", value: NORMA.reserva.etnico_racial },
-    { label: "Mulheres", value: NORMA.reserva.mulheres },
-    { label: "PCD", value: NORMA.reserva.pcd },
-  ];
   const projNota = S.projParcial
     ? ` 2026 é parcial (até ${S.refDate}); o projetado é pró-rata linear (real ÷ fração do ano ≈ ${Math.round(S.fracAnoCorr * 100)}%).`
     : "";
@@ -124,14 +118,14 @@ export default function AnalyticsView() {
 
       {/* ---------- 4. CONFORMIDADE ---------- */}
       <Secao titulo="Conformidade — Portaria 317/2025"
-        nota={`A Portaria Normativa Ipea nº 317 (18/04/2025), citada por todos os editais PIPA, criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação. Aqui: a adesão dos editais ao quadro (conformidade estrutural) e o que a norma exige — distinto da magnitude da seção anterior.`}>
-        <Figura titulo="Adesão ao quadro de reserva — por programa (% dos analisados)"
-          insight={`O quadro aparece onde a 317 vale: ${S.cotaPorPrograma.map((p) => `${p.programa} ${p.pct}% (${p.comReserva}/${p.analisados})`).join("; ")}. Heteroidentificação em ${S.comHetero} chamadas — todas ${S.heteroProgramas.join("/")}.`}>
-          <Bars data={S.cotaPorPrograma.map((p) => ({ label: p.programa, value: p.pct, color: COR_PROGRAMA[p.programa] }))} horizontal unit="%" />
+        nota={`A Portaria Normativa Ipea nº 317 (18/04/2025) criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação, citado por todos os editais PIPA. A conformidade só se mede no PIPA: PROMOB e PROCIN são programas anteriores que a 317 revogou/converteu — não os rege. E é ESTRUTURAL (o quadro aparece), não numérica: o corpus não guarda nº de vagas por categoria e os editais com reserva são de vaga única, então não há split de vagas a verificar.`}>
+        <Figura titulo="Adesão ao quadro de reserva no PIPA — por ano (% dos editais analisados)"
+          insight={`Fração dos editais PIPA analisados que trazem o quadro AC/ER/M/PCD: ${S.adesaoPipaPorAno.map((a) => `${a.ano} ${a.pct}% (${a.comReserva}/${a.analisados})`).join(" · ")}. O quadro se consolida ano a ano — não é universal porque o edital de vaga única costuma citá-lo sem aplicar split.`}>
+          <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.pct }))} horizontal unit="%" color={C.azul} />
         </Figura>
-        <Figura titulo="Reserva exigida pela 317 — % do total de vagas"
-          insight={`A portaria FIXA o percentual sobre o TOTAL de vagas: étnico-racial ${NORMA.reserva.etnico_racial}% (pretos, pardos e indígenas), mulheres ${NORMA.reserva.mulheres}%, PCD ${NORMA.reserva.pcd}%. É a fatia de vagas exigida — distinta da magnitude (nº de chamadas) da seção de inclusão. Como o split é fixo, o edital conforme o aplica; o corpus não guarda nº de vagas por categoria, então desvio numérico edital-a-edital não é detectável aqui.`}>
-          <Bars data={reservaNorma} horizontal unit="%" color={C.gold} />
+        <Figura titulo="Heteroidentificação no PIPA — por ano (nº de editais)"
+          insight={`Editais que exigem o procedimento de heteroidentificação (verificação da autodeclaração étnico-racial): ${S.adesaoPipaPorAno.map((a) => `${a.ano} ${a.hetero}`).join(" · ")}. Exigência crescente entre os que reservam.`}>
+          <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.hetero }))} horizontal color={C.cerrado} />
         </Figura>
       </Secao>
 

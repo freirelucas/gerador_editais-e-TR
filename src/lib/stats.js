@@ -192,13 +192,19 @@ export const cotaPorAnoPct = ANOS.map((ano) => {
   const res = sub.filter((c) => (c.vagas_por_cota || {}).tem_reserva).length;
   return { ano, total: sub.length, comReserva: res, pct: sub.length ? Math.round((res / sub.length) * 100) : 0 };
 });
-export const cotaPorPrograma = PROGRAMAS.map((programa) => {
-  const sub = CORPUS.filter((c) => c.programa === programa);
+// Adesão estrutural ao quadro AC/ER/M/PCD — SÓ no PIPA, único programa que a 317 (abr/2025)
+// rege. PROMOB/PROCIN são programas anteriores que a 317 revogou/converteu, então medir
+// "adesão à 317" neles não faz sentido (a norma não os governa). Por ano, mostra o quadro se
+// consolidando. % é sobre EDITAIS analisados (presença do quadro), não sobre vagas — o corpus
+// não guarda nº de vagas por categoria e os editais com reserva são de vaga única.
+export const adesaoPipaPorAno = ANOS.map((ano) => {
+  const sub = CORPUS.filter((c) => c.programa === "PIPA" && c.ano === ano);
   const analisados = sub.filter((c) => c.vagas_por_cota != null).length;
   const res = sub.filter((c) => (c.vagas_por_cota || {}).tem_reserva).length;
-  return { programa, total: sub.length, analisados, comReserva: res,
+  const hetero = sub.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).length;
+  return { ano, analisados, comReserva: res, hetero,
            pct: analisados ? Math.round((res / analisados) * 100) : 0 };
-}).filter((p) => p.analisados > 0).sort((a, b) => b.pct - a.pct);
+}).filter((a) => a.analisados > 0);
 export const comHetero = CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).length;
 export const heteroProgramas = [...new Set(
   CORPUS.filter((c) => (c.vagas_por_cota || {}).heteroidentificacao).map((c) => c.programa)
