@@ -40,6 +40,8 @@ export default function Line({ data, color = C.cerrado, projected = null }) {
       )}
       {data.map((d, i) => (
         <g key={i}>
+          <title>{`${d.label}: ${fmtInt(d.value)}`}</title>
+          <circle className="chDot" cx={x(i)} cy={y(d.value)} r="12" />
           <circle cx={x(i)} cy={y(d.value)} r="3.5" fill={color} />
           <text x={x(i)} y={y(d.value) - 9} textAnchor="middle" fontFamily={MONO} fontSize="10" fill={C.ink}>
             {fmtInt(d.value)}

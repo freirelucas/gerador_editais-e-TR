@@ -37,7 +37,11 @@ export default function StackedBars({ data, xKey, keys, cores, projected = false
               const h = yOf(d[k] || 0);
               const yTop = padT + plotH - acc - h;
               acc += h;
-              return h > 0 ? <rect key={k} x={x(i) - bw / 2} y={yTop} width={bw} height={h} fill={cores[k]} /> : null;
+              return h > 0 ? (
+                <rect key={k} className="chHover" x={x(i) - bw / 2} y={yTop} width={bw} height={h} fill={cores[k]}>
+                  <title>{`${d[xKey]} · ${k}: ${fmtInt(d[k] || 0)}`}</title>
+                </rect>
+              ) : null;
             })}
             {projected &&
               keys.map((k) => {

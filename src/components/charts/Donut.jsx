@@ -16,7 +16,9 @@ export default function Donut({ data }) {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto", maxWidth: 420 }} role="img">
       {data.map((d, i) => (
-        <path key={i} d={arc(d.value / total)} fill={d.color || PALETA[i % PALETA.length]} />
+        <path key={i} className="chHover" d={arc(d.value / total)} fill={d.color || PALETA[i % PALETA.length]}>
+          <title>{`${d.label}: ${fmtInt(d.value)} (${Math.round((100 * d.value) / total)}%)`}</title>
+        </path>
       ))}
       <text x={cx} y={cy - 4} textAnchor="middle" fontFamily={MONO} fontSize="22" fontWeight="600" fill={C.ink}>
         {fmtInt(total)}

@@ -32,6 +32,13 @@ export default function SerieMensal({ data, color = C.cerrado }) {
       ))}
       <polygon points={area} fill={color} opacity="0.12" />
       <polyline points={pts} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" />
+      {/* alvos transparentes p/ ler qualquer mês no hover (tooltip nativo) */}
+      {data.map((d, i) => (
+        <g key={"hit" + i}>
+          <title>{`${d.ym}: ${fmtInt(d.value)}`}</title>
+          <circle className="chDot" cx={x(i)} cy={y(d.value)} r="7" />
+        </g>
+      ))}
       {/* marca o pico para dar referência sem rotular todos os pontos */}
       <circle cx={x(picoI)} cy={y(data[picoI].value)} r="3.5" fill={color} />
       <text x={x(picoI)} y={y(data[picoI].value) - 9} textAnchor="middle" fontFamily={MONO} fontSize="10" fill={C.ink}>
