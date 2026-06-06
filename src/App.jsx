@@ -78,9 +78,9 @@ export default function App() {
         position: "sticky", top: 0, zIndex: 30, background: "rgba(255,255,255,.82)",
         backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", borderBottom: `1px solid ${C.line}`,
       }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", height: 60, display: "flex", alignItems: "center", gap: 20 }}>
+        <div className="topbar" style={{ maxWidth: 1200, margin: "0 auto", padding: "0 28px", height: 60, display: "flex", alignItems: "center", gap: 20 }}>
           <Logo />
-          <nav style={{ marginLeft: "auto", display: "flex", gap: 4 }}>
+          <nav className="topnav" style={{ marginLeft: "auto", display: "flex", gap: 4 }}>
             {TABS.map(([k, l, ic]) => {
               const on = tab === k;
               return (
@@ -92,19 +92,19 @@ export default function App() {
               );
             })}
           </nav>
-          <div style={{
+          <div className="topbadge" style={{
             fontFamily: SANS, fontSize: 11.5, fontWeight: 600, color: C.muted, padding: "5px 11px",
             border: `1px solid ${C.line}`, borderRadius: RADIUS.pill, background: C.card,
           }}>norma 317/2025</div>
         </div>
       </div>
 
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 28px 80px" }}>
+      <div className="pagewrap" style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 28px 80px" }}>
         <header className="fadeUp" key={tab} style={{ marginBottom: 26 }}>
           <div style={{ fontFamily: SANS, fontSize: 11.5, letterSpacing: ".1em", color: C.azul, textTransform: "uppercase", fontWeight: 600 }}>
             {page.eyebrow}
           </div>
-          <h1 style={{ fontFamily: SANS, fontSize: 30, fontWeight: 700, margin: "7px 0 6px", letterSpacing: "-.02em", color: C.ink }}>
+          <h1 className="pageh1" style={{ fontFamily: SANS, fontSize: 30, fontWeight: 700, margin: "7px 0 6px", letterSpacing: "-.02em", color: C.ink }}>
             {page.h1}
           </h1>
           <p style={{ fontFamily: SANS, color: C.muted, margin: 0, fontSize: 15, lineHeight: 1.5, maxWidth: 760 }}>{page.sub}</p>

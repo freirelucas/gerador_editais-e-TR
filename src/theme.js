@@ -75,4 +75,15 @@ button:active{transform:translateY(.5px);}
 .fadeUp>*:nth-child(4){animation-delay:.09s;}
 .pop{animation:pop .2s ease;}
 @media (max-width:880px){.twocol{grid-template-columns:1fr!important;}}
+/* Desktop-first: o app é desenhado para tela grande; abaixo de 720px só adaptamos o cabeçalho
+   (que não cabe) e folgas — sem mudar o desktop. A nav vira uma faixa própria, todas as abas
+   visíveis; o selo da norma e o padding encolhem; o H1 diminui. */
+@media (max-width:720px){
+  .topbar{height:auto!important;flex-wrap:wrap!important;gap:10px!important;padding:9px 16px!important;}
+  .topnav{order:3;width:100%;margin-left:0!important;gap:5px!important;}
+  .topnav button{flex:1 1 0;min-width:0;justify-content:center;gap:5px!important;padding:8px 4px!important;font-size:11.5px!important;white-space:nowrap;}
+  .topbadge{display:none!important;}
+  .pagewrap{padding:22px 16px 64px!important;}
+  .pageh1{font-size:23px!important;}
+}
 `;
