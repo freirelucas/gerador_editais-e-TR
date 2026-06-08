@@ -2,6 +2,7 @@ import { useState } from "react";
 import { C, FONTS, GLOBAL_CSS, SANS, RADIUS, SHADOW } from "./theme.js";
 import { NORMA } from "./data/norma.js";
 import { CORPUS } from "./data/corpus.js";
+import { readUrl, writeView } from "./lib/urlState.js";
 import BuilderView from "./components/BuilderView.jsx";
 import CorpusView from "./components/CorpusView.jsx";
 import AnalyticsView from "./components/AnalyticsView.jsx";
@@ -67,7 +68,9 @@ function Logo() {
 }
 
 export default function App() {
-  const [tab, setTab] = useState("builder");
+  // aba inicial vinda do deep-link (?view=…); navegação mantém a URL em sincronia
+  const [tab, setTab] = useState(() => readUrl().view || "builder");
+  const irPara = (k) => { setTab(k); writeView(k); };
   const page = PAGE[tab];
   return (
     <div style={{ background: C.paper, minHeight: "100vh", color: C.ink, fontFamily: SANS }}>
@@ -84,7 +87,7 @@ export default function App() {
             {TABS.map(([k, l, ic]) => {
               const on = tab === k;
               return (
-                <button key={k} onClick={() => setTab(k)} className={on ? "" : "lk"} style={{
+                <button key={k} onClick={() => irPara(k)} className={on ? "" : "lk"} style={{
                   fontFamily: SANS, fontSize: 13.5, fontWeight: on ? 600 : 500, display: "flex", alignItems: "center", gap: 7,
                   padding: "8px 13px", borderRadius: RADIUS.sm, cursor: "pointer", border: "none",
                   background: on ? C.accentSoft : "transparent", color: on ? C.azulEscuro : C.muted,

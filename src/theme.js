@@ -80,6 +80,13 @@ button:active{transform:translateY(.5px);}
 .chHover:hover{opacity:.78;cursor:default}
 .chDot{fill:transparent;cursor:default;transition:fill .12s ease}
 .chDot:hover{fill:rgba(91,91,214,.16)}
+/* Barra de ferramentas de exportação por figura + chip de "filtrado" */
+.figtools{display:flex;gap:6px;flex-shrink:0}
+.figtools button{font-family:inherit;font-size:11px;font-weight:600;color:#6e737b;background:#fff;border:1px solid #e8eaef;border-radius:6px;padding:2px 9px;cursor:pointer;transition:color .12s,border-color .12s}
+.figtools button:hover{color:#5b5bd6;border-color:#9b9bec}
+.fchip{display:inline-block;font-size:10px;font-weight:700;color:#5b5bd6;background:#eeeefc;border-radius:999px;padding:2px 8px;margin-left:8px;letter-spacing:.02em;vertical-align:middle;text-transform:none}
+.flash{animation:flash 1.2s ease}
+@keyframes flash{0%{background:#dcdcfa}100%{background:transparent}}
 @media (max-width:880px){.twocol{grid-template-columns:1fr!important;}}
 /* Desktop-first: o app é desenhado para tela grande; abaixo de 720px só adaptamos o cabeçalho
    (que não cabe) e folgas — sem mudar o desktop. A nav vira uma faixa própria, todas as abas

@@ -70,10 +70,11 @@ export const heatmapMesAno = (() => {
 
 // --- série temporal mensal: aberturas por mês (mês de início das inscrições) ---
 // Usa o que já temos (datas em nível de mês); sem rede. Captura tendência + sazonalidade.
-export const serieMensal = (() => {
+// Forma reutilizável (subconjunto) p/ os gráficos que respondem ao filtro global.
+export const serieMensalDe = (arr = CORPUS) => {
   const cont = new Map();
   let minYM = null, maxYM = null;
-  for (const c of CORPUS) {
+  for (const c of arr) {
     if (!c.prazo_ini_iso) continue;
     const ym = c.prazo_ini_iso.slice(0, 7);
     cont.set(ym, (cont.get(ym) || 0) + 1);
@@ -90,8 +91,23 @@ export const serieMensal = (() => {
     if (++m > 12) { m = 1; y++; }
   }
   return out;
-})();
+};
+export const serieMensal = serieMensalDe();
 export const serieMensalCobertura = CORPUS.filter((c) => c.prazo_ini_iso).length;
+
+// janela de inscrição — resumo (histograma + mediana + n) reutilizável por subconjunto.
+export const janelaDe = (arr = CORPUS) => {
+  const js = arr.map((c) => c.janela_dias).filter((d) => typeof d === "number" && d >= 0);
+  const bins = new Map();
+  for (const d of js) {
+    const b = Math.min(Math.floor(d / 5) * 5, 40);
+    bins.set(b, (bins.get(b) || 0) + 1);
+  }
+  const hist = [...bins.entries()].sort((a, b) => a[0] - b[0])
+    .map(([b, n]) => ({ faixa: b === 40 ? "40+" : `${b}–${b + 4}`, total: n }));
+  const mediana = js.length ? [...js].sort((a, b) => a - b)[Math.floor(js.length / 2)] : null;
+  return { hist, mediana, n: js.length };
+};
 
 // --- temas dos títulos de projeto ---
 const STOP = new Set(
@@ -111,13 +127,22 @@ export const topTemas = (() => {
 // --- qualidade: completude e flags (honestidade primeiro) ---
 const N = CORPUS.length;
 const frac = (pred) => Math.round((100 * CORPUS.filter(pred).length) / N);
+// Honestidade: "modalidade" tem DUAS leituras que não podem ser confundidas — o texto livre
+// (extraído, presente em ~85%) e a modalidade CANÔNICA (vocabulário oficial da 317, em
+// data/modalidades.js), que por construção só existe no PIPA. Misturá-las gera legenda mentirosa.
 export const completude = [
-  { campo: "url / título / ano", pct: 100 },
-  { campo: "programa", pct: frac((c) => c.programa) },
-  { campo: "datas (prazo)", pct: frac((c) => c.prazo_ini_iso && c.prazo_fim_iso) },
-  { campo: "modalidade", pct: frac((c) => c.modalidade) },
-  { campo: "qtd. de bolsas", pct: frac((c) => c.qtd_bolsas != null) },
+  { key: "id", campo: "url / título / ano", pct: 100 },
+  { key: "programa", campo: "programa", pct: frac((c) => c.programa) },
+  { key: "datas", campo: "datas (prazo)", pct: frac((c) => c.prazo_ini_iso && c.prazo_fim_iso) },
+  { key: "mod_txt", campo: "modalidade (texto livre)", pct: frac((c) => c.modalidade) },
+  { key: "mod_can", campo: "modalidade canônica (só PIPA)", pct: frac((c) => c.modalidade_canonica) },
+  { key: "bolsas", campo: "nº de bolsas", pct: frac((c) => c.qtd_bolsas != null) },
 ];
+export const modalidadeCanon = {
+  total: CORPUS.filter((c) => c.modalidade_canonica).length,
+  pipa: CORPUS.filter((c) => c.programa === "PIPA" && c.modalidade_canonica).length,
+  pipaTotal: CORPUS.filter((c) => c.programa === "PIPA").length,
+};
 export const flagsCount = (() => {
   const m = new Map();
   for (const c of CORPUS) for (const f of c.flags || []) m.set(f, (m.get(f) || 0) + 1);
