@@ -242,6 +242,8 @@ export default function AnalyticsView() {
   // valores dos destaques
   const promob = S.porPrograma.find((p) => p.programa === "PROMOB")?.total || 0;
   const promobPct = Math.round((promob / S.totalChamadas) * 100);
+  const promob23 = S.programaPorAno.find((l) => l.ano === "2023")?.PROMOB ?? 0;
+  const promob24 = S.programaPorAno.find((l) => l.ano === "2024")?.PROMOB ?? 0;
   const r24 = S.cotaPorAnoPct.find((a) => a.ano === "2024")?.pct ?? 0;
   const r26 = S.cotaPorAnoPct.find((a) => a.ano === "2026")?.pct ?? 0;
   const pctBR = String(S.cotaPctTotal).replace(".", ",");
@@ -273,7 +275,7 @@ export default function AnalyticsView() {
       <Secao titulo="A virada PROMOB → PIPA">
         <Figura titulo="Programa × ano — a virada estrutural" wide
           csv={() => [["ano", "PROMOB", "PIPA", "PROCIN"], ...S.programaPorAno.map((d) => [d.ano, d.PROMOB, d.PIPA, d.PROCIN])]}
-          insight={"PROMOB domina 2023–2024 (90, 73) e some em 2026; PIPA cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA — por isso o gerador é PIPA-only. A fatia hachurada de 2026 é o projetado." + projNota}>
+          insight={`PROMOB domina 2023–2024 (${promob23}, ${promob24}) e some em 2026; PIPA cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA — por isso o gerador é PIPA-only. A fatia hachurada de 2026 é o projetado.${projNota}`}>
           <StackedBars data={S.programaPorAnoProj} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} projected />
         </Figura>
         <Figura titulo="Chamadas por ano — real e projetado"
@@ -283,7 +285,7 @@ export default function AnalyticsView() {
             projected={S.porAnoProjetado.map((a) => a.projetado)} />
         </Figura>
         <Figura titulo="Participação por programa" csv={csvLV(dadosPrograma, "programa", "chamadas")}
-          insight="PROMOB responde por ~76% de todo o corpus — o acervo histórico é, em essência, PROMOB.">
+          insight={`PROMOB responde por ~${promobPct}% de todo o corpus — o acervo histórico é, em essência, PROMOB.`}>
           <Donut data={dadosPrograma} />
         </Figura>
       </Secao>
