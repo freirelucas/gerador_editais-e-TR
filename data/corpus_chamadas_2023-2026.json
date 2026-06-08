@@ -361,42 +361,64 @@
     "janela_dias": 12,
     "modalidade_canonica": "Doutor Bolsista",
     "flags": [],
-    "categoria_funcao": [],
-    "categoria_tema": [],
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Internacional e comércio"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “BRICS 2025 – O IPEA NA PRESIDÊNCIA ROTATIVA BRASILEIRA”",
     "projeto_vinculado": "BRICS 2025 – O IPEA NA PRESIDÊNCIA ROTATIVA BRASILEIRA",
     "modalidades_extraidas": [
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      770.93,
-      2028.0,
-      3596.4,
-      34280.0,
-      410913.0,
-      2566365.84,
-      31769202.23
+      6760.0
     ],
     "formacao": [
       "Doutorado",
+      "Mestrado",
       "Graduação",
       "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": null,
-    "diretoria_nome": null,
-    "enrich_flags": [
-      "objeto_ausente",
-      "diretoria_ausente"
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Doutor Bolsista (Vaga imediata e reserva) Requisitos: 5.1.1. Possuir título de Doutor na área de Relações Internacionais, Ciência Política ou áreas de concentração subordinadas.",
+      "Ter experiência comprovada (vínculos profissionais e/ou publicações realizadas) com métodos quantitativos aplicados à pesquisa em Relações Internacionais - (Informar no currículo);",
+      "Ter domínio de softwares estatísticos, desde os mais simples (Excel, Google Planilhas) aos mais avançados (R, SPSS, Power BI), comprovado por meio de certificados e/ou publicações realizadas - (Informar no currículo);",
+      "Ter experiência comprovada (vínculos profissionais e/ou publicações realizadas) com estudos sobre organizações internacionais, governança global, crise da ordem liberal internacional, parcerias estratégicas bilaterais e/ou coalizões e alianças internacionais - (Informar no currículo);",
+      "Ter experiência comprovada (vínculos profissionais e/ou publicações realizadas) com estudos sobre análise de política externa e/ou política externa brasileira - (Informar no currículo);",
+      "Apresentar proposta de projeto, no máximo de 08 páginas, relacionada ao tema da pesquisa. (Anexar no momento da inscrição). A não apresentação da proposta de projeto sujeitará o candidato à sua exclusão da Chamada, mesmo que este possua os demais requisitos e experiência na área requerida. A propost"
     ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O objetivo geral do projeto se divide em duas partes com naturezas distintas, porém complementares. De um lado, ele visa apoiar a presidência exercida em 2025 pelo Ipea nos mecanismos de diá"
+    ],
+    "diretoria": "DINTE",
+    "diretoria_nome": "Diretoria de Estudos e Relações Econômicas e Políticas Internacionais",
+    "enrich_flags": [],
     "papel": "Doutor Bolsista",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 3,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -423,10 +445,67 @@
     "janela_dias": 9,
     "modalidade_canonica": null,
     "flags": [],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Setorial, inovação e infraestrutura"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 0,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 2,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Centro de Pesquisa em Ciência, Tecnologia e Sociedade”",
+    "projeto_vinculado": "Centro de Pesquisa em Ciência, Tecnologia e Sociedade",
+    "modalidades_extraidas": [
+      "Assistente de Ciência de Dados Pleno"
+    ],
+    "papel": "Assistente de Ciência de Dados Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Ciência de Dados Pleno (para vaga imediata e cadastro reserva ER) Requisitos:",
+      "Possuir graduação completa em estatística ou ciências atuariais;",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Ter experiência comprovada em projetos de pesquisa com uso de R, Python. Comprovar apresentando artigos e/ou scripts com explicações detalhadas em PDF, no momento da inscrição;",
+      "Conhecimento avançado em Língua Inglesa (Informar no currículo);",
+      "Possuir interesse no tema transformação digital ou plataformas digitais é um diferencial;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: Esta chamada destina-se a execução de projeto de pesquisa que tem o objetivo estudar os impactos que a ciência e a tecnologia têm na economia, na sociedade e na qualidade de vida das pessoas"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16334-chamada-publica-014-2026",
@@ -450,12 +529,71 @@
     "prazo_ini_iso": "2026-04-13",
     "prazo_fim_iso": "2026-04-23",
     "janela_dias": 10,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Júnior",
     "flags": [],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Centro de Pesquisa em Ciência, Tecnologia e Sociedade”",
+    "projeto_vinculado": "Centro de Pesquisa em Ciência, Tecnologia e Sociedade",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Júnior"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Júnior",
+    "valores_brl": [
+      2785.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa e Ciência de Dados Júnior (Vaga imediata e reserva) Requisitos: 5.1.1. Possuir graduação completa no curso de ciências econômicas;",
+      "Ter experiência em projetos de pesquisa com uso de R e/ou Python comprovar apresentando artigos e/ou scripts com explicações detalhadas em PDF, no momento da inscrição;",
+      "Ter experiência em projetos de pesquisa com métodos estatísticos aplicados à economia e microdados, por exemplo, com uso da Relação Anual de Informações Sociais (RAIS) e pesquisas estruturais do IBGE (PIA, PINTEC etc), comprovada no currículo;",
+      "Conhecimento avançado em Língua Inglesa (informar no currículo);",
+      "Ter disponibilidade para desenvolver as atividades de pesquisa nas instalações do IPEA no Rio de Janeiro;",
+      "Apresentar histórico escolar da graduação no momento da inscrição. Vaga: 01 (uma) - Imediata Vaga: 01 (uma) – Reserva"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: Esta chamada destina-se a execução de projeto de pesquisa que tem como objetivo estudar os impactos que a ciência e a tecnologia têm na economia, na sociedade e na qualidade de vida das pess",
+      "Quais têm sido os impactos do avanço da C&T na sociedade, em especial nos temas priorizados pelo CTS?",
+      "Como acelerar o processo de produção e difusão de novas tecnologias em saúde, educação, sustentabilidade e plataformas digitais, e quais são os obstáculos a serem superados para que elas possam ser mais amplamente aproveitadas pela sociedade?",
+      "Como as políticas públicas podem estimular (ou têm estimulado) a produção científica e o desenvolvimento de novas tecnologias que contribuam para a superação de problemas críticos dos países?",
+      "Em que medida o progresso científico e tecnológico tem contribuído ou poderá contribuir no futuro para mitigar ou para aprofundar as desigualdades socioeconômicas e como as políticas públicas podem atuar para que os frutos do progresso técnico sejam mais amplamente distribuídos na sociedade? Mais in"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16317-chamada-publica-13-2026",
@@ -481,42 +619,62 @@
     "janela_dias": 13,
     "modalidade_canonica": "Doutor Bolsista",
     "flags": [],
-    "categoria_funcao": [],
-    "categoria_tema": [],
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
+    "categoria_tema": [
+      "Internacional e comércio"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “BRICS 2025 – O IPEA NA PRESIDÊNCIA ROTATIVA BRASILEIRA”",
     "projeto_vinculado": "BRICS 2025 – O IPEA NA PRESIDÊNCIA ROTATIVA BRASILEIRA",
     "modalidades_extraidas": [
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      770.93,
-      2028.0,
-      3596.4,
-      34280.0,
-      410913.0,
-      2566365.84,
-      31769202.23
+      6760.0
     ],
     "formacao": [
       "Doutorado",
+      "Mestrado",
       "Graduação",
       "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": null,
-    "diretoria_nome": null,
-    "enrich_flags": [
-      "objeto_ausente",
-      "diretoria_ausente"
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Doutor Bolsista (para vaga imediata e cadastro reserva M) Requisitos: 5.1.1. Possuir título de Doutor na área de Economia.",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.",
+      "Possuir conhecimentos na área de comércio internacional;",
+      "Ter experiência comprovada (vínculos profissionais e/ou publicações realizadas) com aplicação de métodos quantitativos em pesquisa na área de comércio internacional;",
+      "Ter domínio de softwares estatísticos;",
+      "Ter experiência comprovada na manipulação de bases de dados de comércio internacional, tanto as bases nacionais quanto internacionais;"
     ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O objetivo geral do projeto se divide em duas partes com naturezas distintas, porém complementares. De um lado, ele visa apoiar a presidência exercida em 2025 pelo Ipea nos mecanismos de diá"
+    ],
+    "diretoria": "DINTE",
+    "diretoria_nome": "Diretoria de Estudos e Relações Econômicas e Políticas Internacionais",
+    "enrich_flags": [],
     "papel": "Doutor Bolsista",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 9,
+        "ampla_concorrencia": 6,
+        "reservadas": 3,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 3,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -630,6 +788,8 @@
     "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [],
     "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
       "Apoio à pesquisa"
     ],
     "categoria_tema": [
@@ -637,35 +797,54 @@
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Estudos e pesquisas sobre financiamento, ações e programas da educação básica”",
     "projeto_vinculado": "Estudos e pesquisas sobre financiamento, ações e programas da educação básica",
     "modalidades_extraidas": [
       "Assistente de Pesquisa Pleno",
+      "Assistente de Pesquisa e Ciência de Dados Sênior",
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      19500.0,
-      22177.2,
-      38289.84,
-      253255.08,
-      372124.99,
-      5936593.43
+      4030.0,
+      6240.0,
+      6760.0
     ],
     "formacao": [
       "Doutorado"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DIMAC",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Macroeconômicas",
-    "enrich_flags": [
-      "objeto_ausente"
+    "requisitos": [
+      "Considera-se pessoa negra a pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, nos termos da Lei nº 12.288, de 20 de julho de 2010 e que possua traços fenotípicos caracterizadores, a serem verificados ",
+      "Não será admitida para o procedimento de heteroidentificação citado no item 6.1, em nenhuma hipótese, prova baseada em ancestralidade para a aferição da condição declarada pela pessoa candidata.",
+      "Será composta uma comissão para a realização do procedimento de heteroidentificação.",
+      "As informações prestadas no momento da inscrição são de inteira responsabilidade da pessoa candidata, respondendo, o mesmo, nos termos da Lei, por qualquer declaração falsa.",
+      "Para o procedimento de heteroidentificação, as pessoas candidatas que se inscreveram para vagas destinadas a pessoas negras deverão se apresentar, à critério do IPEA, pessoalmente ou virtualmente perante a Comissão de Heteroidentificação, sendo especificamente convocados para esse fim após a fase de"
     ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A Diretoria de Estudos e Políticas Sociais (Disoc), no âmbito de suas atribuições, desenvolve estudos e pesquisas sobre políticas de educação no Brasil. Atualmente, o Ipea mantém parceria co"
+    ],
+    "diretoria": "DISOC",
+    "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
+    "enrich_flags": [],
     "papel": "Assistente de Pesquisa Pleno",
     "vagas_por_cota": {
       "tem_reserva": true,
-      "categorias": [],
-      "heteroidentificacao": true
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 18,
+        "ampla_concorrencia": 11,
+        "reservadas": 7,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 3,
+          "PCD": 0
+        },
+        "selecoes": 5
+      }
     }
   },
   {
@@ -774,16 +953,72 @@
     "prazo_ini_iso": "2026-03-23",
     "prazo_fim_iso": "2026-04-15",
     "janela_dias": 23,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [
-      "Regional, urbano e ambiental"
+    "categoria_funcao": [
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 0,
+        "reservadas": 4,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Interfaces entre biodiversidade e território nos biomas brasileiros”",
+    "projeto_vinculado": "Interfaces entre biodiversidade e território nos biomas brasileiros",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa Pleno (para vaga imediata e cadastro reserva ER) Requisitos:",
+      "Possuir título de Mestre em uma das seguintes áreas: Análise e Modelagem de Sistemas Ambientais, Biologia, Cartografia, Ciências Ambientais, Desenvolvimento Sustentável, Engenharia Agronômica, Engenharia Ambiental, Engenharia Florestal, Geociências Aplicadas e Geodinâmicas, Geografia, Geologia, Geop",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores.;",
+      "Possuir experiência em trabalhos de mapeamento utilizando imagens de satélite, análise e espacialização de dados utilizando sistemas de informação e softwares geoespaciais;",
+      "Demonstrar domínio dos programas de Sistema de Informação Geográfica ArcGis e Qgis; conhecer programação e/ou plataforma Google Earth Engine;",
+      "Possuir trabalhos publicados e/ou ter participado de equipes de pesquisa nos temas de interesse;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O bioma é uma unidade ecológica de larga escala, ou seja, uma macrorregião com fauna, flora e clima bem característicos. A perspectiva de sistemas socioecológicos amplia ainda mais essa defi"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16298-chamada-publica-008-2026",
@@ -807,14 +1042,71 @@
     "prazo_ini_iso": "2026-03-19",
     "prazo_fim_iso": "2026-03-31",
     "janela_dias": 12,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 0,
+        "reservadas": 4,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Políticas Ambientais no Brasil”",
+    "projeto_vinculado": "Políticas Ambientais no Brasil",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa Pleno (para vaga imediata e cadastro reserva ER) Requisitos:",
+      "Possuir graduação e mestrado em Políticas Públicas, Economia, Administração, Gestão Ambiental, Meio Ambiente, Engenharias, Geologia ou Geografia;",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Ter experiência em pesquisa na área de análise/avaliação de políticas/programas governamentais ambientais ou ter estudos publicados na área de meio ambiente ou políticas ambientais e seus subtemas;",
+      "Possuir experiência no manuseio de bases de dados, com conhecimento avançado no em Excel, programação avançada em R, Stata ou similar;",
+      "Ter domínio da língua inglesa ou espanhola;(informar no currículo);"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: Entre os desafios atuais do Sistema Nacional de Meio Ambiente, a ser enfrentado na pesquisa, é a busca pela atuação coordenada, descentralizada, compartilhada e eficiente dos entes integrant"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16296-chamada-publica-007-2026",
@@ -837,49 +1129,72 @@
     "prazo_ini_iso": "2026-03-17",
     "prazo_fim_iso": "2026-03-26",
     "janela_dias": 9,
-    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "titulo_ano_divergente",
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
       "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Regional, urbano e ambiental"
+      "Social, trabalho e renda",
+      "Regional, urbano e ambiental",
+      "Setorial, inovação e infraestrutura"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Plano Nacional de Habitação 2024–2040 – Planhab ”",
     "projeto_vinculado": "Plano Nacional de Habitação 2024–2040 – Planhab",
     "modalidades_extraidas": [
-      "Assistente de Pesquisa e Ciência de Dados Iniciante",
-      "Assistente de Pesquisa Pleno",
-      "Doutor Bolsista"
+      "Assistente de Pesquisa Pleno"
     ],
     "valores_brl": [
-      2679.0,
-      20621.87,
-      148800.0,
-      2467920.0
+      4030.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa Pleno (para vaga imediata e cadastro reserva",
+      "AC) Requisitos: 5.1.1. Possuir título de Mestre na área de Economia;",
+      "Experiência em indústria da construção, cadeia produtiva, conjuntura da construção civil;",
+      "Conhecimento em projeções, cenários e políticas habitacionais;",
+      "Apresentar Proposta de execução do projeto, no máximo de 08 páginas, relacionada ao tema da pesquisa. (Anexar no momento da inscrição). A não apresentação do projeto sujeitará o candidato à sua exclusão da Chamada, mesmo que este possua experiência na área requerida. Vaga: 01 (uma) - Imediata Vaga: ",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores."
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O projeto de pesquisa envolve a elaboração de estudos e análises para subsidiar o Plano Nacional de Habitação (Planhab) 2024–2040, conforme previsto na Lei nº 11.124/2005. Em parceria com a "
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
-    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "papel": "Assistente de Pesquisa Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 8,
+        "ampla_concorrencia": 4,
+        "reservadas": 4,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -903,48 +1218,68 @@
     "prazo_ini_iso": "2026-03-12",
     "prazo_fim_iso": "2026-03-24",
     "janela_dias": 12,
-    "modalidade_canonica": "Assistente de Pesquisa Pleno",
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "titulo_ano_divergente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Apoio à pesquisa"
-    ],
+    "categoria_funcao": [],
     "categoria_tema": [
+      "Macroeconomia e finanças",
       "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Modelo CGE Ambiental Recursivo e Dinâmico aplicado ao Brasil: Simulações de Políticas Climáticas e Mercados de Carbono”",
     "projeto_vinculado": "Modelo CGE Ambiental Recursivo e Dinâmico aplicado ao Brasil: Simulações de Políticas Climáticas e Mercados de Carbono",
     "modalidades_extraidas": [
-      "Assistente de Pesquisa Pleno",
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      19500.0,
-      22177.2,
-      38289.84,
-      253255.08,
-      372124.99,
-      5936593.43
+      6760.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DIMAC",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Macroeconômicas",
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Doutor Bolsista (para vaga imediata e cadastro reserva M) Requisitos: 5.1.1. Possuir título de Doutor em Economia ou áreas afins, desde que com tese/dissertação aplicada à CGE/macro dinâmica/economia ambiental",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.",
+      "Sólidos conhecimentos em Teoria do Equilíbrio Geral, Macroeconomia Micro Fundamentada, Macroeconomia Dinâmica, Modelos com fricções de comércio e mobilidade de fatores e Economia Ambiental e instrumentos de precificação de carbono;",
+      "Experiência quantitativa consistente, incluindo: Otimização com restrições, Métodos numéricos para solução de sistemas não lineares, Álgebra linear aplicada, Métodos iterativos, Análise de estabilidade e convergência;",
+      "Experiência comprovada na adaptação ou extensão estrutural de modelos CGE dinâmicos;",
+      "Proficiência em linguagem de programação Python, incluindo experiência com bibliotecas como NumPy, SciPy e Pandas, bem como uso de Git/GitHub;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O Brasil enfrenta o desafio de conciliar crescimento econômico com compromissos climáticos cada vez mais ambiciosos, num contexto em que a precificação de carbono ganha centralidade na agend"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente"
+      "diretoria_ausente"
     ],
-    "papel": "Assistente de Pesquisa Pleno",
+    "papel": "Doutor Bolsista",
     "vagas_por_cota": {
       "tem_reserva": true,
-      "categorias": [],
-      "heteroidentificacao": true
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 1,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 2,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1033,13 +1368,16 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
+      "Ciência de Dados – Engenharia",
       "Ciência de Dados – Analytics/ML",
       "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Social, trabalho e renda"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Estado das regiões – Dinâmicas Regional no Brasil”",
     "projeto_vinculado": "Estado das regiões – Dinâmicas Regional no Brasil",
     "modalidades_extraidas": [
       "Assistente de Pesquisa e Ciência de Dados Iniciante",
@@ -1047,27 +1385,52 @@
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      2679.0,
-      20621.87,
-      148800.0,
-      2467920.0
+      1582.0,
+      4030.0,
+      6760.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante (para vaga imediata e cadastro reserva ER) Requisitos: 5.1.1. Estar regularmente matriculado no curso de Graduação em Economia, Políticas Públicas, Estatísti",
+      "Gerenciamento de Banco de dados;",
+      "Conhecimentos específicos do campo de monitoramento de atividades e dinâmica regional, economia, economia do setor público; dados orçamentos;",
+      "Experiência em indicadores fiscais, mercado de trabalho e dinâmica regional;",
+      "Ter disponibilidade para desenvolver as atividades de pesquisa no IPEA- Brasília;",
+      "Apresentar ensaio analisando indicadores recentes fiscais em especial o investimento federal regionalizado, mercado de trabalho regional ou de conjuntura econômica regionalizada (ver Anexo III) - (Anexar no momento da inscrição). A não apresentação do ensaio sujeitará o candidato à sua exclusão da C"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O projeto desenvolve um diagnóstico integrado da dinâmica regional brasileira, reunindo dados econômicos, sociais, produtivos e ambientais em múltiplas escalas. A iniciativa consolida bases "
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
     "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 12,
+        "ampla_concorrencia": 0,
+        "reservadas": 12,
+        "por_categoria": {
+          "Étnico-racial": 12,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 3
+      }
     }
   },
   {
@@ -1246,39 +1609,63 @@
     "categoria_funcao": [
       "Ciência de Dados – Analytics/ML"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Social, trabalho e renda"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de pessoas interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Conexões entre as Organizações da Sociedade Civil e o Estado”",
     "projeto_vinculado": "Conexões entre as Organizações da Sociedade Civil e o Estado",
     "modalidades_extraidas": [
-      "Assistente em Ciência de Dados Pleno"
+      "Assistente em Ciência de Dados Pleno",
+      "Doutor Bolsista"
     ],
     "valores_brl": [
-      3223.85,
-      3362.57,
-      14160.0,
-      84000.0,
-      121052.52,
-      7834897.73
+      4030.0,
+      6760.0
     ],
     "formacao": [
       "Doutorado",
-      "Graduação"
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 – Assistente em Ciência de Dados Pleno Requisitos 5.1.1. Possuir graduação em ciência da computação ou áreas afins Obrigatórios: ou ciência política e áreas afins.",
+      "Possuir conhecimento avançado de programação em R ou Python;",
+      "Ter experiência com manipulação e integração de grandes bases de dados;",
+      "Domínio ou experiência demonstrada em metodologia de análise de redes sociais. Vaga: 01 (uma) Requisitos para a Seleção 2 – Doutor Bolsista Requisitos 5.2.1. Possuir doutorado em uma das seguintes áreas: ciência Obrigatórios: política, sociologia, economia ou administração.",
+      "Ter experiência em pesquisa no tema desta chamada, a saber, Organizações da Sociedade Civil;",
+      "Domínio da literatura e metodologia de análise de redes sociais;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do O projeto inspira-se na literatura sobre movimentos sociais, Trabalho: especialmente na abordagem relacional proposta por Diani (1992; 2003), que define movimentos como redes de interações entre uma p"
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
     "papel": "Assistente em Ciência de Dados Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 8,
+        "ampla_concorrencia": 5,
+        "reservadas": 3,
+        "por_categoria": {
+          "Étnico-racial": 3,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -1384,7 +1771,7 @@
     "prazo_fim": "23-01-26",
     "programa": "PIPA",
     "projeto": "Indicador/relatório de assistência setorial (subsídios e proteção tarifária)",
-    "modalidade": null,
+    "modalidade": "Doutor Bolsista",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/chamadas_publicas/2025/251230_chamada_publica_n_63.pdf",
@@ -1396,15 +1783,68 @@
     "prazo_ini_iso": "2025-12-30",
     "prazo_fim_iso": "2026-01-23",
     "janela_dias": 24,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
     "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_tema": [
+      "Internacional e comércio"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Indicador/relatório de assistência setorial (subsídios e proteção tarifária)”",
+    "projeto_vinculado": "Indicador/relatório de assistência setorial (subsídios e proteção tarifária)",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Doutor Bolsista Requisitos: 5.1.1. Possuir título de Doutor na área de Economia.",
+      "Experiência em pesquisa em temas de Economia Internacional (comércio internacional, política comercial etc.) - (informar no currículo);",
+      "Experiência com manipulação de bases de dados;",
+      "Conhecimento em Língua Inglesa (informar no currículo);",
+      "Experiência de pesquisa aplicada com uso de matrizes insumo-produto e modelos de equilíbrio geral computável; (informar no currículo);",
+      "Apresentar no momento da inscrição um projeto de até 10 páginas contendo objetivo, justificativa, metodologia e bibliografia, demonstrando domínio conceitual e clareza na proposta. A pessoa candidata que não anexar o projeto no momento da inscrição será excluída da Chamada, mesmo que possua experiên"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O objetivo do projeto é mensurar e analisar o apoio total do Governo Federal a setores econômicos no Brasil por meio de subsídios diretos e indiretos e de proteção tarifária. O trabalho emba"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16202-chamada-publica-062-2025",
@@ -1519,14 +1959,70 @@
     "prazo_ini_iso": "2025-11-24",
     "prazo_fim_iso": "2025-12-04",
     "janela_dias": 10,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 2,
+        "reservadas": 3,
+        "por_categoria": {
+          "Étnico-racial": 3,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de pessoas interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Avaliação institucional”",
+    "projeto_vinculado": "Avaliação institucional",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Assistente de Pesquisa Pleno (para vaga imediata e cadastro reserva ER) Requisitos: 5.1.1. Possuir título de Mestrado em uma das seguintes áreas: Administração ou Psicologia;",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Ter formação acadêmica e conhecimentos teóricos específicos em Psicologia Organizacional; Gestão de Recursos Humanos ou áreas afins;",
+      "Experiência em pesquisa sobre programas de bolsas de pesquisa e Qualidade de Vida ou sobre processos intersubjetivos vinculados ao trabalho;",
+      "Familiaridade com o tema da pesquisa;",
+      "Experiência em projetos de pesquisa participativa (Pesquisa-Ação, Psicodinâmica do Trabalho, Psicossociologia);"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O Instituto de Pesquisa Econômica Aplicada (IPEA), é uma fundação pública federal veiculada ao Ministério do Planejamento e Orçamento (MPO), cuja atuação é central no desenvolvimento de polí"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16169-chamada-publica-060-2025",
@@ -1551,17 +2047,71 @@
     "prazo_ini_iso": "2025-11-24",
     "prazo_fim_iso": "2025-12-04",
     "janela_dias": 10,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [
       "Social, trabalho e renda",
+      "Estado, instituições e democracia",
       "Internacional e comércio"
     ],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 6,
+        "ampla_concorrencia": 0,
+        "reservadas": 6,
+        "por_categoria": {
+          "Étnico-racial": 3,
+          "Mulheres": 3,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de pessoas interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Integração Regional: O Brasil e a América do Sul”",
+    "projeto_vinculado": "Integração Regional: O Brasil e a América do Sul",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 – Assistente de Pesquisa Pleno Requisitos 5.1.1. Possuir título de Mestre em qualquer área do conhecimento e Obrigatórios: estudos formais (graduação, especialização ou mestrado) na área de Economia ou Relaçõe",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.;",
+      "Experiência de pesquisa em temas de Integração Regional, especialmente integração da América do Sul e governança regional, com ao menos três publicações - (informar no currículo);",
+      "Experiência acadêmica e profissional no Oeste do Brasil e/ou Amazônia, especialmente em regiões de fronteira - (informar no currículo);",
+      "Experiência de ao menos um ano em corpo editorial de revista acadêmica e na gestão de publicações por meio do sistema OJS (Open Journal Systems) - (informar no currículo);",
+      "Conhecimento em Língua Espanhola e Inglesa - (informar no currículo) - (informar no currículo);"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do O projeto busca subsidiar as discussões visando a agenda Trabalho: do Brasil para a América do Sul, por meio da análise das políticas nas seguintes áreas prioritárias: ➢ Fortalecimento da governança r"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16159-chamada-publica-059-2025",
@@ -1585,14 +2135,68 @@
     "prazo_ini_iso": "2025-11-19",
     "prazo_fim_iso": "2025-12-02",
     "janela_dias": 13,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Ciência de Dados – Engenharia",
+      "Métodos quantitativos"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 2,
+        "reservadas": 3,
+        "por_categoria": {
+          "Étnico-racial": 3,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Agricultura Familiar e Políticas Públicas de Desenvolvimento Rural”",
+    "projeto_vinculado": "Agricultura Familiar e Políticas Públicas de Desenvolvimento Rural",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para Seleção 1 - Doutor Bolsista (para vaga imediata e cadastro reserva ER) Requisitos: 5.1.1. Possuir título de Doutor na área de Economia, Econometria, Estatística, Políticas Públicas ou Ciência Política.",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores.",
+      "Possuir conhecimento e experiência em aplicação de métodos e modelos de econometria causal para a avaliação de impacto de políticas públicas, comprovada por meio de pesquisa publicada em que utilizou a metodologia indicada, devendo constar no currículo do candidato as referências dos trabalhos publi",
+      "Possuir conhecimento e experiência em estudos sobre agricultura familiar e/ ou políticas públicas de desenvolvimento rural, comprovada por meio de pesquisa publicada na área, devendo constar no currículo do candidato as referências dos trabalhos publicados;",
+      "Possuir conhecimento e experiência em Big Data (Spark, duckdb, Dask, bancos relacionais e não relacionais) e proficiência em Python (spark, PySpark, scikit-learn, statsmodels), SQL e R (tidyverse, data.table, sparkR, fixest e outros), comprovada por meio de cursos específicos, trabalhos ou estágios ",
+      "Ter disponibilidade para execução das atividades inerentes ao projeto de pesquisa nas instalações do IPEA em Brasília;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A agricultura familiar desempenha um papel importante na produção de alimentos e no desenvolvimento rural sustentável. No entanto, o cenário atual é marcado por desafios significativos, como"
+    ],
+    "diretoria": "DIRUR",
+    "diretoria_nome": "Diretoria de Estudos e Políticas Regionais, Urbanas e Ambientais",
+    "enrich_flags": []
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16158-harmoniza-pof",
@@ -1622,12 +2226,75 @@
     "prazo_ini_iso": "2025-11-19",
     "prazo_fim_iso": "2025-12-02",
     "janela_dias": 13,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 7,
+        "ampla_concorrencia": 1,
+        "reservadas": 6,
+        "por_categoria": {
+          "Étnico-racial": 4,
+          "Mulheres": 2,
+          "PCD": 0
+        },
+        "selecoes": 4
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Harmoniza POF”",
+    "projeto_vinculado": "Harmoniza POF",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Iniciante",
+      "Assistente de Pesquisa e Ciência de Dados Júnior",
+      "Assistente de Pesquisa e Ciência de Dados Sênior",
+      "Doutor Bolsista"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "valores_brl": [
+      1582.0,
+      2785.0,
+      6240.0,
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante Requisitos: 5.1.1. Estar regulamente matriculado no curso de graduação em Economia.",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.",
+      "Experiência comprovada em currículo de atividades de pesquisa desenvolvidas com pacote R;",
+      "Experiência no uso de bases do IBGE comprovadas em currículo. Vaga: 01 (uma) Requisitos para a Seleção 2 - Assistente de Pesquisa e Ciência de Dados Júnior Requisitos: 5.2.1. Possuir graduação completa em Economia.",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Experiência comprovada em currículo de atividades de pesquisa desenvolvidas com pacote R;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: Organizar uma base harmonizada da Pesquisa de Orçamento Familiar (POF) que permita acompanhar o consumo das famílias brasileiras de forma sistemática ao longo dos últimos 30 anos. A pesquisa"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16154-chamada-publica-057-2025",
@@ -1650,14 +2317,75 @@
     "prazo_ini_iso": "2025-11-18",
     "prazo_fim_iso": "2025-11-27",
     "janela_dias": 9,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [],
     "categoria_funcao": [
-      "Métodos quantitativos"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_tema": [
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 16,
+        "ampla_concorrencia": 6,
+        "reservadas": 10,
+        "por_categoria": {
+          "Étnico-racial": 2,
+          "Mulheres": 8,
+          "PCD": 0
+        },
+        "selecoes": 5,
+        "selecoes_puladas": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Acompanhamento da Conjuntura Econômica Brasileira - Suporte analítico e econométrico”",
+    "projeto_vinculado": "Acompanhamento da Conjuntura Econômica Brasileira - Suporte analítico e econométrico",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Iniciante",
+      "Assistente de Pesquisa e Ciência de Dados Júnior",
+      "Assistente de Pesquisa Pleno",
+      "Doutor Bolsista"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "valores_brl": [
+      1582.0,
+      2785.0,
+      4030.0,
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante Requisitos: 5.1.1. Estar regulamente matriculado no curso de Graduação em Economia ou Estatística.",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Ter interesse no acompanhamento de estatísticas econômicas;",
+      "Conhecimentos de macroeconomia;",
+      "Conhecimentos de softwares de manipulação de dados/tratamento de séries temporais como R, Python, E-Views e Matlab;",
+      "Conhecimentos de estatística e econometria;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O ambiente econômico contemporâneo caracteriza-se por elevada complexidade e por intensas interações entre os mercados monetário, cambial, de crédito e o sistema financeiro como um todo. Com"
+    ],
+    "diretoria": "DIMAC",
+    "diretoria_nome": "Diretoria de Estudos e Políticas Macroeconômicas",
+    "enrich_flags": []
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16136-chamada-publica-n-56-2026",
@@ -1691,41 +2419,66 @@
       "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Macroeconomia e finanças"
+      "Macroeconomia e finanças",
+      "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Modelagem macroeconômica baseada em agentes (Macro ABM)”",
     "projeto_vinculado": "Modelagem macroeconômica baseada em agentes (Macro ABM)",
     "modalidades_extraidas": [
       "Assistente de Pesquisa Pleno"
     ],
     "valores_brl": [
-      7283.05,
-      15551.62,
-      19956.16,
-      30500.0,
-      38956.38,
-      86800.0,
-      93500.0,
-      96600.0,
-      126500.0,
-      484268.4,
-      787321.62
+      4030.0
     ],
-    "formacao": [],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DIMAC",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Macroeconômicas",
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 – Assistente de Pesquisa Pleno Requisitos 5.1.1. Possuir título de Mestre em uma das seguintes áreas: em Obrigatórios: Economia, Administração, Estatística, Matemática, Computação, Engenharia Elétrica ou Engen",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação;",
+      "Sólidos conhecimentos em estatística e/ou econometria;",
+      "Proficiência em ao menos uma linguagem de programação estatística (ex: R, Python ou Julia) e Git/Github;",
+      "Conhecimento de estatísticas macroeconômicas brasileiras, especialmente Contas Nacionais e Matrizes de Insumo-Produto;",
+      "Inglês avançado para leitura técnica;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do Este projeto visa adaptar um modelo macroeconômico Trabalho: baseado em agentes (ABM) para a economia brasileira. A adaptação será realizada utilizando a linguagem de programação Julia. A modelagem ba",
+      "Realizar a limpeza, processamento e compatibilização das bases de dados.",
+      "Auxiliar no desenvolvimento e aplicação de métodos estatísticos para a calibração de parâmetros em Julia, com possível interface com R/Python.",
+      "Realizar análise de sensibilidade dos resultados do modelo aos parâmetros calibrados.",
+      "Explorar o uso de técnicas de machine learning para análise dos resultados das simulações ou para a modelagem de choques exógenos.",
+      "Executar simulações computacionais utilizando o modelo em diferentes cenários de política econômica."
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente"
+      "diretoria_ausente"
     ],
     "papel": "Assistente de Pesquisa Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 0,
+        "reservadas": 3,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 3,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1776,34 +2529,61 @@
     "categoria_funcao": [
       "Ciência de Dados – Analytics/ML"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Núcleo de Informações Sociais – NINSOC”",
     "projeto_vinculado": "Núcleo de Informações Sociais – NINSOC",
     "modalidades_extraidas": [
-      "Assistente em Ciência de Dados Pleno",
-      "Doutor Bolsista"
+      "Assistente em Ciência de Dados Pleno"
     ],
     "valores_brl": [
-      3304413.72
+      4030.0
     ],
     "formacao": [
       "Doutorado",
-      "Graduação"
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente em Ciência de Dados Pleno Requisitos: 5.1.1. Possuir graduação completa em uma das seguintes áreas: Administração, Administração Pública, Ciência da Computação, Ciência de Dados, Ciência Política,",
+      "Possuir conhecimentos avançados em programação em R, Python ou Stata;",
+      "Ter boa capacidade de expressão oral e escrita;",
+      "Apresentar projeto de pesquisa simplificado, de no máximo 5 páginas, para responder a uma pergunta de pesquisa das áreas de desigualdades de gênero e cor/raça, educação, saúde, previdência social, mercado de trabalho e/ou renda, contendo: (i) a pergunta de pesquisa; (ii) descrição da metodologia e d",
+      "As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas o bolsista deverá ter disponibilidade para realização de atividades presencialmente no Ipea Brasília ou Ipea Rio de Janeiro, sempre que solicitado pelo coordenador do projeto, com recursos próprios do bolsista.",
+      "O conhecimento e a experiência requeridos deverão estar descritos/mencionados, de forma detalhada, no currículo da pessoa candidata;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A Diretoria de Estudos e Políticas Sociais - Disoc, dentre as suas atividades, desenvolve estudos, pesquisas e assessorias governamentais relacionadas a temas sociais e políticas públicas. A"
+    ],
     "diretoria": "DISOC",
     "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
-    "enrich_flags": [
-      "objeto_ausente"
-    ],
+    "enrich_flags": [],
     "papel": "Assistente em Ciência de Dados Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 8,
+        "ampla_concorrencia": 8,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1815,7 +2595,7 @@
     "prazo_fim": "24-11-25",
     "programa": "PIPA",
     "projeto": "Indicador/relatório de assistência setorial (subsídios e proteção tarifária)",
-    "modalidade": null,
+    "modalidade": "Doutor Bolsista",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/Chamada_Pública_Especializada_Pipa_054_-_2025.pdf",
@@ -1826,15 +2606,71 @@
     "prazo_ini_iso": "2025-11-10",
     "prazo_fim_iso": "2025-11-24",
     "janela_dias": 14,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Internacional e comércio"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD"
+      ],
+      "heteroidentificacao": true,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 0,
+        "reservadas": 2,
+        "por_categoria": {
+          "Étnico-racial": 2,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Indicador/relatório de assistência setorial (subsídios e proteção tarifária)”",
+    "projeto_vinculado": "Indicador/relatório de assistência setorial (subsídios e proteção tarifária)",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Doutor Bolsista Requisitos: 5.1.1. Possuir título de Doutor na área de Economia.",
+      "Vaga destinada a pessoa negra - pessoa que se autodeclarar preta ou parda, conforme o quesito cor ou raça usado pela Fundação Instituto Brasileiro de Geografia e Estatística - IBGE, e que possua traços fenotípicos caracterizadores;",
+      "Experiência comprovada de pesquisa em temas de Economia Internacional (comércio internacional, política comercial etc.);",
+      "Experiência com manipulação de bases de dados;",
+      "Conhecimento em Língua Inglesa (informar no currículo);",
+      "Experiência de pesquisa aplicada com uso de matrizes insumo-produto e modelos de equilíbrio geral computável;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O objetivo do projeto é mensurar e analisar o apoio total do Governo Federal a setores econômicos no Brasil por meio de subsídios diretos e indiretos e de proteção tarifária. O trabalho emba"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16123-chamada-publica-053-2025",
@@ -1860,41 +2696,66 @@
     "prazo_ini_iso": "2025-11-03",
     "prazo_fim_iso": "2025-11-25",
     "janela_dias": 22,
-    "modalidade_canonica": "Assistente em Ciência de Dados Pleno",
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [
-      "Ciência de Dados – Analytics/ML"
+    "categoria_funcao": [],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
-    "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de pessoas candidatas interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Pesquisa sobre residentes em Domicílios Coletivos no Brasil”",
     "projeto_vinculado": "Pesquisa sobre residentes em Domicílios Coletivos no Brasil",
     "modalidades_extraidas": [
-      "Assistente em Ciência de Dados Pleno",
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      3304413.72
+      6760.0
     ],
     "formacao": [
       "Doutorado",
-      "Graduação"
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Doutor Bolsista",
+      "Possuir título de Doutor em uma das seguintes áreas: Ciências Sociais, Políticas Públicas, Economia, Serviço Social, Administração Pública ou Sociologia.",
+      "Capacidade de análise documental e revisão sistemática, especialmente de programas e políticas públicas;",
+      "Familiaridade com bases de dados institucionais (por exemplo, sites governamentais, organismos internacionais, portais de transparência, legislações e relatórios oficiais); Requisitos: 5.1.4. Domínio de metodologias de mapeamento de políticas e análise comparada internacional;",
+      "Competência para sintetizar grandes volumes de informação em fichas descritivas e relatórios claros;",
+      "Conhecimento básico sobre financiamento e governança pública, permitindo identificar fontes, arranjos e modelos de gestão;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A Diretoria de Estudos e Políticas Sociais - Disoc, entre as suas atividades, desenvolve estudos e pesquisas sobre geração, gênero e igualdade racial. O Ipea possui um Termo de Execução Desc"
+    ],
     "diretoria": "DISOC",
     "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
-    "enrich_flags": [
-      "objeto_ausente"
-    ],
-    "papel": "Assistente em Ciência de Dados Pleno",
+    "enrich_flags": [],
+    "papel": "Doutor Bolsista",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 4,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -1928,14 +2789,69 @@
     "prazo_ini_iso": "2025-10-24",
     "prazo_fim_iso": "2025-11-11",
     "janela_dias": 18,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 24,
+        "ampla_concorrencia": 9,
+        "reservadas": 15,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 15,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de pessoas candidatas interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “IpeaData-Lab”",
+    "projeto_vinculado": "IpeaData-Lab",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Iniciante"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "valores_brl": [
+      1582.0
+    ],
+    "formacao": [
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante Requisitos: 5.1.1. Estar regularmente matriculado no curso de graduação em umas das seguintes áreas: Economia, Ciência da Computação, Ciência de Dados, Est",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.",
+      "Possuir conhecimentos de programação em R;",
+      "Conhecimentos em Estatística; Econometria e Inferência Causal;",
+      "Conhecimento em Ciência de Dados, incluindo desenvolvimento de soluções de acesso, manipulação e disponibilização de bancos de dados ;",
+      "Conhecimento em língua inglesa (informar no currículo);"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O Ipea tem como missão aprimorar as políticas públicas fundamentais ao desenvolvimento do Brasil, por meio da produção e disseminação de conhecimento e da assessoria estratégica ao Estado. N"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16091-chamada-publica-n-51-2025",
@@ -1946,7 +2862,7 @@
     "prazo_fim": "28-10-25",
     "programa": "PIPA",
     "projeto": "Produção e disseminação de conhecimento sobre as possibilidades de avaliação, com métodos adequados e rigorosos, dos programas e ações do Plano Nacional de Cuidados",
-    "modalidade": null,
+    "modalidade": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/chamadas_publicas/2025/Chamada_Pública_Especializada_Pipa_051_-_2025.pdf",
@@ -1962,15 +2878,68 @@
     "prazo_ini_iso": "2025-10-15",
     "prazo_fim_iso": "2025-10-28",
     "janela_dias": 13,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 0,
+        "reservadas": 4,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 4,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de mulheres interessadas para concessão de bolsa de pesquisa e formação de cadastro reserva, de 18 de abril de 2025, para atuar no Projeto: “Produção e disseminação de conhecimento sobre as possibilidades de avaliação, com métodos adequados e rigorosos, dos programas e ações do Plano Nacional de Cuidados”",
+    "projeto_vinculado": "Produção e disseminação de conhecimento sobre as possibilidades de avaliação, com métodos adequados e rigorosos, dos programas e ações do Plano Nacional de Cuidados",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Sênior"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Sênior",
+    "valores_brl": [
+      6240.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Sênior Requisitos: 5.1.1. Possuir graduação em qualquer área do conhecimento e pós-graduação completa lato ou stricto sensu na área de Ciências Econômicas.",
+      "Vaga destinada para mulheres: Pessoa que assim for identificada em seus documentos civis, tais como a cédula de identidade e a carteira nacional de habilitação.",
+      "Possuir pelo menos 6 anos de experiência com projetos relacionados ao financiamento de políticas públicas;",
+      "Possuir experiência na realização de análise orçamentária de políticas públicas;",
+      "Apresentar projeto de pesquisa simplificado, de no máximo 5 páginas, que apresente uma proposta de financiamento interfederativo da Política Nacional de Cuidados. A pessoa candidata que não anexar o projeto no momento da inscrição será excluída da Chamada, mesmo que possua experiência na área requer",
+      "As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas a bolsista deverá ter disponibilidade para realização de atividades presencialmente no Ipea Brasília, sempre que solicitado pelo coordenador do projeto, com recursos próprios do bolsista."
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A Diretoria de Estudos e Políticas Sociais - Disoc, dentre as suas atividades, desenvolve estudos e pesquisas sobre gênero e cuidado. Sua produção em torno destes temas apontou, ao longo das"
+    ],
+    "diretoria": "DISOC",
+    "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
+    "enrich_flags": []
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16071-chamada-publica-n-050-2025-inclua-igualdade-racial",
@@ -2017,16 +2986,77 @@
     "prazo_ini_iso": "2025-10-03",
     "prazo_fim_iso": "2025-10-21",
     "janela_dias": 18,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [
       "Social, trabalho e renda"
     ],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 14,
+        "ampla_concorrencia": 14,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 4
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “INCLUA – Igualdade Racial”",
+    "projeto_vinculado": "INCLUA – Igualdade Racial",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Iniciante",
+      "Assistente de Pesquisa e Ciência de Dados Júnior",
+      "Assistente de Pesquisa Pleno",
+      "Doutor Bolsista"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "valores_brl": [
+      1582.0,
+      2785.0,
+      4030.0,
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Iniciante - Frontend Requisitos: 5.1.1. Estar regularmente matriculado em curso de Graduação na área de Computação;",
+      "Ter conhecimento em desenvolvimento Frontend (HTML, CSS e JavaScript);",
+      "Ter conhecimento em PHP aplicado ao WordPress;",
+      "Ter conhecimento em estrutura de temas e plugins (WordPress Codex);",
+      "Ter conhecimento em Git e GitHub;",
+      "Desejável ter experiência prévia em projetos de extensão, pesquisa e participação em núcleos ou grupos de desenvolvimento no ambiente universitário;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A INCLUA – Plataforma de Recursos Pró-Equidade em Políticas Públicas (https://inclua.ipea.gov.br/) tem o objetivo de oferecer aos gestores, profissionais e trabalhadores envolvidos na implem"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16031-chamada-publica-n-049-2025",
@@ -2050,14 +3080,71 @@
     "prazo_ini_iso": "2025-09-19",
     "prazo_fim_iso": "2025-09-30",
     "janela_dias": 11,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Iniciante",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Atlas do Estado Brasileiro”",
+    "projeto_vinculado": "Atlas do Estado Brasileiro",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Iniciante",
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Iniciante",
+    "valores_brl": [
+      1582.0
+    ],
+    "formacao": [
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 – Assistente de Pesquisa e Ciência de Dados Iniciante Requisitos: 5.1.1. Estar regularmente matriculado no curso de graduação em Economia;",
+      "Possuir conhecimentos de programação em R;",
+      "É desejável ter experiência com manuseio de grandes bases de dados;",
+      "É desejável ter conhecimento de técnicas de análise quantitativas;",
+      "É desejável possuir experiência de pesquisa sobre o Estado Brasileiro;",
+      "A bolsa é não presencial, sendo necessária a disponibilidade, quando solicitado pela coordenação da pesquisa, para exercer atividades da pesquisa nas instalações Ipea Brasília"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do O ATLAS DO ESTADO BRASILEIRO é uma plataforma de Trabalho: dados integrados sobre o funcionalismo público, em seus três níveis federativos – federal, estadual e municipal - e dos três Poderes. Além do",
+      "Fazer levantamento da bibliografia relevante para o tema",
+      "Participar de seminários e atividades de pesquisa Resultados Ampliar a compreensão da casa acerca do papel do setor Esperados: público em influenciar as desigualdades raciais do mercado de trabalho brasileiro. A consolidação da pesquisa será feita na forma de TD e nota técnica."
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16026-chamada-publica-n-048-2025",
@@ -2068,7 +3155,7 @@
     "prazo_fim": "30-09-25",
     "programa": "PIPA",
     "projeto": "Núcleo de Arquitetura Financeira Internacional (NAFI)",
-    "modalidade": null,
+    "modalidade": "Doutor Bolsista",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/chamadas_publicas/2025/Chamada_Pública_Especializada_Pipa_048_-_2025.pdf",
@@ -2091,15 +3178,66 @@
     "prazo_ini_iso": "2025-09-17",
     "prazo_fim_iso": "2025-09-30",
     "janela_dias": 13,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
     "categoria_funcao": [],
     "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Núcleo de Arquitetura Financeira Internacional (NAFI)”",
+    "projeto_vinculado": "Núcleo de Arquitetura Financeira Internacional (NAFI)",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Doutor Bolsista Requisitos: 5.1.1. Possuir título de Doutorado em Economia ou Engenharia, ou áreas afins, preferencialmente com foco em arquitetura financeira internacional, mercado de capitais, sistema fina",
+      "Ter conhecimento em língua inglesa, preferencialmente em nível avançado para leitura (informar no currículo);",
+      "Desejável experiência com análise e manipulação de dados, incluindo conhecimento em ferramentas como Microsoft Excel, Access e linguagem de programação Python;",
+      "Ter experiência prática no mercado financeiro será considerada um diferencial.",
+      "Constituem disposições aplicáveis a todos os candidatos:",
+      "Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados em conformidade com a legislação vigente."
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: Transformações no Sistema Financeiro Internacional e Desafios para as Economias Emergentes e em Desenvolvimento: fontes de risco, impactos macroeconômicos e desdobramentos sistêmicos no cont"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16017-chamada-publica-n-47-2025",
@@ -2110,7 +3248,7 @@
     "prazo_fim": "23-09-25",
     "programa": "PIPA",
     "projeto": "O Financiamento Internacional para o Desenvolvimento Sustentável - análise dos mecanismos de cooperação internacional e financiamento climático",
-    "modalidade": null,
+    "modalidade": "Doutor Bolsista",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/chamadas_publicas/2025/Chamada_Pública_Especializada_Pipa_047_-_2025.pdf",
@@ -2125,7 +3263,7 @@
     "prazo_ini_iso": "2025-09-12",
     "prazo_fim_iso": "2025-09-23",
     "janela_dias": 11,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
@@ -2136,8 +3274,59 @@
       "Regional, urbano e ambiental",
       "Internacional e comércio"
     ],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “O Financiamento Internacional para o Desenvolvimento Sustentável - análise dos mecanismos de cooperação internacional e financiamento climático”",
+    "projeto_vinculado": "O Financiamento Internacional para o Desenvolvimento Sustentável - análise dos mecanismos de cooperação internacional e financiamento climático",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Doutor Bolsista Requisitos: 5.1.1. Possuir título de doutor na área de Economia ou Relações Internacionais ou Ciência Política;",
+      "Desejável ter domínio da leitura em língua inglesa;",
+      "Ter conhecimento e experiência nas áreas de financiamento climático, política de investimento financeiro, métodos quantitativos e avaliação de projetos/políticas públicas; Publicações e participação em projetos de pesquisa nas áreas da presente chamada nos últimos 5 anos.;",
+      "Desejável conhecimento na área de economia política e desenvolvimento socioeconômico;",
+      "Apresentar \"Carta de Intenções\", deverá conter, pelo menos, considerações sobre a trajetória profissional e sobre as competências pessoais aplicáveis ao objeto da chamada, bem como as motivações para participação neste. Além disso, será necessário que o candidato/a justifique como suas publicações e",
+      "Constituem disposições aplicáveis a todos os candidatos:"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O impacto da ação humana - com os processos de industrialização, uso de combustíveis fósseis, urbanização e consumo em massa - intensificou a emissão de gases de efeito estufa (GEE). Em 1988"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/16016-chamada-publica-n-46-2025",
@@ -2171,41 +3360,63 @@
     "categoria_funcao": [
       "Apoio à pesquisa"
     ],
-    "categoria_tema": [],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
+    ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Catálogo de Políticas Públicas”",
     "projeto_vinculado": "Catálogo de Políticas Públicas",
     "modalidades_extraidas": [
       "Assistente de Pesquisa Pleno"
     ],
     "valores_brl": [
-      38.5,
-      41.61,
-      10844.35,
-      99995.33,
-      357204.25,
-      449984.55,
-      699999.73,
-      1403092.11,
-      1483088.47,
-      5064924.52,
-      5350687.88
+      4030.0
     ],
-    "formacao": [],
-    "requisitos": [],
-    "atividades": [],
+    "formacao": [
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 – Assistente de Pesquisa Pleno Requisitos: 5.1.1. Possuir graduação e título de Mestre em uma das seguintes áreas: Formação acadêmica em Administração Pública, Políticas Públicas, Gestão de Políticas Públicas,",
+      "Compreensão do funcionamento da máquina pública federal, especialmente no que diz respeito ao planejamento, implementação e monitoramento de políticas públicas;",
+      "Conhecimento do ciclo orçamentário federal, incluindo as fases de elaboração, aprovação, execução e avaliação orçamentária, e sua relação com os instrumentos legais (PPA, LDO, LOA);",
+      "Capacidade de interpretar e sistematizar dados de políticas públicas e seus vínculos institucionais com estruturas de financiamento;",
+      "Familiaridade com bases e sistemas de dados orçamentários e administrativos, tais como SIOP, SIGPlan, Siga Brasil, Portal da Transparência, e outros bancos públicos de dados;",
+      "Habilidade para identificar, classificar e consolidar informações dispersas em diferentes documentos (atos normativos, planos, relatórios, bases de execução orçamentária) com clareza analítica;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do O Catálogo de Políticas Públicas é uma iniciativa estratégica Trabalho: do Ipea voltada à sistematização, classificação e disponibilização pública de informações sobre políticas públicas federais vige"
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
     "papel": "Assistente de Pesquisa Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 3,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2229,45 +3440,68 @@
     "prazo_ini_iso": "2025-09-09",
     "prazo_fim_iso": "2025-09-30",
     "janela_dias": 21,
-    "modalidade_canonica": "Doutor Bolsista",
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Métodos quantitativos"
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
     ],
     "categoria_tema": [],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Núcleo de Estatística da DISET (NESET)”",
     "projeto_vinculado": "Núcleo de Estatística da DISET (NESET)",
     "modalidades_extraidas": [
-      "Doutor Bolsista"
+      "Assistente de Pesquisa e Ciência de Dados Sênior"
     ],
     "valores_brl": [
-      7524.0,
-      24000.0,
-      72777.9,
-      117669.99,
-      233942.4,
-      3462835.0
+      6240.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Seleção 1 - Assistente de Pesquisa e Ciência de Dados Sênior",
+      "Possuir graduação em qualquer área do conhecimento e pós-graduação “stricto sensu” (Mestrado ou Doutorado) completa nas áreas de Economia ou Estatística;",
+      "Ter experiência comprovada em projetos de pesquisa com microdados (registros administrativos) e métodos estatísticos aplicados à economia;",
+      "Ter experiência comprovada em projetos de pesquisa com uso de software estatístico R ou Stata;",
+      "Conhecimento de língua inglesa;",
+      "Anexar, no momento da inscrição: 5.1.5.1. Currículo lattes atualizado (pdf e link de acesso); 5.1.5.2. Carta de Apresentação de sua autoria, de até 02 (duas) laudas, descrevendo experiência referente aos itens “5.1.2.” e “5.1.3.”; 5.1.5.3. Artigo científico de sua autoria, publicado ou aceito para p"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: O Ipea foi pioneiro no cruzamento de microdados de empresas a partir de Propósito do trabalho: diversas fontes (registros administrativos e/ou pesquisas), o que permitiu a elaboração de dezenas de estudos, a organ"
+    ],
     "diretoria": "DISET",
     "diretoria_nome": "Diretoria de Estudos e Políticas Setoriais de Inovação e Infraestrutura",
-    "enrich_flags": [
-      "objeto_ausente"
-    ],
-    "papel": "Doutor Bolsista",
+    "enrich_flags": [],
+    "papel": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 3,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2297,43 +3531,71 @@
     "prazo_ini_iso": "2025-09-04",
     "prazo_fim_iso": "2025-09-16",
     "janela_dias": 12,
-    "modalidade_canonica": "Assistente de Pesquisa Pleno",
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Júnior",
     "flags": [
       "qtd_ausente"
     ],
     "categoria_funcao": [
-      "Especialista de domínio",
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
       "Apoio à pesquisa"
     ],
     "categoria_tema": [
-      "Social, trabalho e renda"
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Avanços e Limites da Coordenação Federativa por meio de Consórcios Intermunicipais: aprendendo com os “fracassos”",
     "projeto_vinculado": "Avanços e Limites da Coordenação Federativa por meio de Consórcios Intermunicipais: aprendendo com os “fracassos",
     "modalidades_extraidas": [
-      "Assistente de Pesquisa Pleno"
+      "Assistente de Pesquisa e Ciência de Dados Júnior"
     ],
     "valores_brl": [
-      26912.68
+      2785.0
     ],
     "formacao": [
-      "Especialista"
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa e Ciência de Dados Júnior Requisitos obrigatórios: 5.1.1. Possuir Graduação na área de Ciência Política, Sociologia, Estatística, Economia, Direito, Administração Pública ou Ciência da",
+      "Possuir experiência de pesquisa ou publicações sobre consórcios intermunicipais no Brasil;",
+      "Possuir conhecimentos de programação em R, Python, GIT;",
+      "Possuir experiência com coleta, organização, categorização e manipulação de bases de dados, SQL ou LLM;",
+      "Desejável possuir capacidade de ler textos em inglês;",
+      "Apresentar carta de intenções de até 3 (três) páginas, que contenha trajetória profissional e competências pessoais aplicáveis à Chamada;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A cooperação entre municípios brasileiros possui o potencial de melhorar a eficiência e eficácia das políticas públicas. Em que pese sua importância e frequência, ainda se conhece pouco sobr"
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
-    "papel": "Assistente de Pesquisa Pleno",
+    "papel": "Assistente de Pesquisa e Ciência de Dados Júnior",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 6,
+        "ampla_concorrencia": 6,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -2345,7 +3607,7 @@
     "prazo_fim": "09-09-25",
     "programa": "PIPA",
     "projeto": "Transferências intergovernamentais no âmbito do federalismo brasileiro",
-    "modalidade": null,
+    "modalidade": "Assistente de Pesquisa Pleno",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/chamadas_publicas/2025/Chamada_pública_Especializada_Pipa_-_43-2025novo.pdf",
@@ -2361,18 +3623,73 @@
     "prazo_ini_iso": "2025-08-29",
     "prazo_fim_iso": "2025-09-09",
     "janela_dias": 11,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa Pleno",
     "flags": [
       "titulo_ano_divergente",
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [
+      "Social, trabalho e renda",
       "Estado, instituições e democracia"
     ],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Transferências intergovernamentais no âmbito do federalismo brasileiro”",
+    "projeto_vinculado": "Transferências intergovernamentais no âmbito do federalismo brasileiro",
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa Pleno"
+    ],
+    "papel": "Assistente de Pesquisa Pleno",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Mestrado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa Pleno Requisitos obrigatórios: 5.1.1. Possuir título de Mestre na área de Ciência Política, Sociologia, Estatística, Economia, Direito ou Administração Pública",
+      "Possuir experiência de pesquisa ou publicações com a utilização de técnica de análise de conteúdo e similares;",
+      "Possuir conhecimentos de programação em R ou Python;",
+      "Desejável possuir experiência de pesquisa ou publicações sobre transferências intergovernamentais no federalismo brasileiro;",
+      "Apresentar projeto de pesquisa de até 10 (dez) páginas. A não apresentação da proposta, sujeitará a pessoa candidata a exclusão da Chamada, mesmo que esta possua experiência na área requerida.",
+      "A bolsa é não presencial, sendo necessária a disponibilidade, quando solicitado pela coordenação da pesquisa, para exercer atividades da pesquisa em Brasília."
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: A motivação para realizar o presente projeto de pesquisa é compreender como a União mobiliza distintos mecanismos para realizar a descentralização fiscal. A transferência de recursos finance"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/15993-chamada-publica-042-2025",
@@ -2395,44 +3712,74 @@
     "prazo_ini_iso": "2025-08-28",
     "prazo_fim_iso": "2025-09-09",
     "janela_dias": 12,
-    "modalidade_canonica": "Doutor Bolsista",
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Júnior",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Analytics/ML",
+      "Métodos quantitativos",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [
       "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Institucionalização da Prospectiva/Foresight no Ipea - Estruturação Conceitual”",
     "projeto_vinculado": "Institucionalização da Prospectiva/Foresight no Ipea - Estruturação Conceitual",
     "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Júnior",
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      7524.0,
-      24000.0,
-      72777.9,
-      117669.99,
-      233942.4,
-      3462835.0
+      2785.0,
+      6760.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DISET",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Setoriais de Inovação e Infraestrutura",
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Seleção 1 - Assistente de Pesquisa e Ciência de Dados Júnior",
+      "Possuir título de Bacharel em uma das seguintes áreas do conhecimento: Administração, Economia, Demografia, Estatística ou Ciências da Informação.",
+      "Apresentar carta de motivação para participação no projeto de até 04 páginas;",
+      "Ter domínio de ferramentas do pacote MS-Office 365;",
+      "Ter disponibilidade para desenvolver as atividades de pesquisa no Ipea Brasília-DF;",
+      "Desejável possuir conhecimentos básicos de conceitos e ferramentas de prospectiva/foresight e/ou estudos aplicados de prospectiva/foresight na construção de cenários;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a seguir: Propósito do trabalho: O Instituto de Pesquisa Econômica Aplicada (Ipea) é reconhecido por tomadores de decisão, do setor público, privado ou do terceiro setor, como um “locus” de excelência na produção de pesquis",
+      "Relatório final do projeto, contendo ao menos: a) resenha sintética das publicações que compõem a literatura revisada. b) listagem organizada das referências bibliográficas encontradas. c) as atividades desempenhadas, identificando os produtos gerados, como resenhas, bancos de dados, séries etc. Sel",
+      "Relatório final do projeto, contendo ao menos: a) arcabouço conceitual referente ao tema da prospectiva/foresight em suas diversas dimensões: metodologia, conceitos, ferramentas, lógica e linhas/escolas de pensamento. b) apresentação, nestes âmbitos, dos aspectos a serem observados e considerados pa"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente"
+      "diretoria_ausente"
     ],
-    "papel": "Doutor Bolsista",
+    "papel": "Assistente de Pesquisa e Ciência de Dados Júnior",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 4,
+        "ampla_concorrencia": 4,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 2
+      }
     }
   },
   {
@@ -3037,44 +4384,64 @@
       "qtd_ausente"
     ],
     "categoria_funcao": [
+      "Métodos quantitativos",
       "Apoio à pesquisa"
     ],
     "categoria_tema": [
+      "Macroeconomia e finanças",
       "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Análise das Políticas de Emprego e Boletim Mercado de Trabalho: Conjuntura e Análise”",
     "projeto_vinculado": "Análise das Políticas de Emprego e Boletim Mercado de Trabalho: Conjuntura e Análise",
     "modalidades_extraidas": [
       "Assistente de Pesquisa Pleno"
     ],
     "valores_brl": [
-      1460.0,
-      2500.0,
-      4200.0,
-      35525.0,
-      128956.59,
-      138000.0,
-      684788.0,
-      964157.71,
-      3094958.16,
-      8590000.0,
-      14280000.0
+      4030.0
     ],
-    "formacao": [],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DISOC",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
+    "formacao": [
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para a Seleção 1 - Assistente de Pesquisa Pleno Requisitos obrigatórios: 4.1.1. Graduação completa em economia;",
+      "Possuir no mínimo de dois anos de experiência com pesquisas análogas ao objeto dessa chamada pública (critério eliminatório – comprovação mediante menção no currículo), o candidato que não apresentar experiências será eliminado mesmo que atenda aos demais requisitos.;",
+      "Experiência com leitura, processamento e tabulação de dados primários (microdados) da Pesquisa de Orçamento Familiar (POF) do IBGE;",
+      "Experiência com leitura e tabulação de dados primários (microdados) da PNAD-Contínua do IBGE;",
+      "Conhecimento do software estatístico Stata ou R;",
+      "Familiaridade com a literatura de tributação e distribuição de renda (tópico a ser verificado na entrevista, mas deve ser indicado nos currículos);"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir: Propósito do trabalho: Colaborar em algumas etapas da confecção de um relatório que mostre e discuta uma estimativa para o adicional de arrecadação obtido pelo governo federal quando há um reajuste do salário-mínimo. Par"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente"
+      "diretoria_ausente"
     ],
     "papel": "Assistente de Pesquisa Pleno",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 3,
+        "ampla_concorrencia": 3,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -3097,44 +4464,69 @@
     "prazo_ini_iso": "2025-06-18",
     "prazo_fim_iso": "2025-07-08",
     "janela_dias": 20,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML",
+      "Apoio à pesquisa"
+    ],
     "categoria_tema": [
       "Regional, urbano e ambiental"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Construção de metodologia de monitoramento e avaliação do Programa Cidades Melhores e definição de indicadores”",
     "projeto_vinculado": "Construção de metodologia de monitoramento e avaliação do Programa Cidades Melhores e definição de indicadores",
-    "modalidades_extraidas": [],
-    "valores_brl": [
-      3200.0,
-      10639.86,
-      38830.8,
-      91500.0,
-      93500.0,
-      96600.0,
-      126500.0,
-      236218.5,
-      8786114.19
+    "modalidades_extraidas": [
+      "Assistente de Pesquisa e Ciência de Dados Sênior"
     ],
-    "formacao": [],
-    "requisitos": [],
-    "atividades": [],
+    "valores_brl": [
+      6240.0
+    ],
+    "formacao": [
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para o candidato Requisitos obrigatórios: 4.1.1. Possuir nível superior e pós-graduação lato ou stricto sensu na área de Computação, Sistemas de Informação, Ciência da Computação, Análise e Desenvolvimento de Sistemas, Engenha",
+      "Ter conhecimentos em bancos de dados relacionais (PostgreSQL) e linguagem SQL;",
+      "Ter conhecimentos em programação nas linguagens Java ou PHP;",
+      "Ter conhecimentos em programação JavaScript, HTML, CSS e frameworks JS;",
+      "Ter conhecimento em desenvolvimento de soluções WEB;",
+      "Ter conhecimento em ferramentas de versionamento e gerenciamento de código (Git, GitHub ou GitLab)"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir: Propósito do trabalho: Esta chamada insere-se no Termo de Execução Descentralizada (TED) entre o Ipea e a Secretaria Nacional de Desenvolvimento Urbano e Metropolitano do Ministério das Cidades (SNDUM/MCidades). A SNDUM "
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
-    "papel": null,
+    "papel": "Assistente de Pesquisa e Ciência de Dados Sênior",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 2,
+        "ampla_concorrencia": 2,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -3250,14 +4642,71 @@
     "prazo_ini_iso": "2025-05-28",
     "prazo_fim_iso": "2025-06-10",
     "janela_dias": 13,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
-    "categoria_tema": [],
-    "enriquecido": false,
-    "vagas_por_cota": null
+    "categoria_funcao": [
+      "Ciência de Dados – Engenharia",
+      "Ciência de Dados – Analytics/ML"
+    ],
+    "categoria_tema": [
+      "Social, trabalho e renda",
+      "Estado, instituições e democracia",
+      "Regional, urbano e ambiental"
+    ],
+    "enriquecido": true,
+    "vagas_por_cota": {
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
+    },
+    "fonte_texto": true,
+    "objeto": "1.1. Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Núcleo de Informações Sociais - NINSOC”",
+    "projeto_vinculado": "Núcleo de Informações Sociais - NINSOC",
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
+    ],
+    "papel": "Doutor Bolsista",
+    "valores_brl": [
+      4030.0
+    ],
+    "formacao": [
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para o candidato Requisitos obrigatórios: 4.1.1. Possuir graduação completa em uma das seguintes áreas: Administração, Administração Pública, Ciência da Computação, Ciência de Dados, Ciência Política, Ciências Sociais, Demogra",
+      "As atividades poderão ser desenvolvidas na modalidade remota (à distância), mas o bolsista deverá ter disponibilidade para realização de atividades presencialmente no Ipea Brasília, sempre que solicitado pelo coordenador do projeto, com recursos próprios do bolsista.",
+      "Possuir conhecimentos avançados em programação em R, Python ou Stata;",
+      "Ter boa capacidade de expressão oral e escrita;",
+      "Possuir experiência com web scrapping (raspagem de dados de sites da internet).",
+      "Apresentar projeto de pesquisa simplificado, de no máximo 5 páginas, que utilize web scrapping para responder a uma pergunta de pesquisa, contendo: (i) a pergunta de pesquisa; (ii) descrição da metodologia utilizada, com indicação ao repositório (Github, Gitlab ou similar) com o código utilizado na "
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir: Propósito do trabalho: O Ipea possui uma parceria com o MDIC para a realização de pesquisas relacionadas aos gastos públicos derivados de emendas parlamentares, com foco nas áreas de saúde, educação e trabalho. Em partic"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
+    "enrich_flags": [
+      "diretoria_ausente"
+    ]
   },
   {
     "url": "https://www.ipea.gov.br/portal/bolsas-de-pesquisa-lista/15822-chamada-publica-n-031-2025",
@@ -3285,42 +4734,64 @@
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
     "categoria_tema": [
       "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
-    "projeto_vinculado": "Acompanhamento e análise de políticas de igualdade racial",
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Acompanhamento e análise de políticas de igualdade racial.”",
+    "projeto_vinculado": "Acompanhamento e análise de políticas de igualdade racial.",
     "modalidades_extraidas": [
       "Doutor Bolsista"
     ],
     "valores_brl": [
-      0.0,
-      43046.1,
-      143199.9,
-      146436.12,
-      150971.66,
-      810854.28,
-      1000000.0,
-      1842542.79
+      6760.0
     ],
     "formacao": [
-      "Doutorado"
+      "Doutorado",
+      "Graduação",
+      "Pós-graduação"
     ],
-    "requisitos": [],
-    "atividades": [],
-    "diretoria": "DISOC",
-    "diretoria_nome": "Diretoria de Estudos e Políticas Sociais",
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para o candidato",
+      "Possuir título de Doutor em qualquer área das Ciências Sociais, ou Ciências Humanas.",
+      "Ter disponibilidade para desenvolver as atividades inerente a pesquisa no Ipea do Rio de Janeiro. Requisitos 4.1.3. Possuir experiência em formulação e avaliação de políticas obrigatórios: públicas, políticas sociais e políticas econômicas voltadas ao combate às desigualdades raciais e socioeconômic",
+      "Possuir conhecimento e experiência comprovados em produção, processamento e avaliação de indicadores econômicos, demográficos e sociais, relacionados à área racial e às desigualdades socioeconômicas gerados a partir de bases de dados oficiais do governo brasileiro.",
+      "Possuir conhecimentos e experiência comprovadas na avaliação da situação econômica, demográfica, de saúde, e de mercado de trabalho da população negra e da população indígena brasileira.",
+      "A comprovação das experiências solicitadas nos itens 4.1.3. ,"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir: Candidato O cenário de desigualdade racial tem se constituído em elemento Propósito do trabalho: estruturante da desigualdade no contexto brasileiro. Na última década, especialmente a partir da criação da Seppir o execut"
+    ],
+    "diretoria": null,
+    "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente"
+      "diretoria_ausente"
     ],
     "papel": "Doutor Bolsista",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {
@@ -3332,7 +4803,7 @@
     "prazo_fim": "27-05-25",
     "programa": "PIPA",
     "projeto": "Acompanhamento e análise da política de assistência social",
-    "modalidade": null,
+    "modalidade": "Doutor Bolsista",
     "qtd_bolsas": null,
     "pdf_urls": [
       "https://www.ipea.gov.br/portal/images/Chamada_pública_Especializada_Pipa_-_30-2025.pdf",
@@ -3351,38 +4822,69 @@
     "prazo_ini_iso": "2025-05-16",
     "prazo_fim_iso": "2025-05-27",
     "janela_dias": 11,
-    "modalidade_canonica": null,
+    "modalidade_canonica": "Doutor Bolsista",
     "flags": [
       "modalidade_ausente",
       "qtd_ausente"
     ],
-    "categoria_funcao": [],
+    "categoria_funcao": [
+      "Métodos quantitativos"
+    ],
     "categoria_tema": [
       "Social, trabalho e renda"
     ],
     "enriquecido": true,
     "fonte_texto": true,
-    "objeto": null,
+    "objeto": "Seleção de interessados para concessão de bolsa de pesquisa e formação de cadastro reserva no Projeto: “Acompanhamento e análise da política de assistência social”",
     "projeto_vinculado": "Acompanhamento e análise da política de assistência social",
-    "modalidades_extraidas": [],
-    "valores_brl": [
-      31013.0,
-      142000.0
+    "modalidades_extraidas": [
+      "Doutor Bolsista"
     ],
-    "formacao": [],
-    "requisitos": [],
-    "atividades": [],
+    "valores_brl": [
+      6760.0
+    ],
+    "formacao": [
+      "Doutorado",
+      "Graduação",
+      "Pós-graduação"
+    ],
+    "requisitos": [
+      "Os requisitos aplicáveis estão descritos nos quadros a seguir: Requisitos para o candidato “A” Requisitos obrigatórios: 4.1.1. Possuir doutorado completo em uma das seguintes áreas: Ciências Sociais/Sociologia/Antropologia; Ciência Política; Demografia; Estatística; Economia; Desenvolvimento Econômi",
+      "O bolsista deverá ter disponibilidade para a realização de reuniões periódicas de acompanhamento em horário comercial. No caso de disponibilidade para as reuniões presenciais, o bolsista deverá arcar com as despesas relativas ao seu deslocamento até o local da reunião e, no caso das reuniões remotas",
+      "Conhecimentos de estatística intermediária, softwares de análise de dados quantitativos e/ou programação.",
+      "Experiência de pesquisa e/ou profissional com a política pública de assistência social.",
+      "Apresentar projeto de até 10 páginas, considerando clareza na estruturação, coerência argumentativa e contribuição em termos de uma proposta para acompanhar e analisar a política de assistência social Requisitos desejáveis (não são obrigatórios): 4.1.6. Experiência de pesquisa, trabalho ou atividade",
+      "Conhecimentos de análise de conteúdo e/ou softwares para pesquisa qualitativa;"
+    ],
+    "atividades": [
+      "Os detalhes do projeto do qual o candidato fará parte estão descritos a seguir: Candidato “A” Propósito do trabalho: Acompanhar a dinâmica da política de assistência social, em seus diferentes aspectos, e em interação com o ambiente institucional, político e social. As ofertas que a compõem, bem com"
+    ],
     "diretoria": null,
     "diretoria_nome": null,
     "enrich_flags": [
-      "objeto_ausente",
       "diretoria_ausente"
     ],
-    "papel": null,
+    "papel": "Doutor Bolsista",
     "vagas_por_cota": {
-      "tem_reserva": false,
-      "categorias": [],
-      "heteroidentificacao": false
+      "tem_reserva": true,
+      "categorias": [
+        "Étnico-racial",
+        "Mulheres",
+        "PCD",
+        "Indígena"
+      ],
+      "heteroidentificacao": false,
+      "quadro": {
+        "total": 5,
+        "ampla_concorrencia": 5,
+        "reservadas": 0,
+        "por_categoria": {
+          "Étnico-racial": 0,
+          "Mulheres": 0,
+          "PCD": 0
+        },
+        "selecoes": 1
+      }
     }
   },
   {

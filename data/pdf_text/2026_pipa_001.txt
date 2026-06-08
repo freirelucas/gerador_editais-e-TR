@@ -1,119 +1,544 @@
-                                                                                  Seção 3                       ISSN 1677-7069                        Nº 81, segunda-feira, 4 de maio de 2026
+CHAMADA PÚBLICA - ESPECIALIZADA IPEA/PIPA - Nº 001/2026 - SELEÇÃO DE
+        PESSOAS CANDIDATAS PARA CONCESSÃO DE BOLSA
+
+O Instituto de Pesquisa Econômica Aplicada – IPEA, fundação pública vinculada ao
+Ministério do Planejamento e Orçamento, divulga a presente chamada pública
+especializada e convida interessados a participar do processo seletivo para a concessão
+de bolsa de pesquisa, no âmbito do Programa de Incentivo à Pesquisa Aplicada - PIPA.
+
+1. OBJETO:
+Seleção de pessoas interessadas para concessão de bolsa de pesquisa e formação de
+cadastro reserva no Projeto: “Conexões entre as Organizações da Sociedade Civil
+e o Estado”.
+
+2. QUANTIDADE E DURAÇÃO DAS BOLSAS
+Serão concedidas 02 (duas) bolsas com duração prevista de 12 (doze) meses, podendo
+ser renovadas, conforme Portaria nº 317/2025 de 18 de abril de 2025.
+
+3. VAGAS:
+3.1. As vagas estão distribuídas conforme o quadro a seguir:
+
+                                            Vagas imediatas         Cadastro Reserva
+                             Valor da
+ Seleção     Modalidade
+                              bolsa
+                                         AC    ER     M    PCD    AC    ER    M    PCD
+               Assistente
+              em Ciência
+      1                     R$ 4.030,00 01       * *    *     02   *     *    *
+               de Dados
+                 Pleno
+                Doutor      R$ 6.760,00
+      2                                    01    * *    *     02   *     *    *
+                Bolsista
+*Não haverá reserva de vagas para esse público na presente chamada, conforme os
+critérios estabelecidos na Portaria nº 317/2025.
+
+AC: Ampla concorrência.
+ER: Étnico-racial (pretos e pardos).
+M: Mulheres.
+PCD: Pessoa com deficiência.
+
+3.2. A vaga para cadastro de reserva permite provimento adicional, conforme
+necessidade do IPEA.
+3.3. O cadastro reserva terá validade de 01 (um) ano, podendo ser prorrogado.
+
+4. CONCESSÃO DE BENEFÍCIOS
+4.1. A concessão de bolsa será de até 12 (doze) meses e não poderá exceder o período
+de duração do projeto.
+4.1.1. A bolsa poderá ser renovada mediante justificativa, observado o projeto de
+pesquisa, pelo tempo total máximo de 48 (quarenta e oito) meses, contabilizados o
+tempo da concessão inicial e o das renovações.
+4.2. Não poderá ser concedido apoio financeiro à pessoa candidata que foi beneficiada
+com a concessão de bolsa do IPEA nos últimos 12 (doze) meses anteriores à data de
+início de nova concessão, exceto nas seguintes situações:
+4.2.1. A pessoa candidata que foi beneficiada com a concessão de bolsa pelo IPEA nos
+últimos 12 (doze) meses cuja vigência foi inferior a 01 (um) ano.
+4.2.2. Esteja concorrendo a modalidades de bolsa com valor superior ao recebido
+anteriormente.
+4.2.3. Para os casos previstos acima, a soma do tempo de concessão das bolsas,
+consideradas também as renovações, não poderá ultrapassar o tempo total máximo de
+48 (quarenta e oito) meses, contabilizados o tempo da concessão inicial e o das
+renovações, independente da modalidade.
+
+5. REQUISITOS E DISPOSIÇÕES APLICÁVEIS A TODAS AS PESSOAS
+CANDIDATAS
+5.1. Os requisitos aplicáveis estão descritos nos quadros a seguir:
+       Requisitos para a Seleção 1 – Assistente em Ciência de Dados Pleno
+ Requisitos        5.1.1. Possuir graduação em ciência da computação ou áreas afins
+ Obrigatórios: ou ciência política e áreas afins.
+                   5.1.2. Possuir conhecimento avançado de programação em R ou
+                   Python;
+                   5.1.3. Ter experiência com manipulação e integração de grandes
+                   bases de dados;
+                   5.1.4. Domínio ou experiência demonstrada em metodologia de
+                   análise de redes sociais.
+                   Vaga: 01 (uma)
+
+                    Requisitos para a Seleção 2 – Doutor Bolsista
+ Requisitos        5.2.1. Possuir doutorado em uma das seguintes áreas: ciência
+ Obrigatórios:     política, sociologia, economia ou administração.
+                   5.2.2. Ter experiência em pesquisa no tema desta chamada, a
+                   saber, Organizações da Sociedade Civil;
+                   5.2.3. Domínio da literatura e metodologia de análise de redes
+                   sociais;
+                   5.2.4. Apresentar projeto de pesquisa de até 10 (dez) páginas que
+                   formule uma proposta, em particular com delineamento
+                   metodológico, visando implementar os objetivos da pesquisa.
+                    Vaga: 01 (uma)
+
+5.2. Constituem disposições aplicáveis a todas as pessoas candidatas:
+5.2.2.1. Os títulos obtidos no exterior só serão aceitos se, e somente se, forem validados
+em conformidade com a legislação vigente.
+5.2.2.2. A comprovação das experiências solicitadas dar-se-á por meio das atividades
+profissionais ou acadêmicas relatadas no currículo da pessoa candidata, tais como:
+textos ou artigos científicos publicados, autoria ou coautoria de capítulos de livros,
+dissertação ou tese defendida, registro de experiência em serviços públicos voltados ao
+tema dessa chamada, registro de experiência como coordenador e/ou participante de
+projetos de pesquisa, em carteira de trabalho ou outros.
+5.2.2.3. Caso a proficiência em língua inglesa seja um requisito, serão aceitos como
+certificados: TOEFL/TOEFL iBT, EFSET, Cambridge, IELTS, TOEIC e Duolingo English
+Test, Michigan ou certificado emitido pelo Centro de Línguas Faculdade, Instituto ou
+departamento vinculado à universidade de origem da pessoa candidata. No caso de a
+pessoa candidata apresentar outros certificados de proficiência que não os enunciados
+nessa chamada, caberá à comissão julgadora decidir sobre sua aceitação.
+5.2.2.4. Os documentos serão analisados no momento da implementação da bolsa,
+podendo esta não ser implementada caso não cumpra os requisitos deste edital.
+5.2.2.5. Solicita-se às pessoas candidatas atualizarem e adaptarem seus currículos,
+ressaltando os pontos requeridos neste edital.
+5.2.2.6. A existência de algum tipo de inadimplência por parte da pessoa candidata
+selecionada junto à Administração Pública Federal, direta ou indireta, constituirá fator
+impeditivo para a concessão da bolsa pesquisa.
+5.2.2.7. A pessoa candidata selecionada poderá acumular a bolsa do IPEA com os
+vencimentos provenientes do exercício de cargo de professor, pesquisador universitário
+ou de cargos públicos cujas atribuições incluam expressamente atividades de pesquisa
+científica, pesquisa aplicada às políticas públicas e ao desenvolvimento do país.
+5.2.2.8. Na situação prevista no item 5.2.2.7., o IPEA pagará o montante correspondente
+a 60% (sessenta por cento) do valor da bolsa, segundo a modalidade para a qual a
+pessoa candidata foi selecionada.
+5.2.2.9. A acumulação da bolsa do IPEA com quaisquer outras bolsas, mesmo aquelas
+vinculadas à programa de pós-graduação, não será permitida.
+5.2.2.10. A pessoa candidata que estiver concorrendo à vaga que exige título de Mestre
+com especificações de área de conhecimento, caso seja selecionada, poderá
+apresentar título de Doutor que atenda às mesmas especificações, sendo que isto não
+implicará em alteração do valor e das atividades previstas na chamada pública,
+respeitado o disposto no item 5.2.2.8.
+5.2.2.11. A pessoa candidata que não atender aos requisitos listados acima poderá a
+critério da Comissão Julgadora ser eliminada automaticamente da seleção.
+
+6. INFORMAÇÕES SOBRE O PROJETO
+6.1. Os detalhes do projeto do qual a pessoa candidata fará parte estão descritos a
+seguir:
+ Propósito do            O projeto inspira-se na literatura sobre movimentos sociais,
+ Trabalho:               especialmente na abordagem relacional proposta por Diani
+                         (1992; 2003), que define movimentos como redes de
+                         interações entre uma pluralidade de atores — indivíduos,
+                         grupos e organizações — conectados por laços informais,
+                         baseados em identidades compartilhadas e engajados em
+                         disputas políticas ou culturais. Apoia-se também nas teorias
+                         e nos desafios apresentados sobre a compreensão das
+                         formas de articulação entre as Organizações da Sociedade
+                         Civil - OSCs e as organizações do Estado em diferentes
+                         áreas de política pública (Abers & von Bülow, 2011; Lavalle,
+                         Carlos, Dowbor & Szwako, 2019; Abers & Tatagiba, 2015;
+                         Silva, 2015). Ambas as vertentes demonstram a importância
+                         de compreender as formas de articulação socioestatais a
+                         partir da investigação das propriedades das redes
+                         interorganizacionais que se formam entre atores que atuam
+                         na interface entre organizações públicas e organizações da
+                         sociedade civil.
+
+                          Ao adotar esse enquadramento no estudo dos canais, meios
+                          e densidade das conexões das OSCs com as organizações
+                          do Estado, o projeto parte da premissa de que a
+                          heterogeneidade das formas de atuação das OSCs pode ser
+                          mais bem compreendida se for possível reconstruir a
+                          densidade e formato das redes de interação com diferentes
+setores estatais — burocracias em distintos níveis
+federativos, partidos políticos e seus diretórios, bem como
+parlamentos. Tais redes, uma vez reconstruídas (ainda que
+parcialmente), podem indicar quais em que arenas
+institucionais e não institucionais ocorrem com maior
+frequência e, desse modo, servir de insumo para análises
+sobre a ação coletiva junto ao Estado bem como explicar as
+influências diferenciais de grupos de OSCs sobre políticas
+públicas, instâncias de representação e outras etapas do
+ciclo de políticas — da formação da agenda à
+implementação.
+
+Nesse registro, o projeto pretende construir bases efetivas
+para uma análise mais ampla das especificidades e
+heterogeneidades dos padrões de interação socioestatais
+que moldam a ação pública e a atuação do Estado em
+diferentes áreas de política (Lavalle, Carlos, Dowbor &
+Szwako, 2018). Espera-se contribuir para elucidar, por meio
+dos padrões de conexão observados, como os valores,
+interesses e demandas das organizações civis se
+expressam na institucionalidade política brasileira.
+Adicionalmente, busca-se ampliar as informações que
+permitam compreender, sob o enquadramento da
+constituição recíproca entre Estado e sociedade civil (idem,
+2018), as formas de articulação, mais ou menos
+institucionalizadas e amplamente heterogêneas, entre esses
+atores.
+
+A construção dos dados e as descrições propostas
+contribuirão para iluminar o entendimento dos diferentes
+“domínios    de    agência”   (idem,  2018:   26)    ou,
+prospectivamente, para informar análises de caso sobre
+variações e densidades das conexões entre agentes
+públicos e não estatais.
+
+A partir do que foi proposto por Abers e von Bülow (2021), a
+perspectiva relacional e a análise de redes são concebidas
+como recursos teórico-metodológicos fundamentais para
+compreender as formas de articulação, a diversidade de
+interesses e as variações na porosidade entre o Estado e a
+sociedade civil. As autoras demonstram como ativistas e
+organizações transitam entre espaços institucionais e de
+mobilização, e que a ação “de dentro do Estado” pode
+coexistir e interagir com práticas externas de advocacy e
+participação social. A constituição dos domínios de agência
+encontra, na perspectiva relacional, um caminho fértil para
+explorar os mecanismos que explicam certas figurações
+entre organizações e setores do Estado. Como apontam
+Lavalle et al. (2019), “em processos de interação
+socioestatal, a formação de redes de movimento e de redes
+de apoiadores, o papel de intermediação, coordenação e
+articulação de brokers potencializa a influência dos atores
+coletivos na política pública, condicionando a construção de
+domínios de agência” (p. 55).
+
+A proposta também pretende oferecer novas bases para
+refletir sobre o potencial de relaxar fronteiras analíticas
+rígidas entre as oposições “confrontar” e “cooperar”,
+“institucionalizar” e “não institucionalizar”, ao analisar as
+formas de interação entre OSCs e setores do Estado
+(Lavalle, Carlos, Dowbor & Szwako, 2018) em domínios
+específicos de agência. Além disso, à luz da literatura sobre
+capacidades estatais, busca-se explorar, de modo tentativo,
+as capacidades político-relacionais (Pires & Gomide, 2016)
+entre OSCs e diferentes setores estatais, em distintos níveis
+federativos.
+
+Por fim, o projeto contribuirá para a compreensão, a partir de
+um detalhamento categórico mais refinado das OSCs e de
+sua presença em diferentes espaços estatais, dos modos de
+institucionalização da ação das organizações no aparato
+público — entre os quais se destacam a institucionalização
+programática, simbólica, prática e, sobretudo, posicional
+(Lavalle & Szwako, 2017). Isso inclui o mapeamento, nos
+âmbitos partidário, legislativo e burocrático, da ocupação de
+posições no aparato estatal.
+
+Parte-se da crescente disponibilidade de microdados sobre
+as OSCs e sobre o aparato do Estado — em especial, sobre
+a força de trabalho no setor público —, que podem ser
+relacionados entre si para (re)construir a ecologia das
+interfaces entre organizações e estruturas estatais. Parte
+desses microdados será mobilizada a partir da própria
+plataforma com a qual este projeto dialoga: o Mapa das
+Organizações da Sociedade Civil, que contém informações
+sobre organizações constituídas, áreas e finalidades de
+atuação. Outras bases relevantes incluem os sistemas de
+pessoas da administração pública (Siape), os vínculos de
+trabalho no país (Rais), e os registros de filiados e diretórios
+partidários (TSE), entre outras, que servirão como pontos de
+partida para o trabalho de prospecção proposto.
+
+Referências Bibliográficas:
+
+ABERS, Rebecca; VON BÜLOW, Marisa. Social Movements
+and the State: Conventional and Contentious Politics. In:
+ABERS, R.; SERAFIM, L.; TATAGIBA, L. (eds.). Social
+Movements and Public Policy in Brazil. Cham: Palgrave
+Macmillan, 2021.
+
+ABERS, Rebecca; TATAGIBA, Luciana. Institutional
+activism: Mobilizing for women’s police stations in
+Brazil. Social Politics: International Studies in Gender, State
+& Society, v. 22, n. 4, p. 440–471, 2015.
+                     DIANI, Mario. The concept of social movement. Sociological
+                     Review, v. 40, n. 1, p. 1–25, 1992.
+
+                     DIANI, Mario. Networks and social movements: A research
+                     programme. In: DIANI, M.; MCADAM, D. (eds.). Social
+                     Movements and Networks: Relational Approaches to
+                     Collective Action. Oxford: Oxford University Press, 2003. p.
+                     299–319.
+
+                     LAVALLE, Adrian Gurza; CARLOS, Euzeneia; DOWBOR,
+                     Monika;      SZWAKO,       José. Movimentos    sociais  e
+                     institucionalização: Políticas, repertórios e domínios de
+                     agência. São Paulo: Editora Unesp, 2019.
+
+                     LAVALLE, Adrian Gurza; SZWAKO, José. Sociedade civil,
+                     Estado e institucionalização de práticas: repensando o
+                     debate à luz da experiência brasileira. Opinião Pública, v. 23,
+                     n. 1, p. 102–135, 2017.
+
+                     PIRES, Roberto Rocha C.; GOMIDE, Alexandre de Ávila.
+                     Governança e capacidades estatais: uma análise
+                     comparativa de políticas públicas. Revista de Sociologia e
+                     Política, v. 24, n. 58, p. 79–99, 2016.
+Atividades a serem   Seleção 1 – Assistente em Ciência de Dados Pleno
+desenvolvidas pelo
+pesquisador              Atuar de modo direto na prospecção e integração das
+bolsista:                 bases de dados
+                         Produzir tabulações e visualizações que apoiem a
+                          análise dos dados;
+                         Escrever relatórios e notas técnicas;
+                         Documentar os dicionários de variáveis das
+                          diferentes bases de dados geradas;
+                         Apoiar a integração das bases de dados ao Mapa das
+                          Organizações da Sociedade Civil, coordenado pelo
+                          Ipea.
+
+                     Seleção 2 – Doutor Bolsista
+
+                         Prospectar a literatura sobre o tema e sistematizá-la
+                          na forma de relatório;
+                         Apoiar o processo de prospecção e integração das
+                          bases de dados
+                         Manusear, explorar e gerar visualizações gráficas a
+                          partir de bases de dados, bem como produzir um
+                          relatório analítico com os resultados.
+
+Resultados               Ampliar a compreensão das formas de articulação e
+Esperados:                interação entre OSCs e o Estado brasileiro;
+                         Disponibilizar novos instrumentos para apoiar
+                          gestores públicos na formulação de políticas em
+                          parceria com OSCs;
+                         Ampliar o volume de pesquisas empíricas sobre as
+                          OSCs do Brasil
+7. APRESENTAÇÃO E ENVIO DAS CANDIDATURAS
+7.1. As inscrições deverão ser realizadas exclusivamente por meio do SISBOLSAS -
+https://bolsas.ipea.gov.br/bolsas, disponível na página do IPEA www.ipea.gov.br,
+mediante a seleção do projeto de interesse, anexando:
+a) Currículo lattes ou informando endereço lattes;
+b) Proposta de execução do projeto (somente para a Seleção 2 – Doutor Bolsista).
+7.1.1. A pessoa candidata que não anexar o currículo ou informar endereço Lattes e a
+proposta de execução do projeto, será desclassificada automaticamente.
+7.2.     A   pessoa      candidata    deverá     se    cadastrar   no    SISBOLSAS
+(https://bolsas.ipea.gov.br/bolsas), opção “Ainda não sou cadastrado” e preencher
+os dados. A senha deverá ser composta por letras, números e caracteres especiais, no
+intervalo de 8 a 10 caracteres.
+7.3. A pessoa candidata, ao concluir sua inscrição, receberá um e-mail de confirmação
+da inscrição, devendo, caso não o receba, entrar em contato (dentro do prazo de
+inscrição), por meio do e-mail pipa@ipea.gov.br noticiando o ocorrido para
+esclarecimentos e visando a conclusão da inscrição.
+7.4. A pessoa candidata que não concluir a inscrição será eliminada automaticamente.
+7.5. O preenchimento e conferência dos dados informados é de inteira responsabilidade
+da pessoa candidata. Não será responsabilidade do IPEA eventuais erros cometidos
+pelas pessoas candidatas na operação do SISBOLSAS.
+7.6. Após a conclusão do processo de inscrição e a obtenção do status "Inscrição
+Finalizada", não será possível realizar alterações nos dados informados pelas pessoas
+candidatas, bem como excluir ou incluir documentos.
+7.6.1. Caso a pessoa candidata necessite modificar dados após a inscrição ter sido
+finalizada no SISBOLSAS, este deverá clicar no botão “Excluir candidatura” e realizar
+nova inscrição, respeitando os prazos estabelecidos no edital.
+7.7. Caso a pessoa candidata se inscreva para mais de uma modalidade de bolsa,
+dentro da mesma chamada pública, exige-se que anexe os documentos requeridos para
+cada solicitação de inscrição.
+7.8. Para a pessoa candidata que já possui cadastro, será necessário acessar o
+SISBOLSAS, selecionar o projeto e anexar a documentação exigida nesta Chamada
+Pública.
+
+8. JULGAMENTO
+8.1. Para julgamento da Chamada Pública será criada Comissão Julgadora, composta
+de pelo menos 03 (três) membros titulares e 01 (um) suplente.
+8.1.1. Não poderá participar da Comissão Julgadora, devendo ser substituído por
+suplente:
+a) cônjuge ou parente do avaliado, consanguíneo ou afim, em linha reta ou colateral,
+até o terceiro grau;
+b) orientador do avaliado nos últimos cinco anos;
+c) amigo íntimo ou inimigo do avaliado.
+8.2. Constituem os critérios de julgamento:
+
+Seleção 1 – Assistente em Ciência de Dados Pleno
+
+ ITEM                      CRITÉRIO DE JULGAMENTO                             PESO
+         Possuir conhecimento avançado de programação em R ou
+ A                                                                              3
+         Python
+         Domínio ou experiência demonstrada em metodologia de análise
+ B                                                                              3
+         de redes sociais.
+         Ter experiência com manipulação e integração de grandes bases
+ C                                                                              2
+         de dados
+ D       Entrevista                                                             2
+
+Seleção 2 – Doutor Bolsista
+
+ ITEM                     CRITÉRIO DE JULGAMENTO                              PESO
+ A       Experiência comprovada de pesquisa no tema da chamada                  4
+         Domínio ou experiência demonstrada em metodologia de análise           2
+ B
+         de redes sociais
+ C       Qualidade do projeto de pesquisa proposto                              2
+ D       Entrevista                                                             2
+8.2.1. A critério da Comissão Julgadora, poderão ser entrevistadas as pessoas
+candidatas com melhores notas na combinação dos itens A a C, sendo convocadas para
+a entrevista a quantidade de pessoas candidatas que a Comissão julgar necessária para
+o preenchimento da vaga e do cadastro reserva.
+8.2.2. Poderá, a critério da Comissão Julgadora, ser desclassificada a pessoa candidata
+que obtiver nota inferior a 50% do total proposto nos itens de A a D desta Chamada.
+8.2.3. Poderá, a critério da Comissão Julgadora, desclassificar a pessoa candidata que
+obtiver nota 0 (zero) em qualquer um dos critérios de julgamento.
+8.2.4. Em caso de empate entre as pessoas candidatas, será utilizado como critério de
+desempate a idade informada no SISBOLSAS, dando-se preferência para a pessoa
+candidata com maior idade.
+
+9. RESULTADO DO JULGAMENTO
+A relação das pessoas candidatas aprovadas será divulgada na página eletrônica do
+IPEA, disponível na Internet no endereço www.ipea.gov.br e seu extrato publicado no
+Diário Oficial da União.
+
+10. RECURSOS ADMINISTRATIVOS
+10.1. Caso a pessoa candidata tenha interesse em interpor pedido de recurso ao
+resultado do julgamento, deverá apresentá-lo exclusivamente por meio do SISBOLSAS
+- https://bolsas.ipea.gov.br/bolsas no prazo de 03 (três) dias úteis, a contar do dia
+seguinte da data de publicação do resultado no Diário Oficial da União.
+10.2. O pedido de recurso deverá ser remetido ao Ipea, pelo SISBOLSAS, em forma de
+petição em formato de PDF com pelo menos os seguintes campos:
+a) objeto do pedido;
+b) exposição de motivos;
+c) embasamento normativo;
+d) pedido.
+10.3. No campo de texto do sistema, a pessoa candidata deverá informar a relação dos
+documentos apresentados, iniciada pelo próprio pedido.
+10.4. Será negado conhecimento ao pedido de recurso que:
+a) não atender às exigências do Sistema de Cadastro de Bolsa para os recursos;
+b) estiver fora das regras estabelecidas nesta chamada, dos procedimentos previstos
+na Lei nº 9.784, de 29 de janeiro de 1999 ou em outras leis, instruções e normatizações
+federais;
+c) contiver palavras ofensivas, preconceituosas e afrontas de caráter racial, social, de
+gênero, e/ou religioso, sendo a pessoa candidata eliminada do presente certame,
+podendo ainda o Ipea realizar comunicação às instituições competentes em caso de
+crime.
+10.5. Os pedidos de recurso, caso atendam, aos requisitos desta chamada, serão
+dirigidos a Comissão Julgadora que, após exame, poderá julgar pela reconsideração de
+sua decisão, bem como confirmação, modificação, anulação ou revogação total ou
+parcial, nos termos da Lei nº 9.784, de 29 de janeiro de 1999. Caso a Comissão
+Julgadora julgue pelo indeferimento da reconsideração, os pedidos de recurso serão
+encaminhados para deliberação final pela Diretoria de Desenvolvimento Institucional -
+DIDES - do Ipea.
+
+11. CANCELAMENTO DA CONCESSÃO
+A Bolsa de Pesquisa poderá ser cancelada pela diretoria responsável a qualquer
+momento, de acordo com seu interesse e conveniência, sem prejuízo de outras
+providências cabíveis, em decisão devidamente fundamentada, não implicando
+qualquer tipo de indenização e não cabendo qualquer tipo de recurso por parte do
+bolsista.
+
+12. PERMISSÕES E AUTORIZAÇÕES ESPECIAIS
+É de exclusiva responsabilidade de cada pessoa candidata adotar todas as providências
+que envolvam permissões e autorizações especiais de caráter ético ou legal,
+necessárias para a execução do projeto.
+
+13. AJUSTES DOS PROJETOS APROVADOS
+O projeto aprovado poderá sofrer ajustes junto à diretoria interessada, visando
+adequação ao Plano de Trabalho do IPEA e às suas metas institucionais.
+
+14. ESCLARECIMENTOS E DAS INFORMAÇÕES ADICIONAIS
+Os esclarecimentos e informações adicionais acerca do conteúdo desta chamada
+poderão ser obtidos por intermédio do endereço eletrônico pipa@ipea.gov.br ou através
+dos telefones (61) 2026-5219 e (61) 2026-5511, referenciando-se ao número da
+chamada e nome do projeto.
+
+15. ANULAÇÃO OU REVOGAÇÃO DA CHAMADA PÚBLICA
+A qualquer tempo, a presente chamada poderá ser revogada ou anulada, no todo ou
+em parte, a critério do IPEA, sem que isso implique em direito à indenização ou
+reclamação de qualquer natureza.
+16. IMPUGNAÇÃO DA CHAMADA PÚBLICA
+A chamada poderá ser impugnada até o quarto dia corrido após início do prazo
+estabelecido para submissão das candidaturas e deverá ser enviado por meio
+eletrônico, em forma de petição em formato PDF, para o endereço: pipa@ipea.gov.br
+com pelo menos os seguintes campos:
+a) Objeto do pedido:
+b) Exposição de motivos:
+c) Embasamento normativo:
+d) Pedido.
+
+17. CLÁUSULA DE RESERVA
+O IPEA reserva-se o direito de resolver os casos omissos e as situações não previstas
+na presente chamada.
+
+18. DISPOSIÇÕES GERAIS
+18.1. As informações geradas com a implementação das propostas selecionadas serão
+de domínio do IPEA, disponibilizadas em sua base de dados, com divulgação ao público.
+18.2. É dever do pesquisador bolsista apresentar relatórios semestrais e final sobre as
+atividades desenvolvidas durante o período de sua bolsa, devidamente avaliado pelo
+coordenador do projeto.
+18.3. As publicações científicas e qualquer outro meio de divulgação de trabalho de
+pesquisa, apoiados pela presente chamada, deverão citar, obrigatoriamente, o apoio do
+IPEA.
+18.4. Caso haja desistência da pessoa selecionada ou cancelamento da bolsa, poderá
+ser convocada a pessoa selecionada em segunda lugar e, assim, sucessivamente, a fim
+de dar continuidade às atividades do projeto de pesquisa.
+18.5. A concessão da bolsa de pesquisa não configura vínculo empregatício, nem se
+caracteriza como contraprestação de serviço.
+18.6. Não será concedido a pessoa candidata acesso ao conteúdo e a outros dados das
+avaliações
+desenvolvidas pelos demais pessoas candidatas na presente chamada pública, pela
+inviabilidade jurídica do pedido, com fulcro no art. 31 da Lei nº 12.527 de 2011, tendo
+em vista se tratar de informações pessoais, salvo se houver previsão legal ou
+consentimento expresso da pessoa a quem elas se referem, em conformidade com o
+inciso II do § 1º do art. 31 da Lei nº 12.527/2011.
+18.7. Os documentos a serem incluídos no momento da inscrição no SISBOLSAS
+deverão ser nos formatos “.docx”,“.doc” ,“.odt”,“.pdf”, limitando-se a arquivos de no
+máximo 50 Mb (50 megabytes) cada um. Recomenda-se evitar o uso de figuras, gráficos
+etc., que comprometam a capacidade do arquivo, pois propostas que excedam o limite
+de 50 Mb não serão recebidas pelo guichê eletrônico do IPEA"
+
+19. ANEXOS
+19.1. Anexo I – Cronograma
+19.2. Anexo II – Concessão da Bolsa/Documentos para implementação da Bolsa
+
+                                                      Brasília, 08 de janeiro de 2026
+
+                            MARINÉSIA LEMOS SOUTO
+  Coordenadora-Geral de Contratações, Serviços Gerais e Apoio à Pesquisa – CGCAP
+                                     ANEXO I
 
 
-               SECRETARIA NACIONAL DE PESCA ARTESANAL                                                              UNIDADE ESTADUAL NO RIO GRANDE DO SUL
-                                    EXTRATO DE TERMO ADITIVO                                                                            AVISO DE ANULAÇÃO
+1. CRONOGRAMA
+1.1. O cronograma está disposto abaixo:
 
-Espécie: 2° Termo Aditivo ao Convênio nº 948599/2023                                                ANULAÇÃO DE TERMO DE RESCISÃO UNILATERAL
-Processo nº 00350.004402/2023-16                                                                               A Fundação Instituto Brasileiro de Geografia e Estatística (IBGE), por meio da
-Concedente: Ministério da Pesca e Aquicultura - CNPJ: 49.381.076/0001-01.                           Superintendência Estadual do Rio Grande do Sul, considerando as recomendações do
-Convenente: Fundação De Amparo A Pesquisa Do Estado Do Acre - FAPAC, CNPJ nº                        PARECER Nº 00051/2026/ADM-COACON/PFE-IBGE/PGF/AGU, resolve ANULAR o Termo de
-                                                                                                    Rescisão Unilateral do Contrato Administrativo SICON nº 11/2025. A presente anulação tem
-15.449.024/0001-08.                                                                                 como fundamentos o Art. 137, caput, da Lei n° 14.133, de 2021, os Arts. 53 e 54 da Lei n°
-Objeto: O presente Termo Aditivo visa prorrogar a vigência do Termo de Convênio                     9.784, de 1999, e a Súmula 473 do Supremo Tribunal Federal.
-948599/2023 (32793128), até a data de 29 de abril de 2027, tendo em vista o disposto na
-Portaria Conjunta MGI/MF/CGU nº 33, de 30 de agosto de 2023.                                                                                         Em 30 de abril de 2026.
-Data da Assinatura: 28/04/2026.                                                                                                                LUIS EDUARDO AZEVEDO PUCHALSKI
-Signatário Concedente: Cristiano Wellington Noberto Ramalho - Secretário Nacional de                                                 Superintendente Estadual do IBGE no Rio Grande do Sul
-Pesca Artesanal.
-Signatário Convenente: Reyson Barros Correia - Presidente da Fundação de Amparo a                                 INSTITUTO DE PESQUISA ECONÔMICA APLICADA
-Pesquisa do Estado do Acre (FAPAC).
-                                                                                                                     EXTRATO DE TERMO ADITIVO Nº 3/2026 - UASG 113601
-                                    EXTRATO DE TERMO ADITIVO
-                                                                                                    Número do Contrato: 21/2025.
-Espécie: 1º Termo Aditivo ao Termo de Fomento n.° 965701/2024.                                      Nº Processo: 03001.000838/2025-48.
-Processo n.º 00350.031163/2024-40.                                                                  Pregão. Nº 90016/2024. Contratante: INSTITUTO DE PESQUISA ECONOMICA APLICADA.
-Concedente: Secretaria Nacional de Pesca Artesanal - MPA, CNPJ: 49.381.076/0001-01.                 Contratado: 14.355.750/0001-90 - ATLANTICO ENGENHARIA LTDA. Objeto: O presente
-Convenente: Federação das Colônias e Associações dos Pescadores e Aquicultores do                   termo aditivo tem por objeto o a(s) seguinte(s) alteração(ões) contratual(is), fundamentada
-Estado do Espirito Santo - FECOPES, CNPJ/MF nº 10.750.850/0001-60.                                  no art. 124, II, "d", c/c art. 134 ambos da lei n. 14.133/2021, tais como: Reequilíbrio
-Objeto: O presente Termo Aditivo visa prorrogar a vigência do Termo de Fomento nº                   Econômico Financeiro do Contrato nº. 21/2025, referente a reoneração gradual da folha de
-956450/2024, até a data de 31 de maio de 2027.                                                      pagamento da empresa, conforme previsto na lei nº. 14.973/2025; reativação de 2,3585%
-                                                                                                    referente aos custos fixos ou variáveis não renováveis, da planilha de custos e formação de
-Data da Assinatura: 28/04/2026.                                                                     preços, previsto no módulo 3 - provisão para rescisão, e, ainda a alteração do item 11.1,
-Signatário Concedente: Cristiano Wellington Noberto Ramalho - Secretário Nacional de                constante na cláusula décima primeira, da garantia de execução do contrato nº. 21/2025..
-Pesca Artesanal.                                                                                    Vigência: 01/09/2025 a 01/09/2026. Valor Total Atualizado do Contrato: R$ 7.834.897,73.
-Signatário Convenente/OSC: Carlos Roberto Alves Belonia - Presidente da Federação das               Data de Assinatura: 30/04/2026.
-Colônias e Associações dos Pescadores e Aquicultores do Estado do Espirito Santo - FECOPES.
-                                                                                                    (COMPRASNET 4.0 - 30/04/2026).
-              Ministério do Planejamento e Orçamento
-                                                                                                                 DIRETORIA DE DESENVOLVIMENTO INSTITUCIONAL
-FUNDAÇÃO INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA                                                               COORDENAÇÃO-GERAL DE SERVIÇOS
-                 EXTRATO DE APOSTILAMENTO Nº 7/2026 - UASG 114637                                                      CORPORATIVOS E APOIO À PESQUISA
-Número do Contrato: 6/2022.                                                                                           COORDENAÇÃO DE APOIO À PESQUISA
-Nº Processo: 01727.000096/2021-16.                                                                                EXTRATO DE ACORDO DE COOOPERAÇÃO TÉCNICA Nº 18/2026
-Contratante: CENTRO DOC. E DISSEMINACAO DA INFORMACAO/IBGE. Contratado:
-33.285.255/0001-05 - CNS NACIONAL DE SERVICOS LIMITADA. Objeto: Repactuação de                      ESPÉCIE: Acordo de Cooperação Técnica entre o IPEA e a Secretária de Prêmios e Apostas
-preços.. Vigência: 25/04/2026 a 24/04/2027. Valor Total Atualizado do Contrato: R$                  - SPA nº 18/2026. PROCESSO: nº 03001.000514/2026-91. PARTÍCIPES: Instituto de Pesquisa
-514.386,24. Data de Assinatura: 28/04/2026.                                                         Econômica Aplicada - Ipea, CNPJ nº 33.892.175/0001-00, e a Secretária de Prêmios e
-                                                                                                    Apostas - SPA, CNPJ nº 00.394.460/0581-40- OBJETO: é a formalizar parceria entre o
-(COMPRASNET 4.0 - 28/04/2026).                                                                      Ministério da Fazenda, por intermédio da Secretaria de Prêmios e Apostas (SPA), e o
-                                                                                                    Instituto de Pesquisa Econômica Aplicada (IPEA), com vistas à estruturação de um sistema
-                            UNIDADE ESTADUAL NO CEARÁ                                               de indicadores públicos voltados ao monitoramento e à avaliação da política regulatória de
-                                                                                                    apostas de quota fixa, bem como ao desenvolvimento de estudos e pesquisas, de interesse
-                                 AVISO DE LICITAÇÃO                                                 institucional, sobre o mercado de apostas de quota fixa e suas implicações
-                    PREGÃO ELETRÔNICO Nº 90002/2026 - UASG 114610                                   socioeconômicas, conforme especificações estabelecidas no plano de trabalho.
-                                                                                                    ASSINATURA: 15/04/2026 - VIGÊNCIA: 60 (sessenta) meses a partir da assinatura - até
-            Nº Processo: 03623000067202652. Objeto: Aquisição de equipamentos de                    15/04/2031. SIGNATÁRIO: Pelo IPEA, Luciana Mendes Santos Servo, Presidenta, e pela
-repotencialização de estações maregráficas da Rede Maregráfica Permanentepara Geodésia              SPA/MF, Daniele Correa Cardoso, Secretaria -Substituta.
-(RMPG), bem como de Miras de Invar para a atividade de nivelamento geométrico.. Total
-de Itens Licitados: 3. Edital: 04/05/2026 das 08h00 às 12h00 e das 14h00 às 17h00.                               DIRETORIA DE ESTUDOS E POLÍTICAS DO ESTADO,
-Endereço: Av. 13 de Maio, 2901, Benfica - Fortaleza - Ce - Fortaleza/CE ou                                            DAS INSTITUIÇÕES E DA DEMOCRACIA
-https://www.gov.br/compras/edital/114610-5-90002-2026. Entrega das Propostas: a partir
-                                                                                                                                  RESULTADO DE JULGAMENTO
-de 04/05/2026 às 08h00 no site www.gov.br/compras. Abertura das Propostas: 14/05/2026
-às 09h30 no site www.gov.br/compras. Informações Gerais: .                                                                    CHAMADA PÚBLICA IPEA/PIPA Nº 1/2026
+ EVENTOS                                                        DATAS
+ Início do envio das candidaturas                               09 de Janeiro de
+                                                                2026
+ Data limite para submissão das candidaturas                    29 de Janeiro de
+                                                                2026
+ Previsão da divulgação do resultado no Diário Oficial da União A partir do dia 13
+ e na página do IPEA na internet                                de fevereiro de
+                                                                2026
+ Previsão do início da bolsa                                    A partir do dia 26
+                                                                de fevereiro de
+                                                                2026
+1.2. As inscrições devem ser enviadas ao IPEA até às 23h59min (vinte e três horas e
+cinquenta e nove minutos), horário de Brasília, na data limite para submissão das
+candidaturas.
+1.3. Recomenda-se o envio das propostas com antecedência, uma vez que o IPEA não
+se responsabiliza por propostas não recebidas em decorrência de eventuais problemas
+técnicos e congestionamentos.
+                                     ANEXO II
 
-                                                                                                               O INSTITUTO DE PESQUISA ECONÔMICA APLICADA - IPEA, torna público o
-                                                      ELAINE CRISTINA MARCAL SALES                  resultado com as pessoas candidatas selecionadas para concessão de bolsa pesquisa
-                                                                 Pregoeira                          conforme Item 9 - Resultado do Julgamento, com duração prevista de 12 (doze) meses,
-                                                                                                    podendo ser renovada de acordo com Chamada Pública nº 001/2026 - Projeto: "Conexões
-(SIASGnet - 28/04/2026) 114629-11301-2026NE800001                                                   entre as Organizações da Sociedade Civil e o Estado", no âmbito do Programa de Incentivo
-                     UNIDADE ESTADUAL EM MINAS GERAIS                                               à Pesquisa Aplicada - PIPA. A implementação da bolsa, ficará condicionada à aceitação da
-                                                                                                    pessoa candidata e apresentação dos documentos necessários.
-                  EXTRATO DE CONTRATO Nº 90002/2026 - UASG 114618
-                                                                                                    .   . Nome do Candidato              .Modalidade de Bolsa/Colocação
-Nº Processo: 03631.000199/2026-85.                                                                  .   .Vitor Guerra Rolla              .Seleção 1 - Assistente em Ciência de Dados Pleno
-Dispensa Nº 20/2026. Contratante: SUPERINTENDENCIA ESTADUAL IBGE MINAS GERAIS.                                                           (aprovado) -1º lugar
-Contratado: 49.082.295/0001-81 - DIGITAL NET KTA LTDA. Objeto: Contratação de solução               ..Felipe      Marques       Esteves .Seleção 1 - Assistente em Ciência de Dados Pleno
-de tecnologia da informação e comunicação de serviço de comunicação multimídia -                     Lamarca*                            (selecionado) -2º lugar
-SCM(internet banda larga) para atendimento à necessidade de comunicação de 18 agências              ..Zara Rego de Souza*                .Seleção 1 - Assistente em Ciência de Dados Pleno
-do IBGE em Minas Gerais, para acesso à internet, nas condições estabelecidas no Termo de                                                 (selecionado) -3º lugar
-Referência. AGÊNCIAS: ARAXÁ/MG , BARBACENA/MG, BETIM/MG , BOM DESPACHO/MG ,                         ..Fernando Gutz Baptista Leite       .Seleção 2 - Doutor (Aprovado) 1º lugar
-CARANGOLA/MG, CARATINGA/MG, CATAGUASES/MG , CAXAMBU/MG , CONSELHEIRO                                ..Aline Brêtas de Menezes*           .Seleção 2 - Doutor (selecionado) - 2º lugar
-LAFAIETE/MG , GUAXUPÉ/MG , ITAJUBÁ/MG , LEOPOLDINA/MG , MANHUAÇU/MG,                                ..Jonice de Oliveira Sampaio*        .Seleção 2 - Doutor (selecionado) - 3º lugar
-PASSOS/MG, SÃO JOÃO DEL REI/MG , UBERABA/MG , UBERLÂNDIA/MG, UNAÍ/MG.                                           *Caso haja desistência da 1º colocado das seleções, poderão ser convocados os
-Fundamento Legal: LEI 14.133/2021 - Artigo: 75 - Inciso: II. Vigência: 29/04/2026 a                 2º colocados, e assim sucessivamente.
-28/04/2027. Valor Total: R$ 14.160,00. Data de Assinatura: 29/04/2026.
-                                                                                                                                                Brasília-DF, 30 de abril de 2026.
-(COMPRASNET 4.0 - 30/04/2026).                                                                                                                LUSENI MARIA CORDEIRO D AQUINO
-                                                                                                                                   Diretora de Estudos e Políticas DO Estado, das Instituições
-                  EXTRATO DE TERMO ADITIVO Nº 4/2026 - UASG 114618                                                                                       e da Democracia
-Número do Contrato: 8/2019.                                                                                             Ministério de Portos e Aeroportos
-Nº Processo: 20526.000199/2019-91.
-Dispensa. Nº 5/2019. Contratante: SUPERINTENDENCIA ESTADUAL IBGE MINAS GERAIS.
-Contratado: 14.242.624/0001-20 - GILBERTO MATOS PASSOS DINIZ. Objeto: Quarto Termo                             AGÊNCIA NACIONAL DE TRANSPORTES AQUAVIÁRIOS
-Aditivo ao Contrato de Locação do imóvel situado à rua José Carlos Camargos, nº 106, em                                        EDITAL DE CONVOCAÇÃO Nº 30/2026
-Contagem, para instalar a agência do IBGE em Contagem/MG.. Vigência: 10/05/2026 a
-10/05/2028. Valor Total Atualizado do Contrato: R$ 84.000,00. Data de Assinatura:                               O DIRETOR-GERAL DA AGÊNCIA NACIONAL DE TRANSPORTES AQUAVIÁRIOS, no
-30/04/2026.                                                                                         uso da competência que lhe é conferida pelo art. 12, § 1º, inciso V do Regimento Interno,
-                                                                                                    aprovado pela Resolução nº 116, de 20 de agosto de 2024, alterada pela Resolução nº
-(COMPRASNET 4.0 - 30/04/2026).                                                                      120, de 07 de outubro 2024, torna pública a convocação dos candidatos aprovados para
-                                                                                                    provimento de vagas efetivas da Agência Nacional de Transportes Aquaviários (ANTAQ) no
-            EXTRATO DE APOSTILAMENTO Nº 2/2026 - UASG 114618                                        Concurso Público Nacional Unificado 2 regido pelo Edital Enap nº 114/2025, de 30 de
-                                                                                                    junho de 2025, executado pela Fundação Getulio Vargas (FGV) sob a coordenação da
-Número do Contrato: 1/2020.                                                                         Escola Nacional de Administração Pública (Enap), publicado no Diário Oficial da União nº
-                                                                                                    120-A, seção 3 - Extra-A, de 30 de junho de 2025, para provimento do cargo efetivo de
-Nº Processo: 20526.001101/2019-84.                                                                  Técnico em Regulação de Serviços de Transportes Aquaviários e suas respectivas
-Contratante: SUPERINTENDENCIA ESTADUAL IBGE MINAS GERAIS. Contratado:                               retificações publicadas em DOU
-***.983.***-15 - MARCIO JOSE DA SILVA. Objeto: Reajuste aluguel agência                                         1. Da convocação
-Itajubá de acordo com INPC, passando ao valor mensal de R$3.223,85 para                                         1.1.Estão convocados os candidatos aprovados para o cargo de Técnico em
-R$3.362,57, com efeitos financeiros a partir de 15/02/2026. Vigência:                               Regulação de Serviços de Transportes Aquaviários, conforme resultado homologado pelo
-                                                                                                    Edital nº 84, de 13 de março de 2026, publicado no Diário Oficial da União nº 50, seção
-15/02/2026 a 15/02/2029. Valor Total Atualizado do Contrato: R$ 121.052,52.                         3, de 16 de março de 2026, para realizar os procedimentos necessários para o ingresso
-Data de Assinatura: 30/04/2026.                                                                     na ANTAQ.
-                                                                                                                1.2. convocação observará o disposto neste Edital e as informações
-(COMPRASNET 4.0 - 30/04/2026).                                                                      complementares disponibilizadas no endereço eletrônico da ANTAQ.
-
-         Este documento pode ser verificado no endereço eletrônico                            113                                 Documento assinado digitalmente conforme MP nº 2.200-2 de 24/08/2001,
-         http://www.in.gov.br/autenticidade.html, pelo código 05302026050400113                                                       que institui a Infraestrutura de Chaves Públicas Brasileira - ICP-Brasil.
+1. CONCESSÃO DA BOLSA/DOCUMENTOS PARA IMPLEMENTAÇÃO DA BOLSA
+1.1. A pessoa candidata selecionada deverá manifestar interesse de assumir a bolsa,
+sob pena de não ter a bolsa implementada, receberá um link por e-mail, devendo estar
+logado no SISTEMA DE CADASTRO DE BOLSA para aparecer a página de aceite.
+1.2. A bolsa será concedida na duração prevista em conformidade com a Portaria 317
+de 18 de abril de 2025, mediante a apresentação, no prazo determinado por
+comunicação oficial do IPEA, dos seguintes documentos:
+a) formulário de solicitação de bolsa;
+b) termo de compromisso assinado em duas vias;
+c) autorização da instituição de origem para atuação no projeto (para pessoas
+candidatas vinculadas aos órgãos públicos - autenticada);
+d) cópia da carteira de identidade (autenticada);
+e) cópia CPF (autenticada);
+f) comprovante de residência (emitido nos últimos 90 dias);
+g) comprovante de escolaridade (autenticada);
+h) comprovante bancário de conta corrente.
 

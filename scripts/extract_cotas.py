@@ -52,38 +52,78 @@ CATS = {
 QUADRO_COLS = ["AC", "ER", "M", "PCD"]
 
 
+def _regiao_quadro(texto):
+    """Recorta a região do quadro 3.1. Aceita o gatilho 'quadro a seguir' OU, na falta
+    dele, o cabeçalho 'Vagas imediatas' (recuando p/ pegar a linha de cabeçalho). Corta no
+    fim da tabela (3.2 / 'Não haverá' / legenda 'AC: Ampla' / 'Portaria')."""
+    m = re.search(r"quadro a seguir", texto, re.I)
+    start = m.start() if m else None
+    if start is None:
+        m = re.search(r"vagas imediatas", texto, re.I)
+        if not m:
+            return None
+        start = max(0, m.start() - 200)
+    win = texto[start: start + 2600]
+    return re.split(r"\n\s*3\.2[\.\)]|N[ãa]o haver[áa]|Portaria n[ºo°]|\bAC\s*[:\-]\s*Ampla", win)[0]
+
+
+def _celulas_por_ancora(win):
+    """Layout comum: as 8 células vêm DEPOIS do 'R$ <valor>'. Lê de cada âncora 'R$' até a
+    próxima (ou fim), atravessando quebras de linha (robusto a linha quebrada na extração).
+    Devolve (grupos_de_8, puladas) — pula seleção truncada sem derrubar o quadro."""
+    anchors = [m.start() for m in re.finditer(r"R\$\s*[\d.,]+", win)]
+    if not anchors:
+        return [], 0
+    anchors.append(len(win))
+    grupos, puladas = [], 0
+    for i in range(len(anchors) - 1):
+        span = re.sub(r"^\s*R\$\s*[\d.,]+", "", win[anchors[i]: anchors[i + 1]], count=1)
+        cels = re.findall(r"\*|\d+", span)
+        if len(cels) >= 8:
+            grupos.append(cels[:8])
+        else:
+            puladas += 1
+    return grupos, puladas
+
+
+def _celulas_por_run(win):
+    """Layout alternativo (seleção única): as 8 células vêm ANTES do 'R$', na linha do
+    candidato/modalidade. Varre runs de 8 células `*`/número na mesma linha, já sem os
+    valores monetários (removidos), evitando confundir rótulo de seleção e cifras."""
+    limpo = re.sub(r"R\$\s*[\d.,]+", " ", win)
+    return [re.findall(r"\*|\d+", m.group(0)) for m in
+            re.finditer(r"(?<![\d*])(?:\*|\d{1,2})(?:[ \t]+(?:\*|\d{1,2})){7}(?![\d*])", limpo)]
+
+
 def extrai_quadro(texto):
-    """Soma as vagas do quadro 3.1 por categoria. Cada linha de seleção tem 'R$ <valor>'
-    seguido de 8 células (AC ER M PCD imediatas + AC ER M PCD reserva), `*` = 0. Retorna
-    None se não houver quadro tabular parseável (não inventa números)."""
-    mi = re.search(r"quadro a seguir", texto, re.I)
-    if not mi:
+    """Soma as vagas do quadro 3.1 por categoria (AC ER M PCD, imediatas + reserva; `*`=0).
+    Robusto à extração do PDF: tenta o layout 'células após R$' e, se nada casar, o layout
+    'células antes do R$' (seleção única). Não inventa: sanidade descarta números absurdos
+    (total 0, total > 2000 ou reservadas > total)."""
+    win = _regiao_quadro(texto)
+    if not win:
         return None
-    win = texto[mi.start(): mi.start() + 1500]
-    win = re.split(r"\n\s*3\.2\.|N[ãa]o haver[áa]|Portaria n", win)[0]
+    grupos, puladas = _celulas_por_ancora(win)
+    if not grupos:
+        grupos, puladas = _celulas_por_run(win), 0
+    if not grupos:
+        return None
     agg = {c: 0 for c in QUADRO_COLS}
-    selecoes = 0
-    for line in win.splitlines():
-        if not re.search(r"R\$\s*[\d.,]+", line):
-            continue
-        apos = re.sub(r"^\s*[\d.,]+", "", line.split("R$", 1)[1], count=1)
-        celulas = re.findall(r"\*|\d+", apos)
-        if len(celulas) != 8:
-            return None  # formato inesperado — descarta o quadro inteiro
-        nums = [0 if c == "*" else int(c) for c in celulas]
+    for cels in grupos:
+        nums = [0 if c == "*" else int(c) for c in cels[:8]]
         for col, imed, res in zip(QUADRO_COLS, nums[0:4], nums[4:8]):
             agg[col] += imed + res
-        selecoes += 1
-    if not selecoes:
-        return None
     total = sum(agg.values())
     reservadas = agg["ER"] + agg["M"] + agg["PCD"]
+    if total <= 0 or total > 2000 or reservadas > total:
+        return None
     return {
         "total": total,
         "ampla_concorrencia": agg["AC"],
         "reservadas": reservadas,
         "por_categoria": {"Étnico-racial": agg["ER"], "Mulheres": agg["M"], "PCD": agg["PCD"]},
-        "selecoes": selecoes,
+        "selecoes": len(grupos),
+        **({"selecoes_puladas": puladas} if puladas else {}),
     }
 
 
