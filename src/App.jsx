@@ -52,16 +52,17 @@ export function Icon({ name, size = 16, color = "currentColor", w = 1.7 }) {
 
 function Logo() {
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+    <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
       <div style={{
-        width: 32, height: 32, borderRadius: 9, background: `linear-gradient(135deg, ${C.azul}, ${C.brand})`,
-        display: "flex", alignItems: "center", justifyContent: "center", boxShadow: SHADOW.xs,
+        width: 34, height: 34, borderRadius: 10, background: `linear-gradient(140deg, #6e6ef2 0%, ${C.azul} 52%, ${C.brand} 100%)`,
+        display: "flex", alignItems: "center", justifyContent: "center",
+        boxShadow: `${SHADOW.xs}, inset 0 1px 0 rgba(255,255,255,.28)`,
       }}>
-        <Icon name="spark" size={18} color="#fff" w={1.6} />
+        <Icon name="spark" size={19} color="#fff" w={1.7} />
       </div>
       <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.05 }}>
-        <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 16, color: C.ink, letterSpacing: "-.01em" }}>idea</span>
-        <span style={{ fontFamily: SANS, fontWeight: 500, fontSize: 10.5, color: C.faint, letterSpacing: ".02em" }}>gerador IPEA</span>
+        <span style={{ fontFamily: SANS, fontWeight: 700, fontSize: 16.5, color: C.ink, letterSpacing: "-.02em" }}>idea</span>
+        <span style={{ fontFamily: SANS, fontWeight: 600, fontSize: 9.5, color: C.faint, letterSpacing: ".12em", textTransform: "uppercase" }}>gerador IPEA</span>
       </div>
     </div>
   );
@@ -89,16 +90,21 @@ export default function App() {
               return (
                 <button key={k} onClick={() => irPara(k)} className={on ? "" : "lk"} style={{
                   fontFamily: SANS, fontSize: 13.5, fontWeight: on ? 600 : 500, display: "flex", alignItems: "center", gap: 7,
-                  padding: "8px 13px", borderRadius: RADIUS.sm, cursor: "pointer", border: "none",
+                  padding: "8px 14px", borderRadius: RADIUS.sm, cursor: "pointer", border: "none",
                   background: on ? C.accentSoft : "transparent", color: on ? C.azulEscuro : C.muted,
-                }}><Icon name={ic} size={15} />{l}</button>
+                  boxShadow: on ? "inset 0 0 0 1px rgba(91,91,214,.16)" : "none",
+                }}><Icon name={ic} size={15} color={on ? C.azul : C.faint} />{l}</button>
               );
             })}
           </nav>
           <div className="topbadge" style={{
-            fontFamily: SANS, fontSize: 11.5, fontWeight: 600, color: C.muted, padding: "5px 11px",
+            fontFamily: SANS, fontSize: 11.5, fontWeight: 600, color: C.muted, padding: "5px 12px 5px 9px",
             border: `1px solid ${C.line}`, borderRadius: RADIUS.pill, background: C.card,
-          }}>norma 317/2025</div>
+            display: "inline-flex", alignItems: "center", gap: 6,
+          }}>
+            <span style={{ width: 6, height: 6, borderRadius: 999, background: C.ok, boxShadow: `0 0 0 3px ${C.okBg}` }} />
+            norma 317/2025 · vigente
+          </div>
         </div>
       </div>
 
@@ -107,13 +113,15 @@ export default function App() {
           <div style={{ fontFamily: SANS, fontSize: 11.5, letterSpacing: ".1em", color: C.azul, textTransform: "uppercase", fontWeight: 600 }}>
             {page.eyebrow}
           </div>
-          <h1 className="pageh1" style={{ fontFamily: SANS, fontSize: 30, fontWeight: 700, margin: "7px 0 6px", letterSpacing: "-.02em", color: C.ink }}>
+          <h1 className="pageh1" style={{ fontFamily: SANS, fontSize: 31, fontWeight: 800, margin: "7px 0 6px", letterSpacing: "-.025em", color: C.ink }}>
             {page.h1}
           </h1>
           <p style={{ fontFamily: SANS, color: C.muted, margin: 0, fontSize: 15, lineHeight: 1.5, maxWidth: 760 }}>{page.sub}</p>
         </header>
 
-        {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView /> : <RedesView />}
+        <div className="viewfade" key={tab}>
+          {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView /> : <RedesView />}
+        </div>
 
         <footer style={{
           marginTop: 50, paddingTop: 18, borderTop: `1px solid ${C.line}`, fontFamily: SANS,

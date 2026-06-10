@@ -36,6 +36,18 @@ export default function RedesView() {
   const maxConf = Math.max(...dag.edges.map((e) => e.conf), 0.001);
   const isOn = (e) => edge && e.from === edge.from && e.to === edge.to;
 
+  // Nó = caixa com o rótulo INTEIRO (sem código de 3 letras). Largura ∝ tamanho do texto.
+  const LABEL = (n) => NOME[n].replace(" (grupo)", "");
+  const box = {};
+  dag.nodes.forEach((n) => { box[n] = { w: Math.min(140, Math.max(64, LABEL(n).length * 7.2 + 24)), h: 34 }; });
+  // Ponto onde a reta centro→alvo cruza a borda da caixa (folga p/ acomodar a seta).
+  const onRect = (cx, cy, hw, hh, tx, ty) => {
+    const dx = tx - cx, dy = ty - cy;
+    if (!dx && !dy) return { x: cx, y: cy };
+    const s = Math.min(dx ? hw / Math.abs(dx) : Infinity, dy ? hh / Math.abs(dy) : Infinity);
+    return { x: cx + dx * s, y: cy + dy * s };
+  };
+
   const Seg = ({ on, set, children }) => (
     <button onClick={set} style={{
       fontFamily: SANS, fontSize: 12.5, padding: "6px 13px", cursor: "pointer", borderRadius: 7, border: "none",
@@ -54,7 +66,7 @@ export default function RedesView() {
   );
 
   return (
-    <div style={{ display: "grid", gap: 18 }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 18, minWidth: 0 }}>
       <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <div style={{ display: "inline-flex", background: C.sunken, borderRadius: RADIUS.sm, padding: 3, gap: 3 }}>
           <Seg on={escopo === "todos"} set={() => { setEscopo("todos"); setSelKey(null); }}>Todo o corpus (253)</Seg>
@@ -66,66 +78,68 @@ export default function RedesView() {
 
       <div className="twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0,1fr) minmax(320px,400px)", gap: 18, alignItems: "start" }}>
         {/* DAG */}
-        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.lg, boxShadow: SHADOW.card, padding: "16px 18px 10px" }}>
-          <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: ".08em", textTransform: "uppercase", color: C.faint, marginBottom: 4 }}>
-            DAG aprendido — Hill-Climbing (BIC) · espessura ∝ estabilidade (bootstrap, B={dag.B})
+        <div style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.lg, boxShadow: SHADOW.card, padding: "16px 18px 10px", minWidth: 0 }}>
+          <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: C.faint, marginBottom: 3 }}>
+            Mapa de dependências
           </div>
-          <svg viewBox={`0 0 ${W} ${H + 28}`} style={{ width: "100%", height: "auto", display: "block" }}>
+          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, marginBottom: 10, lineHeight: 1.45 }}>
+            Uma seta <b style={{ color: C.ink }}>A → B</b> significa que conhecer <b style={{ color: C.ink }}>A</b> ajuda a prever <b style={{ color: C.ink }}>B</b>. Clique numa seta para ver a tabela de probabilidades. A <b>espessura</b> indica a estabilidade.
+          </div>
+          <svg viewBox={`0 0 ${W} ${H + 34}`} style={{ width: "100%", height: "auto", display: "block" }}>
             <defs>
               {[["aOn", C.azul], ["aOff", C.azulClaro]].map(([id, col]) => (
-                <marker key={id} id={id} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <marker key={id} id={id} viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
                   <path d="M0 0L10 5L0 10z" fill={col} />
                 </marker>
               ))}
             </defs>
             {domain && tiers.map((t) => (
-              <text key={t} x={colX[t]} y={14} textAnchor="middle" fontFamily={SANS} fontSize="9.5" fontWeight="600" fill={C.faint}>
-                {TIER_LABEL[t].split(" (")[0]}
+              <text key={t} x={colX[t]} y={13} textAnchor="middle" fontFamily={SANS} fontSize="10" fontWeight="700" letterSpacing=".05em" fill={C.faint}>
+                {TIER_LABEL[t].split(" (")[0].toUpperCase()}
               </text>
             ))}
-            <g transform="translate(0,24)">
+            <g transform="translate(0,28)">
               {dag.edges.map((e) => {
                 const p1 = pos[e.from], p2 = pos[e.to];
                 if (!p1 || !p2) return null;
                 const on = isOn(e);
-                const dim = edge && !on;
-                const dx = p2.x - p1.x, dy = p2.y - p1.y, len = Math.hypot(dx, dy) || 1;
-                const r1 = 22, r2 = 28; // recuo p/ não cobrir o nó / dar espaço à seta
-                const x1 = p1.x + (dx / len) * r1, y1 = p1.y + (dy / len) * r1;
-                const x2 = p2.x - (dx / len) * r2, y2 = p2.y - (dy / len) * r2;
+                const dim = selKey !== null && !on; // só esmaece os demais depois de um clique
+                const a = onRect(p1.x, p1.y, box[e.from].w / 2, box[e.from].h / 2, p2.x, p2.y);
+                const b = onRect(p2.x, p2.y, box[e.to].w / 2 + 7, box[e.to].h / 2 + 7, p1.x, p1.y);
                 return (
-                  <line key={`${e.from}->${e.to}`} x1={x1} y1={y1} x2={x2} y2={y2}
-                    stroke={on ? C.azul : C.azulClaro} strokeOpacity={dim ? 0.22 : 1}
-                    strokeWidth={1.4 + (e.conf / maxConf) * 6} strokeLinecap="round"
-                    markerEnd={`url(#${on ? "aOn" : "aOff"})`} style={{ cursor: "pointer" }}
-                    onClick={() => { setSelKey(`${e.from}->${e.to}`); setFlip(false); }} />
+                  <g key={`${e.from}->${e.to}`} style={{ cursor: "pointer" }} onClick={() => { setSelKey(`${e.from}->${e.to}`); setFlip(false); }}>
+                    <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke="transparent" strokeWidth={16} />
+                    <line x1={a.x} y1={a.y} x2={b.x} y2={b.y}
+                      stroke={on ? C.azul : C.azulClaro} strokeOpacity={dim ? 0.3 : 1}
+                      strokeWidth={1.6 + (e.conf / maxConf) * 5.5} strokeLinecap="round"
+                      markerEnd={`url(#${on ? "aOn" : "aOff"})`} />
+                  </g>
                 );
               })}
               {dag.nodes.map((n) => {
-                const p = pos[n], hot = edge && (edge.from === n || edge.to === n);
+                const p = pos[n], w = box[n].w, h = box[n].h, hot = edge && (edge.from === n || edge.to === n);
+                const dim = selKey !== null && !hot;
                 return (
-                  <g key={n}>
-                    <circle cx={p.x} cy={p.y} r={21} fill={hot ? C.azul : C.accentSoft} stroke={C.azul} strokeWidth={hot ? 0 : 1.5} />
-                    <text x={p.x} y={p.y + 4} textAnchor="middle" fontFamily={SANS} fontSize="12" fontWeight="700" fill={hot ? "#fff" : C.azulEscuro}>
-                      {NOME[n].replace(" (grupo)", "").slice(0, 3)}
-                    </text>
-                    <text x={p.x} y={p.y + 36} textAnchor="middle" fontFamily={SANS} fontSize="11" fontWeight={hot ? 700 : 500} fill={hot ? C.ink : C.muted}>
-                      {NOME[n].replace(" (grupo)", "")}
+                  <g key={n} opacity={dim ? 0.45 : 1} style={{ transition: "opacity .15s" }}>
+                    <rect x={p.x - w / 2} y={p.y - h / 2} width={w} height={h} rx={9}
+                      fill={hot ? C.azul : C.card} stroke={hot ? C.azul : C.azulClaro} strokeWidth={1.5} />
+                    <text x={p.x} y={p.y + 4.5} textAnchor="middle" fontFamily={SANS} fontSize="12.5" fontWeight={hot ? 700 : 600} fill={hot ? "#fff" : C.azulEscuro}>
+                      {LABEL(n)}
                     </text>
                   </g>
                 );
               })}
             </g>
           </svg>
-          <div style={{ fontFamily: SANS, fontSize: 11, color: C.faint, padding: "2px 2px 8px", lineHeight: 1.5 }}>
-            Seta = dependência dirigida no melhor modelo (BIC). A <b>direção</b> entre variáveis nem sempre é
-            identificável só com dados (classes de equivalência); a ordem temporal de domínio ajuda a orientar.
-            Estabilidade = fração de {dag.B} reamostragens em que a aresta reapareceu. Associação ≠ causalidade.
+          <div style={{ fontFamily: SANS, fontSize: 11, color: C.faint, padding: "4px 2px 8px", lineHeight: 1.5 }}>
+            Aresta = dependência no melhor modelo (Hill-Climbing/BIC). A <b>direção</b> nem sempre é identificável só
+            com dados (classes de equivalência); a ordem temporal de domínio ajuda a orientar. Estabilidade = fração
+            de {dag.B} reamostragens (bootstrap) em que a aresta reapareceu. Associação ≠ causalidade.
           </div>
         </div>
 
         {/* painel */}
-        <div style={{ display: "grid", gap: 16 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 16, minWidth: 0 }}>
           <div style={{ background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.lg, boxShadow: SHADOW.card, padding: "16px 18px" }}>
             <div style={{ fontFamily: SANS, fontSize: 11, fontWeight: 600, letterSpacing: ".08em", textTransform: "uppercase", color: C.faint, marginBottom: 10 }}>
               Arestas do DAG ({dag.edges.length}) · estabilidade

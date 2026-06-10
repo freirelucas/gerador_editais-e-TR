@@ -1,7 +1,7 @@
 // Sistema de design "produto" (Linear/Notion-like) com âncora institucional IPEA.
 // UI em Inter; o DOCUMENTO gerado usa serifa (Source Serif) para parecer o artefato oficial.
 export const FONTS = `
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap');
 `;
 
 export const SANS = "'Inter', system-ui, -apple-system, Segoe UI, sans-serif";
@@ -43,37 +43,49 @@ export const C = {
 export const RADIUS = { sm: 8, md: 12, lg: 16, pill: 999 };
 export const SHADOW = {
   xs: "0 1px 2px rgba(20,28,40,.06)",
-  card: "0 1px 2px rgba(20,28,40,.05), 0 2px 6px rgba(20,28,40,.04)",
-  md: "0 6px 20px rgba(20,28,40,.10)",
-  lg: "0 20px 48px rgba(20,28,40,.20)",
-  focus: "0 0 0 3px rgba(91,91,214,.18)",
+  card: "0 1px 2px rgba(20,28,40,.04), 0 4px 14px rgba(20,28,40,.05)",
+  md: "0 10px 30px rgba(20,28,40,.12)",
+  lg: "0 24px 56px rgba(20,28,40,.22)",
+  focus: "0 0 0 3px rgba(91,91,214,.30)",
 };
 
 // CSS global: foco, hover, transições, scrollbar e microanimações (o que inline não cobre).
 export const GLOBAL_CSS = `
 *{box-sizing:border-box;}
-html,body{margin:0;background:${C.paper};}
+html{scroll-behavior:smooth;}
+html,body{margin:0;background:${C.paper};-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+::selection{background:${C.accentSoft};color:${C.azulEscuro};}
+
+/* Foco acessível e consistente: anel índigo só no foco por teclado (sem outline serrilhado).
+   O box-shadow segue o border-radius real do elemento, então serve pílula, círculo ou caixa. */
+button:focus-visible,a:focus-visible,select:focus-visible,summary:focus-visible,[role="button"]:focus-visible,[tabindex]:focus-visible{outline:none;box-shadow:${SHADOW.focus}!important;}
 input,textarea,select{transition:border-color .15s, box-shadow .15s;}
 input:focus,textarea:focus,select:focus{border-color:${C.azul}!important;box-shadow:${SHADOW.focus}!important;}
 input::placeholder,textarea::placeholder{color:#aeb4bc;}
-button{transition:background .15s,color .15s,border-color .15s,box-shadow .15s,transform .06s;}
+
+button{transition:background .15s,color .15s,border-color .15s,box-shadow .15s,transform .08s ease;}
 button:active{transform:translateY(.5px);}
+.lk{transition:background .15s,color .15s;}
 .lk:hover{background:${C.sunken};}
-.cardhover{transition:box-shadow .18s, border-color .18s, transform .18s;}
-.cardhover:hover{box-shadow:${SHADOW.md};border-color:${C.lineStrong};}
+.cardhover{transition:box-shadow .2s, border-color .2s, transform .2s;}
+.cardhover:hover{box-shadow:${SHADOW.md};border-color:${C.lineStrong};transform:translateY(-1px);}
+
 ::-webkit-scrollbar{width:11px;height:11px;}
 ::-webkit-scrollbar-thumb{background:#d4d8df;border-radius:999px;border:3px solid transparent;background-clip:padding-box;}
 ::-webkit-scrollbar-thumb:hover{background:#c2c7d0;}
+
 @keyframes fadeUp{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
 @keyframes pop{0%{transform:scale(.96);}60%{transform:scale(1.015);}100%{transform:scale(1);}}
-@keyframes flashbg{0%{background:rgba(91,91,214,.18);}100%{background:transparent;}}
-.flash{animation:flashbg 1.1s ease-out;border-radius:6px;margin:0 -8px;padding:0 8px;}
+@keyframes flashbg{0%{background:${C.accentSoft};}100%{background:transparent;}}
+.flash{animation:flashbg 1.1s ease-out;border-radius:8px;}
 .fadeUp{animation:fadeUp .24s cubic-bezier(.2,.7,.3,1) both;}
 .fadeUp>*{animation:fadeUp .26s cubic-bezier(.2,.7,.3,1) both;}
 .fadeUp>*:nth-child(2){animation-delay:.03s;}
 .fadeUp>*:nth-child(3){animation-delay:.06s;}
 .fadeUp>*:nth-child(4){animation-delay:.09s;}
 .pop{animation:pop .2s ease;}
+.viewfade{animation:fadeUp .28s cubic-bezier(.2,.7,.3,1) both;}
+
 /* Realce e tooltip nos gráficos SVG: barras/fatias clareiam no hover; alvos transparentes
    (.chDot) dão um halo onde se pode ler o ponto. O tooltip em si é o <title> nativo do SVG. */
 .chHover{transition:opacity .12s ease}
@@ -82,21 +94,27 @@ button:active{transform:translateY(.5px);}
 .chDot:hover{fill:rgba(91,91,214,.16)}
 /* Barra de ferramentas de exportação por figura + chip de "filtrado" */
 .figtools{display:flex;gap:6px;flex-shrink:0}
-.figtools button{font-family:inherit;font-size:11px;font-weight:600;color:#6e737b;background:#fff;border:1px solid #e8eaef;border-radius:6px;padding:2px 9px;cursor:pointer;transition:color .12s,border-color .12s}
-.figtools button:hover{color:#5b5bd6;border-color:#9b9bec}
-.fchip{display:inline-block;font-size:10px;font-weight:700;color:#5b5bd6;background:#eeeefc;border-radius:999px;padding:2px 8px;margin-left:8px;letter-spacing:.02em;vertical-align:middle;text-transform:none}
-.flash{animation:flash 1.2s ease}
-@keyframes flash{0%{background:#dcdcfa}100%{background:transparent}}
-@media (max-width:880px){.twocol{grid-template-columns:1fr!important;}}
+.figtools button{font-family:inherit;font-size:11px;font-weight:600;color:${C.faint};background:${C.card};border:1px solid ${C.line};border-radius:6px;padding:3px 9px;cursor:pointer;transition:color .12s,border-color .12s,background .12s}
+.figtools button:hover{color:${C.azul};border-color:${C.azulClaro};background:${C.accentSoft}}
+.fchip{display:inline-block;font-size:10px;font-weight:700;color:${C.azul};background:${C.accentSoft};border-radius:999px;padding:2px 8px;margin-left:8px;letter-spacing:.02em;vertical-align:middle;text-transform:none}
+
+/* Acessibilidade: respeita quem pediu menos movimento. */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important;}
+}
+
+/* Em telas estreitas as duas colunas viram uma; minmax(0,1fr) deixa a coluna encolher abaixo do
+   conteúdo (tabela/SVG largos passam a rolar internamente) em vez de estourar a página. */
+@media (max-width:880px){.twocol{grid-template-columns:minmax(0,1fr)!important;}}
 /* Desktop-first: o app é desenhado para tela grande; abaixo de 720px só adaptamos o cabeçalho
    (que não cabe) e folgas — sem mudar o desktop. A nav vira uma faixa própria, todas as abas
-   visíveis; o selo da norma e o padding encolhem; o H1 diminui. */
+   visíveis com alvo de toque confortável; o selo da norma e o padding encolhem; o H1 diminui. */
 @media (max-width:720px){
-  .topbar{height:auto!important;flex-wrap:wrap!important;gap:10px!important;padding:9px 16px!important;}
+  .topbar{height:auto!important;flex-wrap:wrap!important;gap:10px!important;padding:9px 14px!important;}
   .topnav{order:3;width:100%;margin-left:0!important;gap:5px!important;}
-  .topnav button{flex:1 1 0;min-width:0;justify-content:center;gap:5px!important;padding:8px 4px!important;font-size:11.5px!important;white-space:nowrap;}
+  .topnav button{flex:1 1 0;min-width:0;min-height:42px;justify-content:center;gap:5px!important;padding:8px 4px!important;font-size:11.5px!important;white-space:nowrap;}
   .topbadge{display:none!important;}
-  .pagewrap{padding:22px 16px 64px!important;}
+  .pagewrap{padding:22px 14px 64px!important;}
   .pageh1{font-size:23px!important;}
 }
 `;
