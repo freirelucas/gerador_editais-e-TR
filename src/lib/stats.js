@@ -127,21 +127,27 @@ export const topTemas = (() => {
 // --- qualidade: completude e flags (honestidade primeiro) ---
 const N = CORPUS.length;
 const frac = (pred) => Math.round((100 * CORPUS.filter(pred).length) / N);
-// Honestidade: "modalidade" tem DUAS leituras que não podem ser confundidas — o texto livre
-// (extraído, presente em ~85%) e a modalidade CANÔNICA (vocabulário oficial da 317, em
-// data/modalidades.js), que por construção só existe no PIPA. Misturá-las gera legenda mentirosa.
+// Honestidade: alguns campos "(só PIPA)" — a modalidade CANÔNICA (vocabulário oficial da 317) e o
+// QUADRO numérico de vagas (vagas_por_cota.quadro) — por construção só existem no PIPA; PROMOB/PROCIN
+// não os têm. Por isso a completude DELES é medida sobre o universo PIPA (fracPipa), não sobre o
+// corpus inteiro — senão a barra contradiz a própria legenda ("X de Y chamadas PIPA"). Os demais
+// campos continuam sobre o corpus todo. (A "modalidade (texto livre)" é a leitura crua, não-canônica.)
+const PIPA = CORPUS.filter((c) => c.programa === "PIPA");
+const fracPipa = (pred) => Math.round((100 * PIPA.filter(pred).length) / PIPA.length);
+const temQuadroVagas = (c) => ((c.vagas_por_cota || {}).quadro || {}).total != null;
 export const completude = [
   { key: "id", campo: "url / título / ano", pct: 100 },
   { key: "programa", campo: "programa", pct: frac((c) => c.programa) },
   { key: "datas", campo: "datas (prazo)", pct: frac((c) => c.prazo_ini_iso && c.prazo_fim_iso) },
   { key: "mod_txt", campo: "modalidade (texto livre)", pct: frac((c) => c.modalidade) },
-  { key: "mod_can", campo: "modalidade canônica (só PIPA)", pct: frac((c) => c.modalidade_canonica) },
-  { key: "bolsas", campo: "nº de bolsas", pct: frac((c) => c.qtd_bolsas != null) },
+  { key: "mod_can", campo: "modalidade canônica (só PIPA)", pct: fracPipa((c) => c.modalidade_canonica) },
+  { key: "vagas", campo: "quadro de vagas (só PIPA)", pct: fracPipa(temQuadroVagas) },
 ];
 export const modalidadeCanon = {
   total: CORPUS.filter((c) => c.modalidade_canonica).length,
-  pipa: CORPUS.filter((c) => c.programa === "PIPA" && c.modalidade_canonica).length,
-  pipaTotal: CORPUS.filter((c) => c.programa === "PIPA").length,
+  pipa: PIPA.filter((c) => c.modalidade_canonica).length,
+  pipaTotal: PIPA.length,
+  vagasPipa: PIPA.filter(temQuadroVagas).length,
 };
 export const flagsCount = (() => {
   const m = new Map();
