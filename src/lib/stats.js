@@ -339,7 +339,7 @@ export const programaPorAnoProj = programaPorAno.map((linha) => {
 export const PROGRAMAS_OPC = ["Todos", ...PROGRAMAS];
 export const ANOS_OPC = ["Todos", ...ANOS];
 export const RESERVA_OPC = ["Todas", "Com reserva", "Sem reserva"];
-const temReserva = (c) => !!(c.vagas_por_cota || {}).tem_reserva;
+export const temReserva = (c) => !!(c.vagas_por_cota || {}).tem_reserva;
 
 export function filtrar({ programa = "Todos", ano = "Todos", reserva = "Todas" } = {}) {
   return CORPUS.filter((c) => {
@@ -349,6 +349,27 @@ export function filtrar({ programa = "Todos", ano = "Todos", reserva = "Todas" }
     if (reserva === "Sem reserva" && temReserva(c)) return false;
     return true;
   });
+}
+
+// Resolve quais chamadas correspondem a (dimensão, valor) — usado pelo drill-down dos gráficos.
+// Mesmas convenções dos agregadores acima: multi-rótulo via includes; papel normalizado (sem acento).
+export function matchDim(c, dim, value) {
+  switch (dim) {
+    case "funcao": return (c.categoria_funcao || []).includes(value);
+    case "tema": return (c.categoria_tema || []).includes(value);
+    case "formacao": return (c.formacao || []).includes(value);
+    case "cota": return ((c.vagas_por_cota || {}).categorias || []).includes(value);
+    case "diretoria": return value === "não identificada" ? !c.diretoria : c.diretoria === value;
+    case "papel": return !!c.papel && semAcento(c.papel).replace(/\s+/g, " ").trim() === semAcento(value).replace(/\s+/g, " ").trim();
+    default: return false;
+  }
+}
+// Faixa de janela (mesma binagem de janelaDe): "10–14" ou "40+".
+export function matchJanela(c, faixa) {
+  const d = c.janela_dias;
+  if (typeof d !== "number" || d < 0) return false;
+  const b = Math.min(Math.floor(d / 5) * 5, 40);
+  return (b === 40 ? "40+" : `${b}–${b + 4}`) === faixa;
 }
 
 const porProgramaDe = (arr) =>

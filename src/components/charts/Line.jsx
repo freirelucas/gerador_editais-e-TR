@@ -4,7 +4,8 @@ import { MONO, fmtInt, niceMax, ticks } from "./primitives.js";
 // Linha com área. data: [{ label, value }].
 // projected (opcional): array paralelo a data com o valor projetado (ou null) por ponto;
 // desenha um traço tracejado do real até o projetado (convenção "2026 projetado").
-export default function Line({ data, color = C.cerrado, projected = null }) {
+// Interatividade (opcional): onSelect(label) + selected (label|null) — alvos clicáveis por ponto.
+export default function Line({ data, color = C.cerrado, projected = null, onSelect = null, selected = null }) {
   const projVals = projected || data.map(() => null);
   const max = niceMax(Math.max(1, ...data.map((d) => d.value), ...projVals.filter((v) => v != null)));
   const W = 680, H = 280, padL = 40, padR = 14, padT = 16, padB = 40;
@@ -13,6 +14,8 @@ export default function Line({ data, color = C.cerrado, projected = null }) {
   const y = (v) => padT + plotH * (1 - v / max);
   const pts = data.map((d, i) => `${x(i)},${y(d.value)}`).join(" ");
   const area = `${padL},${padT + plotH} ${pts} ${x(data.length - 1)},${padT + plotH}`;
+  const clk = typeof onSelect === "function";
+  const isSel = (d) => selected != null && d.label === selected;
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto" }} role="img">
@@ -39,14 +42,16 @@ export default function Line({ data, color = C.cerrado, projected = null }) {
         ) : null
       )}
       {data.map((d, i) => (
-        <g key={i}>
-          <title>{`${d.label}: ${fmtInt(d.value)}`}</title>
+        <g key={i} onClick={clk ? () => onSelect(d.label) : undefined} style={clk ? { cursor: "pointer" } : undefined}>
+          <title>{`${d.label}: ${fmtInt(d.value)}${clk ? " · clique para filtrar" : ""}`}</title>
           <circle className="chDot" cx={x(i)} cy={y(d.value)} r="12" />
-          <circle cx={x(i)} cy={y(d.value)} r="3.5" fill={color} />
+          <circle cx={x(i)} cy={y(d.value)} r={isSel(d) ? 5.5 : 3.5} fill={color}
+            stroke={isSel(d) ? C.card : "none"} strokeWidth={isSel(d) ? 2 : 0} />
           <text x={x(i)} y={y(d.value) - 9} textAnchor="middle" fontFamily={MONO} fontSize="10" fill={C.ink}>
             {fmtInt(d.value)}
           </text>
-          <text x={x(i)} y={H - padB + 16} textAnchor="middle" fontFamily={MONO} fontSize="10.5" fill={C.ink}>
+          <text x={x(i)} y={H - padB + 16} textAnchor="middle" fontFamily={MONO} fontSize="10.5" fill={C.ink}
+            fontWeight={isSel(d) ? 700 : 400}>
             {d.label}
           </text>
         </g>

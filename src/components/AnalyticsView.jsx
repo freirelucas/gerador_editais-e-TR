@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { C } from "../theme.js";
+import { C, RADIUS, SHADOW } from "../theme.js";
 import * as S from "../lib/stats.js";
+import { CORPUS } from "../data/corpus.js";
 import quality from "../data/quality.json";
 import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
 import { readUrl, writeAnalytics, DEFAULT_DIM } from "../lib/urlState.js";
@@ -162,9 +163,51 @@ function FilterBar({ filtro, setFiltro, sub, ativo }) {
   );
 }
 
+// Painel de drill-down: lista as chamadas por trás de uma barra clicada (com link ao edital).
+// Fecha no ✕, no clique fora ou no Esc.
+function DrillDown({ titulo, chamadas, onClose }) {
+  useEffect(() => {
+    const k = (e) => e.key === "Escape" && onClose();
+    window.addEventListener("keydown", k);
+    return () => window.removeEventListener("keydown", k);
+  }, [onClose]);
+  return (
+    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 60, background: "rgba(20,28,40,.42)",
+      backdropFilter: "blur(2px)", WebkitBackdropFilter: "blur(2px)", display: "flex", alignItems: "center", justifyContent: "center", padding: 20 }}>
+      <div onClick={(e) => e.stopPropagation()} className="fadeUp" role="dialog" aria-label={titulo} style={{ background: C.card,
+        borderRadius: RADIUS.lg, boxShadow: SHADOW.lg, width: "min(680px,100%)", maxHeight: "82vh", display: "flex", flexDirection: "column", overflow: "hidden" }}>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 12, padding: "16px 20px", borderBottom: `1px solid ${C.line}` }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: C.azul, fontWeight: 700 }}>Drill-down</div>
+            <div style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 700, color: C.ink, lineHeight: 1.3 }}>{titulo}</div>
+            <div style={{ fontFamily: SERIF, fontSize: 12.5, color: C.muted, marginTop: 2 }}>{chamadas.length} chamada{chamadas.length === 1 ? "" : "s"} no recorte atual</div>
+          </div>
+          <button onClick={onClose} title="Fechar (Esc)" style={{ fontFamily: MONO, fontSize: 15, lineHeight: 1, color: C.muted,
+            background: C.sunken, border: "none", borderRadius: RADIUS.pill, width: 30, height: 30, cursor: "pointer", flexShrink: 0 }}>✕</button>
+        </div>
+        <div style={{ overflowY: "auto", padding: "6px 8px" }}>
+          {chamadas.map((c, i) => (
+            <a key={i} href={c.url || c.pdf || "#"} target="_blank" rel="noreferrer" className="lk"
+              style={{ display: "block", textDecoration: "none", padding: "10px 12px", borderRadius: RADIUS.sm }}>
+              <div style={{ fontFamily: SERIF, fontSize: 14, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{c.titulo}</div>
+              <div style={{ fontFamily: MONO, fontSize: 11.5, color: C.muted, marginTop: 2 }}>
+                {c.ano} · {c.programa}{c.modalidade_canonica ? " · " + c.modalidade_canonica : c.modalidade ? " · " + c.modalidade : ""}
+              </div>
+            </a>
+          ))}
+          {!chamadas.length && <div style={{ padding: 18, fontFamily: SERIF, color: C.muted }}>Nenhuma chamada corresponde neste recorte.</div>}
+        </div>
+      </div>
+    </div>
+  );
+}
+// rótulo da dimensão do explorador → chave do resolvedor S.matchDim
+const DIM_KEY = { "Função do perfil": "funcao", "Tema / domínio": "tema", "Formação exigida": "formacao", "Papel / modalidade": "papel", "Diretoria": "diretoria", "Categoria de cota": "cota" };
+
 // explorador: dimensão local + recorte do filtro global; exporta PNG e CSV
 function Explorador({ filtro }) {
   const [dim, setDim] = useState(() => readUrl().dim || DEFAULT_DIM);
+  const [drill, setDrill] = useState(null);
   useEffect(() => { writeAnalytics({ filtro, dim }); }, [dim]); // eslint-disable-line react-hooks/exhaustive-deps
   const ref = useRef(null);
   const sub = useMemo(() => S.filtrar(filtro), [filtro]);
@@ -203,13 +246,15 @@ function Explorador({ filtro }) {
           : "Nenhuma chamada neste recorte tem esse atributo."}
       </div>
       <div ref={ref} style={{ background: "#fff", border: `1px solid ${C.line}`, borderRadius: 2, padding: "14px 16px", minHeight: 120 }}>
-        {dados.length ? <Bars data={dados} horizontal={meta.horizontal} color={C.azul} /> : <Vazio escopo={escopoLabel(filtro)} />}
+        {dados.length
+          ? <Bars data={dados} horizontal={meta.horizontal} color={C.azul}
+              onSelect={(v) => setDrill({ titulo: `${dim}: ${v}`, chamadas: sub.filter((c) => S.matchDim(c, DIM_KEY[dim], v)) })} />
+          : <Vazio escopo={escopoLabel(filtro)} />}
       </div>
-      {meta.multi && dados.length > 0 && (
-        <div style={{ fontFamily: SERIF, fontSize: 11.5, color: C.muted, marginTop: 7 }}>
-          {soma} menções no total (multi-rótulo) · passe o mouse nas barras para o valor exato.
-        </div>
-      )}
+      <div style={{ fontFamily: SERIF, fontSize: 11.5, color: C.muted, marginTop: 7 }}>
+        Clique numa barra para ver as chamadas por trás dela.{meta.multi && dados.length > 0 ? ` ${soma} menções no total (multi-rótulo).` : ""}
+      </div>
+      {drill && <DrillDown titulo={drill.titulo} chamadas={drill.chamadas} onClose={() => setDrill(null)} />}
     </section>
   );
 }
@@ -251,6 +296,19 @@ export default function AnalyticsView() {
   const cp = Object.fromEntries(S.completude.map((c) => [c.key, c.pct]));
   const md = S.modalidadeCanon;
 
+  // ---- interatividade ----
+  // Cross-filter: gráficos cujo eixo é faceta (programa/ano) clicam direto no filtro global
+  // (clique fixa; clicar de novo limpa — substitui por dimensão). Drill-down: os categóricos
+  // abrem a lista das chamadas por trás da barra (S.matchDim resolve a dimensão → chamadas).
+  const [drill, setDrill] = useState(null);
+  const abrir = (titulo, chamadas) => setDrill({ titulo, chamadas });
+  const selPrograma = filtro.programa !== "Todos" ? filtro.programa : null;
+  const selAno = filtro.ano !== "Todos" ? filtro.ano : null;
+  const setPrograma = (p) => setFiltro((f) => ({ ...f, programa: f.programa === p ? "Todos" : p }));
+  const setAno = (a) => setFiltro((f) => ({ ...f, ano: f.ano === a ? "Todos" : a }));
+  const setAnoPrograma = (a, p) => setFiltro((f) => (f.ano === a && f.programa === p ? { ...f, ano: "Todos", programa: "Todos" } : { ...f, ano: a, programa: p }));
+  const selStack = selAno && selPrograma ? { x: selAno, k: selPrograma } : null;
+
   return (
     <div style={{ fontFamily: SERIF, color: C.ink }}>
       <p style={{ fontSize: 15, lineHeight: 1.6, color: C.muted, margin: "0 0 18px", maxWidth: 800 }}>
@@ -276,17 +334,18 @@ export default function AnalyticsView() {
         <Figura titulo="Programa × ano — a virada estrutural" wide
           csv={() => [["ano", "PROMOB", "PIPA", "PROCIN"], ...S.programaPorAno.map((d) => [d.ano, d.PROMOB, d.PIPA, d.PROCIN])]}
           insight={`PROMOB domina 2023–2024 (${promob23}, ${promob24}) e some em 2026; PIPA cresce. A Portaria 317/2025 converteu PROMOB/PROCIN no PIPA — por isso o gerador é PIPA-only. A fatia hachurada de 2026 é o projetado.${projNota}`}>
-          <StackedBars data={S.programaPorAnoProj} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} projected />
+          <StackedBars data={S.programaPorAnoProj} xKey="ano" keys={["PROMOB", "PIPA", "PROCIN"]} cores={COR_PROGRAMA} projected
+            onSelect={setAnoPrograma} selected={selStack} />
         </Figura>
         <Figura titulo="Chamadas por ano — real e projetado"
           csv={() => [["ano", "total", "projetado"], ...S.porAnoProjetado.map((a) => [a.ano, a.total, a.projetado ?? ""])]}
           insight={"Tendência de queda no nº de chamadas." + (projNota || " 2026 é parcial.")}>
           <Line data={S.porAnoProjetado.map((a) => ({ label: a.ano, value: a.total }))}
-            projected={S.porAnoProjetado.map((a) => a.projetado)} />
+            projected={S.porAnoProjetado.map((a) => a.projetado)} onSelect={setAno} selected={selAno} />
         </Figura>
         <Figura titulo="Participação por programa" csv={csvLV(dadosPrograma, "programa", "chamadas")}
           insight={`PROMOB responde por ~${promobPct}% de todo o corpus — o acervo histórico é, em essência, PROMOB.`}>
-          <Donut data={dadosPrograma} />
+          <Donut data={dadosPrograma} onSelect={setPrograma} selected={selPrograma} />
         </Figura>
       </Secao>
 
@@ -298,19 +357,19 @@ export default function AnalyticsView() {
         nota="Perfis SOLICITADOS pelas chamadas — não há dados de contratação/resultado no acervo. Classificação por regras sobre objeto+requisitos (taxonomia editável em data/taxonomia.json); rótulos múltiplos podem somar mais que o total. Responde ao filtro global.">
         <Figura titulo="Função do perfil (classificação)" escopo={escopo} noTools={!dFuncao.length} csv={csvLV(dFuncao, "funcao", "mencoes")}
           insight="O que a chamada quer que a pessoa faça — derivado de objeto+requisitos.">
-          {dFuncao.length ? <Bars data={dFuncao} horizontal /> : <Vazio escopo={escopo} />}
+          {dFuncao.length ? <Bars data={dFuncao} horizontal onSelect={(v) => abrir(`Função: ${v}`, sub.filter((c) => S.matchDim(c, "funcao", v)))} /> : <Vazio escopo={escopo} />}
         </Figura>
         <Figura titulo="Formação exigida" escopo={escopo} noTools={!dFormacao.length} csv={csvLV(dFormacao, "formacao", "mencoes")}
           insight="Titulação mínima citada nos requisitos (multi-rótulo).">
-          {dFormacao.length ? <Bars data={dFormacao} horizontal color={C.gold} /> : <Vazio escopo={escopo} />}
+          {dFormacao.length ? <Bars data={dFormacao} horizontal color={C.gold} onSelect={(v) => abrir(`Formação: ${v}`, sub.filter((c) => S.matchDim(c, "formacao", v)))} /> : <Vazio escopo={escopo} />}
         </Figura>
         <Figura titulo="Papel/modalidade pedido por seleção" wide escopo={escopo} noTools={!dPapel.length} csv={csvLV(dPapel, "papel", "chamadas")}
           insight="Papel nomeado em cada seleção do edital — oficial (PIPA) e legado (PROMOB). Variantes de acento/caixa foram agrupadas; só os 8 nomes oficiais entram em modalidade_canonica.">
-          {dPapel.length ? <Bars data={dPapel} horizontal /> : <Vazio escopo={escopo} />}
+          {dPapel.length ? <Bars data={dPapel} horizontal onSelect={(v) => abrir(`Papel/modalidade: ${v}`, sub.filter((c) => S.matchDim(c, "papel", v)))} /> : <Vazio escopo={escopo} />}
         </Figura>
         <Figura titulo="Temas / domínios (classificação)" escopo={escopo} noTools={!dTema.length} csv={csvLV(dTema, "tema", "mencoes")}
           insight="Domínio temático por regras sobre objeto+projeto+requisitos.">
-          {dTema.length ? <Bars data={dTema} horizontal color={C.gold} /> : <Vazio escopo={escopo} />}
+          {dTema.length ? <Bars data={dTema} horizontal color={C.gold} onSelect={(v) => abrir(`Tema: ${v}`, sub.filter((c) => S.matchDim(c, "tema", v)))} /> : <Vazio escopo={escopo} />}
         </Figura>
       </Secao>
 
@@ -319,24 +378,28 @@ export default function AnalyticsView() {
         nota={`Vagas reservadas a ação afirmativa. Das ${S.totalChamadas} chamadas, ${S.comReserva} (${S.cotaPctTotal}%) preveem reserva EXPLÍCITA — e concentram-se em PIPA 2025–2026 (ver evolução). Contamos chamadas com reserva, não o nº de vagas (não está nos editais); tema e função são multi-rótulo, somam mais que ${S.comReserva}.`}>
         <Figura titulo="Chamadas com reserva — por categoria (nº)" csv={() => [["categoria", "chamadas", "% das com reserva"], ...S.porCotaPct.map((d) => [d.label, d.n, d.value])]}
           insight={`Magnitude entre as ${S.comReserva} chamadas com reserva: ${S.porCotaPct.map((d) => `${d.label} ${d.n} (${d.value}%)`).join(", ")}. Indígena é citado à parte, mas na 317 entra na cota étnico-racial.`}>
-          <Bars data={S.porCotaPct.map((d) => ({ label: d.label, value: d.n }))} horizontal color={C.cerrado} />
+          <Bars data={S.porCotaPct.map((d) => ({ label: d.label, value: d.n }))} horizontal color={C.cerrado}
+            onSelect={(v) => abrir(`Reserva — ${v}`, CORPUS.filter((c) => S.matchDim(c, "cota", v)))} />
         </Figura>
         <Figura titulo="Chamadas com reserva — por ano (nº e %)" csv={() => [["ano", "com_reserva", "total", "pct"], ...S.cotaPorAnoPct.map((a) => [a.ano, a.comReserva, a.total, a.pct])]}
           insight={`A reserva era ~ausente até 2024 e salta com a 317/2025 (abr): ${S.cotaPorAnoPct.map((a) => `${a.ano} ${a.comReserva}/${a.total} (${a.pct}%)`).join(" · ")}. Mudança de regime, não tendência suave.`}>
           <Bars data={S.cotaPorAnoPct.map((a) => ({ label: a.ano, value: a.comReserva }))}
-            color={(d) => (d.label >= "2025" ? C.cerrado : C.line)} />
+            color={(d) => (d.label >= "2025" ? C.cerrado : C.line)} onSelect={setAno} selected={selAno} />
         </Figura>
         <Figura titulo="Quais TEMAS reservam mais (nº de chamadas)" wide csv={csvLV(S.reservaPorTema, "tema", "chamadas")}
           insight={`A inclusão se concentra em temas sociais: ${S.reservaPorTema.slice(0, 3).map((t) => `${t.label} ${t.value}`).join(", ")}… É onde a reserva de vagas mais aparece.`}>
-          <Bars data={S.reservaPorTema} horizontal color={C.cerrado} />
+          <Bars data={S.reservaPorTema} horizontal color={C.cerrado}
+            onSelect={(v) => abrir(`Reserva · tema: ${v}`, CORPUS.filter((c) => S.temReserva(c) && S.matchDim(c, "tema", v)))} />
         </Figura>
         <Figura titulo="Quais FUNÇÕES reservam mais (nº de chamadas)" csv={csvLV(S.reservaPorFuncao, "funcao", "chamadas")}
           insight={`Por função pedida: ${S.reservaPorFuncao.map((f) => `${f.label} ${f.value}`).join(", ")}.`}>
-          <Bars data={S.reservaPorFuncao} horizontal color={C.cerrado} />
+          <Bars data={S.reservaPorFuncao} horizontal color={C.cerrado}
+            onSelect={(v) => abrir(`Reserva · função: ${v}`, CORPUS.filter((c) => S.temReserva(c) && S.matchDim(c, "funcao", v)))} />
         </Figura>
         <Figura titulo="Quais DIRETORIAS reservam mais (nº de chamadas)" csv={csvLV(S.reservaPorDiretoria, "diretoria", "chamadas")}
           insight={`Cuidado: a diretoria só foi extraída em ${S.comReserva - S.reservaDiretoriaSem} das ${S.comReserva} (${S.reservaDiretoriaSem} não identificadas) — entre as identificadas, distribui-se por igual entre as diretorias econômicas/sociais. Sinal fraco, leia com cautela.`}>
-          <Bars data={S.reservaPorDiretoria} horizontal color={C.cerrado} />
+          <Bars data={S.reservaPorDiretoria} horizontal color={C.cerrado}
+            onSelect={(v) => abrir(`Reserva · diretoria: ${v}`, CORPUS.filter((c) => S.temReserva(c) && S.matchDim(c, "diretoria", v)))} />
         </Figura>
       </Secao>
 
@@ -345,11 +408,13 @@ export default function AnalyticsView() {
         nota={`A Portaria Normativa Ipea nº 317 (18/04/2025) criou o PIPA e o quadro padrão de reserva AC/ER/M/PCD + heteroidentificação, citado por todos os editais PIPA. Só se mede no PIPA: PROMOB e PROCIN são programas anteriores que a 317 revogou/converteu — não os rege. Duas faces: a adesão estrutural (o quadro aparece) e, onde o edital traz a tabela numérica (3.1), a fração REAL de vagas reservadas — esta lida diretamente do texto dos editais.`}>
         <Figura titulo="Adesão ao quadro de reserva no PIPA — por ano (% dos editais analisados)" csv={() => [["ano", "pct", "com_reserva", "analisados"], ...S.adesaoPipaPorAno.map((a) => [a.ano, a.pct, a.comReserva, a.analisados])]}
           insight={`Fração dos editais PIPA analisados que trazem o quadro AC/ER/M/PCD: ${S.adesaoPipaPorAno.map((a) => `${a.ano} ${a.pct}% (${a.comReserva}/${a.analisados})`).join(" · ")}. O quadro se consolida ano a ano — não é universal porque o edital de vaga única costuma citá-lo sem aplicar split.`}>
-          <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.pct }))} horizontal unit="%" color={C.azul} />
+          <Bars data={S.adesaoPipaPorAno.map((a) => ({ label: a.ano, value: a.pct }))} horizontal unit="%" color={C.azul}
+            onSelect={setAno} selected={selAno} />
         </Figura>
         <Figura titulo="Vagas reservadas no PIPA — % do total de vagas (medido no quadro)" csv={() => [["categoria", "pct_do_total", "vagas"], ...S.vagasPipaQuadro.porCategoriaPct.map((c) => [c.label, c.value, c.n])]}
           insight={`Lido do quadro numérico (seção 3.1) de ${S.vagasPipaQuadro.n} editais PIPA: ${S.vagasPipaQuadro.reservadas} de ${S.vagasPipaQuadro.total} vagas são reservadas (${S.vagasPipaQuadro.pct}%); o resto é ampla concorrência. Por categoria do total: ${S.vagasPipaQuadro.porCategoriaPct.map((c) => `${c.label} ${c.value}% (${c.n})`).join(", ")}. A norma fixa 30/40/10, mas a aplicação real difere — a reserva de PcD não foi acionada. Salto por ano: ${S.vagasPipaQuadro.porAno.map((a) => `${a.ano} ${a.pct}%`).join(" · ")}.`}>
-          <Bars data={S.vagasPipaQuadro.porCategoriaPct} horizontal unit="%" color={C.cerrado} />
+          <Bars data={S.vagasPipaQuadro.porCategoriaPct} horizontal unit="%" color={C.cerrado}
+            onSelect={(v) => abrir(`Vagas reservadas — ${v} (PIPA, quadro 3.1)`, CORPUS.filter((c) => c.programa === "PIPA" && (c.vagas_por_cota || {}).quadro && S.matchDim(c, "cota", v)))} />
         </Figura>
       </Secao>
 
@@ -357,11 +422,12 @@ export default function AnalyticsView() {
       <Secao titulo="Sazonalidade & prazos">
         <Figura titulo="Aberturas por mês — série temporal" wide escopo={escopo} noTools={!serie.length} csv={() => [["mes", "aberturas"], ...serie.map((d) => [d.ym, d.value])]}
           insight={`Volume por mês de abertura das inscrições (${serieCob}/${sub.length} com data): a tendência de queda e a sazonalidade aparecem no detalhe mensal; as linhas tracejadas marcam a virada de ano.`}>
-          {serie.length ? <SerieMensal data={serie} /> : <Vazio escopo={escopo} />}
+          {serie.length ? <SerieMensal data={serie} onSelect={setAno} selected={selAno} /> : <Vazio escopo={escopo} />}
         </Figura>
         <Figura titulo="Janela de inscrição (dias)" escopo={escopo} noTools={!janela.hist.length} csv={() => [["faixa_dias", "chamadas"], ...janela.hist.map((h) => [h.faixa, h.total])]}
           insight={`Mediana de ${janela.mediana ?? "—"} dias (${janela.n} com janela informada); a maioria concentra-se entre 10 e 14 dias.`}>
-          {janela.hist.length ? <Bars data={janela.hist.map((h) => ({ label: h.faixa, value: h.total }))} /> : <Vazio escopo={escopo} />}
+          {janela.hist.length ? <Bars data={janela.hist.map((h) => ({ label: h.faixa, value: h.total }))}
+            onSelect={(v) => abrir(`Janela de inscrição: ${v} dias`, sub.filter((c) => S.matchJanela(c, v)))} /> : <Vazio escopo={escopo} />}
         </Figura>
       </Secao>
 
@@ -373,6 +439,8 @@ export default function AnalyticsView() {
             color={(d) => (d.value < 50 ? C.gold : C.cerrado)} />
         </Figura>
       </Secao>
+
+      {drill && <DrillDown titulo={drill.titulo} chamadas={drill.chamadas} onClose={() => setDrill(null)} />}
     </div>
   );
 }

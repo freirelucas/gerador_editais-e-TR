@@ -3,7 +3,8 @@ import { MONO, fmtInt, niceMax, ticks } from "./primitives.js";
 
 // Série temporal mensal: linha + área. data: [{ ym, ano, mes, value }].
 // Rótulos do eixo x só nas viradas de ano (mes === 1) para não poluir com ~40 pontos.
-export default function SerieMensal({ data, color = C.cerrado }) {
+// Interatividade (opcional): onSelect(ano) ao clicar num mês; `selected` (ano|null) realça o ano.
+export default function SerieMensal({ data, color = C.cerrado, onSelect = null, selected = null }) {
   if (!data || !data.length) return null;
   const max = niceMax(Math.max(1, ...data.map((d) => d.value)));
   const W = 680, H = 260, padL = 34, padR = 12, padT = 16, padB = 30;
@@ -14,9 +15,17 @@ export default function SerieMensal({ data, color = C.cerrado }) {
   const area = `${padL},${padT + plotH} ${pts} ${x(data.length - 1)},${padT + plotH}`;
   const anoStarts = data.map((d, i) => (d.mes === 1 || i === 0 ? i : -1)).filter((i) => i >= 0);
   const picoI = data.reduce((bi, d, i) => (d.value > data[bi].value ? i : bi), 0);
+  const clk = typeof onSelect === "function";
+  // faixa de destaque do ano selecionado (cross-filter por ano)
+  const selIdx = selected != null ? data.map((d, i) => (d.ano === selected ? i : -1)).filter((i) => i >= 0) : [];
+  const colW = data.length > 1 ? plotW / (data.length - 1) : plotW;
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto" }} role="img">
+      {selIdx.length > 0 && (
+        <rect x={x(selIdx[0]) - colW / 2} y={padT} width={colW * selIdx.length} height={plotH}
+          fill={C.azul} opacity="0.08" />
+      )}
       {ticks(max).map((t, i) => (
         <g key={"t" + i}>
           <line x1={padL} x2={W - padR} y1={y(t)} y2={y(t)} stroke={C.line} strokeWidth="0.5" />
@@ -32,10 +41,10 @@ export default function SerieMensal({ data, color = C.cerrado }) {
       ))}
       <polygon points={area} fill={color} opacity="0.12" />
       <polyline points={pts} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" />
-      {/* alvos transparentes p/ ler qualquer mês no hover (tooltip nativo) */}
+      {/* alvos transparentes p/ ler qualquer mês no hover (tooltip nativo) e clicar p/ filtrar o ano */}
       {data.map((d, i) => (
-        <g key={"hit" + i}>
-          <title>{`${d.ym}: ${fmtInt(d.value)}`}</title>
+        <g key={"hit" + i} onClick={clk ? () => onSelect(d.ano) : undefined} style={clk ? { cursor: "pointer" } : undefined}>
+          <title>{`${d.ym}: ${fmtInt(d.value)}${clk ? ` · clique para filtrar ${d.ano}` : ""}`}</title>
           <circle className="chDot" cx={x(i)} cy={y(d.value)} r="7" />
         </g>
       ))}

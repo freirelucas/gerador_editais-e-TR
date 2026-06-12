@@ -4,7 +4,9 @@ import { MONO, fmtInt, niceMax, ticks } from "./primitives.js";
 // Barras empilhadas. data: [{ [xKey]: rótulo, ...séries }]; keys: nomes das séries; cores: {série: cor}.
 // projected (opcional): se true, empilha por cima o incremento projetado d[`${k}_proj`]
 // com hachura (convenção "projetado", pró-rata linear).
-export default function StackedBars({ data, xKey, keys, cores, projected = false }) {
+// Interatividade (opcional): onSelect(x, serie) torna cada segmento clicável; `selected` ({x, k}|null)
+// destaca o segmento ativo e esmaece os demais.
+export default function StackedBars({ data, xKey, keys, cores, projected = false, onSelect = null, selected = null }) {
   const valOf = (d) => keys.reduce((s, k) => s + (d[k] || 0) + (projected ? d[`${k}_proj`] || 0 : 0), 0);
   const totais = data.map(valOf);
   const max = niceMax(Math.max(1, ...totais));
@@ -13,6 +15,9 @@ export default function StackedBars({ data, xKey, keys, cores, projected = false
   const x = (i) => padL + ((i + 0.5) * plotW) / data.length;
   const yOf = (v) => plotH * (v / max);
   const bw = (plotW / data.length) * 0.6;
+  const clk = typeof onSelect === "function";
+  const isSel = (xv, k) => selected && selected.x === xv && selected.k === k;
+  const isDim = (xv, k) => selected && !isSel(xv, k);
 
   return (
     <svg viewBox={`0 0 ${W} ${H}`} style={{ width: "100%", height: "auto" }} role="img">
@@ -38,8 +43,10 @@ export default function StackedBars({ data, xKey, keys, cores, projected = false
               const yTop = padT + plotH - acc - h;
               acc += h;
               return h > 0 ? (
-                <rect key={k} className="chHover" x={x(i) - bw / 2} y={yTop} width={bw} height={h} fill={cores[k]}>
-                  <title>{`${d[xKey]} · ${k}: ${fmtInt(d[k] || 0)}`}</title>
+                <rect key={k} className="chHover" x={x(i) - bw / 2} y={yTop} width={bw} height={h} fill={cores[k]}
+                  onClick={clk ? () => onSelect(d[xKey], k) : undefined} style={clk ? { cursor: "pointer" } : undefined}
+                  opacity={isDim(d[xKey], k) ? 0.4 : 1} stroke={isSel(d[xKey], k) ? C.ink : "none"} strokeWidth={isSel(d[xKey], k) ? 1.5 : 0}>
+                  <title>{`${d[xKey]} · ${k}: ${fmtInt(d[k] || 0)}${clk ? " · clique para filtrar" : ""}`}</title>
                 </rect>
               ) : null;
             })}
