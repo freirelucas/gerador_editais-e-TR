@@ -2,6 +2,7 @@
 // Cada projeto traz parâmetros do wizard no UNIVERSO DA BASE (taxonomia de tema/função +
 // 6 diretorias substantivas). `composto.diretoria/tema = true` quando não havia precedente
 // e o valor foi composto a partir do próprio projeto (diretorias envolvidas / tema da área).
+// PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o Analytics.
 // Não edite à mão; rode o script.
 export const PROJETOS = [
 {
@@ -7053,3 +7054,59 @@ export const PROJETOS = [
 }
 }
 ];
+export const PROJETOS_RESUMO = {
+"totalAtivos": 366,
+"totalProdutos": 5291,
+"produtosPorTipo": [
+{
+"label": "Artigo",
+"value": 1315
+},
+{
+"label": "Documento institucional",
+"value": 1049
+},
+{
+"label": "Evento",
+"value": 689
+},
+{
+"label": "Texto para Discussão",
+"value": 490
+},
+{
+"label": "Apresentação em evento",
+"value": 345
+},
+{
+"label": "Nota Técnica",
+"value": 333
+},
+{
+"label": "Capítulo",
+"value": 332
+},
+{
+"label": "Periódico",
+"value": 252
+},
+{
+"label": "Base de Dados",
+"value": 209
+},
+{
+"label": "Representação institucional",
+"value": 69
+},
+{
+"label": "Coletânea",
+"value": 63
+},
+{
+"label": "Portal ou sítio de internet",
+"value": 58
+}
+],
+"estrategicos": 26,
+"prioritarios": 14
+};

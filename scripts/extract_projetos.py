@@ -83,9 +83,25 @@ def sigla_substantiva(coord, envolvidas, temas):
     return "DIEST", composto
 
 
+def resumo_produtos(ativos_num):
+    """Agrega os PRODUTOS (sheet Produtos) dos projetos ativos — o que eles entregam."""
+    from openpyxl import load_workbook
+    wb = load_workbook(XLSX, read_only=True, data_only=True)
+    ws = wb["Produtos"]
+    rows = list(ws.iter_rows(values_only=True))
+    hdr = [str(c) for c in rows[0]]
+    inum = next(i for i, h in enumerate(hdr) if "número do projeto" in h.lower())
+    itipo = next(i for i, h in enumerate(hdr) if "tipo de produto" in h.lower())
+    cnt, tot = Counter(), 0
+    for r in rows[1:]:
+        if str(r[inum]) in ativos_num and r[itipo]:
+            cnt[r[itipo]] += 1; tot += 1
+    return tot, cnt.most_common(12)
+
+
 def main():
     linhas, col = carrega_linhas()
-    seeds, vistos = [], set()
+    seeds, vistos, n_estrat, n_prior = [], set(), 0, 0
     for r in linhas:
         estagio = col(r, "Estágio do Projeto")
         if not estagio or any(x in sa(estagio) for x in ATIVO_FORA):
@@ -95,6 +111,8 @@ def main():
         if not titulo or numero in vistos:
             continue
         vistos.add(numero)
+        if sa(col(r, "Projeto Estratégico") or "") == "estrategico": n_estrat += 1
+        if sa(col(r, "Projeto Prioritário") or "") == "prioritario": n_prior += 1
         coord_dir = col(r, "Diretoria")
         envolvidas = col(r, "Diretorias Envolvidas")
         # classificação dentro do universo da base (título do projeto)
@@ -124,14 +142,24 @@ def main():
     # ordena por diretoria → tema → ano desc, p/ navegação previsível no picker
     seeds.sort(key=lambda s: (s["diretoria"], s["temas"][0], s["ano"] or "0"), reverse=False)
 
+    tot_prod, prod_tipos = resumo_produtos(vistos)
+    resumo = {
+        "totalAtivos": len(seeds),
+        "totalProdutos": tot_prod,
+        "produtosPorTipo": [{"label": t, "value": n} for t, n in prod_tipos],
+        "estrategicos": n_estrat,
+        "prioritarios": n_prior,
+    }
     out = RAIZ / "src/data/projetos.js"
     head = (
         "// GERADO por scripts/extract_projetos.py — projetos ATIVOS do IPEA como seeds do Gerador.\n"
         "// Cada projeto traz parâmetros do wizard no UNIVERSO DA BASE (taxonomia de tema/função +\n"
         "// 6 diretorias substantivas). `composto.diretoria/tema = true` quando não havia precedente\n"
         "// e o valor foi composto a partir do próprio projeto (diretorias envolvidas / tema da área).\n"
+        "// PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o Analytics.\n"
         "// Não edite à mão; rode o script.\n"
         f"export const PROJETOS = {json.dumps(seeds, ensure_ascii=False, indent=0)};\n"
+        f"export const PROJETOS_RESUMO = {json.dumps(resumo, ensure_ascii=False, indent=0)};\n"
     )
     out.write_text(head, encoding="utf-8")
 

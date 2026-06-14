@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import { C, RADIUS, SHADOW } from "../theme.js";
 import * as S from "../lib/stats.js";
 import { CORPUS } from "../data/corpus.js";
+import { PROJETOS, PROJETOS_RESUMO } from "../data/projetos.js";
 import quality from "../data/quality.json";
 import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
 import { readUrl, writeAnalytics, DEFAULT_DIM } from "../lib/urlState.js";
@@ -180,21 +181,24 @@ function DrillDown({ titulo, chamadas, onClose }) {
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: C.azul, fontWeight: 700 }}>Drill-down</div>
             <div style={{ fontFamily: SERIF, fontSize: 17, fontWeight: 700, color: C.ink, lineHeight: 1.3 }}>{titulo}</div>
-            <div style={{ fontFamily: SERIF, fontSize: 12.5, color: C.muted, marginTop: 2 }}>{chamadas.length} chamada{chamadas.length === 1 ? "" : "s"} no recorte atual</div>
+            <div style={{ fontFamily: SERIF, fontSize: 12.5, color: C.muted, marginTop: 2 }}>{chamadas.length} resultado{chamadas.length === 1 ? "" : "s"}</div>
           </div>
           <button onClick={onClose} title="Fechar (Esc)" style={{ fontFamily: MONO, fontSize: 15, lineHeight: 1, color: C.muted,
             background: C.sunken, border: "none", borderRadius: RADIUS.pill, width: 30, height: 30, cursor: "pointer", flexShrink: 0 }}>✕</button>
         </div>
         <div style={{ overflowY: "auto", padding: "6px 8px" }}>
-          {chamadas.map((c, i) => (
-            <a key={i} href={c.url || c.pdf || "#"} target="_blank" rel="noreferrer" className="lk"
-              style={{ display: "block", textDecoration: "none", padding: "10px 12px", borderRadius: RADIUS.sm }}>
+          {chamadas.map((c, i) => {
+            const href = c.url || c.pdf || null;
+            const sub = c.sub != null ? c.sub
+              : `${c.ano} · ${c.programa}${c.modalidade_canonica ? " · " + c.modalidade_canonica : c.modalidade ? " · " + c.modalidade : ""}`;
+            const inner = (<>
               <div style={{ fontFamily: SERIF, fontSize: 14, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{c.titulo}</div>
-              <div style={{ fontFamily: MONO, fontSize: 11.5, color: C.muted, marginTop: 2 }}>
-                {c.ano} · {c.programa}{c.modalidade_canonica ? " · " + c.modalidade_canonica : c.modalidade ? " · " + c.modalidade : ""}
-              </div>
-            </a>
-          ))}
+              <div style={{ fontFamily: MONO, fontSize: 11.5, color: C.muted, marginTop: 2 }}>{sub}</div>
+            </>);
+            return href
+              ? <a key={i} href={href} target="_blank" rel="noreferrer" className="lk" style={{ display: "block", textDecoration: "none", padding: "10px 12px", borderRadius: RADIUS.sm }}>{inner}</a>
+              : <div key={i} style={{ padding: "10px 12px", borderRadius: RADIUS.sm }}>{inner}</div>;
+          })}
           {!chamadas.length && <div style={{ padding: 18, fontFamily: SERIF, color: C.muted }}>Nenhuma chamada corresponde neste recorte.</div>}
         </div>
       </div>
@@ -308,6 +312,26 @@ export default function AnalyticsView() {
   const setAno = (a) => setFiltro((f) => ({ ...f, ano: f.ano === a ? "Todos" : a }));
   const setAnoPrograma = (a, p) => setFiltro((f) => (f.ano === a && f.programa === p ? { ...f, ano: "Todos", programa: "Todos" } : { ...f, ano: a, programa: p }));
   const selStack = selAno && selPrograma ? { x: selAno, k: selPrograma } : null;
+  // drill-down de PROJETOS (sem URL): lista título + área/coordenação
+  const abrirProjetos = (titulo, projs) => setDrill({
+    titulo, chamadas: projs.map((p) => ({ titulo: p.titulo, sub: `${p.ano || "—"} · ${p.diretoria}${p.coordenador ? " · " + p.coordenador : ""}` })),
+  });
+
+  // ---- novos dados: projetos ativos do IPEA (demanda de pesquisa) ----
+  const projPorTema = useMemo(() => {
+    const m = {}; PROJETOS.forEach((p) => (m[p.temas[0]] = (m[p.temas[0]] || 0) + 1));
+    return Object.entries(m).map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value);
+  }, []);
+  const projPorDir = useMemo(() => {
+    const m = {}; PROJETOS.forEach((p) => (m[p.diretoria] = (m[p.diretoria] || 0) + 1));
+    return Object.entries(m).map(([label, value]) => ({ label, value })).sort((a, b) => b.value - a.value);
+  }, []);
+  const coberturaTema = useMemo(() => {
+    const pj = {}; PROJETOS.forEach((p) => (pj[p.temas[0]] = (pj[p.temas[0]] || 0) + 1));
+    const pp = {}; CORPUS.forEach((c) => c.programa === "PIPA" && (c.categoria_tema || []).forEach((t) => (pp[t] = (pp[t] || 0) + 1)));
+    return Object.keys(pj).map((t) => ({ label: t, value: Math.round((100 * (pp[t] || 0)) / pj[t]), pipa: pp[t] || 0, ativos: pj[t] }))
+      .sort((a, b) => a.value - b.value);
+  }, []);
 
   return (
     <div style={{ fontFamily: SERIF, color: C.ink }}>
@@ -351,6 +375,28 @@ export default function AnalyticsView() {
 
       {/* ---------- EXPLORADOR (filtra) ---------- */}
       <Explorador filtro={filtro} />
+
+      {/* ---------- PROJETOS ATIVOS (novos dados, panorama) ---------- */}
+      <Secao titulo="Projetos ativos do IPEA — demanda de pesquisa"
+        nota={`${PROJETOS.length} projetos em andamento (planilha institucional), traduzidos para o universo da base (taxonomia de tema/função, 6 diretorias substantivas). Panorama do portfólio de projetos — não responde ao filtro global, que é das chamadas. Clique nas barras para ver os projetos.`}>
+        <Figura titulo="Projetos ativos por tema" wide csv={csvLV(projPorTema, "tema", "projetos")}
+          insight={`Onde a pesquisa em curso se concentra: ${projPorTema.slice(0, 3).map((d) => `${d.label} ${d.value}`).join(", ")}. O tema vem do título (taxonomia) ou, sem precedente, da diretoria da área.`}>
+          <Bars data={projPorTema} horizontal color={C.azul} onSelect={(v) => abrirProjetos(`Projetos · tema: ${v}`, PROJETOS.filter((p) => p.temas[0] === v))} />
+        </Figura>
+        <Figura titulo="Cobertura de bolsas por tema — chamadas PIPA por projeto ativo (%)" csv={() => [["tema", "cobertura_pct", "chamadas_pipa", "projetos_ativos"], ...coberturaTema.map((d) => [d.label, d.value, d.pipa, d.ativos])]}
+          insight={`Chamadas PIPA ÷ projetos ativos, por tema. Onde há muita pesquisa e poucas bolsas — sub-servido, logo oportunidade de TR: ${coberturaTema.slice(0, 3).map((d) => `${d.label} ${d.value}% (${d.pipa}/${d.ativos})`).join(", ")}.`}>
+          <Bars data={coberturaTema} horizontal unit="%" color={(d) => (d.value < 25 ? C.gold : C.cerrado)}
+            onSelect={(v) => abrirProjetos(`Projetos · tema: ${v}`, PROJETOS.filter((p) => p.temas[0] === v))} />
+        </Figura>
+        <Figura titulo="Projetos ativos por diretoria" csv={csvLV(projPorDir, "diretoria", "projetos")}
+          insight="Distribuição por área coordenadora substantiva (não-substantivas foram mapeadas pela diretoria envolvida / tema).">
+          <Bars data={projPorDir} horizontal color={C.azul} onSelect={(v) => abrirProjetos(`Projetos · diretoria: ${v}`, PROJETOS.filter((p) => p.diretoria === v))} />
+        </Figura>
+        <Figura titulo="O que os projetos entregam — tipos de produto" csv={csvLV(PROJETOS_RESUMO.produtosPorTipo, "tipo", "produtos")}
+          insight={`${PROJETOS_RESUMO.totalProdutos.toLocaleString("pt-BR")} produtos nos projetos ativos. Predominam saídas analíticas (artigos, TDs, notas técnicas) — sinal de "Apoio à pesquisa"/"Métodos quantitativos"; "Base de Dados" aponta engenharia de dados. É a melhor pista de FUNÇÃO (o título raramente a revela).`}>
+          <Bars data={PROJETOS_RESUMO.produtosPorTipo} horizontal color={C.cerrado} />
+        </Figura>
+      </Secao>
 
       {/* ---------- 2. O QUE PEDEM (filtra) ---------- */}
       <Secao titulo="O que as chamadas pedem"
