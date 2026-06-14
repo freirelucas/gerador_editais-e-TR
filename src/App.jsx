@@ -120,7 +120,7 @@ export default function App() {
         </header>
 
         <div className="viewfade" key={`view-${tab}`}>
-          {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView /> : <RedesView />}
+          {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView irPara={irPara} /> : <RedesView />}
         </div>
 
         <footer style={{

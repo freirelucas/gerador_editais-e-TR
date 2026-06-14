@@ -1,8 +1,9 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import { C, RADIUS, SHADOW } from "../theme.js";
+import { C, SANS, RADIUS, SHADOW } from "../theme.js";
 import * as S from "../lib/stats.js";
 import { CORPUS } from "../data/corpus.js";
 import { PROJETOS, PROJETOS_RESUMO } from "../data/projetos.js";
+import { rotuloUnidade } from "../data/diretorias.js";
 import quality from "../data/quality.json";
 import { COR_PROGRAMA, MONO, SERIF } from "./charts/primitives.js";
 import { readUrl, writeAnalytics, DEFAULT_DIM } from "../lib/urlState.js";
@@ -195,6 +196,14 @@ function DrillDown({ titulo, chamadas, onClose }) {
               <div style={{ fontFamily: SERIF, fontSize: 14, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{c.titulo}</div>
               <div style={{ fontFamily: MONO, fontSize: 11.5, color: C.muted, marginTop: 2 }}>{sub}</div>
             </>);
+            if (c.acao) {
+              return (
+                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 12px", borderRadius: RADIUS.sm }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>{inner}</div>
+                  <button onClick={c.acao} title="Gerar um edital a partir deste projeto" style={{ flexShrink: 0, fontFamily: SANS, fontSize: 11.5, fontWeight: 600, color: "#fff", background: C.azul, border: "none", borderRadius: RADIUS.sm, padding: "7px 12px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 6 }}>✦ gerar edital</button>
+                </div>
+              );
+            }
             return href
               ? <a key={i} href={href} target="_blank" rel="noreferrer" className="lk" style={{ display: "block", textDecoration: "none", padding: "10px 12px", borderRadius: RADIUS.sm }}>{inner}</a>
               : <div key={i} style={{ padding: "10px 12px", borderRadius: RADIUS.sm }}>{inner}</div>;
@@ -263,7 +272,7 @@ function Explorador({ filtro }) {
   );
 }
 
-export default function AnalyticsView() {
+export default function AnalyticsView({ irPara }) {
   const init = readUrl();
   const [filtro, setFiltro] = useState(init.filtro);
   const ativo = filtro.programa !== "Todos" || filtro.ano !== "Todos" || filtro.reserva !== "Todas";
@@ -312,9 +321,28 @@ export default function AnalyticsView() {
   const setAno = (a) => setFiltro((f) => ({ ...f, ano: f.ano === a ? "Todos" : a }));
   const setAnoPrograma = (a, p) => setFiltro((f) => (f.ano === a && f.programa === p ? { ...f, ano: "Todos", programa: "Todos" } : { ...f, ano: a, programa: p }));
   const selStack = selAno && selPrograma ? { x: selAno, k: selPrograma } : null;
-  // drill-down de PROJETOS (sem URL): lista título + área/coordenação
+  // Gera um edital a partir do projeto: serializa os campos no formato do rascunho do
+  // Builder (#s=…, mesmo esquema do compartilhar) e troca para a aba Gerador, que remonta
+  // e hidrata a partir do hash. encodeURIComponent evita que +/=/ do base64 se percam.
+  const gerarDoProjeto = (p) => {
+    const form = {
+      diretoriaSel: p.diretoria, unidade: rotuloUnidade(p.diretoria) || "",
+      temas: p.temas, funcoes: p.funcoes, projetoNome: p.titulo, coordenador: p.coordenador || "",
+    };
+    try {
+      const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(form))));
+      location.hash = "#s=" + encodeURIComponent(b64);
+    } catch { /* ignore */ }
+    setDrill(null);
+    irPara && irPara("builder");
+  };
+  // drill-down de PROJETOS (sem URL): lista título + área/coordenação + ação "gerar edital"
   const abrirProjetos = (titulo, projs) => setDrill({
-    titulo, chamadas: projs.map((p) => ({ titulo: p.titulo, sub: `${p.ano || "—"} · ${p.diretoria}${p.coordenador ? " · " + p.coordenador : ""}` })),
+    titulo, chamadas: projs.map((p) => ({
+      titulo: p.titulo,
+      sub: `${p.ano || "—"} · ${p.diretoria}${p.coordenador ? " · " + p.coordenador : ""}`,
+      acao: irPara ? () => gerarDoProjeto(p) : undefined,
+    })),
   });
 
   // ---- novos dados: projetos ativos do IPEA (demanda de pesquisa) ----
