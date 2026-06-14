@@ -54,10 +54,15 @@
   tema (projetos ativos × chamadas PIPA). Quando sub-servido (<25%, ex.: DIEST 89×15),
   destaca "tema sub-servido por bolsas: boa hora para um edital". Dado pré-computado em
   `PROJETOS_RESUMO.coberturaPorTema` (extrator).
+- **F4 — Sugestão de modalidade no passo Perfil.** Como a função (evidência mais forte
+  da sugestão) é definida no Perfil, a sugestão reaparece ali — mas só quando é
+  *acionável* (função escolhida e a modalidade atual difere da sugerida), evitando
+  redundância com o passo Bolsa.
 - **Bug corrigido:** colisão de `key` no `App.jsx` (header e view irmãos com `key={tab}`),
   que gerava warning de chave duplicada no console.
 
 ## Backlog (próximas rodadas)
 
-- **F4 — Sugestão de modalidade** também no passo Perfil, ou nota de que melhora ao
-  definir a função.
+- Navegação por teclado no seletor de projetos (setas/Enter) — hoje é por clique.
+- Quando não houver projeto no escopo da diretoria mas houver em "todas", sugerir a
+  troca de escopo automaticamente.

@@ -546,6 +546,12 @@ export default function BuilderView() {
           <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Use ‘Compor perfil’ acima, ou escreva livremente…" value={f.perfil} onChange={set("perfil")} />
         </Field>
         <Similares campo="perfil" />
+        {f.funcoes.length > 0 && sugMod && f.modalidade !== sugMod.modalidade.nome && (<>
+          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, lineHeight: 1.45, marginTop: 2 }}>
+            Com a função definida, o histórico refina a modalidade (a atual difere da sugerida):
+          </div>
+          <SugestaoModalidade />
+        </>)}
       </>);
       case 4: return (<>
         <label style={{ display: "flex", gap: 11, alignItems: "flex-start", cursor: "pointer", background: f.multivagas ? C.accentSoft : C.surface2, border: `1px solid ${f.multivagas ? C.azulClaro : C.line}`, borderRadius: RADIUS.md, padding: "12px 14px" }}>
