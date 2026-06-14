@@ -11,7 +11,7 @@ import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "
 import { sugerirModalidade } from "../lib/sugestao.js";
 import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
 import { exemplosPorTema } from "../data/objetos.js";
-import { PROJETOS } from "../data/projetos.js";
+import { PROJETOS, PROJETOS_RESUMO } from "../data/projetos.js";
 
 // Ícones inline (sem dependência).
 const IP = {
@@ -322,6 +322,9 @@ export default function BuilderView() {
   const reservaLive = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
   const acLive = Math.max(q - reservaLive, 0);
   const dInsc = diffDias(f.inscIni, f.inscFim);
+  // Empurrão de oportunidade (F5): cobertura de bolsas do tema = chamadas PIPA ÷ projetos ativos.
+  const cobTema = (PROJETOS_RESUMO.coberturaPorTema || {})[f.temas[0]];
+  const temaSubservido = cobTema && cobTema.ativos >= 10 && cobTema.pipa / cobTema.ativos < 0.25;
 
   const btn = (primary) => ({
     fontFamily: SANS, fontSize: 13, padding: "9px 16px", borderRadius: RADIUS.sm, cursor: "pointer", fontWeight: 600,
@@ -456,6 +459,16 @@ export default function BuilderView() {
             {DIRETORIAS.map((d) => <option key={d.sigla} value={d.sigla}>{d.sigla} — {d.nome}</option>)}
           </select>
         </Field>
+        {cobTema && (
+          <div style={{ fontFamily: SANS, fontSize: 12, lineHeight: 1.45, marginTop: -8,
+            color: temaSubservido ? C.azulEscuro : C.muted,
+            background: temaSubservido ? C.accentSoft : "transparent",
+            border: temaSubservido ? `1px solid ${C.azulClaro}` : "none",
+            borderRadius: RADIUS.sm, padding: temaSubservido ? "8px 11px" : 0 }}>
+            <b>{cobTema.ativos}</b> projetos ativos neste tema · <b>{cobTema.pipa}</b> chamadas PIPA no histórico
+            {temaSubservido && <> — <b>tema sub-servido por bolsas</b>: muita pesquisa, poucas chamadas. Boa hora para um edital.</>}
+          </div>
+        )}
         <Field l="Nº da chamada / TR"><input style={inp} placeholder="020/2026" value={f.numero} onChange={set("numero")} /></Field>
         <Field l="Unidade responsável (preenchida pela diretoria; edite p/ coordenação específica)">
           <input style={inp} placeholder="Diretoria / unidade responsável" value={f.unidade} onChange={set("unidade")} />

@@ -50,12 +50,14 @@
   para 364/366 (99%)**: "Base de Dados" prominente → *Ciência de Dados – Engenharia* (16);
   demais saídas (artigos, TDs, notas) → *Apoio à pesquisa* (318); o título mantém a
   distinção fina quant/DS. Validado pelo `npm run stress` (2196/2196 builds, 0 exceções).
+- **F5 — Empurrão de oportunidade.** Sob a diretoria, mostra a cobertura de bolsas do
+  tema (projetos ativos × chamadas PIPA). Quando sub-servido (<25%, ex.: DIEST 89×15),
+  destaca "tema sub-servido por bolsas: boa hora para um edital". Dado pré-computado em
+  `PROJETOS_RESUMO.coberturaPorTema` (extrator).
 - **Bug corrigido:** colisão de `key` no `App.jsx` (header e view irmãos com `key={tab}`),
   que gerava warning de chave duplicada no console.
 
 ## Backlog (próximas rodadas)
 
-- **F5 — Empurrão de oportunidade:** sob a diretoria, indicar cobertura de bolsas do
-  tema (ex.: "DIEST: 89 projetos, 15 chamadas — sub-servido") com link ao Analytics.
 - **F4 — Sugestão de modalidade** também no passo Perfil, ou nota de que melhora ao
   definir a função.

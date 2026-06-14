@@ -8134,6 +8134,32 @@ export const PROJETOS_RESUMO = {
 "value": 58
 }
 ],
+"coberturaPorTema": {
+"Estado, instituições e democracia": {
+"ativos": 89,
+"pipa": 15
+},
+"Macroeconomia e finanças": {
+"ativos": 49,
+"pipa": 8
+},
+"Regional, urbano e ambiental": {
+"ativos": 51,
+"pipa": 18
+},
+"Setorial, inovação e infraestrutura": {
+"ativos": 44,
+"pipa": 5
+},
+"Social, trabalho e renda": {
+"ativos": 112,
+"pipa": 40
+},
+"Internacional e comércio": {
+"ativos": 21,
+"pipa": 7
+}
+},
 "estrategicos": 26,
 "prioritarios": 14
 };

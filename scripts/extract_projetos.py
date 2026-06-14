@@ -166,10 +166,16 @@ def main():
     for n in vistos:
         prod_ativos.update(prod.get(n, Counter()))
     tot_prod, prod_tipos = sum(prod_ativos.values()), prod_ativos.most_common(12)
+    # cobertura de bolsas por tema (sinal de oportunidade): chamadas PIPA ÷ projetos ativos
+    corpus = json.loads((RAIZ / "data/corpus_chamadas_2023-2026.json").read_text(encoding="utf-8"))
+    pipa_tema = Counter(t for c in corpus if c.get("programa") == "PIPA" for t in (c.get("categoria_tema") or []))
+    proj_tema = Counter(s["temas"][0] for s in seeds)
+    cobertura = {t: {"ativos": proj_tema[t], "pipa": pipa_tema.get(t, 0)} for t in proj_tema}
     resumo = {
         "totalAtivos": len(seeds),
         "totalProdutos": tot_prod,
         "produtosPorTipo": [{"label": t, "value": n} for t, n in prod_tipos],
+        "coberturaPorTema": cobertura,
         "estrategicos": n_estrat,
         "prioritarios": n_prior,
     }
