@@ -1,9 +1,10 @@
 // GERADO por scripts/extract_projetos.py — projetos ATIVOS do IPEA como seeds do Gerador.
 // Cada projeto traz parâmetros do wizard no UNIVERSO DA BASE (taxonomia de tema/função +
 // 6 diretorias substantivas). `composto.diretoria/tema = true` quando não havia precedente
-// e o valor foi composto a partir do próprio projeto (diretorias envolvidas / tema da área).
-// PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o Analytics.
-// Não edite à mão; rode o script.
+// e o valor foi composto a partir do próprio projeto: diretorias envolvidas / tema da
+// área / função inferida pelo mix de produtos (Base de Dados → engenharia; demais saídas
+// → apoio à pesquisa). PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o
+// Analytics. Não edite à mão; rode o script.
 export const PROJETOS = [
 {
 "id": "932",
@@ -15,13 +16,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2015",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -34,13 +38,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -53,13 +60,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -72,13 +82,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -91,13 +104,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -110,13 +126,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -129,13 +148,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -148,13 +170,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -167,13 +192,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -186,13 +214,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -213,7 +244,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -226,13 +258,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -245,13 +280,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -272,7 +310,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -285,13 +324,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -304,13 +346,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -331,7 +376,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -344,13 +390,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -363,13 +412,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -382,13 +434,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -401,13 +456,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -420,13 +478,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -439,13 +500,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Suspenso",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -458,13 +522,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -477,13 +544,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -496,13 +566,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -515,13 +588,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Projeto de Gestão",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -534,13 +610,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -553,13 +632,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -572,13 +654,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -591,13 +676,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -610,13 +698,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -629,13 +720,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -648,13 +742,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -667,13 +764,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -686,13 +786,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -705,13 +808,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -724,13 +830,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -743,13 +852,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -762,13 +874,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -789,7 +904,8 @@ export const PROJETOS = [
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -802,13 +918,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -821,13 +940,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em avaliação técnico-científica e financeira",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -840,13 +962,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -859,13 +984,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -886,7 +1014,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -899,13 +1028,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -918,13 +1050,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -937,13 +1072,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -956,13 +1094,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -975,13 +1116,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -994,13 +1138,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1013,13 +1160,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Ideia de Inovação",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1032,13 +1182,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1051,13 +1204,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1070,13 +1226,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1089,13 +1248,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1108,13 +1270,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1135,7 +1300,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -1148,13 +1314,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1167,13 +1336,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1186,13 +1358,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1205,13 +1380,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1224,13 +1402,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1243,13 +1424,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1262,13 +1446,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1281,13 +1468,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1300,13 +1490,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1319,13 +1512,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1338,13 +1534,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1357,13 +1556,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1376,13 +1578,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1403,7 +1608,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -1416,13 +1622,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1435,13 +1644,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1462,7 +1674,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -1475,13 +1688,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1494,13 +1710,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1513,13 +1732,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1532,13 +1754,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1557,7 +1782,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -1571,13 +1797,16 @@ export const PROJETOS = [
 "Macroeconomia e finanças",
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1590,13 +1819,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1609,13 +1841,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1628,13 +1863,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1647,13 +1885,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1666,13 +1907,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1685,13 +1929,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1704,13 +1951,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1723,13 +1973,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1742,13 +1995,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1761,13 +2017,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Suspenso",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1788,7 +2047,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -1801,13 +2061,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1820,13 +2083,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1839,13 +2105,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1858,13 +2127,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1877,13 +2149,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Suspenso",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1896,13 +2171,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1915,13 +2193,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1934,13 +2215,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1953,13 +2237,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -1973,13 +2260,16 @@ export const PROJETOS = [
 "Macroeconomia e finanças",
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -1992,13 +2282,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2015",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2011,13 +2304,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2030,13 +2326,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2049,13 +2348,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2077,7 +2379,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -2090,13 +2393,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2109,13 +2415,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2128,13 +2437,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2147,13 +2459,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2166,13 +2481,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2185,13 +2503,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2213,7 +2534,8 @@ export const PROJETOS = [
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -2226,13 +2548,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2245,13 +2570,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2264,13 +2592,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2283,13 +2614,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2302,13 +2636,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2321,13 +2658,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2340,13 +2680,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Ideia de Inovação",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2367,7 +2710,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -2388,7 +2732,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -2401,13 +2746,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2420,13 +2768,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2439,13 +2790,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2458,13 +2812,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2477,13 +2834,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2496,13 +2856,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2523,7 +2886,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -2536,13 +2900,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2555,13 +2922,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2574,13 +2944,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2593,13 +2966,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2612,13 +2988,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2631,13 +3010,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2650,13 +3032,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2669,13 +3054,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2688,13 +3076,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2707,13 +3098,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2726,13 +3120,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2745,13 +3142,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2772,7 +3172,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -2785,13 +3186,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2804,13 +3208,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2824,13 +3231,16 @@ export const PROJETOS = [
 "Macroeconomia e finanças",
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2843,13 +3253,16 @@ export const PROJETOS = [
 "temas": [
 "Macroeconomia e finanças"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -2862,13 +3275,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2889,7 +3305,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -2902,13 +3319,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2921,13 +3341,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em cadastramento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2940,13 +3363,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em cadastramento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2959,13 +3385,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2978,13 +3407,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Estudo prospectivo",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -2997,13 +3429,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3016,13 +3451,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3035,13 +3473,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3054,13 +3495,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3082,7 +3526,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -3096,13 +3541,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3116,13 +3564,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3135,13 +3586,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3154,13 +3608,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3173,13 +3630,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3192,13 +3652,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3211,13 +3674,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3230,13 +3696,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3249,13 +3718,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3268,13 +3740,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3287,13 +3762,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3306,13 +3784,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3325,13 +3806,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3344,13 +3828,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3363,13 +3850,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3382,13 +3872,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3409,7 +3902,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -3422,13 +3916,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em avaliação técnico-científica e financeira",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3449,7 +3946,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -3462,13 +3960,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3481,13 +3982,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3500,13 +4004,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3519,13 +4026,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3539,13 +4049,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3559,13 +4072,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3578,13 +4094,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3597,13 +4116,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3616,13 +4138,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3635,13 +4160,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3655,13 +4183,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2018",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3674,13 +4205,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3694,13 +4228,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3713,13 +4250,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3732,13 +4272,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3753,13 +4296,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3773,13 +4319,16 @@ export const PROJETOS = [
 "Estado, instituições e democracia",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3793,13 +4342,16 @@ export const PROJETOS = [
 "Estado, instituições e democracia",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2016",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3813,13 +4365,16 @@ export const PROJETOS = [
 "Estado, instituições e democracia",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3833,13 +4388,16 @@ export const PROJETOS = [
 "Estado, instituições e democracia",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3853,13 +4411,16 @@ export const PROJETOS = [
 "Estado, instituições e democracia",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3872,13 +4433,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2012",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3891,13 +4455,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Projeto de Pesquisa Padrão",
 "estagio": "Em cadastramento",
 "ano": "2013",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3910,13 +4477,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2016",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -3929,13 +4499,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3948,13 +4521,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3967,13 +4543,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -3986,13 +4565,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4005,13 +4587,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4024,13 +4609,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4043,13 +4631,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4070,7 +4661,8 @@ export const PROJETOS = [
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -4091,7 +4683,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -4104,13 +4697,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4124,13 +4720,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4143,13 +4742,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4162,13 +4764,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4181,13 +4786,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Suspenso",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4208,7 +4816,8 @@ export const PROJETOS = [
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -4221,13 +4830,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4240,13 +4852,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4259,13 +4874,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4278,13 +4896,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4298,13 +4919,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4317,13 +4941,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4344,7 +4971,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -4357,13 +4985,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4376,13 +5007,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4395,13 +5029,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4414,13 +5051,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4433,13 +5073,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4452,13 +5095,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4471,13 +5117,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4490,13 +5139,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4509,13 +5161,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4528,13 +5183,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4547,13 +5205,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4566,13 +5227,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4585,13 +5249,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4604,13 +5271,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4623,13 +5293,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4642,13 +5315,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4661,13 +5337,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4680,13 +5359,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4701,13 +5383,16 @@ export const PROJETOS = [
 "Regional, urbano e ambiental",
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Ideia de Inovação",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4720,13 +5405,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4740,13 +5428,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4765,7 +5456,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -4786,7 +5478,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -4799,13 +5492,16 @@ export const PROJETOS = [
 "temas": [
 "Internacional e comércio"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4818,13 +5514,16 @@ export const PROJETOS = [
 "temas": [
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4837,13 +5536,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2016",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4856,13 +5558,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4875,13 +5580,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2018",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4894,13 +5602,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4913,13 +5624,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4940,7 +5654,8 @@ export const PROJETOS = [
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -4953,13 +5668,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -4972,13 +5690,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -4991,13 +5712,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5010,13 +5734,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5029,13 +5756,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Suspenso",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5048,13 +5778,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5067,13 +5800,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5086,13 +5822,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5105,13 +5844,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5124,13 +5866,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5143,13 +5888,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5162,13 +5910,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5189,7 +5940,8 @@ export const PROJETOS = [
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -5210,7 +5962,8 @@ export const PROJETOS = [
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -5223,13 +5976,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5242,13 +5998,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5261,13 +6020,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5288,7 +6050,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -5301,13 +6064,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5320,13 +6086,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5339,13 +6108,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5358,13 +6130,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5377,13 +6152,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5396,13 +6174,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5415,13 +6196,16 @@ export const PROJETOS = [
 "temas": [
 "Setorial, inovação e infraestrutura"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5443,7 +6227,8 @@ export const PROJETOS = [
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -5456,13 +6241,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5475,13 +6263,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5494,13 +6285,16 @@ export const PROJETOS = [
 "temas": [
 "Estado, instituições e democracia"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5513,13 +6307,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2013",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5532,13 +6329,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2013",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5551,13 +6351,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5570,13 +6373,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5589,13 +6395,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5608,13 +6417,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5627,13 +6439,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5646,13 +6461,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5665,13 +6483,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5684,13 +6505,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5703,13 +6527,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5722,13 +6549,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2014",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5741,13 +6571,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2015",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5760,13 +6593,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2015",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5779,13 +6615,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2016",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5798,13 +6637,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2017",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5817,13 +6659,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5844,7 +6689,8 @@ export const PROJETOS = [
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -5857,13 +6703,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5876,13 +6725,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2019",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5895,13 +6747,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2020",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5914,13 +6769,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2021",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5933,13 +6791,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5952,13 +6813,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -5971,13 +6835,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Ciência de Dados – Engenharia"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2022",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -5990,13 +6857,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6009,13 +6879,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Estudo propositivo",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6028,13 +6901,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6047,13 +6923,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6066,13 +6945,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2023",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6085,13 +6967,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6104,13 +6989,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6123,13 +7011,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6142,13 +7033,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6161,13 +7055,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6188,7 +7085,8 @@ export const PROJETOS = [
 "ano": "2024",
 "composto": {
 "diretoria": true,
-"tema": true
+"tema": true,
+"funcao": false
 }
 },
 {
@@ -6201,13 +7099,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6220,13 +7121,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6239,13 +7143,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6258,13 +7165,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6277,13 +7187,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6296,13 +7209,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6315,13 +7231,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6334,13 +7253,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2024",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6353,13 +7275,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6372,13 +7297,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6391,13 +7319,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6410,13 +7341,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6437,7 +7371,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -6450,13 +7385,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6469,13 +7407,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6488,13 +7429,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6507,13 +7451,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6534,7 +7481,8 @@ export const PROJETOS = [
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -6547,13 +7495,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6566,13 +7517,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6585,13 +7539,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6604,13 +7561,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6623,13 +7583,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6642,13 +7605,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6661,13 +7627,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6680,13 +7649,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6699,13 +7671,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6718,13 +7693,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6737,13 +7715,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6756,13 +7737,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6775,13 +7759,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Institucional",
 "estagio": "Em andamento",
 "ano": "2025",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6794,13 +7781,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Ideia de Inovação",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6813,13 +7803,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6832,13 +7825,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6859,7 +7855,8 @@ export const PROJETOS = [
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": false
 }
 },
 {
@@ -6872,13 +7869,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6891,13 +7891,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6910,13 +7913,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6930,13 +7936,16 @@ export const PROJETOS = [
 "Social, trabalho e renda",
 "Regional, urbano e ambiental"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6949,13 +7958,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -6968,13 +7980,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -6987,13 +8002,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 },
 {
@@ -7006,13 +8024,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em cadastramento",
 "ano": "2026",
 "composto": {
 "diretoria": true,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -7025,13 +8046,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": false
+"tema": false,
+"funcao": true
 }
 },
 {
@@ -7044,13 +8068,16 @@ export const PROJETOS = [
 "temas": [
 "Social, trabalho e renda"
 ],
-"funcoes": [],
+"funcoes": [
+"Apoio à pesquisa"
+],
 "modalidadeProjeto": "Temático",
 "estagio": "Em andamento",
 "ano": "2026",
 "composto": {
 "diretoria": false,
-"tema": true
+"tema": true,
+"funcao": true
 }
 }
 ];

@@ -83,24 +83,39 @@ def sigla_substantiva(coord, envolvidas, temas):
     return "DIEST", composto
 
 
-def resumo_produtos(ativos_num):
-    """Agrega os PRODUTOS (sheet Produtos) dos projetos ativos — o que eles entregam."""
+def ler_produtos():
+    """Produtos por 'Número do Projeto' (Counter de tipo) — sheet Produtos."""
     from openpyxl import load_workbook
     wb = load_workbook(XLSX, read_only=True, data_only=True)
-    ws = wb["Produtos"]
-    rows = list(ws.iter_rows(values_only=True))
-    hdr = [str(c) for c in rows[0]]
+    rows = wb["Produtos"].iter_rows(values_only=True)
+    hdr = [str(c) for c in next(rows)]
     inum = next(i for i, h in enumerate(hdr) if "número do projeto" in h.lower())
     itipo = next(i for i, h in enumerate(hdr) if "tipo de produto" in h.lower())
-    cnt, tot = Counter(), 0
-    for r in rows[1:]:
-        if str(r[inum]) in ativos_num and r[itipo]:
-            cnt[r[itipo]] += 1; tot += 1
-    return tot, cnt.most_common(12)
+    prod = {}
+    for r in rows:
+        if r[itipo]:
+            prod.setdefault(str(r[inum]), Counter())[r[itipo]] += 1
+    return prod
+
+
+# Inferência de FUNÇÃO pelo MIX DE PRODUTOS quando o título não a revela (≈90% dos casos).
+# O único sinal específico e defensável dos produtos é "Base de Dados" → engenharia de
+# dados. As demais saídas (artigos, TDs, notas, docs institucionais) são apoio à pesquisa
+# (revisão, sistematização, relatórios — FUNCAO_TERMOS de "Apoio à pesquisa"). A distinção
+# fina quant/DS vem do título. Sem produtos → função fica "a definir".
+PROD_DATA = "Base de Dados"
+def funcao_por_produtos(cnt):
+    if not cnt:
+        return []
+    tot = sum(cnt.values())
+    if cnt.get(PROD_DATA, 0) >= 2 and cnt[PROD_DATA] / tot >= 0.15:
+        return ["Ciência de Dados – Engenharia"]
+    return ["Apoio à pesquisa"]
 
 
 def main():
     linhas, col = carrega_linhas()
+    prod = ler_produtos()  # produtos por Número do Projeto, p/ inferir função e o resumo
     seeds, vistos, n_estrat, n_prior = [], set(), 0, 0
     for r in linhas:
         estagio = col(r, "Estágio do Projeto")
@@ -117,7 +132,12 @@ def main():
         envolvidas = col(r, "Diretorias Envolvidas")
         # classificação dentro do universo da base (título do projeto)
         temas = classifica(titulo, "TEMA")
-        funcoes = classifica(titulo, "FUNCAO")
+        titulo_func = classifica(titulo, "FUNCAO")
+        if titulo_func:                       # título revela a função (alta confiança)
+            funcoes, func_composto = titulo_func, False
+        else:                                 # senão, infere pelo mix de produtos
+            funcoes = funcao_por_produtos(prod.get(numero))
+            func_composto = bool(funcoes)
         diretoria, dir_composto = sigla_substantiva(coord_dir, envolvidas, temas)
         tema_composto = not temas
         if not temas:  # sem precedente no título → compõe pelo tema da área
@@ -136,13 +156,16 @@ def main():
             "modalidadeProjeto": (col(r, "Modalidade") or "").strip() or None,
             "estagio": estagio,
             "ano": ano,
-            "composto": {"diretoria": dir_composto, "tema": tema_composto},
+            "composto": {"diretoria": dir_composto, "tema": tema_composto, "funcao": func_composto},
         })
 
     # ordena por diretoria → tema → ano desc, p/ navegação previsível no picker
     seeds.sort(key=lambda s: (s["diretoria"], s["temas"][0], s["ano"] or "0"), reverse=False)
 
-    tot_prod, prod_tipos = resumo_produtos(vistos)
+    prod_ativos = Counter()
+    for n in vistos:
+        prod_ativos.update(prod.get(n, Counter()))
+    tot_prod, prod_tipos = sum(prod_ativos.values()), prod_ativos.most_common(12)
     resumo = {
         "totalAtivos": len(seeds),
         "totalProdutos": tot_prod,
@@ -155,9 +178,10 @@ def main():
         "// GERADO por scripts/extract_projetos.py — projetos ATIVOS do IPEA como seeds do Gerador.\n"
         "// Cada projeto traz parâmetros do wizard no UNIVERSO DA BASE (taxonomia de tema/função +\n"
         "// 6 diretorias substantivas). `composto.diretoria/tema = true` quando não havia precedente\n"
-        "// e o valor foi composto a partir do próprio projeto (diretorias envolvidas / tema da área).\n"
-        "// PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o Analytics.\n"
-        "// Não edite à mão; rode o script.\n"
+        "// e o valor foi composto a partir do próprio projeto: diretorias envolvidas / tema da\n"
+        "// área / função inferida pelo mix de produtos (Base de Dados → engenharia; demais saídas\n"
+        "// → apoio à pesquisa). PROJETOS_RESUMO agrega os produtos entregues (sheet Produtos) p/ o\n"
+        "// Analytics. Não edite à mão; rode o script.\n"
         f"export const PROJETOS = {json.dumps(seeds, ensure_ascii=False, indent=0)};\n"
         f"export const PROJETOS_RESUMO = {json.dumps(resumo, ensure_ascii=False, indent=0)};\n"
     )
@@ -168,7 +192,11 @@ def main():
     print(f"projetos ativos: {len(seeds)}  →  {out.relative_to(RAIZ)}")
     print("por diretoria:", dict(Counter(s["diretoria"] for s in seeds)))
     print("por tema(1º):", dict(Counter(s["temas"][0] for s in seeds)))
-    print("com função classificada:", sum(1 for s in seeds if s["funcoes"]))
+    print("com função (total):", sum(1 for s in seeds if s["funcoes"]),
+          "| pelo título:", sum(1 for s in seeds if s["funcoes"] and not s["composto"]["funcao"]),
+          "| inferida de produtos:", sum(1 for s in seeds if s["composto"]["funcao"]),
+          "| a definir:", sum(1 for s in seeds if not s["funcoes"]))
+    print("função (distribuição):", dict(Counter(s["funcoes"][0] for s in seeds if s["funcoes"]).most_common()))
     print("diretoria composta:", sum(1 for s in seeds if s["composto"]["diretoria"]),
           "| tema composto:", sum(1 for s in seeds if s["composto"]["tema"]))
     print(f"combinações distintas (diretoria×tema×função): {len(combos)}")

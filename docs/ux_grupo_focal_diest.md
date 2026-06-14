@@ -44,8 +44,12 @@
   mapeamento `STEP_CONF`. O usuário enxerga e clica direto no passo problemático.
 - **F3 — Confirmação do preenchimento.** Após escolher um projeto, mostra
   **"✓ Preenchido a partir de \<título\> — diretoria · tema · função · ano"** com
-  **"trocar projeto"**. Quando o projeto não traz função, exibe **"função a definir"**
-  (o caso honesto de ~90% — ver inferência por produtos, próximo passo).
+  **"trocar projeto"**. A função agora vem inferida do **mix de produtos** do projeto
+  (ver abaixo); só fica "função a definir" nos 2 projetos sem produto registrado.
+- **Inferência de função pelos produtos.** Cobertura de função saltou de **34/366 (9%)
+  para 364/366 (99%)**: "Base de Dados" prominente → *Ciência de Dados – Engenharia* (16);
+  demais saídas (artigos, TDs, notas) → *Apoio à pesquisa* (318); o título mantém a
+  distinção fina quant/DS. Validado pelo `npm run stress` (2196/2196 builds, 0 exceções).
 - **Bug corrigido:** colisão de `key` no `App.jsx` (header e view irmãos com `key={tab}`),
   que gerava warning de chave duplicada no console.
 
@@ -55,4 +59,3 @@
   tema (ex.: "DIEST: 89 projetos, 15 chamadas — sub-servido") com link ao Analytics.
 - **F4 — Sugestão de modalidade** também no passo Perfil, ou nota de que melhora ao
   definir a função.
-- **Inferir função** pelo mix de produtos do projeto (fecha o "função a definir").

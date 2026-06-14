@@ -7,7 +7,7 @@ Rodado em 2026-06-14 sobre **366 projetos-semente**, cada um em **3 variantes** 
 - **Builds executados sem exceção:** 2196/2196 (100.0%)
 - **Exceções:** 0
 - **Sugestão de modalidade (DAG) disponível:** 366/366 (100%)
-- **Semente já traz função:** 34/366 (9%) — o restante cai em "função a definir"
+- **Semente já traz função:** 364/366 (99%) — o restante cai em "função a definir"
 
 ## Conformidade logo após semear (o que o usuário ainda precisa completar)
 
