@@ -24,12 +24,8 @@ function Ic({ d, size = 15, color = "currentColor", w = 1.8 }) {
 }
 
 
-// Projetos ativos do IPEA agrupados por diretoria (picker "partir de um projeto real").
+// Projetos ativos do IPEA indexados por id (picker "partir de um projeto real" — busca em BuilderView).
 const PROJ_BY_ID = Object.fromEntries(PROJETOS.map((p) => [p.id, p]));
-const PROJ_GRUPOS = Object.entries(
-  PROJETOS.reduce((m, p) => ((m[p.diretoria] = m[p.diretoria] || []).push(p), m), {})
-).sort((a, b) => a[0].localeCompare(b[0]));
-const truncT = (s, n = 64) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 
 const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
 const STEP_SHORT = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
@@ -166,8 +162,10 @@ export default function BuilderView() {
   }));
   // Partir de um projeto ativo real: preenche diretoria/tema/função/título no universo da base.
   const [projSel, setProjSel] = useState("");
+  const [projQ, setProjQ] = useState("");      // busca no seletor de projetos
+  const [projAll, setProjAll] = useState(false); // escopo: só a diretoria atual × todas
   const carregarProjeto = (id) => {
-    setProjSel(id);
+    setProjSel(id); setProjQ("");
     const pr = PROJ_BY_ID[id];
     if (!pr) return;
     setF((p) => ({
@@ -180,6 +178,17 @@ export default function BuilderView() {
       coordenador: pr.coordenador || p.coordenador,
     }));
   };
+  const limparProj = () => { setProjSel(""); setProjQ(""); };
+  // Busca acento-insensível; escopo padrão = diretoria atual (a DIEST tem ~100 projetos).
+  const norm = (s) => (s || "").normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+  const selProj = PROJ_BY_ID[projSel];
+  const projCountDir = useMemo(() => PROJETOS.filter((p) => p.diretoria === f.diretoriaSel).length, [f.diretoriaSel]);
+  const projMatches = useMemo(() => {
+    const nq = norm(projQ);
+    return PROJETOS
+      .filter((p) => (projAll || p.diretoria === f.diretoriaSel) && (!nq || norm(p.titulo + " " + (p.temas[0] || "")).includes(nq)))
+      .slice(0, 60);
+  }, [projQ, projAll, f.diretoriaSel]);
 
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
@@ -409,17 +418,38 @@ export default function BuilderView() {
       case 0: return (<>
         <div style={{ background: C.accentSoft, border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.md, padding: "12px 14px", marginBottom: 14 }}>
           <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 13, color: C.azulEscuro }}>✦ Partir de um projeto ativo do IPEA</div>
-          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, margin: "2px 0 8px", lineHeight: 1.45 }}>
-            {PROJETOS.length} projetos em andamento. Escolher um preenche diretoria, tema, função e título — mapeados ao universo do histórico (ajuste à vontade).
-          </div>
-          <select style={inp} value={projSel} onChange={(e) => carregarProjeto(e.target.value)}>
-            <option value="">— escolher projeto (opcional) —</option>
-            {PROJ_GRUPOS.map(([dir, lst]) => (
-              <optgroup key={dir} label={`${dir} · ${lst.length}`}>
-                {lst.map((p) => <option key={p.id} value={p.id}>{truncT(p.titulo)} · {p.ano}</option>)}
-              </optgroup>
-            ))}
-          </select>
+          {selProj ? (
+            <div style={{ display: "flex", gap: 8, alignItems: "baseline", flexWrap: "wrap", marginTop: 6 }}>
+              <span style={{ fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, lineHeight: 1.45 }}>
+                ✓ Preenchido a partir de <b>{selProj.titulo}</b>
+              </span>
+              <span style={{ fontFamily: SANS, fontSize: 11.5, color: C.muted }}>
+                {selProj.diretoria} · {selProj.temas[0]}{selProj.funcoes.length ? " · " + selProj.funcoes.join(", ") : " · função a definir"}{selProj.ano ? " · " + selProj.ano : ""}
+              </span>
+              <button type="button" onClick={limparProj} style={{ background: "none", border: "none", color: C.azul, cursor: "pointer", fontFamily: SANS, fontSize: 12, fontWeight: 600, padding: 0 }}>trocar projeto</button>
+            </div>
+          ) : (<>
+            <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, margin: "2px 0 8px", lineHeight: 1.45 }}>
+              <b>{projCountDir}</b> projetos da {f.diretoriaSel} (de {PROJETOS.length}). Busque e escolha — preenche diretoria, tema, função e título (ajuste à vontade).
+            </div>
+            <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
+              <button type="button" onClick={() => setProjAll(false)} style={chipStyle(!projAll)}>só {f.diretoriaSel} ({projCountDir})</button>
+              <button type="button" onClick={() => setProjAll(true)} style={chipStyle(projAll)}>todas as áreas ({PROJETOS.length})</button>
+            </div>
+            <input style={inp} placeholder="Buscar projeto por título ou tema…" value={projQ} onChange={(e) => setProjQ(e.target.value)} />
+            <div style={{ maxHeight: 212, overflowY: "auto", marginTop: 8, display: "grid", gap: 4 }}>
+              {projMatches.length === 0 && (
+                <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, padding: "8px 2px" }}>Nenhum projeto encontrado{projAll ? "" : ` na ${f.diretoriaSel}`}.</div>
+              )}
+              {projMatches.map((p) => (
+                <button key={p.id} type="button" onClick={() => carregarProjeto(p.id)} className="lk"
+                  style={{ textAlign: "left", background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.sm, padding: "8px 10px", cursor: "pointer" }}>
+                  <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{p.titulo}</div>
+                  <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, marginTop: 2 }}>{p.diretoria} · {p.temas[0]}{p.ano ? " · " + p.ano : ""}</div>
+                </button>
+              ))}
+            </div>
+          </>)}
         </div>
         <Field l="Diretoria (área de pesquisa) — pré-seleciona o tema e prioriza sugestões da área">
           <select style={inp} value={f.diretoriaSel} onChange={(e) => setDiretoria(e.target.value)}>
@@ -701,20 +731,30 @@ export default function BuilderView() {
         <div style={{ display: "flex", alignItems: "flex-start" }}>
           {STEPS.map((s, i) => {
             const done = i < step, active = i === step;
+            const iss = confForStep(i);
+            const sev = iss.some((c) => c.sev === "err") ? "err" : iss.some((c) => c.sev === "warn") ? "warn" : null;
             return (
-              <div key={i} onClick={() => setStep(i)} title={s}
+              <div key={i} onClick={() => setStep(i)} title={sev ? `${s} — ${iss.length} ponto(s) de atenção` : s}
                 style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", cursor: "pointer" }}>
                 {i < STEPS.length - 1 && (
                   <div style={{ position: "absolute", top: 14, left: "50%", width: "100%", height: 2, background: done ? C.azul : C.line }} />
                 )}
                 <div className={active ? "pop" : ""} style={{
+                  position: "relative",
                   width: 28, height: 28, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                   fontFamily: SANS, fontSize: 12, fontWeight: 700, zIndex: 1,
                   background: done ? C.azul : active ? C.card : C.surface2,
                   color: done ? "#fff" : active ? C.azul : C.faint,
                   border: `2px solid ${done || active ? C.azul : C.line}`,
                   boxShadow: active ? SHADOW.focus : "none",
-                }}>{done ? <Ic d="check" size={14} color="#fff" w={2.4} /> : i + 1}</div>
+                }}>{done ? <Ic d="check" size={14} color="#fff" w={2.4} /> : i + 1}
+                  {sev && (
+                    <span title={`${iss.length} ponto(s) de atenção`} style={{
+                      position: "absolute", top: -3, right: -3, width: 11, height: 11, borderRadius: "50%",
+                      background: SEVC[sev], border: `2px solid ${C.card}`, boxSizing: "border-box",
+                    }} />
+                  )}
+                </div>
                 <div style={{ fontFamily: SANS, fontSize: 9.5, marginTop: 6, textAlign: "center", lineHeight: 1.2,
                   color: active ? C.azulEscuro : C.faint, fontWeight: active ? 600 : 500 }}>{STEP_SHORT[i]}</div>
               </div>

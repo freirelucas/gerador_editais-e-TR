@@ -109,7 +109,7 @@ export default function App() {
       </div>
 
       <div className="pagewrap" style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 28px 80px" }}>
-        <header className="fadeUp" key={tab} style={{ marginBottom: 26 }}>
+        <header className="fadeUp" key={`head-${tab}`} style={{ marginBottom: 26 }}>
           <div style={{ fontFamily: SANS, fontSize: 11.5, letterSpacing: ".1em", color: C.azul, textTransform: "uppercase", fontWeight: 600 }}>
             {page.eyebrow}
           </div>
@@ -119,7 +119,7 @@ export default function App() {
           <p style={{ fontFamily: SANS, color: C.muted, margin: 0, fontSize: 15, lineHeight: 1.5, maxWidth: 760 }}>{page.sub}</p>
         </header>
 
-        <div className="viewfade" key={tab}>
+        <div className="viewfade" key={`view-${tab}`}>
           {tab === "builder" ? <BuilderView /> : tab === "corpus" ? <CorpusView /> : tab === "analytics" ? <AnalyticsView /> : <RedesView />}
         </div>
 
