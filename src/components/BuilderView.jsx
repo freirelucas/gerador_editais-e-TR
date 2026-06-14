@@ -171,6 +171,7 @@ export default function BuilderView() {
   });
   const [projQ, setProjQ] = useState("");      // busca no seletor de projetos
   const [projAll, setProjAll] = useState(false); // escopo: só a diretoria atual × todas
+  const [projHi, setProjHi] = useState(0);     // item destacado (navegação por teclado)
   const carregarProjeto = (id) => {
     setProjSel(id); setProjQ("");
     const pr = PROJ_BY_ID[id];
@@ -196,6 +197,14 @@ export default function BuilderView() {
       .filter((p) => (projAll || p.diretoria === f.diretoriaSel) && (!nq || norm(p.titulo + " " + (p.temas[0] || "")).includes(nq)))
       .slice(0, 60);
   }, [projQ, projAll, f.diretoriaSel]);
+  useEffect(() => { setProjHi(0); }, [projQ, projAll]); // busca/escopo muda → destaca o 1º
+  const onProjKey = (e) => {
+    if (!projMatches.length) return;
+    if (e.key === "ArrowDown") { e.preventDefault(); setProjHi((h) => Math.min(projMatches.length - 1, h + 1)); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); setProjHi((h) => Math.max(0, h - 1)); }
+    else if (e.key === "Enter") { e.preventDefault(); const p = projMatches[projHi]; if (p) carregarProjeto(p.id); }
+    else if (e.key === "Escape") { setProjQ(""); }
+  };
 
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
@@ -455,18 +464,22 @@ export default function BuilderView() {
               <button type="button" onClick={() => setProjAll(false)} style={chipStyle(!projAll)}>só {f.diretoriaSel} ({projCountDir})</button>
               <button type="button" onClick={() => setProjAll(true)} style={chipStyle(projAll)}>todas as áreas ({PROJETOS.length})</button>
             </div>
-            <input style={inp} placeholder="Buscar projeto por título ou tema…" value={projQ} onChange={(e) => setProjQ(e.target.value)} />
+            <input style={inp} placeholder="Buscar projeto por título ou tema… (↑↓ navega, Enter escolhe)" value={projQ} onChange={(e) => setProjQ(e.target.value)} onKeyDown={onProjKey} />
             <div style={{ maxHeight: 212, overflowY: "auto", marginTop: 8, display: "grid", gap: 4 }}>
               {projMatches.length === 0 && (
                 <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, padding: "8px 2px" }}>Nenhum projeto encontrado{projAll ? "" : ` na ${f.diretoriaSel}`}.</div>
               )}
-              {projMatches.map((p) => (
-                <button key={p.id} type="button" onClick={() => carregarProjeto(p.id)} className="lk"
-                  style={{ textAlign: "left", background: C.card, border: `1px solid ${C.line}`, borderRadius: RADIUS.sm, padding: "8px 10px", cursor: "pointer" }}>
-                  <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{p.titulo}</div>
-                  <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, marginTop: 2 }}>{p.diretoria} · {p.temas[0]}{p.ano ? " · " + p.ano : ""}</div>
-                </button>
-              ))}
+              {projMatches.map((p, idx) => {
+                const hi = idx === projHi;
+                return (
+                  <button key={p.id} type="button" onClick={() => carregarProjeto(p.id)} onMouseEnter={() => setProjHi(idx)} className="lk"
+                    ref={hi ? (el) => el && el.scrollIntoView({ block: "nearest" }) : undefined}
+                    style={{ textAlign: "left", background: hi ? C.accentSoft : C.card, border: `1px solid ${hi ? C.azulClaro : C.line}`, borderRadius: RADIUS.sm, padding: "8px 10px", cursor: "pointer" }}>
+                    <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.ink, fontWeight: 600, lineHeight: 1.35 }}>{p.titulo}</div>
+                    <div style={{ fontFamily: SANS, fontSize: 11, color: C.muted, marginTop: 2 }}>{p.diretoria} · {p.temas[0]}{p.ano ? " · " + p.ano : ""}</div>
+                  </button>
+                );
+              })}
             </div>
           </>)}
         </div>

@@ -61,8 +61,13 @@
 - **Bug corrigido:** colisão de `key` no `App.jsx` (header e view irmãos com `key={tab}`),
   que gerava warning de chave duplicada no console.
 
+- **Navegação por teclado no seletor de projetos.** ↑/↓ percorrem os resultados (com
+  destaque e auto-scroll), Enter escolhe, Esc limpa a busca — para quem prefere não usar
+  o mouse (persona P1, com pressa).
+- **Analytics → Gerador.** No drill-down de "Demanda de pesquisa", cada projeto tem
+  "✦ gerar edital" que abre o Gerador já semeado (descobrir oportunidade → agir).
+
 ## Backlog (próximas rodadas)
 
-- Navegação por teclado no seletor de projetos (setas/Enter) — hoje é por clique.
 - Quando não houver projeto no escopo da diretoria mas houver em "todas", sugerir a
   troca de escopo automaticamente.
