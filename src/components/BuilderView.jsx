@@ -155,11 +155,15 @@ export default function BuilderView() {
       : p.vagas,
   }));
   // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
-  const setDiretoria = (sigla) => setF((p) => ({
-    ...p, diretoriaSel: sigla,
-    temas: DIRETORIA_TEMA[sigla] ? [DIRETORIA_TEMA[sigla]] : p.temas,
-    unidade: rotuloUnidade(sigla) || p.unidade,
-  }));
+  // Mudar a área manualmente invalida o "preenchido a partir de <projeto>" — limpa a seleção.
+  const setDiretoria = (sigla) => {
+    setProjSel(""); setProjQ("");
+    setF((p) => ({
+      ...p, diretoriaSel: sigla,
+      temas: DIRETORIA_TEMA[sigla] ? [DIRETORIA_TEMA[sigla]] : p.temas,
+      unidade: rotuloUnidade(sigla) || p.unidade,
+    }));
+  };
   // Partir de um projeto ativo real: preenche diretoria/tema/função/título no universo da base.
   const [projSel, setProjSel] = useState("");
   const [projQ, setProjQ] = useState("");      // busca no seletor de projetos
