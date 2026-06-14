@@ -11,6 +11,7 @@ import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "
 import { sugerirModalidade } from "../lib/sugestao.js";
 import { DIRETORIAS, DIRETORIA_TEMA, PADRAO_DIRETORIA, rotuloUnidade } from "../data/diretorias.js";
 import { exemplosPorTema } from "../data/objetos.js";
+import { PROJETOS } from "../data/projetos.js";
 
 // Ícones inline (sem dependência).
 const IP = {
@@ -22,6 +23,13 @@ function Ic({ d, size = 15, color = "currentColor", w = 1.8 }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={w} strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><path d={IP[d]} /></svg>;
 }
 
+
+// Projetos ativos do IPEA agrupados por diretoria (picker "partir de um projeto real").
+const PROJ_BY_ID = Object.fromEntries(PROJETOS.map((p) => [p.id, p]));
+const PROJ_GRUPOS = Object.entries(
+  PROJETOS.reduce((m, p) => ((m[p.diretoria] = m[p.diretoria] || []).push(p), m), {})
+).sort((a, b) => a[0].localeCompare(b[0]));
+const truncT = (s, n = 64) => (s.length > n ? s.slice(0, n - 1) + "…" : s);
 
 const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
 const STEP_SHORT = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
@@ -156,6 +164,22 @@ export default function BuilderView() {
     temas: DIRETORIA_TEMA[sigla] ? [DIRETORIA_TEMA[sigla]] : p.temas,
     unidade: rotuloUnidade(sigla) || p.unidade,
   }));
+  // Partir de um projeto ativo real: preenche diretoria/tema/função/título no universo da base.
+  const [projSel, setProjSel] = useState("");
+  const carregarProjeto = (id) => {
+    setProjSel(id);
+    const pr = PROJ_BY_ID[id];
+    if (!pr) return;
+    setF((p) => ({
+      ...p,
+      diretoriaSel: pr.diretoria,
+      unidade: rotuloUnidade(pr.diretoria) || p.unidade,
+      temas: pr.temas.length ? pr.temas : p.temas,
+      funcoes: pr.funcoes,
+      projetoNome: pr.titulo,
+      coordenador: pr.coordenador || p.coordenador,
+    }));
+  };
 
   const minuta = useMemo(() => (doc === "tr" ? buildTR(f) : buildEdital(f)), [f, doc]);
   const conf = useMemo(() => conformidade(f), [f]);
@@ -383,6 +407,20 @@ export default function BuilderView() {
   function stepBody() {
     switch (step) {
       case 0: return (<>
+        <div style={{ background: C.accentSoft, border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.md, padding: "12px 14px", marginBottom: 14 }}>
+          <div style={{ fontFamily: SANS, fontWeight: 700, fontSize: 13, color: C.azulEscuro }}>✦ Partir de um projeto ativo do IPEA</div>
+          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, margin: "2px 0 8px", lineHeight: 1.45 }}>
+            {PROJETOS.length} projetos em andamento. Escolher um preenche diretoria, tema, função e título — mapeados ao universo do histórico (ajuste à vontade).
+          </div>
+          <select style={inp} value={projSel} onChange={(e) => carregarProjeto(e.target.value)}>
+            <option value="">— escolher projeto (opcional) —</option>
+            {PROJ_GRUPOS.map(([dir, lst]) => (
+              <optgroup key={dir} label={`${dir} · ${lst.length}`}>
+                {lst.map((p) => <option key={p.id} value={p.id}>{truncT(p.titulo)} · {p.ano}</option>)}
+              </optgroup>
+            ))}
+          </select>
+        </div>
         <Field l="Diretoria (área de pesquisa) — pré-seleciona o tema e prioriza sugestões da área">
           <select style={inp} value={f.diretoriaSel} onChange={(e) => setDiretoria(e.target.value)}>
             {DIRETORIAS.map((d) => <option key={d.sigla} value={d.sigla}>{d.sigla} — {d.nome}</option>)}
