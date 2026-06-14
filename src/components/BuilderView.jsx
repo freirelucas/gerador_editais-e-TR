@@ -165,7 +165,10 @@ export default function BuilderView() {
     }));
   };
   // Partir de um projeto ativo real: preenche diretoria/tema/função/título no universo da base.
-  const [projSel, setProjSel] = useState("");
+  // projSel pode vir do deep-link do Analytics (#…&p=<id>) p/ mostrar o banner do projeto.
+  const [projSel, setProjSel] = useState(() => {
+    try { return new URLSearchParams(location.hash.slice(1)).get("p") || ""; } catch { return ""; }
+  });
   const [projQ, setProjQ] = useState("");      // busca no seletor de projetos
   const [projAll, setProjAll] = useState(false); // escopo: só a diretoria atual × todas
   const carregarProjeto = (id) => {
@@ -208,6 +211,15 @@ export default function BuilderView() {
   useEffect(() => {
     try { localStorage.setItem(STORE, JSON.stringify(f)); setSaved(true); } catch { /* ignore */ }
   }, [f]);
+
+  // Consumiu o deep-link/rascunho do hash na montagem → limpa a URL. Sem isso, voltar de
+  // outra aba (que remonta o Builder) re-hidrataria do hash antigo e descartaria edições;
+  // o estado já está no formulário e no autosave (localStorage).
+  useEffect(() => {
+    if (location.hash.includes("s=")) {
+      try { history.replaceState(null, "", location.pathname + location.search); } catch { /* ignore */ }
+    }
+  }, []);
 
   // Prévia viva: acende a(s) seção(ões) que acabaram de mudar.
   const minutaKeys = useMemo(() => minuta.map((s) => JSON.stringify(s)), [minuta]);

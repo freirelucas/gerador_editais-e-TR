@@ -331,7 +331,7 @@ export default function AnalyticsView({ irPara }) {
     };
     try {
       const b64 = btoa(unescape(encodeURIComponent(JSON.stringify(form))));
-      location.hash = "#s=" + encodeURIComponent(b64);
+      location.hash = "#s=" + encodeURIComponent(b64) + "&p=" + encodeURIComponent(p.id);
     } catch { /* ignore */ }
     setDrill(null);
     irPara && irPara("builder");
