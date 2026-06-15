@@ -1,6 +1,6 @@
 # Teste de stress do Gerador
 
-Rodado em 2026-06-14 sobre **366 projetos-semente**, cada um em **3 variantes** (base, cotas, multivagas) × **2 documentos** (TR, edital).
+Rodado em 2026-06-15 sobre **366 projetos-semente**, cada um em **3 variantes** (base, cotas, multivagas) × **2 documentos** (TR, edital).
 
 ## Resultado
 
