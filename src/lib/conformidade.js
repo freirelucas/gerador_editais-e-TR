@@ -8,11 +8,20 @@ export const diffDias = (a, b) => {
   return Math.round((new Date(b) - new Date(a)) / 86400000);
 };
 
+// Normaliza para o array de vagas (≥1), igual ao gerador: 1 vaga = bolsa; N = seleções.
+function vagasDe(f) {
+  if (Array.isArray(f.vagas) && f.vagas.length) return f.vagas;
+  return [{ modalidade: f.modalidade, qtd: f.qtd, perfil: f.perfil, atividades: f.atividades,
+    criterios: f.criterios, cotaER: f.cotasOn ? f.cotaER : 0, cotaM: f.cotasOn ? f.cotaM : 0, cotaPCD: f.cotasOn ? f.cotaPCD : 0 }];
+}
+
 // sev: "ok" | "warn" | "err"
 export function conformidade(f) {
   const out = [];
   const add = (sev, label, detail) => out.push({ sev, label, detail });
   const tem = (v) => !!(v && String(v).trim());
+  const vs = vagasDe(f);
+  const multi = vs.length > 1;
 
   add(tem(f.numero) ? "ok" : "warn", "Número da chamada",
     tem(f.numero) ? f.numero : "defina o nº (ex.: 020/2026)");
@@ -23,12 +32,16 @@ export function conformidade(f) {
 
   add(tem(f.projeto) ? "ok" : "err", "Definição do projeto",
     tem(f.projeto) ? "preenchida" : "obrigatória (Art. 7º, II)");
-  add(tem(f.perfil) ? "ok" : "warn", "Perfil do bolsista",
-    tem(f.perfil) ? "preenchido" : "recomendado (Art. 7º, III)");
 
-  const mod = MODALIDADES.find((m) => m.nome === f.modalidade);
-  add(mod && mod.valor > 0 ? "ok" : "warn", "Modalidade e valor",
-    mod ? `${mod.nome} — Anexo I` : "selecione a modalidade");
+  // Perfil: ao menos uma vaga com perfil preenchido (em multivagas, todas idealmente).
+  const comPerfil = vs.filter((v) => tem(v.perfil)).length;
+  add(comPerfil === vs.length ? "ok" : "warn", "Perfil do bolsista",
+    comPerfil === vs.length ? "preenchido" : `${comPerfil}/${vs.length} vaga(s) — recomendado (Art. 7º, III)`);
+
+  // Modalidade e valor: cada vaga deve ter modalidade válida do Anexo I.
+  const semMod = vs.filter((v) => !MODALIDADES.find((m) => m.nome === v.modalidade)).length;
+  add(semMod === 0 ? "ok" : "warn", "Modalidade e valor",
+    semMod === 0 ? (multi ? `${vs.length} vaga(s) — Anexo I` : `${modNome(vs[0])} — Anexo I`) : `${semMod} vaga(s) sem modalidade do Anexo I`);
 
   const din = diffDias(f.inscIni, f.inscFim);
   if (din == null)
@@ -45,40 +58,38 @@ export function conformidade(f) {
       dd >= 0 ? "datas coerentes" : "data fora de ordem");
   });
 
-  if (f.multivagas && Array.isArray(f.vagas) && f.vagas.length) {
-    const tot = f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0);
-    add("ok", "Seleções (multivagas)", `${f.vagas.length} seleção(ões), ${tot} bolsa(s) no total`);
-    f.vagas.forEach((v, i) => {
-      const q = parseInt(v.qtd) || 1;
-      const res = (parseInt(v.cotaER) || 0) + (parseInt(v.cotaM) || 0) + (parseInt(v.cotaPCD) || 0);
-      if (!v.modalidade) add("warn", `Seleção ${i + 1}: modalidade`, "defina a modalidade da seleção");
-      if (res > q) add("err", `Seleção ${i + 1}: reserva ≤ vagas`, `${res} reservada(s) de ${q}`);
-    });
-  } else if (f.cotasOn) {
-    const q = parseInt(f.qtd) || 1;
-    const res = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
-    add(res <= q ? "ok" : "err", "Reserva ≤ total de vagas", `${res} reservada(s) de ${q}`);
-  }
+  // Vagas/seleções: reserva ≤ vagas em cada uma; panorama do conjunto.
+  const tot = vs.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0);
+  if (multi) add("ok", "Seleções (multivagas)", `${vs.length} seleção(ões), ${tot} bolsa(s) no total`);
+  vs.forEach((v, i) => {
+    const q = parseInt(v.qtd) || 1;
+    const res = (parseInt(v.cotaER) || 0) + (parseInt(v.cotaM) || 0) + (parseInt(v.cotaPCD) || 0);
+    const rotulo = multi ? `Seleção ${i + 1}: ` : "";
+    if (res > q) add("err", `${rotulo}Reserva ≤ vagas`, `${res} reservada(s) de ${q}`);
+  });
 
   add("ok", "Comissão julgadora",
     `mín. ${NORMA.comissaoMinIntegrantes} integrantes + 1 suplente (Art. 9º)`);
 
   // ---- Padrões empíricos do corpus PIPA (sev "info"; só aparecem quando há desvio) ----
-  const cdMod = f.modalidade === "Assistente em Ciência de Dados Pleno";
-  const cdFunc = (f.funcoes || []).some((fn) => fn.includes("Ciência de Dados"));
-  if (cdMod && !cdFunc)
-    add("info", "Coerência modalidade × função (corpus)",
-      "modalidade de Ciência de Dados sem função de Ciência de Dados — nas chamadas PIPA, 9/9 casam");
-  const qv = parseInt(f.qtd) || 1;
-  if (qv > 3)
+  vs.forEach((v, i) => {
+    const cdMod = (v.modalidade || "").includes("Ciência de Dados");
+    const cdFunc = (v.funcoes || f.funcoes || []).some((fn) => fn.includes("Ciência de Dados"));
+    if (cdMod && !cdFunc)
+      add("info", `${multi ? `Seleção ${i + 1}: ` : ""}Coerência modalidade × função (corpus)`,
+        "modalidade de Ciência de Dados sem função de Ciência de Dados — nas chamadas PIPA, 9/9 casam");
+  });
+  if (tot > 3)
     add("info", "Quantitativo usual (corpus)",
-      `${qv} vagas — no corpus PIPA o usual é 1 bolsa (máximo observado: 3)`);
+      `${tot} vagas — no corpus PIPA o usual é 1 bolsa (máximo observado: 3)`);
   if (din != null && din >= NORMA.prazoMinEspecializadaDias && din > 21)
     add("info", "Janela de inscrição usual (corpus)",
       `${din} dias — mediana PIPA 13 (faixa típica 11–14 dias)`);
 
   return out;
 }
+
+const modNome = (v) => (MODALIDADES.find((m) => m.nome === v.modalidade) || { nome: "modalidade" }).nome;
 
 export const resumoConf = (lista) => ({
   err: lista.filter((x) => x.sev === "err").length,
