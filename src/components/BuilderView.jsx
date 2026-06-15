@@ -5,7 +5,7 @@ import { fmtValor } from "../lib/format.js";
 import { buildTR, buildEdital, minutaToText } from "../lib/minuta.js";
 import { conformidade, resumoConf, diffDias } from "../lib/conformidade.js";
 import { downloadDoc, printDoc } from "../lib/docExport.js";
-import { chamadasSimilares } from "../lib/similares.js";
+import { vagasTipicas } from "../lib/similares.js";
 import { FUNCOES, TEMAS, enfasesDe, recortesDe } from "../data/perfis.js";
 import { comporPerfil, comporAtividades, comporObjeto, sugerirCriterios } from "../lib/perfil.js";
 import { sugerirModalidade } from "../lib/sugestao.js";
@@ -261,6 +261,7 @@ export default function BuilderView() {
   const [copied, setCopied] = useState(false);
   const [linkCopied, setLinkCopied] = useState(false);
   const [showFull, setShowFull] = useState(false);
+  const [advVaga, setAdvVaga] = useState({}); // por vaga: mostrar "opções avançadas" (ênfases/cotas/experiência/critérios)
   const copy = () => {
     navigator.clipboard.writeText(minutaToText(minuta));
     setCopied(true);
@@ -386,27 +387,38 @@ export default function BuilderView() {
     boxShadow: primary ? SHADOW.xs : "none",
   });
 
-  // Prefill do corpus: chamadas PIPA reais parecidas, com botão p/ puxar o texto ao campo.
-  const sims = useMemo(() => chamadasSimilares({ ...f, modalidade: f.vagas[0]?.modalidade, funcoes: f.vagas[0]?.funcoes || [] }, 3), [f.diretoriaSel, f.temas, f.vagas]);
-  const Similares = ({ campo }) => {
-    const map = { projeto: ["def", "definição"], perfil: ["perfil", "perfil"], atividades: ["atividades", "atividades"] };
-    const [key, nome] = map[campo];
-    const rel = sims.filter((x) => x[key]);
-    if (!rel.length) return null;
+  // Características de vagas TÍPICAS do domínio do projeto (padrão real do corpus PIPA), com ação
+  // p/ semear a 1ª vaga. Substitui o antigo "chamadas parecidas" (que copiava editais inteiros).
+  const tipicas = useMemo(() => vagasTipicas(f), [f.temas, f.diretoriaSel]);
+  const aplicarVaga0 = (patch) => setF((p) => ({ ...p, vagas: p.vagas.map((v, j) => (j === 0 ? { ...v, ...patch } : v)) }));
+  const VagasTipicas = () => {
+    const t = tipicas;
+    if (!t || !t.n) return null;
+    const escopoLabel = t.escopo === "tema" ? "neste tema" : t.escopo === "diretoria" ? "nesta diretoria" : "no PIPA";
+    const topMod = t.modalidades[0];
+    const aplicavel = topMod && MODALIDADES.some((m) => m.nome === topMod.nome);
     return (
       <div style={{ border: `1px solid ${C.line}`, borderRadius: RADIUS.md, background: C.surface2, padding: "12px 14px", display: "grid", gap: 9 }}>
         <div style={{ fontFamily: SANS, fontSize: 10.5, fontWeight: 600, letterSpacing: ".06em", textTransform: "uppercase", color: C.faint, display: "flex", alignItems: "center", gap: 7 }}>
-          <Ic d="spark" size={13} color={C.azul} /> Chamadas PIPA parecidas — puxe a {nome} real
+          <Ic d="spark" size={13} color={C.azul} /> Vagas típicas {escopoLabel} — padrão de {t.n} {t.n > 1 ? "chamadas PIPA reais" : "chamada PIPA real"}
         </div>
-        {rel.map((x, i) => (
-          <div key={i} style={{ display: "flex", gap: 10, alignItems: "baseline" }}>
-            <button type="button" onClick={() => setVal(campo, x[key])} style={{ ...compBtn, flexShrink: 0, padding: "5px 11px" }}>usar</button>
-            <div style={{ fontFamily: SANS, fontSize: 12, color: C.ink, lineHeight: 1.45 }}>
-              <b>{x.titulo}</b> <span style={{ color: C.faint }}>· {x.modalidade}</span><br />
-              <span style={{ color: C.muted }}>{x[key].slice(0, 116)}…</span>
-            </div>
+        {t.modalidades.length > 0 && (
+          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.ink, lineHeight: 1.5 }}>
+            <span style={{ color: C.muted }}>Modalidade usual:</span>{" "}
+            {t.modalidades.map((m, i) => <span key={m.nome}>{i ? "; " : ""}<b>{m.nome}</b> <span style={{ color: C.faint }}>({m.pct}%)</span></span>)}
           </div>
-        ))}
+        )}
+        <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.muted, lineHeight: 1.5 }}>
+          {t.qtdMediana != null && <>Quantitativo típico: <b style={{ color: C.ink }}>{t.qtdMediana} bolsa{t.qtdMediana > 1 ? "s" : ""}</b>{t.qtdMax > t.qtdMediana ? ` (máx. ${t.qtdMax})` : ""} · </>}
+          {t.janelaMediana != null && <>janela de inscrição ~<b style={{ color: C.ink }}>{t.janelaMediana} dias</b> · </>}
+          reserva de cotas em <b style={{ color: C.ink }}>{t.pctReserva}%</b> das chamadas.
+        </div>
+        {aplicavel && (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+            <button type="button" style={{ ...compBtn, padding: "5px 11px" }} onClick={() => aplicarVaga0({ modalidade: topMod.nome, ...(t.qtdMediana ? { qtd: String(t.qtdMediana) } : {}) })}>usar na 1ª vaga</button>
+            <span style={{ fontFamily: SANS, fontSize: 11.5, color: C.faint }}>aplica a modalidade usual{t.qtdMediana ? " e o quantitativo típico" : ""} à 1ª vaga</span>
+          </div>
+        )}
       </div>
     );
   };
@@ -550,8 +562,8 @@ export default function BuilderView() {
             <PlaceholderBtn campo="projeto" />
           </div>
         </Field>
+        <VagasTipicas />
         <ExemplosPipa temas={f.temas} onUsar={(p) => setVal("projeto", p)} />
-        <Similares campo="projeto" />
       </>);
       case 2: return (<>
         {f.vagas.map((v, i) => {
@@ -571,13 +583,6 @@ export default function BuilderView() {
                   {FUNCOES.map((o) => <button key={o} type="button" onClick={() => toggleInVaga(i, "funcoes", o)} style={chipStyle(v.funcoes.includes(o))}>{o}</button>)}
                 </div>
               </Field>
-              {enfasesDe(v.funcoes).length > 0 && (
-                <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                    {enfasesDe(v.funcoes).map((o) => <button key={o} type="button" onClick={() => toggleInVaga(i, "enfases", o)} style={chipStyle(v.enfases.includes(o))}>{o}</button>)}
-                  </div>
-                </Field>
-              )}
               <SugestaoModalidade vi={i} />
               <Field l="Modalidade da bolsa (Portaria 317/2025) — define valor, formação e requisito">
                 <select style={inp} value={v.modalidade} onChange={(e) => setVaga(i, "modalidade", e.target.value)}>
@@ -606,19 +611,6 @@ export default function BuilderView() {
               {f.vagas.length > 1 && (!f.duracaoBolsaSet || !f.duracaoPesquisaSet) && (
                 <div style={{ fontFamily: SANS, fontSize: 11, color: C.faint, marginTop: -8 }}>A primeira duração preenchida vira padrão para todas as vagas (depois, edite cada uma se precisar).</div>
               )}
-              <Field l="Reserva de vagas por cota (AC/ER/M/PCD) — opcional">
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
-                  <input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} placeholder="ER" />
-                  <input style={inp} type="number" min="0" value={v.cotaM} onChange={(e) => setVaga(i, "cotaM", e.target.value)} placeholder="M" />
-                  <input style={inp} type="number" min="0" value={v.cotaPCD} onChange={(e) => setVaga(i, "cotaPCD", e.target.value)} placeholder="PCD" />
-                </div>
-                <div style={{ fontFamily: SANS, fontSize: 12, marginTop: 6, color: vres > vq ? C.err : C.muted }}>
-                  AC: <b>{vac}</b> · reservadas: <b>{vres}</b> · total: <b>{vq}</b>{vres > vq && <span style={{ fontWeight: 600 }}> — excede o total</span>}
-                </div>
-              </Field>
-              <Field l="Experiência / habilidades desejáveis — opcional">
-                <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={v.experiencia} onChange={(e) => setVaga(i, "experiencia", e.target.value)} />
-              </Field>
               <div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
                   <button type="button" style={compBtn} onClick={() => setVaga(i, "perfil", comporPerfil({ modalidade: v.modalidade, funcoes: v.funcoes, temas: f.temas, experiencia: v.experiencia, enfases: v.enfases, recortes: f.recortes }))}>✦ Compor perfil</button>
@@ -637,15 +629,47 @@ export default function BuilderView() {
                   <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={v.atividades} onChange={(e) => setVaga(i, "atividades", e.target.value)} />
                 </Field>
               </div>
-              <div>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
-                  <button type="button" style={compBtn} onClick={() => setVaga(i, "criterios", sugerirCriterios({ modalidade: v.modalidade, funcoes: v.funcoes }))}>✦ Sugerir critérios</button>
-                  <button type="button" style={phBtn} onClick={() => setVaga(i, "criterios", PH.criterios)}>Não encontrei modelo — deixar placeholder</button>
-                </div>
-                <Field l="Critérios de seleção">
-                  <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={v.criterios} onChange={(e) => setVaga(i, "criterios", e.target.value)} />
-                </Field>
-              </div>
+              {/* Divulgação progressiva: o avançado fica recolhido; auto-abre se a vaga já trouxe esses dados. */}
+              {(() => {
+                const aberto = advVaga[i] !== undefined ? advVaga[i] : (v.enfases.length > 0 || !!(v.experiencia && v.experiencia.trim()) || !!(v.criterios && v.criterios.trim()) || vres > 0);
+                return (<>
+                  <button type="button" onClick={() => setAdvVaga((s) => ({ ...s, [i]: !aberto }))}
+                    style={{ justifySelf: "start", background: "none", border: "none", color: C.azul, cursor: "pointer", fontFamily: SANS, fontSize: 12.5, fontWeight: 600, padding: 0 }}>
+                    {aberto ? "▾ Opções avançadas da vaga" : "▸ Opções avançadas (ênfases, cotas, experiência, critérios)"}
+                  </button>
+                  {aberto && (<>
+                    {enfasesDe(v.funcoes).length > 0 && (
+                      <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
+                        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                          {enfasesDe(v.funcoes).map((o) => <button key={o} type="button" onClick={() => toggleInVaga(i, "enfases", o)} style={chipStyle(v.enfases.includes(o))}>{o}</button>)}
+                        </div>
+                      </Field>
+                    )}
+                    <Field l="Experiência / habilidades desejáveis — opcional">
+                      <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={v.experiencia} onChange={(e) => setVaga(i, "experiencia", e.target.value)} />
+                    </Field>
+                    <Field l="Reserva de vagas por cota (AC/ER/M/PCD) — opcional">
+                      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+                        <input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} placeholder="ER" />
+                        <input style={inp} type="number" min="0" value={v.cotaM} onChange={(e) => setVaga(i, "cotaM", e.target.value)} placeholder="M" />
+                        <input style={inp} type="number" min="0" value={v.cotaPCD} onChange={(e) => setVaga(i, "cotaPCD", e.target.value)} placeholder="PCD" />
+                      </div>
+                      <div style={{ fontFamily: SANS, fontSize: 12, marginTop: 6, color: vres > vq ? C.err : C.muted }}>
+                        AC: <b>{vac}</b> · reservadas: <b>{vres}</b> · total: <b>{vq}</b>{vres > vq && <span style={{ fontWeight: 600 }}> — excede o total</span>}
+                      </div>
+                    </Field>
+                    <div>
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+                        <button type="button" style={compBtn} onClick={() => setVaga(i, "criterios", sugerirCriterios({ modalidade: v.modalidade, funcoes: v.funcoes }))}>✦ Sugerir critérios</button>
+                        <button type="button" style={phBtn} onClick={() => setVaga(i, "criterios", PH.criterios)}>Não encontrei modelo — deixar placeholder</button>
+                      </div>
+                      <Field l="Critérios de seleção">
+                        <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={v.criterios} onChange={(e) => setVaga(i, "criterios", e.target.value)} />
+                      </Field>
+                    </div>
+                  </>)}
+                </>);
+              })()}
             </div>
           );
         })}

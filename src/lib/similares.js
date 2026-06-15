@@ -23,6 +23,48 @@ function score(c, f) {
   return s;
 }
 
+// Ranking de ocorrências de um atributo (string ou lista) sobre um conjunto de chamadas.
+const rank = (pool, getArr) => {
+  const m = new Map();
+  for (const c of pool) for (const v of getArr(c) || []) if (v) m.set(v, (m.get(v) || 0) + 1);
+  return [...m.entries()]
+    .map(([nome, k]) => ({ nome, k, pct: Math.round((100 * k) / pool.length) }))
+    .sort((a, b) => b.k - a.k);
+};
+
+const mediana = (a) => {
+  if (!a.length) return null;
+  const s = [...a].sort((x, y) => x - y), m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : Math.round((s[m - 1] + s[m]) / 2);
+};
+
+// Características de vagas TÍPICAS para o domínio do projeto: agrega as chamadas PIPA reais do(s)
+// mesmo(s) tema(s) — com fallback p/ a diretoria e, por fim, todo o PIPA — e resume o PADRÃO
+// (modalidade usual, quantitativo, janela de inscrição, reserva de cotas). Descreve o padrão a
+// partir de dados reais; não copia o texto de uma chamada específica.
+export function vagasTipicas(f) {
+  const temas = f.temas || [];
+  let pool = PIPA.filter((c) => (c.categoria_tema || []).some((t) => temas.includes(t)));
+  let escopo = "tema";
+  if (pool.length < 5 && f.diretoriaSel != null) {
+    const d = PIPA.filter((c) => String(c.diretoria) === String(f.diretoriaSel));
+    if (d.length > pool.length) { pool = d; escopo = "diretoria"; }
+  }
+  if (!pool.length) { pool = PIPA; escopo = "PIPA"; }
+  const n = pool.length;
+  const nums = (key) => pool.map((c) => Number(c[key])).filter((x) => Number.isFinite(x) && x > 0);
+  const qtd = nums("qtd_bolsas");
+  const comReserva = pool.filter((c) => c.tem_reserva === true || c.tem_reserva === 1).length;
+  return {
+    n, escopo,
+    modalidades: rank(pool, (c) => (c.modalidade_canonica ? [c.modalidade_canonica] : [])).slice(0, 3),
+    qtdMediana: mediana(qtd),
+    qtdMax: qtd.length ? Math.max(...qtd) : null,
+    janelaMediana: mediana(nums("janela_dias")),
+    pctReserva: n ? Math.round((100 * comReserva) / n) : 0,
+  };
+}
+
 // Top-N chamadas PIPA reais mais parecidas que tenham texto aproveitável.
 export function chamadasSimilares(f, n = 3) {
   return PIPA
