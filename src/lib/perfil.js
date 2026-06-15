@@ -19,10 +19,10 @@ export function comporObjeto({ projetoNome = "" }) {
 //  Ênfase em {ênfases}. Experiência desejável: …"
 export function comporPerfil({ modalidade, funcoes = [], temas = [], experiencia = "", enfases = [], recortes = [] }) {
   const mod = MODALIDADES.find((m) => m.nome === modalidade);
-  const formacao = (mod && mod.formacao) || "a formação exigida pela modalidade";
+  const base = (mod && mod.perfilBase) || "Profissional com a formação exigida pela modalidade";
   const compet = funcoes.map((fn) => (FUNCAO_PERFIL[fn] || {}).competencia).filter(Boolean);
   const linhas = temas.map((t) => TEMA_LINHA[t]).filter(Boolean);
-  let s = `Profissional com ${formacao}`;
+  let s = base;
   if (compet.length) s += `, com ${lista(compet)}`;
   if (linhas.length) s += `, com atuação em ${lista(linhas)}`;
   if (recortes.length) s += ` (com recorte em ${lista(recortes)})`;
