@@ -27,8 +27,8 @@ function Ic({ d, size = 15, color = "currentColor", w = 1.8 }) {
 // Projetos ativos do IPEA indexados por id (picker "partir de um projeto real" — busca em BuilderView).
 const PROJ_BY_ID = Object.fromEntries(PROJETOS.map((p) => [p.id, p]));
 
-const STEPS = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
-const STEP_SHORT = ["Identificação", "Projeto", "Bolsa", "Perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
+const STEPS = ["Identificação", "Projeto", "Bolsa e perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
+const STEP_SHORT = ["Identificação", "Projeto", "Bolsa e perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
 const SEVC = { ok: C.ok, warn: C.warn, err: C.err, info: C.azul };
 const SEVBG = { ok: C.okBg, warn: C.warnBg, err: C.errBg, info: C.accentSoft };
 const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
@@ -38,8 +38,7 @@ const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
 const FOCO = [
   ["UNIDADE"],
   ["DEFINIÇÃO DO PROJETO", "OBJETO"],
-  ["MODALIDADE", "DURAÇÃO"],
-  ["PERFIL", "REQUISITOS"],
+  ["MODALIDADE", "DURAÇÃO", "PERFIL", "REQUISITOS"],
   ["MODALIDADE", "QUANTITATIVO"],
   ["ATIVIDADES", "CRITÉRIOS", "COMISSÃO"],
   ["INSCRIÇÕES", "CRONOGRAMA", "RESULTADO"],
@@ -125,8 +124,7 @@ function carregarInicial() {
 const STEP_CONF = [
   ["Número da chamada", "Unidade, coordenação"],
   ["Definição do projeto"],
-  ["Modalidade e valor"],
-  ["Perfil do bolsista"],
+  ["Modalidade e valor", "Perfil do bolsista"],
   ["Reserva", "Quantitativo usual", "Coerência modalidade", "Seleção", "Seleções"],
   ["Comissão"],
   ["Prazo de inscrição", "Ordem:", "Janela de inscrição"],
@@ -342,6 +340,24 @@ export default function BuilderView() {
     borderRadius: RADIUS.sm, cursor: "pointer", background: C.accentSoft, color: C.azulEscuro, border: `1px solid ${C.azulClaro}`,
     justifySelf: "start",
   };
+  // Escape hatch (pedido recorrente): quando nenhum modelo/sugestão serve, deixa um
+  // placeholder [entre colchetes] — que a prévia renderiza como rascunho-fantasma a preencher.
+  const phBtn = {
+    fontFamily: SANS, fontSize: 12, fontWeight: 500, padding: "8px 13px", display: "inline-flex", alignItems: "center", gap: 6,
+    borderRadius: RADIUS.sm, cursor: "pointer", background: "transparent", color: C.muted, border: `1px dashed ${C.lineStrong}`,
+    justifySelf: "start",
+  };
+  const PH = {
+    projeto: "[Descrever o objeto do projeto: tema, justificativa e objetivos da pesquisa.]",
+    perfil: "[Descrever o perfil desejado: formação, função/atividades, experiência e habilidades.]",
+    atividades: "[Listar as atividades de pesquisa que o bolsista vai desenvolver.]",
+    criterios: "[Definir os critérios de seleção e julgamento e seus pesos.]",
+  };
+  const PlaceholderBtn = ({ campo }) => (
+    <button type="button" style={phBtn} onClick={() => setVal(campo, PH[campo])} title="Insere um placeholder editável na minuta">
+      Não encontrei modelo — deixar placeholder
+    </button>
+  );
   const mod = MODALIDADES.find((m) => m.nome === f.modalidade);
   const q = parseInt(f.qtd) || 1;
   const reservaLive = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
@@ -516,17 +532,29 @@ export default function BuilderView() {
         </Field>
         <Field l="Definição do projeto de pesquisa">
           <textarea style={{ ...inp, minHeight: 120, resize: "vertical" }} placeholder="Objeto, justificativa e objetivos do projeto…" value={f.projeto} onChange={set("projeto")} />
-          <div style={{ marginTop: 6 }}>
+          <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
             <button type="button" style={compBtn} onClick={() => setVal("projeto", comporObjeto({ projetoNome: f.projetoNome }))}>
               ✦ Compor objeto (estrutura real PIPA)
             </button>
+            <PlaceholderBtn campo="projeto" />
           </div>
         </Field>
         <ExemplosPipa temas={f.temas} onUsar={(p) => setVal("projeto", p)} />
         <Similares campo="projeto" />
       </>);
       case 2: return (<>
-        <Field l="Modalidade da bolsa (Portaria 317/2025)">
+        {/* QUEM: a função/perfil vem primeiro — é o que torna a sugestão de modalidade fundamentada. */}
+        <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
+          <ChipsMulti campo="funcoes" opcoes={FUNCOES} />
+        </Field>
+        {enfasesDe(f.funcoes).length > 0 && (
+          <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
+            <ChipsMulti campo="enfases" opcoes={enfasesDe(f.funcoes)} />
+          </Field>
+        )}
+        {/* A SUGESTÃO já considera a função escolhida acima; só então a modalidade. */}
+        <SugestaoModalidade />
+        <Field l="Modalidade da bolsa (Portaria 317/2025) — define valor, formação e requisito">
           <select style={inp} value={f.modalidade} onChange={set("modalidade")}>
             {MODALIDADES.map((m) => <option key={m.nome}>{m.nome}</option>)}
           </select>
@@ -538,51 +566,34 @@ export default function BuilderView() {
             <span style={{ color: C.muted }}>requisito (Art. 4º): {mod.requisito}</span>
           </div>
         )}
-        <SugestaoModalidade />
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
           <Field l="Qtd. bolsas"><input style={inp} type="number" min="1" value={f.qtd} onChange={set("qtd")} /></Field>
           <Field l="Bolsa (meses)"><input style={inp} type="number" min="1" value={f.duracaoBolsa} onChange={set("duracaoBolsa")} /></Field>
           <Field l="Pesquisa (meses)"><input style={inp} type="number" min="1" value={f.duracaoPesquisa} onChange={set("duracaoPesquisa")} /></Field>
         </div>
         <Check k="cadastroReserva" l="Prever cadastro reserva (Art. 9º, §2º)" />
-      </>);
-      case 3: return (<>
-        <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
-          <ChipsMulti campo="funcoes" opcoes={FUNCOES} />
-        </Field>
-        {enfasesDe(f.funcoes).length > 0 && (
-          <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
-            <ChipsMulti campo="enfases" opcoes={enfasesDe(f.funcoes)} />
-          </Field>
-        )}
+        {/* PERFIL redigido: a partir da função + modalidade já escolhidas. */}
         {recortesDe(f.temas).length > 0 && (
           <Field l="Recortes temáticos (do corpus) — opcional">
             <ChipsMulti campo="recortes" opcoes={recortesDe(f.temas)} />
           </Field>
         )}
-        <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, lineHeight: 1.5 }}>
-          formação (da modalidade): <b>{mod ? mod.formacao : "—"}</b>
-          {f.temas.length > 0 && <><br />temas: <b>{f.temas.join(", ")}</b></>}
-        </div>
         <Field l="Experiência / habilidades desejáveis — opcional">
           <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={f.experiencia} onChange={set("experiencia")} />
         </Field>
-        <button type="button" style={compBtn}
-          onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia, enfases: f.enfases, recortes: f.recortes }))}>
-          ✦ Compor perfil a partir das escolhas
-        </button>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+          <button type="button" style={compBtn}
+            onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia, enfases: f.enfases, recortes: f.recortes }))}>
+            ✦ Compor perfil a partir das escolhas
+          </button>
+          <PlaceholderBtn campo="perfil" />
+        </div>
         <Field l="Perfil do bolsista desejado (editável)">
           <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Use ‘Compor perfil’ acima, ou escreva livremente…" value={f.perfil} onChange={set("perfil")} />
         </Field>
         <Similares campo="perfil" />
-        {f.funcoes.length > 0 && sugMod && f.modalidade !== sugMod.modalidade.nome && (<>
-          <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, lineHeight: 1.45, marginTop: 2 }}>
-            Com a função definida, o histórico refina a modalidade (a atual difere da sugerida):
-          </div>
-          <SugestaoModalidade />
-        </>)}
       </>);
-      case 4: return (<>
+      case 3: return (<>
         <label style={{ display: "flex", gap: 11, alignItems: "flex-start", cursor: "pointer", background: f.multivagas ? C.accentSoft : C.surface2, border: `1px solid ${f.multivagas ? C.azulClaro : C.line}`, borderRadius: RADIUS.md, padding: "12px 14px" }}>
           <input type="checkbox" checked={f.multivagas} onChange={(e) => toggleMultivagas(e.target.checked)} style={{ accentColor: C.azul, width: 16, height: 16, marginTop: 2 }} />
           <div>
@@ -666,7 +677,7 @@ export default function BuilderView() {
           </div>
         </>)}
       </>);
-      case 5: return (<>
+      case 4: return (<>
         {f.multivagas && (
           <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, background: C.accentSoft, border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.sm, padding: "10px 12px", lineHeight: 1.45 }}>
             <b>Multivagas ativo:</b> atividades e critérios são definidos <b>por seleção</b> no passo <b>Vagas</b>. Os campos abaixo valem como base/rascunho.
@@ -674,20 +685,22 @@ export default function BuilderView() {
         )}
         <Field l="Atividades a desenvolver">
           <textarea style={{ ...inp, minHeight: 88, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={f.atividades} onChange={set("atividades")} />
-          <div style={{ marginTop: 6 }}>
+          <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
             <button type="button" style={compBtn}
               onClick={() => setVal("atividades", comporAtividades({ funcoes: f.funcoes, temas: f.temas }))}>
               ✦ Compor atividades (das funções do perfil)
             </button>
+            <PlaceholderBtn campo="atividades" />
           </div>
           <div style={{ marginTop: 9 }}><Similares campo="atividades" /></div>
         </Field>
         <Field l="Critérios de seleção">
           <textarea style={{ ...inp, minHeight: 96, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma; ou gere pelos critérios reais da modalidade…" value={f.criterios} onChange={set("criterios")} />
-          <div style={{ marginTop: 6 }}>
+          <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
             <button type="button" style={compBtn} onClick={() => setVal("criterios", sugerirCriterios({ modalidade: f.modalidade, funcoes: f.funcoes }))}>
               ✦ Sugerir critérios (padrão real da modalidade)
             </button>
+            <PlaceholderBtn campo="criterios" />
           </div>
         </Field>
         <Check k="cartaIntencoes" l="Exigir carta de intenções (Art. 8º, §1º)" />
@@ -695,7 +708,7 @@ export default function BuilderView() {
           <textarea style={{ ...inp, minHeight: 56, resize: "vertical" }} placeholder="Em branco usa a composição-padrão (mín. 3 + 1 suplente, Art. 9º)…" value={f.comissao} onChange={set("comissao")} />
         </Field>
       </>);
-      case 6: return (<>
+      case 5: return (<>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
           <Field l="Publicação"><input style={inp} type="date" value={f.dataPub} onChange={set("dataPub")} /></Field>
           <Field l="Início atividades"><input style={inp} type="date" value={f.inicio} onChange={set("inicio")} /></Field>
@@ -710,7 +723,7 @@ export default function BuilderView() {
           </div>
         )}
       </>);
-      case 7: return (<>
+      case 6: return (<>
         <div style={{ display: "flex", gap: 8, fontFamily: SANS, fontSize: 12.5, fontWeight: 600 }}>
           {[["ok", `${resumo.ok} ok`], ["warn", `${resumo.warn} avisos`], ["err", `${resumo.err} erros`]].map(([k, l]) => (
             <span key={k} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: SEVC[k], background: SEVBG[k], padding: "5px 11px", borderRadius: RADIUS.pill }}>{SEVI[k]} {l}</span>
