@@ -99,13 +99,15 @@ function renderSecao(s, i, flash) {
 const novaVaga = (base = {}) => ({
   modalidade: MODALIDADES[0].nome, funcoes: [], enfases: [], experiencia: "",
   qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0",
+  duracaoBolsa: "12", duracaoPesquisa: "12",
   perfil: "", atividades: "", criterios: "", ...base,
 });
 const DEFAULTS = {
   numero: "", diretoriaSel: PADRAO_DIRETORIA, unidade: rotuloUnidade(PADRAO_DIRETORIA),
   coordenador: "", projetoNome: "", projeto: "", temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], recortes: [],
   vagas: [novaVaga()],
-  duracaoBolsa: "12", duracaoPesquisa: "12",
+  // primeiro preenchimento de duração vira padrão p/ todas as vagas (flag por campo)
+  duracaoBolsaSet: false, duracaoPesquisaSet: false,
   reservaVagas: "", fundamentoCotas: "", heteroident: false, cartaIntencoes: false, comissao: "", diretoria: "",
   dataPub: "", inscIni: "", inscFim: "", resultado: "", inicio: "",
 };
@@ -118,6 +120,7 @@ function migra(s) {
   return { ...DEFAULTS, ...s, vagas: [novaVaga({
     modalidade: s.modalidade, qtd: s.qtd, tipo: s.cadastroReserva ? "Imediata + cadastro reserva" : "Imediata",
     cotaER: s.cotasOn ? s.cotaER : "0", cotaM: s.cotasOn ? s.cotaM : "0", cotaPCD: s.cotasOn ? s.cotaPCD : "0",
+    duracaoBolsa: s.duracaoBolsa || "12", duracaoPesquisa: s.duracaoPesquisa || "12",
     funcoes: s.funcoes || [], enfases: s.enfases || [], experiencia: s.experiencia || "",
     perfil: s.perfil || "", atividades: s.atividades || "", criterios: s.criterios || "",
   })] };
@@ -154,7 +157,14 @@ export default function BuilderView() {
   // ---- Vagas (seleções): um TR tem 1..N vagas, cada uma completa. rmVaga nunca zera.
   const setVaga = (i, k, v) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: v } : x)) }));
   const toggleInVaga = (i, k, val) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: x[k].includes(val) ? x[k].filter((y) => y !== val) : [...x[k], val] } : x)) }));
-  const addVaga = () => setF((p) => ({ ...p, vagas: [...p.vagas, novaVaga()] }));
+  // Duração por vaga: no PRIMEIRO preenchimento (por campo) vira padrão p/ TODAS; depois é individual.
+  const setDuracaoVaga = (i, k, val) => setF((p) => {
+    const flag = k === "duracaoBolsa" ? "duracaoBolsaSet" : "duracaoPesquisaSet";
+    if (!p[flag]) return { ...p, [flag]: true, vagas: p.vagas.map((x) => ({ ...x, [k]: val })) };
+    return { ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: val } : x)) };
+  });
+  // Nova vaga herda a duração-padrão já estabelecida (a da 1ª vaga).
+  const addVaga = () => setF((p) => ({ ...p, vagas: [...p.vagas, novaVaga({ duracaoBolsa: p.vagas[0]?.duracaoBolsa, duracaoPesquisa: p.vagas[0]?.duracaoPesquisa })] }));
   const rmVaga = (i) => setF((p) => ({ ...p, vagas: p.vagas.length > 1 ? p.vagas.filter((_, j) => j !== i) : p.vagas }));
   // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
   // Mudar a área manualmente invalida o "preenchido a partir de <projeto>" — limpa a seleção.
@@ -589,6 +599,13 @@ export default function BuilderView() {
                   </select>
                 </Field>
               </div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                <Field l="Duração da bolsa (meses)"><input style={inp} type="number" min="1" value={v.duracaoBolsa} onChange={(e) => setDuracaoVaga(i, "duracaoBolsa", e.target.value)} /></Field>
+                <Field l="Duração da pesquisa (meses)"><input style={inp} type="number" min="1" value={v.duracaoPesquisa} onChange={(e) => setDuracaoVaga(i, "duracaoPesquisa", e.target.value)} /></Field>
+              </div>
+              {f.vagas.length > 1 && (!f.duracaoBolsaSet || !f.duracaoPesquisaSet) && (
+                <div style={{ fontFamily: SANS, fontSize: 11, color: C.faint, marginTop: -8 }}>A primeira duração preenchida vira padrão para todas as vagas (depois, edite cada uma se precisar).</div>
+              )}
               <Field l="Reserva de vagas por cota (AC/ER/M/PCD) — opcional">
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
                   <input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} placeholder="ER" />
@@ -640,10 +657,6 @@ export default function BuilderView() {
         </div>
         <div style={{ height: 1, background: C.line, margin: "4px 0" }} />
         {/* Características compartilhadas pelo TR (valem para o conjunto) */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
-          <Field l="Duração da bolsa (meses)"><input style={inp} type="number" min="1" value={f.duracaoBolsa} onChange={set("duracaoBolsa")} /></Field>
-          <Field l="Duração da pesquisa (meses)"><input style={inp} type="number" min="1" value={f.duracaoPesquisa} onChange={set("duracaoPesquisa")} /></Field>
-        </div>
         <Field l="Público-alvo / reserva de vagas (Art. 25) — opcional">
           <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
         </Field>

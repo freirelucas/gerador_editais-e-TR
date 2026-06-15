@@ -27,24 +27,36 @@ function vagasDe(f) {
     qtd: f.qtd,
     tipo: f.cadastroReserva ? "Imediata + cadastro reserva" : "Imediata",
     cotaER: f.cotasOn ? f.cotaER : 0, cotaM: f.cotasOn ? f.cotaM : 0, cotaPCD: f.cotasOn ? f.cotaPCD : 0,
+    duracaoBolsa: f.duracaoBolsa, duracaoPesquisa: f.duracaoPesquisa,
     perfil: f.perfil, atividades: f.atividades, criterios: f.criterios,
   }];
 }
-const durs = (f) => {
-  const durB = parseInt(f.duracaoBolsa) || 12;
-  return { durB, durP: parseInt(f.duracaoPesquisa) || durB };
-};
+// Duração por vaga (com fallback ao nível do TR p/ rascunho antigo).
+const durB = (v, f) => parseInt(v.duracaoBolsa) || parseInt(f.duracaoBolsa) || 12;
+const durP = (v, f) => parseInt(v.duracaoPesquisa) || parseInt(v.duracaoBolsa) || parseInt(f.duracaoPesquisa) || parseInt(f.duracaoBolsa) || 12;
+// Seção de duração: uma frase quando todas as vagas têm a mesma; por seleção quando diferem.
+function duracaoSec(vs, f) {
+  const ub = [...new Set(vs.map((v) => durB(v, f)))], up = [...new Set(vs.map((v) => durP(v, f)))];
+  if (ub.length === 1 && up.length === 1) {
+    const b = ub[0], pp = up[0];
+    return [
+      `Duração da bolsa: ${pad(b)} (${extenso(b)}) ${b === 1 ? "mês" : "meses"}.`,
+      `Tempo de duração da pesquisa: ${pad(pp)} (${extenso(pp)}) ${pp === 1 ? "mês" : "meses"}.`,
+    ];
+  }
+  return vs.map((v, i) => `Seleção ${i + 1}: bolsa de ${pad(durB(v, f))} ${durB(v, f) === 1 ? "mês" : "meses"}; pesquisa de ${pad(durP(v, f))} ${durP(v, f) === 1 ? "mês" : "meses"}.`);
+}
 
 // ---------- Vaga única: prosa de bolsa "normal" ----------
 function caracteristicasBolsa(v, f) {
   const mod = modOf(v.modalidade);
   const q = parseInt(v.qtd) || 1;
-  const { durB } = durs(f);
+  const db = durB(v, f);
   const cadastro = /cadastro reserva/i.test(v.tipo || "") || f.cadastroReserva;
   const b = [
     `Modalidade: ${mod.nome} — ${fmtValor(mod.valor, mod.moeda)} mensais (Anexo I da ${NORMA.portaria}).`,
     `Requisito da modalidade: ${ou(mod.requisito, "conforme Art. 4º da norma vigente.")}`,
-    `Quantitativo: ${pad(q)} (${extenso(q)}) bolsa(s), com duração prevista de ${pad(durB)} (${extenso(durB)}) ${durB === 1 ? "mês" : "meses"}, renovável a critério do IPEA.`,
+    `Quantitativo: ${pad(q)} (${extenso(q)}) bolsa(s), com duração prevista de ${pad(db)} (${extenso(db)}) ${db === 1 ? "mês" : "meses"}, renovável a critério do IPEA.`,
     cadastro
       ? "Haverá cadastro reserva, observada a ordem de classificação, admitido provimento adicional na vigência da chamada (Art. 9º, §2º)."
       : "Não haverá cadastro reserva.",
@@ -139,7 +151,6 @@ const secModalidade = (vs, f, t1, tN) => vs.length > 1
 // ---------- Termo de Referência (Art. 7º) ----------
 export function buildTR(f) {
   const vs = vagasDe(f);
-  const { durB, durP } = durs(f);
   const multi = vs.length > 1;
   const S = [];
   S.push({ t: `TERMO DE REFERÊNCIA — CHAMADA PÚBLICA ESPECIALIZADA IPEA/PIPA Nº ${ou(f.numero, "XXX/AAAA")}`, head: true });
@@ -155,10 +166,7 @@ export function buildTR(f) {
     ? perfilMultivagas(vs)
     : [ou(vs[0].perfil, "[Descrever titulação, conhecimentos, competências e experiência desejados.]")] });
   S.push({ n: 4, ...secModalidade(vs, f, "MODALIDADE, VALOR E QUANTITATIVO DA BOLSA", "MODALIDADES, VALORES E QUADRO DE VAGAS") });
-  S.push({ n: 5, t: "DURAÇÃO DA BOLSA E DA PESQUISA", b: [
-    `Duração da bolsa: ${pad(durB)} (${extenso(durB)}) ${durB === 1 ? "mês" : "meses"}.`,
-    `Tempo de duração da pesquisa: ${pad(durP)} (${extenso(durP)}) ${durP === 1 ? "mês" : "meses"}.`,
-  ] });
+  S.push({ n: 5, t: "DURAÇÃO DA BOLSA E DA PESQUISA", b: duracaoSec(vs, f) });
   S.push({ n: 6, t: "ATIVIDADES A SEREM DESENVOLVIDAS", b: multi
     ? atividadesMultivagas(vs)
     : [ou(vs[0].atividades, "[Descrever as atividades de pesquisa que o bolsista irá desenvolver.]")] });
