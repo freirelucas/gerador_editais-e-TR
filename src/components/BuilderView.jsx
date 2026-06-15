@@ -27,8 +27,8 @@ function Ic({ d, size = 15, color = "currentColor", w = 1.8 }) {
 // Projetos ativos do IPEA indexados por id (picker "partir de um projeto real" — busca em BuilderView).
 const PROJ_BY_ID = Object.fromEntries(PROJETOS.map((p) => [p.id, p]));
 
-const STEPS = ["Identificação", "Projeto", "Bolsa e perfil", "Vagas & cotas", "Seleção", "Cronograma", "Conformidade & exportar"];
-const STEP_SHORT = ["Identificação", "Projeto", "Bolsa e perfil", "Vagas", "Seleção", "Cronograma", "Exportar"];
+const STEPS = ["Identificação", "Projeto", "Vagas e perfil", "Cronograma", "Conformidade & exportar"];
+const STEP_SHORT = ["Identificação", "Projeto", "Vagas e perfil", "Cronograma", "Exportar"];
 const SEVC = { ok: C.ok, warn: C.warn, err: C.err, info: C.azul };
 const SEVBG = { ok: C.okBg, warn: C.warnBg, err: C.errBg, info: C.accentSoft };
 const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
@@ -38,9 +38,7 @@ const SEVI = { ok: "✓", warn: "!", err: "✕", info: "ℹ" };
 const FOCO = [
   ["UNIDADE"],
   ["DEFINIÇÃO DO PROJETO", "OBJETO"],
-  ["MODALIDADE", "DURAÇÃO", "PERFIL", "REQUISITOS"],
-  ["MODALIDADE", "QUANTITATIVO"],
-  ["ATIVIDADES", "CRITÉRIOS", "COMISSÃO"],
+  ["MODALIDADE", "PERFIL", "REQUISITOS", "QUANTITATIVO", "QUADRO", "DURAÇÃO", "ATIVIDADES", "CRITÉRIOS", "COMISSÃO"],
   ["INSCRIÇÕES", "CRONOGRAMA", "RESULTADO"],
   null,
 ];
@@ -96,26 +94,42 @@ function renderSecao(s, i, flash) {
 }
 
 // Estado inicial do formulário (extraído p/ permitir hidratação de rascunho/link).
+// Uma vaga (seleção) COMPLETA: tudo que varia por posição mora aqui — modalidade, função,
+// quantitativo, tipo, cotas, perfil, atividades e critérios próprios. Um TR tem 1..N vagas.
+const novaVaga = (base = {}) => ({
+  modalidade: MODALIDADES[0].nome, funcoes: [], enfases: [], experiencia: "",
+  qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0",
+  perfil: "", atividades: "", criterios: "", ...base,
+});
 const DEFAULTS = {
   numero: "", diretoriaSel: PADRAO_DIRETORIA, unidade: rotuloUnidade(PADRAO_DIRETORIA),
-  coordenador: "", projetoNome: "", projeto: "", perfil: "",
-  temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], funcoes: [], enfases: [], recortes: [], experiencia: "",
-  modalidade: MODALIDADES[0].nome, qtd: "1", cadastroReserva: false, reservaVagas: "",
-  cotasOn: false, cotaER: "0", cotaM: "0", cotaPCD: "0", heteroident: false, fundamentoCotas: "",
-  multivagas: false, vagas: [],
-  duracaoBolsa: "12", duracaoPesquisa: "12", atividades: "", criterios: "",
-  cartaIntencoes: false, comissao: "", diretoria: "",
+  coordenador: "", projetoNome: "", projeto: "", temas: [DIRETORIA_TEMA[PADRAO_DIRETORIA]], recortes: [],
+  vagas: [novaVaga()],
+  duracaoBolsa: "12", duracaoPesquisa: "12",
+  reservaVagas: "", fundamentoCotas: "", heteroident: false, cartaIntencoes: false, comissao: "", diretoria: "",
   dataPub: "", inscIni: "", inscFim: "", resultado: "", inicio: "",
 };
 const STORE = "pipa-gerador-rascunho";
+// Hidrata garantindo o modelo de vagas: rascunho/relatório antigo (campos de topo, ou vagas
+// incompletas) é normalizado — uma vaga sintetizada dos campos de topo, ou cada vaga completada.
+function migra(s) {
+  if (Array.isArray(s.vagas) && s.vagas.length)
+    return { ...DEFAULTS, ...s, vagas: s.vagas.map((v) => novaVaga(v)) };
+  return { ...DEFAULTS, ...s, vagas: [novaVaga({
+    modalidade: s.modalidade, qtd: s.qtd, tipo: s.cadastroReserva ? "Imediata + cadastro reserva" : "Imediata",
+    cotaER: s.cotasOn ? s.cotaER : "0", cotaM: s.cotasOn ? s.cotaM : "0", cotaPCD: s.cotasOn ? s.cotaPCD : "0",
+    funcoes: s.funcoes || [], enfases: s.enfases || [], experiencia: s.experiencia || "",
+    perfil: s.perfil || "", atividades: s.atividades || "", criterios: s.criterios || "",
+  })] };
+}
 function carregarInicial() {
   try {
     const h = new URLSearchParams(location.hash.slice(1)).get("s");
-    if (h) return { ...DEFAULTS, ...JSON.parse(decodeURIComponent(escape(atob(h)))) };
+    if (h) return migra(JSON.parse(decodeURIComponent(escape(atob(h)))));
   } catch { /* link inválido — ignora */ }
   try {
     const sv = localStorage.getItem(STORE);
-    if (sv) return { ...DEFAULTS, ...JSON.parse(sv) };
+    if (sv) return migra(JSON.parse(sv));
   } catch { /* sem storage */ }
   return DEFAULTS;
 }
@@ -124,9 +138,7 @@ function carregarInicial() {
 const STEP_CONF = [
   ["Número da chamada", "Unidade, coordenação"],
   ["Definição do projeto"],
-  ["Modalidade e valor", "Perfil do bolsista"],
-  ["Reserva", "Quantitativo usual", "Coerência modalidade", "Seleção", "Seleções"],
-  ["Comissão"],
+  ["Modalidade e valor", "Perfil do bolsista", "Reserva", "Quantitativo usual", "Coerência modalidade", "Seleção", "Seleções", "Comissão"],
   ["Prazo de inscrição", "Ordem:", "Janela de inscrição"],
   null,
 ];
@@ -139,19 +151,11 @@ export default function BuilderView() {
   const setVal = (k, v) => setF({ ...f, [k]: v });
   const toggle = (k) => (e) => setF({ ...f, [k]: e.target.checked });
   const toggleIn = (k, v) => setF((p) => ({ ...p, [k]: p[k].includes(v) ? p[k].filter((x) => x !== v) : [...p[k], v] }));
-  // ---- Multivagas: edital com várias seleções (Seleção 1, 2, …), cada uma com modalidade,
-  // vagas, cotas e perfil próprios — formato real das chamadas PIPA.
-  const novaVaga = (base = {}) => ({ modalidade: MODALIDADES[0].nome, qtd: "1", tipo: "Imediata", cotaER: "0", cotaM: "0", cotaPCD: "0", perfil: "", atividades: "", criterios: "", ...base });
+  // ---- Vagas (seleções): um TR tem 1..N vagas, cada uma completa. rmVaga nunca zera.
   const setVaga = (i, k, v) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: v } : x)) }));
+  const toggleInVaga = (i, k, val) => setF((p) => ({ ...p, vagas: p.vagas.map((x, j) => (j === i ? { ...x, [k]: x[k].includes(val) ? x[k].filter((y) => y !== val) : [...x[k], val] } : x)) }));
   const addVaga = () => setF((p) => ({ ...p, vagas: [...p.vagas, novaVaga()] }));
-  const rmVaga = (i) => setF((p) => ({ ...p, vagas: p.vagas.filter((_, j) => j !== i) }));
-  const toggleMultivagas = (on) => setF((p) => ({
-    ...p, multivagas: on,
-    // ao ligar, semeia a 1ª seleção com o que já foi preenchido no fluxo simples
-    vagas: on && !p.vagas.length
-      ? [novaVaga({ modalidade: p.modalidade, qtd: p.qtd, cotaER: p.cotaER, cotaM: p.cotaM, cotaPCD: p.cotaPCD, perfil: p.perfil, atividades: p.atividades, criterios: p.criterios }), novaVaga()]
-      : p.vagas,
-  }));
+  const rmVaga = (i) => setF((p) => ({ ...p, vagas: p.vagas.length > 1 ? p.vagas.filter((_, j) => j !== i) : p.vagas }));
   // Escolher a diretoria otimiza o fluxo: pré-seleciona o tema da área e preenche o cabeçalho.
   // Mudar a área manualmente invalida o "preenchido a partir de <projeto>" — limpa a seleção.
   const setDiretoria = (sigla) => {
@@ -179,9 +183,10 @@ export default function BuilderView() {
       diretoriaSel: pr.diretoria,
       unidade: rotuloUnidade(pr.diretoria) || p.unidade,
       temas: pr.temas.length ? pr.temas : p.temas,
-      funcoes: pr.funcoes,
       projetoNome: pr.titulo,
       coordenador: pr.coordenador || p.coordenador,
+      // a função do projeto entra na 1ª vaga (as demais permanecem como estão)
+      vagas: p.vagas.map((v, i) => (i === 0 ? { ...v, funcoes: pr.funcoes } : v)),
     }));
   };
   const limparProj = () => { setProjSel(""); setProjQ(""); };
@@ -358,10 +363,6 @@ export default function BuilderView() {
       Não encontrei modelo — deixar placeholder
     </button>
   );
-  const mod = MODALIDADES.find((m) => m.nome === f.modalidade);
-  const q = parseInt(f.qtd) || 1;
-  const reservaLive = (parseInt(f.cotaER) || 0) + (parseInt(f.cotaM) || 0) + (parseInt(f.cotaPCD) || 0);
-  const acLive = Math.max(q - reservaLive, 0);
   const dInsc = diffDias(f.inscIni, f.inscFim);
   // Empurrão de oportunidade (F5): cobertura de bolsas do tema = chamadas PIPA ÷ projetos ativos.
   const cobTema = (PROJETOS_RESUMO.coberturaPorTema || {})[f.temas[0]];
@@ -376,7 +377,7 @@ export default function BuilderView() {
   });
 
   // Prefill do corpus: chamadas PIPA reais parecidas, com botão p/ puxar o texto ao campo.
-  const sims = useMemo(() => chamadasSimilares(f, 3), [f.modalidade, f.temas, f.funcoes, f.diretoriaSel]);
+  const sims = useMemo(() => chamadasSimilares({ ...f, modalidade: f.vagas[0]?.modalidade, funcoes: f.vagas[0]?.funcoes || [] }, 3), [f.diretoriaSel, f.temas, f.vagas]);
   const Similares = ({ campo }) => {
     const map = { projeto: ["def", "definição"], perfil: ["perfil", "perfil"], atividades: ["atividades", "atividades"] };
     const [key, nome] = map[campo];
@@ -400,14 +401,14 @@ export default function BuilderView() {
     );
   };
 
-  // Sugestão de modalidade a partir da rede de dependências (DAG/CPT) sobre o corpus PIPA,
-  // condicionada à evidência já preenchida (diretoria → tema → função). Recalcula só quando
-  // a evidência muda; o DAG é aprendido uma vez (memoizado em lib/sugestao).
-  const sugMod = useMemo(() => sugerirModalidade(f), [f.diretoriaSel, f.temas.join("|"), f.funcoes.join("|")]);
-  const SugestaoModalidade = () => {
-    if (!sugMod) return null;
-    const s = sugMod;
-    const aplicada = f.modalidade === s.modalidade.nome;
+  // Sugestão de modalidade POR VAGA, a partir da rede de dependências (DAG/CPT) sobre o corpus,
+  // condicionada à evidência da vaga (diretoria → tema → função). O DAG é aprendido uma vez
+  // (memoizado em lib/sugestao), então chamar por vaga é barato.
+  const SugestaoModalidade = ({ vi }) => {
+    const v = f.vagas[vi];
+    const s = sugerirModalidade({ diretoriaSel: f.diretoriaSel, temas: f.temas, funcoes: v.funcoes });
+    if (!s) return null;
+    const aplicada = v.modalidade === s.modalidade.nome;
     const pct = Math.round(s.p * 100);
     const via = s.base ? "base histórica PIPA" : `via ${s.via.nome}${s.via.pai ? " · pai no DAG" : ""}`;
     return (
@@ -428,7 +429,7 @@ export default function BuilderView() {
           <span style={{ fontFamily: SANS, fontSize: 11, color: C.muted, whiteSpace: "nowrap" }}>n={s.n} · {via}</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 11, flexWrap: "wrap" }}>
-          <button type="button" disabled={aplicada} onClick={() => setVal("modalidade", s.modalidade.nome)}
+          <button type="button" disabled={aplicada} onClick={() => setVaga(vi, "modalidade", s.modalidade.nome)}
             style={{ ...compBtn, opacity: aplicada ? 0.55 : 1, cursor: aplicada ? "default" : "pointer" }}>
             {aplicada ? "✓ modalidade aplicada" : "Aplicar modalidade"}
           </button>
@@ -543,172 +544,121 @@ export default function BuilderView() {
         <Similares campo="projeto" />
       </>);
       case 2: return (<>
-        {/* QUEM: a função/perfil vem primeiro — é o que torna a sugestão de modalidade fundamentada. */}
-        <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
-          <ChipsMulti campo="funcoes" opcoes={FUNCOES} />
-        </Field>
-        {enfasesDe(f.funcoes).length > 0 && (
-          <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
-            <ChipsMulti campo="enfases" opcoes={enfasesDe(f.funcoes)} />
-          </Field>
-        )}
-        {/* A SUGESTÃO já considera a função escolhida acima; só então a modalidade. */}
-        <SugestaoModalidade />
-        <Field l="Modalidade da bolsa (Portaria 317/2025) — define valor, formação e requisito">
-          <select style={inp} value={f.modalidade} onChange={set("modalidade")}>
-            {MODALIDADES.map((m) => <option key={m.nome}>{m.nome}</option>)}
-          </select>
-        </Field>
-        {mod && (
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, marginTop: -6, lineHeight: 1.55 }}>
-            valor mensal: <b>{fmtValor(mod.valor, mod.moeda)}</b> · Anexo I<br />
-            formação: <b>{mod.formacao}</b><br />
-            <span style={{ color: C.muted }}>requisito (Art. 4º): {mod.requisito}</span>
-          </div>
-        )}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
-          <Field l="Qtd. bolsas"><input style={inp} type="number" min="1" value={f.qtd} onChange={set("qtd")} /></Field>
-          <Field l="Bolsa (meses)"><input style={inp} type="number" min="1" value={f.duracaoBolsa} onChange={set("duracaoBolsa")} /></Field>
-          <Field l="Pesquisa (meses)"><input style={inp} type="number" min="1" value={f.duracaoPesquisa} onChange={set("duracaoPesquisa")} /></Field>
-        </div>
-        <Check k="cadastroReserva" l="Prever cadastro reserva (Art. 9º, §2º)" />
-        {/* PERFIL redigido: a partir da função + modalidade já escolhidas. */}
-        {recortesDe(f.temas).length > 0 && (
-          <Field l="Recortes temáticos (do corpus) — opcional">
-            <ChipsMulti campo="recortes" opcoes={recortesDe(f.temas)} />
-          </Field>
-        )}
-        <Field l="Experiência / habilidades desejáveis — opcional">
-          <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={f.experiencia} onChange={set("experiencia")} />
-        </Field>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <button type="button" style={compBtn}
-            onClick={() => setVal("perfil", comporPerfil({ modalidade: f.modalidade, funcoes: f.funcoes, temas: f.temas, experiencia: f.experiencia, enfases: f.enfases, recortes: f.recortes }))}>
-            ✦ Compor perfil a partir das escolhas
-          </button>
-          <PlaceholderBtn campo="perfil" />
-        </div>
-        <Field l="Perfil do bolsista desejado (editável)">
-          <textarea style={{ ...inp, minHeight: 110, resize: "vertical" }} placeholder="Use ‘Compor perfil’ acima, ou escreva livremente…" value={f.perfil} onChange={set("perfil")} />
-        </Field>
-        <Similares campo="perfil" />
-      </>);
-      case 3: return (<>
-        <label style={{ display: "flex", gap: 11, alignItems: "flex-start", cursor: "pointer", background: f.multivagas ? C.accentSoft : C.surface2, border: `1px solid ${f.multivagas ? C.azulClaro : C.line}`, borderRadius: RADIUS.md, padding: "12px 14px" }}>
-          <input type="checkbox" checked={f.multivagas} onChange={(e) => toggleMultivagas(e.target.checked)} style={{ accentColor: C.azul, width: 16, height: 16, marginTop: 2 }} />
-          <div>
-            <div style={{ fontFamily: SANS, fontSize: 13.5, fontWeight: 600, color: C.ink }}>Edital com múltiplas seleções (multivagas)</div>
-            <div style={{ fontFamily: SANS, fontSize: 12, color: C.muted, lineHeight: 1.45, marginTop: 2 }}>
-              Uma chamada com Seleção 1, 2, 3…, cada uma com modalidade, vagas, cotas e perfil próprios — como nas chamadas PIPA reais.
-            </div>
-          </div>
-        </label>
-
-        {!f.multivagas ? (<>
-          <Field l="Público-alvo / reserva de vagas (Art. 25) — texto livre, opcional">
-            <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
-          </Field>
-          <Check k="cotasOn" l="Prever reserva de vagas por cota (quadro AC/ER/M/PCD)" />
-          {f.cotasOn && (<>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 13 }}>
-              <Field l="Étnico-racial (ER)"><input style={inp} type="number" min="0" value={f.cotaER} onChange={set("cotaER")} /></Field>
-              <Field l="Mulheres (M)"><input style={inp} type="number" min="0" value={f.cotaM} onChange={set("cotaM")} /></Field>
-              <Field l="PCD"><input style={inp} type="number" min="0" value={f.cotaPCD} onChange={set("cotaPCD")} /></Field>
-            </div>
-            <div style={{ fontFamily: SANS, fontSize: 12.5, color: reservaLive > q ? C.err : C.azul }}>
-              ampla concorrência (AC): <b>{acLive}</b> · reservadas: <b>{reservaLive}</b> · total: <b>{q}</b>
-              {reservaLive > q && <span style={{ fontWeight: 600 }}> — excede o total de vagas</span>}
-            </div>
-            <Check k="heteroident" l="Exigir procedimento de heteroidentificação" />
-            <Field l="Fundamento legal das cotas — opcional">
-              <input style={inp} placeholder="Ex.: Lei nº 12.990/2014; Decreto nº 9.508/2018…" value={f.fundamentoCotas} onChange={set("fundamentoCotas")} />
-            </Field>
-          </>)}
-        </>) : (<>
-          {f.vagas.map((v, i) => {
-            const er = parseInt(v.cotaER) || 0, m = parseInt(v.cotaM) || 0, pcd = parseInt(v.cotaPCD) || 0;
-            const vq = parseInt(v.qtd) || 1, vres = er + m + pcd;
-            return (
-              <div key={i} style={{ border: `1px solid ${C.line}`, borderRadius: RADIUS.md, padding: "14px 15px", background: C.surface2, display: "grid", gap: 12 }}>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <span style={{ fontFamily: SANS, fontSize: 12.5, fontWeight: 700, color: C.azulEscuro }}>Seleção {i + 1}</span>
+        {f.vagas.map((v, i) => {
+          const vmod = MODALIDADES.find((m) => m.nome === v.modalidade);
+          const er = parseInt(v.cotaER) || 0, mu = parseInt(v.cotaM) || 0, pcd = parseInt(v.cotaPCD) || 0;
+          const vq = parseInt(v.qtd) || 1, vres = er + mu + pcd, vac = Math.max(vq - vres, 0);
+          return (
+            <div key={i} style={{ border: `1px solid ${f.vagas.length > 1 ? C.azulClaro : C.line}`, borderRadius: RADIUS.md, padding: "15px 16px", background: C.surface2, display: "grid", gap: 14 }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <span style={{ fontFamily: SANS, fontSize: 12.5, fontWeight: 700, color: C.azulEscuro }}>{f.vagas.length > 1 ? `Seleção ${i + 1}` : "Vaga"}</span>
+                {f.vagas.length > 1 && (
                   <button type="button" onClick={() => rmVaga(i)} title="Remover seleção" style={{ marginLeft: "auto", background: "none", border: "none", color: C.muted, cursor: "pointer", fontFamily: SANS, fontSize: 12, fontWeight: 600 }}>remover ✕</button>
+                )}
+              </div>
+              <Field l="Função do perfil — o que a pessoa vai fazer (uma ou mais)">
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                  {FUNCOES.map((o) => <button key={o} type="button" onClick={() => toggleInVaga(i, "funcoes", o)} style={chipStyle(v.funcoes.includes(o))}>{o}</button>)}
                 </div>
-                <Field l="Modalidade">
-                  <select style={inp} value={v.modalidade} onChange={(e) => setVaga(i, "modalidade", e.target.value)}>
-                    {MODALIDADES.map((mm) => <option key={mm.nome} value={mm.nome}>{mm.nome} — {fmtValor(mm.valor, mm.moeda)}</option>)}
-                  </select>
-                </Field>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 12 }}>
-                  <Field l="Nº de vagas"><input style={inp} type="number" min="1" value={v.qtd} onChange={(e) => setVaga(i, "qtd", e.target.value)} /></Field>
-                  <Field l="Tipo de vaga">
-                    <select style={inp} value={v.tipo} onChange={(e) => setVaga(i, "tipo", e.target.value)}>
-                      {["Imediata", "Cadastro reserva", "Imediata + cadastro reserva"].map((t) => <option key={t} value={t}>{t}</option>)}
-                    </select>
-                  </Field>
-                </div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
-                  <Field l="Cota ER"><input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} /></Field>
-                  <Field l="Cota M"><input style={inp} type="number" min="0" value={v.cotaM} onChange={(e) => setVaga(i, "cotaM", e.target.value)} /></Field>
-                  <Field l="Cota PCD"><input style={inp} type="number" min="0" value={v.cotaPCD} onChange={(e) => setVaga(i, "cotaPCD", e.target.value)} /></Field>
-                </div>
-                {vres > vq && <div style={{ fontFamily: SANS, fontSize: 12, color: C.err, fontWeight: 600 }}>reserva ({vres}) excede as vagas ({vq})</div>}
-                <Field l="Perfil/requisitos específicos desta seleção — opcional">
-                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Em branco usa o requisito da modalidade…" value={v.perfil} onChange={(e) => setVaga(i, "perfil", e.target.value)} />
-                </Field>
-                <Field l="Atividades desta seleção — opcional">
-                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Atividades de pesquisa específicas desta seleção…" value={v.atividades} onChange={(e) => setVaga(i, "atividades", e.target.value)} />
-                </Field>
-                <Field l="Critérios de seleção desta seleção — opcional">
-                  <textarea style={{ ...inp, minHeight: 52, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={v.criterios} onChange={(e) => setVaga(i, "criterios", e.target.value)} />
-                  <div style={{ marginTop: 6 }}>
-                    <button type="button" style={{ ...compBtn, padding: "6px 11px", fontSize: 11.5 }}
-                      onClick={() => setVaga(i, "criterios", sugerirCriterios({ modalidade: v.modalidade, funcoes: f.funcoes }))}>
-                      ✦ Sugerir critérios (padrão da modalidade)
-                    </button>
+              </Field>
+              {enfasesDe(v.funcoes).length > 0 && (
+                <Field l="Ênfases técnicas (vocabulário real do corpus PIPA) — opcional">
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {enfasesDe(v.funcoes).map((o) => <button key={o} type="button" onClick={() => toggleInVaga(i, "enfases", o)} style={chipStyle(v.enfases.includes(o))}>{o}</button>)}
                   </div>
                 </Field>
+              )}
+              <SugestaoModalidade vi={i} />
+              <Field l="Modalidade da bolsa (Portaria 317/2025) — define valor, formação e requisito">
+                <select style={inp} value={v.modalidade} onChange={(e) => setVaga(i, "modalidade", e.target.value)}>
+                  {MODALIDADES.map((m) => <option key={m.nome}>{m.nome}</option>)}
+                </select>
+              </Field>
+              {vmod && (
+                <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azul, marginTop: -6, lineHeight: 1.55 }}>
+                  valor mensal: <b>{fmtValor(vmod.valor, vmod.moeda)}</b> · Anexo I<br />
+                  formação: <b>{vmod.formacao}</b><br />
+                  <span style={{ color: C.muted }}>requisito (Art. 4º): {vmod.requisito}</span>
+                </div>
+              )}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 12 }}>
+                <Field l="Qtd. bolsas"><input style={inp} type="number" min="1" value={v.qtd} onChange={(e) => setVaga(i, "qtd", e.target.value)} /></Field>
+                <Field l="Tipo de vaga">
+                  <select style={inp} value={v.tipo} onChange={(e) => setVaga(i, "tipo", e.target.value)}>
+                    {["Imediata", "Cadastro reserva", "Imediata + cadastro reserva"].map((t) => <option key={t} value={t}>{t}</option>)}
+                  </select>
+                </Field>
               </div>
-            );
-          })}
-          <button type="button" onClick={addVaga} style={{ ...compBtn, padding: "9px 14px" }}>+ Adicionar seleção</button>
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.muted }}>
-            Total: <b style={{ color: C.ink }}>{f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0)}</b> bolsa(s) em <b style={{ color: C.ink }}>{f.vagas.length}</b> seleção(ões).
-          </div>
+              <Field l="Reserva de vagas por cota (AC/ER/M/PCD) — opcional">
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+                  <input style={inp} type="number" min="0" value={v.cotaER} onChange={(e) => setVaga(i, "cotaER", e.target.value)} placeholder="ER" />
+                  <input style={inp} type="number" min="0" value={v.cotaM} onChange={(e) => setVaga(i, "cotaM", e.target.value)} placeholder="M" />
+                  <input style={inp} type="number" min="0" value={v.cotaPCD} onChange={(e) => setVaga(i, "cotaPCD", e.target.value)} placeholder="PCD" />
+                </div>
+                <div style={{ fontFamily: SANS, fontSize: 12, marginTop: 6, color: vres > vq ? C.err : C.muted }}>
+                  AC: <b>{vac}</b> · reservadas: <b>{vres}</b> · total: <b>{vq}</b>{vres > vq && <span style={{ fontWeight: 600 }}> — excede o total</span>}
+                </div>
+              </Field>
+              <Field l="Experiência / habilidades desejáveis — opcional">
+                <input style={inp} placeholder="Ex.: experiência com Stata/R/Python; publicações na área…" value={v.experiencia} onChange={(e) => setVaga(i, "experiencia", e.target.value)} />
+              </Field>
+              <div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+                  <button type="button" style={compBtn} onClick={() => setVaga(i, "perfil", comporPerfil({ modalidade: v.modalidade, funcoes: v.funcoes, temas: f.temas, experiencia: v.experiencia, enfases: v.enfases, recortes: f.recortes }))}>✦ Compor perfil</button>
+                  <button type="button" style={phBtn} onClick={() => setVaga(i, "perfil", PH.perfil)}>Não encontrei modelo — deixar placeholder</button>
+                </div>
+                <Field l="Perfil do bolsista (editável)">
+                  <textarea style={{ ...inp, minHeight: 84, resize: "vertical" }} placeholder="Use ‘Compor perfil’, ou escreva livremente…" value={v.perfil} onChange={(e) => setVaga(i, "perfil", e.target.value)} />
+                </Field>
+              </div>
+              <div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+                  <button type="button" style={compBtn} onClick={() => setVaga(i, "atividades", comporAtividades({ funcoes: v.funcoes, temas: f.temas }))}>✦ Compor atividades</button>
+                  <button type="button" style={phBtn} onClick={() => setVaga(i, "atividades", PH.atividades)}>Não encontrei modelo — deixar placeholder</button>
+                </div>
+                <Field l="Atividades a desenvolver">
+                  <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={v.atividades} onChange={(e) => setVaga(i, "atividades", e.target.value)} />
+                </Field>
+              </div>
+              <div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 6 }}>
+                  <button type="button" style={compBtn} onClick={() => setVaga(i, "criterios", sugerirCriterios({ modalidade: v.modalidade, funcoes: v.funcoes }))}>✦ Sugerir critérios</button>
+                  <button type="button" style={phBtn} onClick={() => setVaga(i, "criterios", PH.criterios)}>Não encontrei modelo — deixar placeholder</button>
+                </div>
+                <Field l="Critérios de seleção">
+                  <textarea style={{ ...inp, minHeight: 72, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma…" value={v.criterios} onChange={(e) => setVaga(i, "criterios", e.target.value)} />
+                </Field>
+              </div>
+            </div>
+          );
+        })}
+        <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+          <button type="button" onClick={addVaga} style={{ ...compBtn, padding: "9px 14px" }}>+ Adicionar vaga / seleção</button>
+          <span style={{ fontFamily: SANS, fontSize: 12.5, color: C.muted }}>
+            Total: <b style={{ color: C.ink }}>{f.vagas.reduce((a, v) => a + (parseInt(v.qtd) || 1), 0)}</b> bolsa(s) em <b style={{ color: C.ink }}>{f.vagas.length}</b> vaga(s)/seleção(ões).
+          </span>
+        </div>
+        <div style={{ height: 1, background: C.line, margin: "4px 0" }} />
+        {/* Características compartilhadas pelo TR (valem para o conjunto) */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
+          <Field l="Duração da bolsa (meses)"><input style={inp} type="number" min="1" value={f.duracaoBolsa} onChange={set("duracaoBolsa")} /></Field>
+          <Field l="Duração da pesquisa (meses)"><input style={inp} type="number" min="1" value={f.duracaoPesquisa} onChange={set("duracaoPesquisa")} /></Field>
+        </div>
+        <Field l="Público-alvo / reserva de vagas (Art. 25) — opcional">
+          <input style={inp} placeholder="Ex.: prioridade a pesquisadores de instituições do Norte/Nordeste…" value={f.reservaVagas} onChange={set("reservaVagas")} />
+        </Field>
+        {f.vagas.some((v) => (parseInt(v.cotaER) || 0) + (parseInt(v.cotaM) || 0) + (parseInt(v.cotaPCD) || 0) > 0) && (<>
+          <Field l="Fundamento legal das cotas — opcional">
+            <input style={inp} placeholder="Ex.: Lei nº 12.990/2014; Decreto nº 9.508/2018…" value={f.fundamentoCotas} onChange={set("fundamentoCotas")} />
+          </Field>
+          <Check k="heteroident" l="Exigir procedimento de heteroidentificação" />
         </>)}
-      </>);
-      case 4: return (<>
-        {f.multivagas && (
-          <div style={{ fontFamily: SANS, fontSize: 12.5, color: C.azulEscuro, background: C.accentSoft, border: `1px solid ${C.azulClaro}`, borderRadius: RADIUS.sm, padding: "10px 12px", lineHeight: 1.45 }}>
-            <b>Multivagas ativo:</b> atividades e critérios são definidos <b>por seleção</b> no passo <b>Vagas</b>. Os campos abaixo valem como base/rascunho.
-          </div>
-        )}
-        <Field l="Atividades a desenvolver">
-          <textarea style={{ ...inp, minHeight: 88, resize: "vertical" }} placeholder="Atividades de pesquisa do bolsista…" value={f.atividades} onChange={set("atividades")} />
-          <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <button type="button" style={compBtn}
-              onClick={() => setVal("atividades", comporAtividades({ funcoes: f.funcoes, temas: f.temas }))}>
-              ✦ Compor atividades (das funções do perfil)
-            </button>
-            <PlaceholderBtn campo="atividades" />
-          </div>
-          <div style={{ marginTop: 9 }}><Similares campo="atividades" /></div>
-        </Field>
-        <Field l="Critérios de seleção">
-          <textarea style={{ ...inp, minHeight: 96, resize: "vertical" }} placeholder="Em branco usa o critério-padrão da norma; ou gere pelos critérios reais da modalidade…" value={f.criterios} onChange={set("criterios")} />
-          <div style={{ marginTop: 6, display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <button type="button" style={compBtn} onClick={() => setVal("criterios", sugerirCriterios({ modalidade: f.modalidade, funcoes: f.funcoes }))}>
-              ✦ Sugerir critérios (padrão real da modalidade)
-            </button>
-            <PlaceholderBtn campo="criterios" />
-          </div>
-        </Field>
         <Check k="cartaIntencoes" l="Exigir carta de intenções (Art. 8º, §1º)" />
         <Field l="Composição da comissão julgadora — opcional">
           <textarea style={{ ...inp, minHeight: 56, resize: "vertical" }} placeholder="Em branco usa a composição-padrão (mín. 3 + 1 suplente, Art. 9º)…" value={f.comissao} onChange={set("comissao")} />
         </Field>
       </>);
-      case 5: return (<>
+      case 3: return (<>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 13 }}>
           <Field l="Publicação"><input style={inp} type="date" value={f.dataPub} onChange={set("dataPub")} /></Field>
           <Field l="Início atividades"><input style={inp} type="date" value={f.inicio} onChange={set("inicio")} /></Field>
@@ -723,7 +673,7 @@ export default function BuilderView() {
           </div>
         )}
       </>);
-      case 6: return (<>
+      case 4: return (<>
         <div style={{ display: "flex", gap: 8, fontFamily: SANS, fontSize: 12.5, fontWeight: 600 }}>
           {[["ok", `${resumo.ok} ok`], ["warn", `${resumo.warn} avisos`], ["err", `${resumo.err} erros`]].map(([k, l]) => (
             <span key={k} style={{ display: "inline-flex", alignItems: "center", gap: 6, color: SEVC[k], background: SEVBG[k], padding: "5px 11px", borderRadius: RADIUS.pill }}>{SEVI[k]} {l}</span>
